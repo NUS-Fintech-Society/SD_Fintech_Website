@@ -1,16 +1,18 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.scss";
+import React from "react";
+import "styles/pages/Home.module.scss";
 
-export default function Home() {
+import DefaultLayout from "components/Layouts/DefaultLayout/DefaultLayout";
+
+const Home = (props) => {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Home | Nus FinTech Society</title>
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>NUS Fintech Society</h1>
-      </main>
-    </div>
+    <DefaultLayout>
+      <div className="container">
+        <main className="main">
+          <h1 className="title">NUS Fintech Society</h1>
+        </main>
+      </div>
+    </DefaultLayout>
   );
-}
+};
+
+export default Home;
