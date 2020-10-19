@@ -12,7 +12,7 @@ const DefaultLayout = (props) => {
         <title>NUS FinTech asdasdasdassdaociety</title>
       </Head>
       <NavBar />
-      {props.children}
+      <h1>Dept Layout</h1>
       <Footer />
     </div>
   );
