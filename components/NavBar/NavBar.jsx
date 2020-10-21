@@ -3,12 +3,12 @@ import styles from "./NavBar.module.scss";
 import '../SideDrawer/DrawerToggleButton';
 import DrawerToggleButton from "components/SideDrawer/DrawerToggleButton";
 
-const NavBar = (props) => {
+const NavBar = props => {
   return (
     <header className={styles.navbar}>
       <nav className={styles.navbar_navigation}>
-        <div>
-          <DrawerToggleButton />
+        <div className={styles.navbar_toggle_button}>
+          <DrawerToggleButton click={props.drawerClickHandler} />
         </div>
         <div className={styles.navbar_logo}><a href="#">LOGO</a></div>
         <div className={styles.spacer}></div>

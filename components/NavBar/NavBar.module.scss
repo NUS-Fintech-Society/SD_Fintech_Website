@@ -39,7 +39,33 @@
   flex : 1;
 }
 
-.navbar_items {
+.navbar_items a {
   color: white;
   text-decoration: none;
+}
+
+.navbar_items a:hover,
+.navbar_items a:active {
+  color: grey;
+}
+
+@media (max-width: 768px) {
+  .navbar_items {
+    display: none;
+  }
+
+  .navbar_logo {
+    position: absolute;
+    right: 10%;
+  } 
+}
+
+@media (min-width: 769px) {
+  .navbar_toggle_button{
+    display: none;
+  }
+
+  .navbar_logo {
+    margin-left: 0;
+  } 
 }
