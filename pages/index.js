@@ -10,7 +10,7 @@ const Home = (props) => {
       <div className="container">
         <main className="main">
           <h1 className="title">NUS Fintech Society</h1>
-          
+
         </main>
       </div>
     </DeptLayoutBottom>
