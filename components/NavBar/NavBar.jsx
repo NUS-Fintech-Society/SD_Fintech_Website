@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./NavBar.module.scss";
 import '../SideDrawer/DrawerToggleButton';
 import DrawerToggleButton from "components/SideDrawer/DrawerToggleButton";
+import Link from "next/link";
 
 const NavBar = props => {
   return (
@@ -14,10 +15,10 @@ const NavBar = props => {
         <div className={styles.spacer}></div>
         <div className={styles.navbar_items}>
           <ul id="nav-mobile" className="center">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Our Team</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><Link href="#">Home</Link></li>
+            <li><Link href="#">Events</Link></li>
+            <li><Link href="#">Our Team</Link></li>
+            <li><Link href="#">Contact Us</Link></li>
           </ul>
         </div>
       </nav>
