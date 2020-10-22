@@ -1,7 +1,16 @@
 .header {
   background-color: black;
 
-  p {
+  ul {
+    list-style: none;
+    display: flex;
+  }
+
+  ul li {
+    margin-right: 3rem;
+  }
+
+  ul li a {
     color: white;
   }
 }
