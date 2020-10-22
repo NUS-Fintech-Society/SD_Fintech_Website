@@ -22,17 +22,17 @@ const DeptLayoutBottom = () => {
         'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRl-OO3C8WSch8zgBizrw12_dYu-rAKPQ4jNw&usqp=CAU'
     ]);
 
-    const [currentImageIndex,setCurrentImageIndex] = useState(2);
+    const [currentImageIndex, setCurrentImageIndex] = useState(2);
 
     const changeImage = (e) => {
         console.log('Item`s position after changes: ', e.item);
-        if (e.item==0) {
+        if (e.item == 0) {
             console.log('0');
             setCurrentImageIndex(2);
         } else {
-            setCurrentImageIndex(e.item-1);
+            setCurrentImageIndex(e.item - 1);
         }
-        
+
     };
 
     return (
@@ -41,9 +41,15 @@ const DeptLayoutBottom = () => {
         //     <img src={'https://edit.co.uk/uploads/2016/12/Image-1-Alternatives-to-stock-photography-Thinkstock.jpg'} className="sliderimg" />
         //     <img src={'https://edit.co.uk/uploads/2016/12/Image-1-Alternatives-to-stock-photography-Thinkstock.jpg'} className="sliderimg" />
         // </AliceCarousel>
+        
+        //style={{display:'inline-block'}}
+
         <Fragment>
-            <img src={imageURLs[currentImageIndex]} className="previmg"/> 
-            <AliceCarousel infinite mouseTracking items={images} onSlideChanged={changeImage}/>
+            <div>
+                <img src={imageURLs[currentImageIndex]} className="previmg" />
+                <AliceCarousel infinite mouseTracking items={images} onSlideChanged={changeImage} />
+            </div>
+
         </Fragment>
     )
 }

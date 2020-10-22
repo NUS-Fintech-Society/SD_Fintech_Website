@@ -25,7 +25,8 @@
 
 .alice-carousel {
   position: relative;
-  width: 100%;
+  /* width: 100%; */
+  width: 90%;
   margin: auto;
   direction: ltr; }
 
@@ -71,7 +72,8 @@
 .alice-carousel__next-btn {
   display: inline-block;
   box-sizing: border-box;
-  width: 50%;
+  /* width: 50%; */
+  width: 15%;
   padding: 10px 5px; }
   .alice-carousel__prev-btn [data-area]::after,
   .alice-carousel__next-btn [data-area]::after {
@@ -147,7 +149,8 @@
     left: 18px; }
 
 .alice-carousel__dots {
-  margin: 30px 3px 5px;
+  /* margin: 30px 3px 5px; */
+  margin-right: 70%;
   padding: 0;
   list-style: none;
   text-align: center; }
@@ -156,7 +159,7 @@
     width: 8px;
     height: 8px;
     cursor: pointer;
-    border-radius: 50%;
+     border-radius: 50%; /*controls the shape of the dots */
     background-color: #e0e4fb; }
     .alice-carousel__dots-item:not(:last-child) {
       margin-right: 20px; }

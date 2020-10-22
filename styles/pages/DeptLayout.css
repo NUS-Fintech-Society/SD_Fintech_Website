@@ -1,14 +1,18 @@
 .sliderimg{
-  width: 60%;
-    height: 500px;
-    margin-top:14%;
-    margin-left: 40%;
-    object-fit: cover
+  width: 20%;
+  /* height: 500px; */
+  height: 20%;
+  /* margin-top:14%; */
+  margin-left: 10%;
+  background-color: aqua;
+  object-fit: cover
   }
 
-  .previmg{
-    width: 20%;
-    height: 500px;
-    margin-top:14%;
-    object-fit: cover
+.previmg{
+  width: 10%;
+  /* height: 500px; */
+  height: 20%;
+  /* margin-top:14%; */
+  opacity:0.3;
+  object-fit: cover
   }
