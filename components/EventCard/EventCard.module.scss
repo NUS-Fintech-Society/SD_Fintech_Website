@@ -1,0 +1,37 @@
+.eventCard {
+  max-width: 400px;
+  max-height: 700px;
+  box-shadow: 3px 2px 8px 2px rgba(0, 0, 0, 0.75);
+  background-color: #404040;
+  padding: 4px 2px 4px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 50px 30px 45px;
+
+  p {
+    color: #ffffff;
+  }
+
+  .title {
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .iconTextContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 250px;
+
+    .iconContainer {
+      padding: 3px 10px 0 8px;
+
+      .icon {
+        color: #ffffff;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
