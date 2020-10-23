@@ -41,15 +41,12 @@ const DeptLayoutBottom = () => {
         //     <img src={'https://edit.co.uk/uploads/2016/12/Image-1-Alternatives-to-stock-photography-Thinkstock.jpg'} className="sliderimg" />
         //     <img src={'https://edit.co.uk/uploads/2016/12/Image-1-Alternatives-to-stock-photography-Thinkstock.jpg'} className="sliderimg" />
         // </AliceCarousel>
-        
+
         //style={{display:'inline-block'}}
 
         <Fragment>
-            <div>
                 <img src={imageURLs[currentImageIndex]} className="previmg" />
                 <AliceCarousel infinite mouseTracking items={images} onSlideChanged={changeImage} />
-            </div>
-
         </Fragment>
     )
 }
