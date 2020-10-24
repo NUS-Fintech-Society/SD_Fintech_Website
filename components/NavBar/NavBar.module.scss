@@ -1,5 +1,5 @@
 .navbar {
-  background: rgb(224, 0, 0);
+  background: whitesmoke;
   position: fixed;
   top: 0;
   left: 0;
@@ -19,7 +19,7 @@
 }
 
 .navbar_logo a {
-  color:white;
+  color:black;
   text-decoration: none;
   font-size: 2;
 }
@@ -40,13 +40,13 @@
 }
 
 .navbar_items a {
-  color: white;
+  color: black;
   text-decoration: none;
 }
 
 .navbar_items a:hover,
 .navbar_items a:active {
-  color: grey;
+  color: rgb(87, 87, 87);
 }
 
 @media (max-width: 768px) {

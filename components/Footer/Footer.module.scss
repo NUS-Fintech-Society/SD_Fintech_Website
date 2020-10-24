@@ -1,12 +1,39 @@
 .footer {
   background-color: black;
-  flex-shrink: 0;
   display: flex;
   justify-content: center;
-  margin-top: 100%;
-
-
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
   p {
     color: white;
   }
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  color:  white;
+}
+
+.row li {
+  list-style-type: none;
+  margin-left: 1rem;
+}
+
+.trademark{ 
+  font-size: xx-small;
+  display: flex;
+  justify-content: center;
+  color:  white;
+}
+
+.trademark span {
+  margin-left: 0.5rem;
+}
+
+
+.row a:hover,
+.row a:active {
+  color: rgb(87, 87, 87);
 }

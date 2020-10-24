@@ -35,6 +35,7 @@ const DefaultLayout = (props) => {
       </div>
       <main style={{ marginTop: '64px' }}>
       </main>
+      <Footer />
     </div>
   );
 }
