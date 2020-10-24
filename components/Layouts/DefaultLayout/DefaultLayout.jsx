@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import styles from "./DefaultLayout.module.scss";
 
@@ -7,45 +7,20 @@ import Footer from "components/Footer/Footer";
 import SideDrawer from "components/SideDrawer/SideDrawer"
 import Backdrop from "components/Backdrop/Backdrop";
 
-class handler extends Component {
-  state = {
-    sideDrawerOpen: false
-  };
-
-  drawerToggleClickHandler = () => {
-    this.setState((prevState) => {
-      return { sideDrawerOpen: !prevState.sideDrawerOpen };
-    });
-  };
-
-  backDropClickHandler = () => {
-    this.setState({ sideDrawerOpen: false });
-  };
-
-  render() {
-    let backdrop;
-
-    if (this.state.sideDrawerOpen) {
-      backdrop = <Backdrop click={this.backDropClickHandler} />
-    }
-
-    return (
-      <div className={styles.layout}>
-        <NavBar drawerClickHandler={this.drawerToggleClickHandler} />
-        <SideDrawer show={this.state.sideDrawerOpen} />
-        {backdrop}
-        <main style={{ marginTop: '64px' }}>
-          <p> NUS FINTECH</p>
-        </main>
-      </div>
-    );
-  }
-}
-
 
 const DefaultLayout = (props) => {
+  const [isSideDrawerOpen, setIsSideDrawerOpen] = useState(false);
+
+  const drawerToggleClickHandler = () => {
+    setIsSideDrawerOpen(!isSideDrawerOpen);
+  };
+
+  const backDropClickHandler = () => {
+    setIsSideDrawerOpen(false);
+  };
+
   return (
-    <div className={styles.layout} style={{ height: '100%' }}>
+    <div className={styles.layout}>
       <Head>
         <link
           href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900"
@@ -53,13 +28,15 @@ const DefaultLayout = (props) => {
         />
         <title>NUS FinTech Society</title>
       </Head>
-      <NavBar />
-      <SideDrawer />
-      <Backdrop />
-      {props.children}
-      <Footer />
+      <NavBar drawerClickHandler={drawerToggleClickHandler} />
+      <SideDrawer show={isSideDrawerOpen} />
+      <div>
+        {isSideDrawerOpen && <Backdrop click={backDropClickHandler}></Backdrop>}
+      </div>
+      <main style={{ marginTop: '64px' }}>
+      </main>
     </div>
   );
-};
+}
 
-export default handler;
+export default DefaultLayout;
