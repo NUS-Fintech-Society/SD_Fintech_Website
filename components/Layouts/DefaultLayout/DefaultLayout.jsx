@@ -34,6 +34,7 @@ const DefaultLayout = (props) => {
         {isSideDrawerOpen && <Backdrop click={backDropClickHandler}></Backdrop>}
       </div>
       <main style={{ marginTop: '64px' }}>
+        {props.children}
       </main>
       <Footer />
     </div>
