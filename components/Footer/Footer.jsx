@@ -11,9 +11,9 @@ const Footer = (props) => {
     <div className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.row}>
-          <li><Link href="#"><AiOutlineInstagram /></Link></li>
-          <li><Link href="#"><AiOutlineGithub /></Link></li>
-          <li><Link href="#"><AiOutlineLinkedin /></Link></li>
+          <li><Link href="https://www.instagram.com/nusfintech/"><AiOutlineInstagram /></Link></li>
+          <li><Link href="https://github.com/nusfintech"><AiOutlineGithub /></Link></li>
+          <li><Link href="https://www.linkedin.com/company/nus-fintech-society/"><AiOutlineLinkedin /></Link></li>
         </div>
         <div className={styles.row}>
           <div className={styles.trademark}>
