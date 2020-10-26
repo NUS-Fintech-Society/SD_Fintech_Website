@@ -1,7 +1,8 @@
 .previmg{
-  width: 10%;
+  /* width: 10%; */
   /* height: 500px; */
   height: 20%;
+  width: 20%;
   /* margin-top:14%; */
   opacity:0.3;
   
@@ -18,10 +19,29 @@
   margin-top:4%;
   /* margin-left: 10%; */
   background-color: aqua;
-  object-fit: cover
+  object-fit: cover;
+  border: 3px solid red;
   }
 
-.carouselcontainer {
+
+.projectcontainer {
   margin-top: 64px;
   margin-left: 64px;
+  /* border: 3px solid blue; */
+
+  /*this one below i should remove to make the container responsive and change size*/
+  /* max-width: 640px;  */
+}
+
+.carouselcontainer {
+  border: 3px solid black;
+  float: left;
+  width: 50%;
+}
+
+.projectdetail {
+  /* display: inline; */
+  border: 3px solid black;
+  float: left;
+  width: 50%;
 }

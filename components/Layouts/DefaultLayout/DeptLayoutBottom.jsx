@@ -78,9 +78,14 @@ const DeptLayoutBottom = (props) => {
             </div>
             <main style={{ marginTop: '64px' }}>
                 {/* {props.children} */}
-                <div className="carouselcontainer">
-                    <img src={imageURLs[currentImageIndex]} className="previmg" />
-                    <AliceCarousel infinite mouseTracking items={images} onSlideChanged={changeImage} />
+                <div className="projectcontainer">
+                    <div className="carouselcontainer">
+                        <img src={imageURLs[currentImageIndex]} className="previmg" />
+                        <AliceCarousel infinite mouseTracking items={images} onSlideChanged={changeImage}/>
+                    </div>
+                    <div className="projectdetail">
+                        <h4>Project 1</h4>
+                    </div>
                 </div>
 
             </main>
