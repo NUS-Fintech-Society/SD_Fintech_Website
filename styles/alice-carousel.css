@@ -72,7 +72,7 @@
 .alice-carousel__next-btn {
   display: inline-block;
   box-sizing: border-box;
-  /* width: 50%; */
+  /* width: 50%; for arrows*/
   width: 15%;
   padding: 10px 5px; }
   .alice-carousel__prev-btn [data-area]::after,
