@@ -1,18 +1,27 @@
-.sliderimg{
-  width: 20%;
-  /* height: 500px; */
-  height: 20%;
-  /* margin-top:14%; */
-  margin-left: 10%;
-  background-color: aqua;
-  object-fit: cover
-  }
-
 .previmg{
   width: 10%;
   /* height: 500px; */
   height: 20%;
   /* margin-top:14%; */
   opacity:0.3;
+  
+  /*Trying to make it absolute here*/
+  position: absolute;
+  /*------*/
   object-fit: cover
   }
+
+.sliderimg{
+  width: 20%;
+  /* height: 500px; */
+  height: 20%;
+  margin-top:4%;
+  /* margin-left: 10%; */
+  background-color: aqua;
+  object-fit: cover
+  }
+
+.carouselcontainer {
+  margin-top: 64px;
+  margin-left: 64px;
+}

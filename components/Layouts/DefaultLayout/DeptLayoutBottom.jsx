@@ -1,14 +1,33 @@
 //npm i react-alice-carousel --save
-import AliceCarousel from 'react-alice-carousel';
+
 //https://medium.com/how-to-react/create-beautiful-image-sliders-carousels-in-react-using-react-alice-carousel-395d8ae9310c
 //this shows how to transition to different images https://stackoverflow.com/questions/57107633/changing-an-image-on-in-time-interval-using-react 
 //https://morioh.com/p/396088a987f2
 
 import React, { Fragment, useState, useEffect } from 'react';
+import AliceCarousel from 'react-alice-carousel';
+import Head from "next/head";
+import styles from "./DefaultLayout.module.scss";
+
+import NavBar from "components/NavBar/NavBar";
+import Footer from "components/Footer/Footer";
+import SideDrawer from "components/SideDrawer/SideDrawer"
+import Backdrop from "components/Backdrop/Backdrop";
 
 
 
-const DeptLayoutBottom = () => {
+const DeptLayoutBottom = (props) => {
+
+    const [isSideDrawerOpen, setIsSideDrawerOpen] = useState(false);
+
+    const drawerToggleClickHandler = () => {
+        setIsSideDrawerOpen(!isSideDrawerOpen);
+    };
+
+    const backDropClickHandler = () => {
+        setIsSideDrawerOpen(false);
+    };
+
 
     const [images, setImages] = useState([
         <img src={'https://edit.co.uk/uploads/2016/12/Image-1-Alternatives-to-stock-photography-Thinkstock.jpg'} className="sliderimg" />,
@@ -44,11 +63,37 @@ const DeptLayoutBottom = () => {
 
         //style={{display:'inline-block'}}
 
-        <Fragment>
-                <img src={imageURLs[currentImageIndex]} className="previmg" />
-                <AliceCarousel infinite mouseTracking items={images} onSlideChanged={changeImage} />
-        </Fragment>
+        <div className={styles.layout}>
+            <Head>
+                <link
+                    href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900"
+                    rel="stylesheet"
+                />
+                <title>NUS FinTech Society</title>
+            </Head>
+            <NavBar drawerClickHandler={drawerToggleClickHandler} />
+            <SideDrawer show={isSideDrawerOpen} />
+            <div>
+                {isSideDrawerOpen && <Backdrop click={backDropClickHandler}></Backdrop>}
+            </div>
+            <main style={{ marginTop: '64px' }}>
+                {/* {props.children} */}
+                <div className="carouselcontainer">
+                    <img src={imageURLs[currentImageIndex]} className="previmg" />
+                    <AliceCarousel infinite mouseTracking items={images} onSlideChanged={changeImage} />
+                </div>
+
+            </main>
+            <Footer />
+        </div>
+
+        // <Fragment>
+        //     <img src={imageURLs[currentImageIndex]} className="previmg" />
+        //     <AliceCarousel infinite mouseTracking items={images} onSlideChanged={changeImage} />
+        // </Fragment>
     )
 }
 
-export default DeptLayoutBottom;                  
+export default DeptLayoutBottom;
+
+

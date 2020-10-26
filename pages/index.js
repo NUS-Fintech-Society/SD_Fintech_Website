@@ -6,21 +6,21 @@ import DeptLayoutBottom from "components/Layouts/DefaultLayout/DeptLayoutBottom"
 
 const Home = (props) => {
   return (
-    // <DeptLayoutBottom>
-    //   <div className="container">
-    //     <main className="main">
-    //       <h1 className="title">NUS Fintech Society</h1>
-    //     </main>
-    //   </div>
-    // </DeptLayoutBottom>
+    <DeptLayoutBottom>
+      <div className="container">
+        <main className="main">
+          <h1 className="title">NUS Fintech Society</h1>
+        </main>
+      </div>
+    </DeptLayoutBottom>
 
-      <DefaultLayout>
-        <div className={styles.container}>
-          <main className={styles.main}>
-            <h1 className={styles.title}>NUS Fintech Society</h1>
-          </main>
-        </div>
-      </DefaultLayout>
+      // <DefaultLayout>
+      //   <div className={styles.container}>
+      //     <main className={styles.main}>
+      //       <h1 className={styles.title}>NUS Fintech Society</h1>
+      //     </main>
+      //   </div>
+      // </DefaultLayout>
   );
 };
 
