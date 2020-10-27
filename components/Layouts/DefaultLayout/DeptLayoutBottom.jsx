@@ -14,7 +14,7 @@ import Footer from "components/Footer/Footer";
 import SideDrawer from "components/SideDrawer/SideDrawer"
 import Backdrop from "components/Backdrop/Backdrop";
 
-
+import { Carousel } from 'react-bootstrap';
 
 const DeptLayoutBottom = (props) => {
 
@@ -30,7 +30,8 @@ const DeptLayoutBottom = (props) => {
 
 
     const [images, setImages] = useState([
-        <img src={'https://edit.co.uk/uploads/2016/12/Image-1-Alternatives-to-stock-photography-Thinkstock.jpg'} className="sliderimg" />,
+        // <img src={'https://edit.co.uk/uploads/2016/12/Image-1-Alternatives-to-stock-photography-Thinkstock.jpg'} className="sliderimg" />,
+        <img src={'images/picture1.jpeg'} className="sliderimg" />,
         <img src={'https://www.atomix.com.au/media/2017/07/StockPhotoBanner.jpg'} className="sliderimg" />,
         <img src={'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRl-OO3C8WSch8zgBizrw12_dYu-rAKPQ4jNw&usqp=CAU'} className="sliderimg" />
     ]);
@@ -77,17 +78,24 @@ const DeptLayoutBottom = (props) => {
                 {isSideDrawerOpen && <Backdrop click={backDropClickHandler}></Backdrop>}
             </div>
             <main style={{ marginTop: '64px' }}>
-                {/* {props.children} */}
                 <div className="projectcontainer">
-                    <div className="carouselcontainer">
-                        <img src={imageURLs[currentImageIndex]} className="previmg" />
-                        <AliceCarousel infinite mouseTracking items={images} onSlideChanged={changeImage}/>
-                    </div>
-                    <div className="projectdetail">
-                        <h4>Project 1</h4>
+                    <div className="projectrowone">
+                        <div className="carouselcontainer">
+                            <img src={imageURLs[currentImageIndex]} className="previmg" />
+                            <AliceCarousel infinite mouseTracking items={images} onSlideChanged={changeImage} animationType='fadeout' controlsStrategy='responsive' />
+                        </div>
+                        <div className="detailcontainer">
+                            <div className="projecttitle">
+                                <h2>________ Project 2</h2>
+                            </div>
+                            <div className="projectbody">
+                                <h4>Sentiment Analysis on Financial News</h4>
+                                <h5>1. Full end-to-end project from data extraction to data analysis to prediction</h5>
+                                <h5>2. Interactive Dashboard</h5>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
             </main>
             <Footer />
         </div>

@@ -10,13 +10,17 @@
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
+    "bootstrap": "^4.5.3",
     "moment": "^2.29.1",
     "next": "^9.5.5",
     "react": "^16.13.1",
     "react-alice-carousel": "^2.0.1",
     "react-big-calendar": "^0.28.1",
+    "react-bootstrap": "^1.4.0",
     "react-dom": "^16.13.1",
     "react-icons": "^3.11.0",
+    "react-responsive-carousel": "^3.2.10",
+    "react-slick": "^0.27.12",
     "sass": "^1.26.11",
     "slick-carousel": "^1.8.1"
   }

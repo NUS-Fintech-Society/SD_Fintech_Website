@@ -1,0 +1,147 @@
+.SlickCarousel {
+    text-align: center;
+    /* width: 70%; */
+    margin-left: 20%;
+  }
+   
+  .SlickCarousel-logo {
+    height: 40vmin;
+  }
+   
+  .SlickCarousel-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+   
+  .SlickCarousel-link {
+    color: #09d3ac;
+  }
+   
+  body{
+    /* background: #09d3ac; */
+  }
+   
+  .slides .slick-prev,
+  .slides .slick-next {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+  }
+  
+  
+  .slides {
+    position: relative;
+  }
+  
+  .slides .slick-prev,
+  .slides .slick-next {
+    position: absolute;
+    top: 50%;
+    z-index:1;
+  }
+  
+  .slides .slick-prev {
+    left: 5%;
+  }
+  
+  .slides .slick-next {
+    right: 5%;
+  }
+
+  .next-slick-arrow,
+  .prev-slick-arrow {
+    color: #000000;
+    font-size: 48px;
+  }
+
+/*This below is from the previos alice carousel part*/
+
+
+.previmg{
+  /* width: 10%; */
+  /* height: 500px; */
+  height: 20%;
+  width: 20%;
+  /* margin-top:14%; */
+  opacity:0.3;
+  
+  /*Trying to make it absolute here*/
+  position: absolute;
+  /*------*/
+  object-fit: cover
+  }
+
+.sliderimg{
+    /* height: 500px; */
+  width: 60%;
+  height: 60%;
+  margin-top:4%;
+  margin-left: 10%;
+  background-color: aqua;
+  object-fit: cover;
+  }
+
+
+.projectcontainer {
+  margin-top: 64px;
+  margin-left: 64px;
+}
+
+.carouselcontainer {
+  /* border: 3px solid black; */
+  float: left;
+  width: 40%;
+}
+
+.detailcontainer {
+  /* display: inline; */
+  /* border: 3px solid black; */
+  float: left;
+  width: 55%;
+  margin-left: 5%;
+}
+
+.detailcontainerleft {
+  /* display: inline; */
+  /* border: 3px solid black; */
+  float: left;
+  width: 55%;
+  margin-right: 5%;
+}
+
+.projecttitle {
+  /* width: 70%; */
+  text-align: left;
+  /* margin-top: 10%; */
+  /* border: 3px solid red; */
+}
+
+.underscore {
+  float:left;
+  width:30%;
+  margin-top: 10%;
+  border: 3px solid blue;
+  text-align:justify;
+  text-justify: distribute;
+  border-bottom: ;
+}
+
+.projectbody {
+margin-top: 5%;
+/* border: 3px solid blue; */
+text-align: left;
+font-weight: lighter;
+
+}
+
+.projectrow {
+  margin-top: 15%;
+  position: relative;
+  border: solid yellow;
+}
