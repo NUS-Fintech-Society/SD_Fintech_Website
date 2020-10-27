@@ -1,3 +1,5 @@
+@import "styles/variables.scss";
+
 .container {
   padding: 0 0.5rem;
   display: flex;
@@ -7,11 +9,31 @@
 }
 
 .main {
-  padding: 5rem 0;
+  padding: 1rem 0;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    color: $primary-grey-1;
+  }
+}
+
+.eventsContainer {
+  padding: 2rem 0;
   width: 100%;
   flex: 1;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .eventCardContainer {
+    padding: 3rem 0;
+  }
 }
