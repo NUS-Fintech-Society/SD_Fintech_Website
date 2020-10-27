@@ -289,7 +289,7 @@ const SlickCarousel = (props) => {
                 <div className="projectcontainer" >
                     <div className="detailcontainerleft">
                         <div className="projecttitle">
-                            <h1>Project 2 ________ </h1>
+                            <h1>Project 2 ________________ </h1>
                         </div>
                         <div className="projectbody">
                             <h4>Sentiment Analysis on Financial News</h4>
