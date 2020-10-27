@@ -12,13 +12,14 @@
   padding: 1rem 0;
   width: 100%;
   flex: 1;
+  color: $primary-grey-1;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
 
   h1 {
-    color: $primary-grey-1;
+    font-family: "Lato";
   }
 }
 
@@ -32,8 +33,9 @@
   flex-wrap: wrap;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1400px) {
   .eventCardContainer {
-    padding: 3rem 0;
+    padding: 3rem 0 0 0;
+    align-self: center;
   }
 }

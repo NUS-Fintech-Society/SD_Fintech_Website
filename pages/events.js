@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import styles from "styles/pages/Events.module.scss";
 
+
 import DefaultLayout from "components/Layouts/DefaultLayout/DefaultLayout";
 import EventsCalendar from "components/Calendar/EventsCalendar";
 import EventCard from "components/EventCard/EventCard";

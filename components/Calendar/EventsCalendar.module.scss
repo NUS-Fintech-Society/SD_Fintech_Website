@@ -1,4 +1,34 @@
+@import "styles/variables.scss";
+@import "react-big-calendar/lib/sass/styles";
+
 .calendar {
   height: 60vh;
   width: 90vh;
+}
+
+.eventView {
+  font-family: "Lato";
+  font-size: $font-size-1;
+}
+
+.toolbar {
+  padding: 3px 3px 3px 5px;
+
+  .labelContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 400px;
+
+    p {
+      font-size: $font-size-5;
+      font-family: "Lato";
+      font-weight: $font-weight-dark;
+      color: $primary-grey-1;
+
+      span {
+        font-weight: $font-weight-light;
+      }
+    }
+  }
 }

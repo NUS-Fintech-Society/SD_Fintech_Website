@@ -22,7 +22,10 @@ const EventCard = (props) => {
   };
 
   return (
-    <div className={styles.eventCard}>
+    <div
+      className={styles.eventCard}
+      style={{ backgroundColor: event.background }}
+    >
       <h1 className={styles.title}>{event.title}</h1>
       <div className={styles.iconTextContainer}>
         <div className={styles.iconContainer}>
