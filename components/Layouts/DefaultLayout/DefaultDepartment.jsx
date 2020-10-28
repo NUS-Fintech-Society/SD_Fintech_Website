@@ -258,10 +258,10 @@ const DefaultDepartment = (props) => {
 
         <div>
           {/* PROJECT 1 */}
-          <div className="projectcontainer">
-            <div className="carouselcontainer">
-              <img src={imageURLs[currentImageIndex]} className="previmg" />
-              <div className="SlickCarousel"
+          <div className={styles.projectcontainer}>
+            <div className= {styles.carouselcontainer} >
+              <img src={imageURLs[currentImageIndex]} className={styles.previmg} />
+              <div className={styles.SlickCarousel}
                 style={{ padding: 24 }}>
                 <Slider {...settings}>
                   {photos.map((photo) => {
@@ -275,11 +275,11 @@ const DefaultDepartment = (props) => {
               </div>
               <div style={{ clear: "both" }}></div>
             </div>
-            <div className="detailcontainer">
-              <div className="projecttitle">
+            <div className={styles.detailcontainer}>
+              <div className={styles.projecttitle}>
                 <h1>________________ Project 1</h1>
               </div>
-              <div className="projectbody">
+              <div className={styles.projectbody}>
                 <h4>Sentiment Analysis on Financial News</h4>
                 <h5>1. Full end-to-end project from data extraction to data analysis to prediction</h5>
                 <h5>2. Interactive Dashboard</h5>
@@ -291,20 +291,20 @@ const DefaultDepartment = (props) => {
           <div style={{ clear: "both" }}></div>
           {/* PROJECT 2 */}
 
-          <div className="projectcontainer" >
-            <div className="detailcontainerleft">
-              <div className="projecttitle">
+          <div className={styles.projectcontainer} >
+            <div className={styles.detailcontainerleft}>
+              <div className={styles.projecttitle}>
                 <h1>Project 2 ________________ </h1>
               </div>
-              <div className="projectbody">
+              <div className={styles.projectbody}>
                 <h4>Sentiment Analysis on Financial News</h4>
                 <h5>1. Full end-to-end project from data extraction to data analysis to prediction</h5>
                 <h5>2. Interactive Dashboard</h5>
               </div>
             </div>
-            <div className="carouselcontainer">
-              <img src={imageURLsTwo[currentImageIndexTwo]} className="previmg" />
-              <div className="SlickCarousel"
+            <div className={styles.carouselcontainer}>
+              <img src={imageURLsTwo[currentImageIndexTwo]} className={styles.previmg} />
+              <div className={styles.SlickCarousel}
                 style={{ padding: 24 }}>
                 <Slider {...settingsTwo}>
                   {photosTwo.map((photo) => {
