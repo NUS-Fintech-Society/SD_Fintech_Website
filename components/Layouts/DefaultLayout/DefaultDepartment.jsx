@@ -291,6 +291,7 @@ const DefaultDepartment = (props) => {
               </div>
               <div style={{ clear: "both" }}></div>
             </div>
+            <div className={styles.blank}></div>
           </div>
 
           <div style={{ clear: "both" }}></div>
@@ -330,6 +331,7 @@ const DefaultDepartment = (props) => {
               <div style={{ clear: "both" }}></div>
             </div>
             <div style={{ clear: "both" }}></div>
+            <div className={styles.blank}></div>
           </div>
         </div>
       </div>

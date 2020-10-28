@@ -30,6 +30,7 @@
 .flex{
   display:flex;
   height:35vh;
+  border: 3px solid blue;
 }
 
 .image{
@@ -229,20 +230,23 @@ object-fit: cover
 display:flex;
 margin-top: 5%;
 margin-bottom: 3%;
+border: 3px solid black;
 }
 
 
 //This my original way of doing container
 .carouselcontainer {
 /* border: 3px solid black; */
-float: left;
+// float: left;
+flex-basis: 50%;
 width: 40%;
 }
 
 .detailcontainer {
+  flex-basis: 50%;
 /* display: inline; */
 /* border: 3px solid black; */
-float: left;
+// float: left;
 width: 55%;
 margin-left: 5%;
 }
@@ -250,7 +254,8 @@ margin-left: 5%;
 .detailcontainerleft {
 /* display: inline; */
 /* border: 3px solid black; */
-float: left;
+flex-basis: 50%;
+// float: left;
 width: 55%;
 margin-right: 5%;
 }
