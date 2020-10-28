@@ -8,13 +8,13 @@ import DefaultDepartment from "components/Layouts/DefaultLayout/DefaultDepartmen
 
 const Home = (props) => {
   return (
-    <SlickCarousel>
+    <DefaultLayout>
       <div className="container">
         <main className="main">
           <h1 className="title">NUS Fintech Society</h1>
         </main>
       </div>
-    </SlickCarousel>
+    </DefaultLayout>
 
       // <DefaultLayout>
       //   <div className={styles.container}>
