@@ -8,6 +8,7 @@ import Footer from "components/Footer/Footer";
 import SideDrawer from "components/SideDrawer/SideDrawer"
 import Backdrop from "components/Backdrop/Backdrop";
 
+
 //https://www.freakyjolly.com/react-slick-carousel-with-custom-navigation-and-lazy-loaded-images-in-slider/
 
 const SlickCarousel = (props) => {
@@ -46,6 +47,7 @@ const SlickCarousel = (props) => {
         }
     };
 
+   
     //Carousel 1
     const photos = [
         {
