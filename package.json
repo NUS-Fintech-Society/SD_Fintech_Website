@@ -14,7 +14,7 @@
     "next": "^9.5.5",
     "pleasejs": "^0.4.2",
     "react": "^16.13.1",
-    "react-big-calendar": "^0.28.0",
+    "react-big-calendar": "^0.28.1",
     "react-dom": "^16.13.1",
     "react-icons": "^3.11.0",
     "sass": "^1.26.11"
