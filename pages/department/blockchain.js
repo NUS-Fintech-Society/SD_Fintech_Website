@@ -1,18 +1,23 @@
 import React from "react";
-import "styles/pages/Home.module.scss";
 
 import DefaultDepartment from "components/Layouts/DefaultLayout/DefaultDepartment";
 
-const Home = (props) => {
+const blockchain = (props) => {
   return (
     <DefaultDepartment>
-      <div className="container">
-        <main className="main">
-          <h1 className="title">NUS Fintech Society</h1>
-        </main>
+      <div>
+          <h1 >Blockchain Department</h1>
+      </div>
+      <div>
+      Equip our members with practical knowledge of Blockchain technology
+      </div>
+      <div>
+      To nurture a community of blockchain enthusiasts, where members can learn and grow
       </div>
     </DefaultDepartment>
   );
 };
 
-export default Home;
+
+export default blockchain;
+
