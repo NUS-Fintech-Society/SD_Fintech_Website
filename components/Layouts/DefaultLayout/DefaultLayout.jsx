@@ -1,21 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import styles from "./DefaultLayout.module.scss";
 
 import NavBar from "components/NavBar/NavBar";
 import Footer from "components/Footer/Footer";
+import SideDrawer from "components/SideDrawer/SideDrawer"
+import Backdrop from "components/Backdrop/Backdrop";
+
 
 const DefaultLayout = (props) => {
+  const [isSideDrawerOpen, setIsSideDrawerOpen] = useState(false);
+
+  const drawerToggleClickHandler = () => {
+    setIsSideDrawerOpen(!isSideDrawerOpen);
+  };
+
+  const backDropClickHandler = () => {
+    setIsSideDrawerOpen(false);
+  };
+
   return (
     <div className={styles.layout}>
       <Head>
+        <link
+          href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900"
+          rel="stylesheet"
+        />
         <title>NUS FinTech Society</title>
       </Head>
-      <NavBar />
-      {props.children}
+      <NavBar drawerClickHandler={drawerToggleClickHandler} />
+      <SideDrawer show={isSideDrawerOpen} />
+      <div>
+        {isSideDrawerOpen && <Backdrop click={backDropClickHandler}></Backdrop>}
+      </div>
+      <main style={{ marginTop: '64px' }}>
+        {props.children}
+      </main>
       <Footer />
     </div>
   );
-};
+}
 
 export default DefaultLayout;
