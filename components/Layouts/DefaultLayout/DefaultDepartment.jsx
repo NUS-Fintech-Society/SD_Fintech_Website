@@ -276,7 +276,7 @@ const DefaultDepartment = (props) => {
               </div>
               <div style={{ clear: "both" }}></div>
             </div>
-            <div className="detailcontainer">
+            <div className={styles.detailcontainer}>
               <div className={styles.projecttitle}>
                 <h1>________________ Project 1</h1>
               </div>
@@ -294,8 +294,8 @@ const DefaultDepartment = (props) => {
           <div style={{ clear: "both" }}></div>
           {/* PROJECT 2 */}
 
-          <div className="projectcontainer" >
-            <div className="detailcontainerleft">
+          <div className={styles.projectcontainer} >
+            <div className={styles.detailcontainerleft}>
               <div className={styles.projecttitle}>
                 <h1>Project 2 ________________ </h1>
               </div>
