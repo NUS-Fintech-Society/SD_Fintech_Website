@@ -86,33 +86,6 @@
 }
 
 
-@media only screen and (max-height: 500px){
-  .flex{
-    display:flex;
-    height:25%;
-  }
-  .layout {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    font-family: 'Lato';
-    padding-top: 5%;
-  }
-}
-
-@media only screen and (max-height: 1200px){
-  .flex{
-    display:flex;
-    height:20%;
-  }
-  .layout {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    font-family: 'Lato';
-    padding-top: 5%;
-  }
-}
 
 @media only screen and (max-width: 400px){
   .flex{
@@ -128,19 +101,19 @@
   }
  
 }
-@media only screen and (min-width: 500px){
+
+
+@media only screen and (max-width: 800px){
   .flex{
     display:flex;
     height:30%;
   }
-  
- 
-}
-
-@media only screen and (min-width: 800px){
-  .flex{
-    display:flex;
-    height:30%;
+  .layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Lato';
+    padding-top: 12%;
   }
 }
 
@@ -148,5 +121,12 @@
   .flex{
     display:flex;
     height:50%;
+  }
+  .layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Lato';
+    padding-top: 5%;
   }
 }
