@@ -259,7 +259,9 @@ const DefaultDepartment = (props) => {
         <div>
           {/* PROJECT 1 */}
           <div className={styles.projectcontainer}>
+
             <div className={styles.blank}></div>
+
             <div className={styles.carouselcontainer} >
               <img src={imageURLs[currentImageIndex]} className={styles.previmg} />
               <div className={styles.SlickCarousel}
@@ -295,6 +297,9 @@ const DefaultDepartment = (props) => {
           {/* PROJECT 2 */}
 
           <div className={styles.projectcontainer} >
+
+            <div className={styles.blank}></div>
+
             <div className={styles.detailcontainerleft}>
               <div className={styles.projecttitle}>
                 <h1>Project 2 ________________ </h1>

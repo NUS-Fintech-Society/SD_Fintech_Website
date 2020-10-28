@@ -228,10 +228,15 @@ object-fit: cover;
 
 
 .projectcontainer {
-margin-top: 64px;
-margin-left: 64px;
+// margin-top: 64px;
+// margin-left: 64px;
+display:flex;
+margin-top: 5%;
+margin-bottom: 3%;
 }
 
+
+//This my original way of doing container
 .carouselcontainer {
 /* border: 3px solid black; */
 float: left;
