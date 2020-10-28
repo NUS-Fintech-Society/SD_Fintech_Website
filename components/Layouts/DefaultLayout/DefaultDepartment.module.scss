@@ -20,6 +20,7 @@
   flex-basis:40%;
   box-sizing:border-box;
   margin: 10px;
+  position:relative;
 
 }
 
@@ -28,16 +29,33 @@
   height:35%;
 }
 
-// .image{
-//   width:40%;
-//   height:40%;
-//   margin-left:auto;
-//   background-color: dimgray;
-//   position:relative;
-//   bottom:0;
-//   background-color: dimgray;
+.image{
+  position:absolute;
+  width:40%;/*image width*/
+  height:40%;/*image height*/
+  bottom:0px;
+  background: url("/blockchain.jpg") no-repeat;
+}
 
-// }
+.imageleft{
+  position:absolute;
+  width:40%;/*image width*/
+  height:40%;/*image height*/
+  bottom:0px;
+  right:0px;
+  background: url("/blockchain.jpg") no-repeat;
+}
+
+.line{
+  width:30%;
+  margin-left: 10px;
+}
+
+.lineright{
+  width:30%;
+  margin-right: 10px;
+  text-align: right;
+}
 
 .blank{
   flex-basis:10%;

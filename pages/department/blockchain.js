@@ -12,7 +12,7 @@ const blockchain = (props) => {
       Equip our members with practical knowledge of Blockchain technology
       </div>
       <div>
-      To nurture a community of blockchain enthusiasts, where members can learn and grow
+      To nurture a community of blockchain enthusiasts, where members can learn
       </div>
     </DefaultDepartment>
   );

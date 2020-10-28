@@ -25,9 +25,10 @@ const DefaultDepartment = (props) => {
         <div className={styles.boxbody}>
           {props.children[1]}
         </div>
-        <div className={styles.imageblank}>
+        <hr className={styles.line}></hr>
+        <div className={styles.imageleft}>
+      
         </div>
-        <div className={styles.image}></div>
       </div>
  
       <div className={styles.container}>
@@ -37,9 +38,13 @@ const DefaultDepartment = (props) => {
         <div className={styles.boxbodyright}>
           {props.children[2]}
         </div>
+        <hr className={styles.lineright}></hr>
+        <div className={styles.image}>
+        </div>
       </div>
       <div className={styles.blank}></div>
       </div>
+
     <Footer />
   </div>
 
