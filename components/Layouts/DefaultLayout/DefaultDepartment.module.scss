@@ -209,8 +209,14 @@
 
 
 .previmg{
-height: 20%;
+// height: 20%;
+// width: 20%;
+
+//testing reponsive
 width: 20%;
+height: undefined;
+aspect-ratio: 135/76;
+
 opacity:0.3;
 position: absolute;
 object-fit: cover
