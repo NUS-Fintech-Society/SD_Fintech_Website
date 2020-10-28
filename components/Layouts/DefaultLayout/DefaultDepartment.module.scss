@@ -5,7 +5,7 @@
 .layout {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: auto;
     font-family: 'Lato';
     padding-top: 5%;
   }
@@ -17,7 +17,7 @@
 
 .container {
   background-color:#ededed;
-  flex-basis:40%;
+  flex-basis:50%;
   box-sizing:border-box;
   margin: 10px;
   position:relative;
@@ -25,21 +25,21 @@
 
 .flex{
   display:flex;
-  height:35%;
+  height:35vh;
 }
 
 .image{
   position:absolute;
-  width:40%;/*image width*/
-  height:40%;/*image height*/
+  width:30%;/*image width*/
+  height:50%;/*image height*/
   bottom:0px;
   background: url("/blockchain.jpg") no-repeat;
 }
 
 .imageleft{
   position:absolute;
-  width:40%;/*image width*/
-  height:40%;/*image height*/
+  width:30%;/*image width*/
+  height:50%;/*image height*/
   bottom:0px;
   right:0px;
   background: url("/blockchain.jpg") no-repeat;
@@ -82,38 +82,12 @@
   margin-right: 10px;
 }
 
-@media only screen and (max-height: 500px){
-  .flex{
-    display:flex;
-    height:25%;
-  }
-  .layout {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    font-family: 'Lato';
-    padding-top: 5%;
-  }
-}
 
-@media only screen and (max-height: 1200px){
-  .flex{
-    display:flex;
-    height:20%;
-  }
-  .layout {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    font-family: 'Lato';
-    padding-top: 5%;
-  }
-}
 
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 500px){
   .flex{
     display:flex;
-    height:20%;
+    height:15vh;
   }
   .layout {
     display: flex;
@@ -124,26 +98,47 @@
   }
  
 }
-@media only screen and (min-width: 500px){
-  .flex{
-    display:flex;
-    height:30%;
-  }
-  
- 
-}
 
-@media only screen and (min-width: 800px){
+
+@media only screen and (max-width: 800px){
   .flex{
     display:flex;
-    height:30%;
+    height:18vh;
+  }
+  .layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Lato';
+    padding-top: 12%;
   }
 }
 
 @media only screen and (min-width: 1200px){
   .flex{
     display:flex;
-    height:50%;
+    height:30vh;
+  }
+  .layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Lato';
+    padding-top: 5%;
+  }
+}
+
+@media only screen and (min-width: 1800px){
+  .flex{
+    display:flex;
+    height:40vh;
+  }
+  .layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Lato';
+    padding-top: 5%;
   }
 }
 
