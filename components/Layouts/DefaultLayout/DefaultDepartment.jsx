@@ -276,13 +276,15 @@ const DefaultDepartment = (props) => {
               <div style={{ clear: "both" }}></div>
             </div>
             <div className="detailcontainer">
-              <div className="projecttitle">
+              <div className={styles.projecttitle}>
                 <h1>________________ Project 1</h1>
               </div>
-              <div className="projectbody">
-                <h4>Sentiment Analysis on Financial News</h4>
-                <h5>1. Full end-to-end project from data extraction to data analysis to prediction</h5>
-                <h5>2. Interactive Dashboard</h5>
+              <div className={styles.projecttitle}>
+                <h3>Sentiment Analysis on Financial News</h3>
+                1. Full end-to-end project from data extraction to data analysis to prediction
+                <div>
+                  2. Interactive Dashboard
+               </div>
               </div>
               <div style={{ clear: "both" }}></div>
             </div>
@@ -293,13 +295,15 @@ const DefaultDepartment = (props) => {
 
           <div className="projectcontainer" >
             <div className="detailcontainerleft">
-              <div className="projecttitle">
+              <div className={styles.projecttitle}>
                 <h1>Project 2 ________________ </h1>
               </div>
-              <div className="projectbody">
-                <h4>Sentiment Analysis on Financial News</h4>
-                <h5>1. Full end-to-end project from data extraction to data analysis to prediction</h5>
-                <h5>2. Interactive Dashboard</h5>
+              <div className={styles.projecttitle}>
+                <h3>Sentiment Analysis on Financial News</h3>
+                1. Full end-to-end project from data extraction to data analysis to prediction
+                <div>
+                  2. Interactive Dashboard
+                </div>
               </div>
             </div>
             <div className="carouselcontainer">
