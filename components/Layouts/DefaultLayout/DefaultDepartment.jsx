@@ -259,7 +259,8 @@ const DefaultDepartment = (props) => {
         <div>
           {/* PROJECT 1 */}
           <div className={styles.projectcontainer}>
-            <div className= {styles.carouselcontainer} >
+            <div className={styles.blank}></div>
+            <div className={styles.carouselcontainer} >
               <img src={imageURLs[currentImageIndex]} className={styles.previmg} />
               <div className={styles.SlickCarousel}
                 style={{ padding: 24 }}>
@@ -275,6 +276,9 @@ const DefaultDepartment = (props) => {
               </div>
               <div style={{ clear: "both" }}></div>
             </div>
+
+            {/* <div className={styles.blank}></div> */}
+
             <div className={styles.detailcontainer}>
               <div className={styles.projecttitle}>
                 <h1>________________ Project 1</h1>
@@ -292,6 +296,7 @@ const DefaultDepartment = (props) => {
           {/* PROJECT 2 */}
 
           <div className={styles.projectcontainer} >
+            <div className={styles.blank}></div>
             <div className={styles.detailcontainerleft}>
               <div className={styles.projecttitle}>
                 <h1>Project 2 ________________ </h1>
@@ -301,6 +306,7 @@ const DefaultDepartment = (props) => {
                 <h5>1. Full end-to-end project from data extraction to data analysis to prediction</h5>
                 <h5>2. Interactive Dashboard</h5>
               </div>
+              <div style={{ clear: "both" }}></div>
             </div>
             <div className={styles.carouselcontainer}>
               <img src={imageURLsTwo[currentImageIndexTwo]} className={styles.previmg} />
@@ -316,8 +322,9 @@ const DefaultDepartment = (props) => {
                   })}
                 </Slider>
               </div>
+              <div style={{ clear: "both" }}></div>
             </div>
-
+            <div style={{ clear: "both" }}></div>
           </div>
         </div>
       </div>
