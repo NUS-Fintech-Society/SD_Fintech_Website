@@ -119,20 +119,6 @@
 @media only screen and (min-width: 1200px){
   .flex{
     display:flex;
-    height:30vh;
-  }
-  .layout {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    font-family: 'Lato';
-    padding-top: 5%;
-  }
-}
-
-@media only screen and (min-width: 1800px){
-  .flex{
-    display:flex;
     height:40vh;
   }
   .layout {
@@ -143,3 +129,4 @@
     padding-top: 5%;
   }
 }
+
