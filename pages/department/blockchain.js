@@ -5,17 +5,19 @@ import DefaultDepartmentLayout from "components/Layouts/DefaultDepartmentLayout/
 
 const blockchain = (props) => {
   return (
-    <DefaultDepartmentLayout>
-      <div>
+    <DefaultLayout>
+      <DefaultDepartmentLayout>
+        <div>
           <h1 >Blockchain Department</h1>
+        </div>
+        <div>
+          Equip our members with practical knowledge of Blockchain technology
       </div>
-      <div>
-      Equip our members with practical knowledge of Blockchain technology
+        <div>
+          To nurture a community of blockchain enthusiasts, where members can learn
       </div>
-      <div>
-      To nurture a community of blockchain enthusiasts, where members can learn
-      </div>
-    </DefaultDepartmentLayout>
+      </DefaultDepartmentLayout>
+    </DefaultLayout>
   );
 };
 

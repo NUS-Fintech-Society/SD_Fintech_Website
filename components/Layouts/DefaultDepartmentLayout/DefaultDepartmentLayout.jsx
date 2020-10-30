@@ -188,8 +188,6 @@ const DefaultDepartmentLayout = (props) => {
 
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
-    console.log('CLASS NAME NEXT PRINTING');
-    console.log(className);
     return (
       <div
         className={className}
@@ -201,8 +199,6 @@ const DefaultDepartmentLayout = (props) => {
 
   function SamplePrevArrow(props) {
     const { className, style, onClick } = props;
-    console.log('CLASS NAME PREV PRINTING');
-    console.log(className);
     return (
       <div
         className={className}
@@ -219,7 +215,6 @@ const DefaultDepartmentLayout = (props) => {
         <title>NUS FinTech Society</title>
         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
       </Head>
-      <NavBar />
       <div className={styles.layout}>
 
         <div className={styles.title}>
@@ -335,7 +330,6 @@ const DefaultDepartmentLayout = (props) => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
 
   );
