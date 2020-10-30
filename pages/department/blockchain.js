@@ -2,20 +2,21 @@ import React from "react";
 
 import DefaultLayout from "components/Layouts/DefaultLayout/DefaultLayout";
 import DefaultDepartmentLayout from "components/Layouts/DefaultDepartmentLayout/DefaultDepartmentLayout";
+import departmentData from "data/departmentData";
 
 const blockchain = (props) => {
   return (
     <DefaultLayout>
       <DefaultDepartmentLayout>
         <div>
-          <h1 >Blockchain Department</h1>
+          <h1>{departmentData[0].deptName}</h1>
         </div>
         <div>
-          Equip our members with practical knowledge of Blockchain technology
-      </div>
+          {departmentData[0].purpose}
+        </div>
         <div>
-          To nurture a community of blockchain enthusiasts, where members can learn
-      </div>
+          {departmentData[0].goal}
+        </div>
       </DefaultDepartmentLayout>
     </DefaultLayout>
   );

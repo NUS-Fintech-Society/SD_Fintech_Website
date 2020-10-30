@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import styles from "./DefaultDepartmentLayout.module.scss";
 
@@ -11,6 +11,11 @@ const DefaultDepartmentLayout = (props) => {
 
   const [currentImageIndex, setCurrentImageIndex] = useState(2);
   const [currentImageIndexTwo, setCurrentImageIndexTwo] = useState(2);
+
+  useEffect(() => {
+    console.log("USE EFFECT PRINTING");
+    console.log(props.children[0]);
+  });
 
   const changeImage = (e) => {
     console.log('Item`s position after changes: ', e.item);
@@ -217,6 +222,7 @@ const DefaultDepartmentLayout = (props) => {
       </Head>
       <div className={styles.layout}>
 
+
         <div className={styles.title}>
           {props.children[0]}
         </div>
@@ -252,6 +258,9 @@ const DefaultDepartmentLayout = (props) => {
         </div>
 
         <div>
+
+
+
           {/* PROJECT 1 */}
           <div className={styles.projectcontainer}>
 
@@ -290,8 +299,9 @@ const DefaultDepartmentLayout = (props) => {
           </div>
 
           <div style={{ clear: "both" }}></div>
-          {/* PROJECT 2 */}
 
+
+          {/* PROJECT 2 */}
           <div className={styles.projectcontainer} >
 
             <div className={styles.blank}></div>
@@ -330,7 +340,7 @@ const DefaultDepartmentLayout = (props) => {
           </div>
         </div>
       </div>
-    </div>
+    </div >
 
   );
 };
