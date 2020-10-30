@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import styles from "./DefaultDepartmentLayout.module.scss";
 
@@ -6,25 +6,16 @@ import NavBar from "components/NavBar/NavBar";
 import Footer from "components/Footer/Footer";
 
 import Slider from "react-slick";
-import departmentData from "data/departmentData";
 
 const DefaultDepartmentLayout = (props) => {
 
   const [currentImageIndex, setCurrentImageIndex] = useState(3);
   const [currentImageIndexTwo, setCurrentImageIndexTwo] = useState(3);
+  const [data, setData] = useState(props.department);
 
-  const [projectIndex, setProjectIndex] = useState(0);
-
-  useEffect(() => {
-    console.log('printing the project ID');
-    console.log(props.children);
-    setProjectIndex(props.children);
-  });
 
   const changeImage = (e) => {
-    console.log('Item`s position after changes: ', e.item);
     if (e.item == 0) {
-      console.log('0');
       setCurrentImageIndex(2);
     } else {
       setCurrentImageIndex(e.item - 1);
@@ -32,74 +23,12 @@ const DefaultDepartmentLayout = (props) => {
   };
 
   const changeImageTwo = (e) => {
-    console.log('Item`s position after changes: ', e.item);
     if (e.item == 0) {
-      console.log('0');
       setCurrentImageIndexTwo(2);
     } else {
       setCurrentImageIndexTwo(e.item - 1);
     }
   };
-
-
-  //Carousel 1
-  const photos = [
-    {
-      name: 'Photo 1',
-      url: 'https://images.unsplash.com/photo-1554744512-d6c603f27c54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
-    },
-    {
-      name: 'Photo 2',
-      url: 'https://images.unsplash.com/photo-1538592116845-119a3974c958?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
-    },
-    {
-      name: 'Photo 3',
-      url: 'https://images.unsplash.com/photo-1560958089-b8a1929cea89?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
-    },
-    {
-      name: 'Photo 4',
-      url: 'https://images.unsplash.com/photo-1536700503339-1e4b06520771?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
-    }
-  ]
-
-  //Image Carousel 1
-  const [imageURLs, setImageURLs] = useState([
-    'https://images.unsplash.com/photo-1554744512-d6c603f27c54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-    'https://images.unsplash.com/photo-1538592116845-119a3974c958?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-    'https://images.unsplash.com/photo-1560958089-b8a1929cea89?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-    'https://images.unsplash.com/photo-1536700503339-1e4b06520771?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-  ]);
-
-
-  //Carousel 2
-  const photosTwo = [
-    {
-      name: 'Photo 1',
-      // url: 'https://images.unsplash.com/photo-1596006889651-0cfd9863d722?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
-      url: 'https://i.imgur.com/yAcIkqy.jpg'
-    },
-    {
-      name: 'Photo 2',
-      url: 'https://images.unsplash.com/photo-1558368718-808f08b6d9a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
-    },
-    {
-      name: 'Photo 3',
-      url: 'https://images.unsplash.com/photo-1572191267783-5618f992aff5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
-    },
-    {
-      name: 'Photo 4',
-      url: 'https://images.unsplash.com/photo-1554744512-783e8dc69b10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
-    }
-  ]
-
-  //Image Carousel 2
-  const [imageURLsTwo, setImageURLsTwo] = useState([
-    'https://images.unsplash.com/photo-1596006889651-0cfd9863d722?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-    'https://images.unsplash.com/photo-1558368718-808f08b6d9a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-    'https://images.unsplash.com/photo-1572191267783-5618f992aff5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-    'https://images.unsplash.com/photo-1554744512-783e8dc69b10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-  ]);
-
 
   const settings = {
     dots: true,
@@ -112,11 +41,9 @@ const DefaultDepartmentLayout = (props) => {
     className: "slides",
     beforeChange: (current, next) => {
       if (next == 0) {
-        console.log('0');
         setCurrentImageIndex(3);
       } else {
         setCurrentImageIndex(next - 1);
-        console.log('hello, new index is:' + next);
       }
     },
     nextArrow: <SampleNextArrow />,
@@ -159,11 +86,9 @@ const DefaultDepartmentLayout = (props) => {
     className: "slides",
     beforeChange: (current, next) => {
       if (next == 0) {
-        console.log('0');
         setCurrentImageIndexTwo(3);
       } else {
         setCurrentImageIndexTwo(next - 1);
-        console.log('hello, new index is:' + next);
       }
     },
     nextArrow: <SampleNextArrow />,
@@ -229,7 +154,7 @@ const DefaultDepartmentLayout = (props) => {
 
 
         <div className={styles.title}>
-          {props.children[0]}
+          <h1>{data.deptName}</h1>
         </div>
         <div className={styles.flex}>
 
@@ -239,11 +164,10 @@ const DefaultDepartmentLayout = (props) => {
               <h3>Purpose</h3>
             </div>
             <div className={styles.boxbody}>
-              {departmentData[projectIndex].purpose}
+              {data.purpose}
             </div>
             <hr className={styles.line}></hr>
             <div className={styles.imageleft}>
-
             </div>
           </div>
 
@@ -252,7 +176,7 @@ const DefaultDepartmentLayout = (props) => {
               <h3>Goal</h3>
             </div>
             <div className={styles.boxbodyright}>
-            {departmentData[projectIndex].goal}
+              {data.goal}
             </div>
             <hr className={styles.lineright}></hr>
             <div className={styles.image}>
@@ -270,11 +194,11 @@ const DefaultDepartmentLayout = (props) => {
           <div className={styles.projectcontainer}>
             <div className={styles.blank}></div>
             <div className={styles.carouselcontainer} >
-              <img src={imageURLs[currentImageIndex]} className={styles.previmg} />
+              <img src={data.projectOne.imageURLs[currentImageIndex]} className={styles.previmg} />
               <div className={styles.SlickCarousel}
                 style={{ padding: 24 }}>
                 <Slider {...settings}>
-                  {photos.map((photo) => {
+                  {data.projectOne.carouselArray.map((photo) => {
                     return (
                       <div>
                         <img width="100%" src={photo.url} />
@@ -290,10 +214,10 @@ const DefaultDepartmentLayout = (props) => {
                 <h1>________________ Project 1</h1>
               </div>
               <div className={styles.projecttitle}>
-                <h3>{departmentData[projectIndex].projectOne.title}</h3>
-                {departmentData[projectIndex].projectOne.detailOne}
+                <h3>{data.projectOne.title}</h3>
+                {data.projectOne.detailOne}
                 <div>
-                  {departmentData[projectIndex].projectOne.detailTwo}
+                  {data.projectOne.detailTwo}
                 </div>
               </div>
               <div style={{ clear: "both" }}></div>
@@ -314,20 +238,20 @@ const DefaultDepartmentLayout = (props) => {
                 <h1>Project 2 ________________ </h1>
               </div>
               <div className={styles.projecttitle}>
-                <h3>{departmentData[projectIndex].projectOne.title}</h3>
-                {departmentData[projectIndex].projectOne.detailOne}
+                <h3>{data.projectTwo.title}</h3>
+                {data.projectTwo.detailOne}
                 <div>
-                  {departmentData[projectIndex].projectOne.detailTwo}
+                  {data.projectTwo.detailTwo}
                 </div>
               </div>
               <div style={{ clear: "both" }}></div>
             </div>
             <div className={styles.carouselcontainer}>
-              <img src={imageURLsTwo[currentImageIndexTwo]} className={styles.previmg} />
+              <img src={data.projectTwo.imageURLs[currentImageIndexTwo]} className={styles.previmg} />
               <div className={styles.SlickCarousel}
                 style={{ padding: 24 }}>
                 <Slider {...settingsTwo}>
-                  {photosTwo.map((photo) => {
+                  {data.projectTwo.carouselArray.map((photo) => {
                     return (
                       <div>
                         <img width="100%" src={photo.url} />
