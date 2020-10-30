@@ -10,26 +10,9 @@ const blockchain = (props) => {
       <DefaultDepartmentLayout>
         {/* <div>
           <h1>{departmentData[0].deptName}</h1>
-        </div>
-        <div>
-          {departmentData[0].purpose}
-        </div>
-        <div>
-          {departmentData[0].goal}
-        </div>
-        <div>
-          {departmentData[0].projectOne.title}
-        </div>
-        <div>
-          {departmentData[0].projectOne.detailOne}
-        </div>
-        <div>
-          {departmentData[0].projectOne.detailTwo}
-        </div>
-        <div>
-          {departmentData[0].projectOne.imageURLs}
         </div> */}
-          {departmentData[0].id}
+
+        {departmentData[0].id}
       </DefaultDepartmentLayout>
     </DefaultLayout>
   );

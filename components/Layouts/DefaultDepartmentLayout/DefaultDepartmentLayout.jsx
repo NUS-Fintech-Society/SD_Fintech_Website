@@ -239,7 +239,7 @@ const DefaultDepartmentLayout = (props) => {
               <h3>Purpose</h3>
             </div>
             <div className={styles.boxbody}>
-              {props.children[1]}
+              {departmentData[projectIndex].purpose}
             </div>
             <hr className={styles.line}></hr>
             <div className={styles.imageleft}>
@@ -252,7 +252,7 @@ const DefaultDepartmentLayout = (props) => {
               <h3>Goal</h3>
             </div>
             <div className={styles.boxbodyright}>
-              {props.children[2]}
+            {departmentData[projectIndex].goal}
             </div>
             <hr className={styles.lineright}></hr>
             <div className={styles.image}>
@@ -268,9 +268,7 @@ const DefaultDepartmentLayout = (props) => {
 
           {/* PROJECT 1 */}
           <div className={styles.projectcontainer}>
-
             <div className={styles.blank}></div>
-
             <div className={styles.carouselcontainer} >
               <img src={imageURLs[currentImageIndex]} className={styles.previmg} />
               <div className={styles.SlickCarousel}
@@ -292,15 +290,11 @@ const DefaultDepartmentLayout = (props) => {
                 <h1>________________ Project 1</h1>
               </div>
               <div className={styles.projecttitle}>
-                {/* <h3>Sentiment Analysis on Financial News</h3> */}
-                {/* <h3>{props.children[3]}</h3> */}
                 <h3>{departmentData[projectIndex].projectOne.title}</h3>
-                {/* 1. Full end-to-end project from data extraction to data analysis to prediction */}
                 {departmentData[projectIndex].projectOne.detailOne}
                 <div>
-                  {/* 2. Interactive Dashboard */}
                   {departmentData[projectIndex].projectOne.detailTwo}
-               </div>
+                </div>
               </div>
               <div style={{ clear: "both" }}></div>
             </div>
@@ -320,10 +314,10 @@ const DefaultDepartmentLayout = (props) => {
                 <h1>Project 2 ________________ </h1>
               </div>
               <div className={styles.projecttitle}>
-              <h3>{departmentData[projectIndex].projectOne.title}</h3>
-              <h3>{departmentData[projectIndex].projectOne.detailOne}</h3>
+                <h3>{departmentData[projectIndex].projectOne.title}</h3>
+                {departmentData[projectIndex].projectOne.detailOne}
                 <div>
-                <h3>{departmentData[projectIndex].projectOne.detailTwo}</h3>
+                  {departmentData[projectIndex].projectOne.detailTwo}
                 </div>
               </div>
               <div style={{ clear: "both" }}></div>
