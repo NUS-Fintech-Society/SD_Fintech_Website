@@ -8,7 +8,7 @@ const blockchain = (props) => {
   return (
     <DefaultLayout>
       <DefaultDepartmentLayout>
-        <div>
+        {/* <div>
           <h1>{departmentData[0].deptName}</h1>
         </div>
         <div>
@@ -18,17 +18,18 @@ const blockchain = (props) => {
           {departmentData[0].goal}
         </div>
         <div>
-        {departmentData[0].projectOne.title}
+          {departmentData[0].projectOne.title}
         </div>
         <div>
-        {departmentData[0].projectOne.detailOne}
+          {departmentData[0].projectOne.detailOne}
         </div>
         <div>
-        {departmentData[0].projectOne.detailTwo}
+          {departmentData[0].projectOne.detailTwo}
         </div>
         <div>
-        {departmentData[0].projectOne.imageURLs}
-        </div>
+          {departmentData[0].projectOne.imageURLs}
+        </div> */}
+          {departmentData[0].id}
       </DefaultDepartmentLayout>
     </DefaultLayout>
   );

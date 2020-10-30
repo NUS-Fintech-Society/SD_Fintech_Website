@@ -6,15 +6,19 @@ import NavBar from "components/NavBar/NavBar";
 import Footer from "components/Footer/Footer";
 
 import Slider from "react-slick";
+import departmentData from "data/departmentData";
 
 const DefaultDepartmentLayout = (props) => {
 
   const [currentImageIndex, setCurrentImageIndex] = useState(3);
   const [currentImageIndexTwo, setCurrentImageIndexTwo] = useState(3);
 
+  const [projectIndex, setProjectIndex] = useState(0);
+
   useEffect(() => {
-    console.log("USE EFFECT PRINTING");
-    console.log(props.children[0]);
+    console.log('printing the project ID');
+    console.log(props.children);
+    setProjectIndex(props.children);
   });
 
   const changeImage = (e) => {
@@ -289,12 +293,13 @@ const DefaultDepartmentLayout = (props) => {
               </div>
               <div className={styles.projecttitle}>
                 {/* <h3>Sentiment Analysis on Financial News</h3> */}
-                <h3>{props.children[3]}</h3>
+                {/* <h3>{props.children[3]}</h3> */}
+                <h3>{departmentData[projectIndex].projectOne.title}</h3>
                 {/* 1. Full end-to-end project from data extraction to data analysis to prediction */}
-                {props.children[4]}
+                {departmentData[projectIndex].projectOne.detailOne}
                 <div>
                   {/* 2. Interactive Dashboard */}
-                  {props.children[1]}
+                  {departmentData[projectIndex].projectOne.detailTwo}
                </div>
               </div>
               <div style={{ clear: "both" }}></div>
@@ -315,10 +320,10 @@ const DefaultDepartmentLayout = (props) => {
                 <h1>Project 2 ________________ </h1>
               </div>
               <div className={styles.projecttitle}>
-                <h3>Sentiment Analysis on Financial News</h3>
-                1. Full end-to-end project from data extraction to data analysis to prediction
+              <h3>{departmentData[projectIndex].projectOne.title}</h3>
+              <h3>{departmentData[projectIndex].projectOne.detailOne}</h3>
                 <div>
-                  2. Interactive Dashboard
+                <h3>{departmentData[projectIndex].projectOne.detailTwo}</h3>
                 </div>
               </div>
               <div style={{ clear: "both" }}></div>
