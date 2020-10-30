@@ -7,7 +7,11 @@ export default [
     projectOne:{
         title: "Sentiment Analysis on Financial News",
         detailOne: "1. Full end-to-end project from data extraction to data analysis to prediction",
-        detailTwo: "2. Interactive Dashboar",
+        detailTwo: "2. Interactive Dashboard",
+        imageURLs: ['https://images.unsplash.com/photo-1596006889651-0cfd9863d722?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+        'https://images.unsplash.com/photo-1558368718-808f08b6d9a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+        'https://images.unsplash.com/photo-1572191267783-5618f992aff5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+        'https://images.unsplash.com/photo-1554744512-783e8dc69b10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',]
     }
 },
   {

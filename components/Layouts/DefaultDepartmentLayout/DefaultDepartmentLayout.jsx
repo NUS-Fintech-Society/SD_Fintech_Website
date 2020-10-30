@@ -9,8 +9,8 @@ import Slider from "react-slick";
 
 const DefaultDepartmentLayout = (props) => {
 
-  const [currentImageIndex, setCurrentImageIndex] = useState(2);
-  const [currentImageIndexTwo, setCurrentImageIndexTwo] = useState(2);
+  const [currentImageIndex, setCurrentImageIndex] = useState(3);
+  const [currentImageIndexTwo, setCurrentImageIndexTwo] = useState(3);
 
   useEffect(() => {
     console.log("USE EFFECT PRINTING");
@@ -71,7 +71,8 @@ const DefaultDepartmentLayout = (props) => {
   const photosTwo = [
     {
       name: 'Photo 1',
-      url: 'https://images.unsplash.com/photo-1596006889651-0cfd9863d722?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
+      // url: 'https://images.unsplash.com/photo-1596006889651-0cfd9863d722?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
+      url: 'https://i.imgur.com/yAcIkqy.jpg'
     },
     {
       name: 'Photo 2',
@@ -293,7 +294,7 @@ const DefaultDepartmentLayout = (props) => {
                 {props.children[4]}
                 <div>
                   {/* 2. Interactive Dashboard */}
-                  {props.children[5]}
+                  {props.children[1]}
                </div>
               </div>
               <div style={{ clear: "both" }}></div>
