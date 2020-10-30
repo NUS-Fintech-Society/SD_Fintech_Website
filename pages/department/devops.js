@@ -1,6 +1,7 @@
 import React from "react";
 
 import DefaultLayout from "components/Layouts/DefaultLayout/DefaultLayout";
+import DefaultDepartmentLayout from "components/Layouts/DefaultDepartmentLayout/DefaultDepartmentLayout";
 
 const DevOps = (props) => {
   return (

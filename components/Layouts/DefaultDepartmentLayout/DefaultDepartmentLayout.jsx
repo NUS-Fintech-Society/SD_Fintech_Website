@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Head from "next/head";
-import styles from "./DefaultDepartment.module.scss";
+import styles from "./DefaultDepartmentLayout.module.scss";
 
 import NavBar from "components/NavBar/NavBar";
 import Footer from "components/Footer/Footer";
 
 import Slider from "react-slick";
 
-const DefaultDepartment = (props) => {
+const DefaultDepartmentLayout = (props) => {
 
   const [currentImageIndex, setCurrentImageIndex] = useState(2);
   const [currentImageIndexTwo, setCurrentImageIndexTwo] = useState(2);
@@ -343,4 +343,4 @@ const DefaultDepartment = (props) => {
 
 
 
-export default DefaultDepartment;
+export default DefaultDepartmentLayout;

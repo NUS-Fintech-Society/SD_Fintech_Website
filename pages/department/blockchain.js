@@ -1,10 +1,11 @@
 import React from "react";
 
-import DefaultDepartment from "components/Layouts/DefaultLayout/DefaultDepartment";
+import DefaultLayout from "components/Layouts/DefaultLayout/DefaultLayout";
+import DefaultDepartmentLayout from "components/Layouts/DefaultDepartmentLayout/DefaultDepartmentLayout";
 
 const blockchain = (props) => {
   return (
-    <DefaultDepartment>
+    <DefaultDepartmentLayout>
       <div>
           <h1 >Blockchain Department</h1>
       </div>
@@ -14,7 +15,7 @@ const blockchain = (props) => {
       <div>
       To nurture a community of blockchain enthusiasts, where members can learn
       </div>
-    </DefaultDepartment>
+    </DefaultDepartmentLayout>
   );
 };
 
