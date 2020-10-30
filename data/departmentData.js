@@ -4,6 +4,11 @@ export default [
     deptName: "Blockchain Department",
     purpose: "Equip our members with practical knowledge of Blockchain technology",
     goal: "To nurture a community of blockchain enthusiasts, where members can learn",
+    projectOne:{
+        title: "Sentiment Analysis on Financial News",
+        detailOne: "1. Full end-to-end project from data extraction to data analysis to prediction",
+        detailTwo: "2. Interactive Dashboar",
+    }
 },
   {
     id: 1,

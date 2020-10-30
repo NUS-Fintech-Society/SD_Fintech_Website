@@ -287,10 +287,13 @@ const DefaultDepartmentLayout = (props) => {
                 <h1>________________ Project 1</h1>
               </div>
               <div className={styles.projecttitle}>
-                <h3>Sentiment Analysis on Financial News</h3>
-                1. Full end-to-end project from data extraction to data analysis to prediction
+                {/* <h3>Sentiment Analysis on Financial News</h3> */}
+                <h3>{props.children[3]}</h3>
+                {/* 1. Full end-to-end project from data extraction to data analysis to prediction */}
+                {props.children[4]}
                 <div>
-                  2. Interactive Dashboard
+                  {/* 2. Interactive Dashboard */}
+                  {props.children[5]}
                </div>
               </div>
               <div style={{ clear: "both" }}></div>

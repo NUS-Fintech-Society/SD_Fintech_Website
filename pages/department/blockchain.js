@@ -17,6 +17,15 @@ const blockchain = (props) => {
         <div>
           {departmentData[0].goal}
         </div>
+        <div>
+        {departmentData[0].projectOne.title}
+        </div>
+        <div>
+        {departmentData[0].projectOne.detailOne}
+        </div>
+        <div>
+        {departmentData[0].projectOne.detailTwo}
+        </div>
       </DefaultDepartmentLayout>
     </DefaultLayout>
   );
