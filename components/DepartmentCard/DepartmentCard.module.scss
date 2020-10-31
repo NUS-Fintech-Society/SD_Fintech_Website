@@ -1,0 +1,33 @@
+@import "styles/variables.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px 1px #e5e5e5;
+  padding: 2rem;
+  width: 60%;
+  height: 100%;
+
+  h3 {
+    color: $primary-grey-1;
+    font-family: "Lato";
+  }
+
+  .button {
+    margin-top: 1rem;
+    background-color: $primary-blue-1;
+    color: $primary-white-1;
+  }
+
+  .image {
+    width: 70px;
+  }
+}
+
+@media (max-width: 769px) {
+  .container {
+    width: 100%;
+  }
+}
