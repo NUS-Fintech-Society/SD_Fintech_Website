@@ -1,162 +1,155 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-
+@import "styles/variables.scss";
 
 .layout {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    font-family: 'Lato';
-    padding-top: 5%;
-  }
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  font-family: "Lato";
+  padding-top: 5%;
+}
 
-.title{
+.title {
   text-align: center;
   font-size: 1.5vw;
 }
 
-.projecttitle{
+.projecttitle {
   font-size: 1.5vw;
 }
 
 .container {
-  background-color:#ededed;
-  flex-basis:50%;
-  box-sizing:border-box;
+  background-color: #ededed;
+  flex-basis: 50%;
+  box-sizing: border-box;
   margin: 10px;
-  position:relative;
+  position: relative;
 }
 
-.flex{
-  display:flex;
-  height:35vh;
+.flex {
+  display: flex;
+  height: 35vh;
 }
 
-.image{
-  position:absolute;
-  width:30%;/*image width*/
-  height:50%;/*image height*/
-  bottom:0px;
+.image {
+  position: absolute;
+  width: 30%; /*image width*/
+  height: 50%; /*image height*/
+  bottom: 0px;
   background: url("/blockchain.jpg") no-repeat;
 }
 
-.imageleft{
-  position:absolute;
-  width:30%;/*image width*/
-  height:50%;/*image height*/
-  bottom:0px;
-  right:0px;
+.imageleft {
+  position: absolute;
+  width: 30%; /*image width*/
+  height: 50%; /*image height*/
+  bottom: 0px;
+  right: 0px;
   background: url("/blockchain.jpg") no-repeat;
 }
 
-.line{
-  width:30%;
+.line {
+  width: 30%;
   margin-left: 10px;
 }
 
-.lineright{
-  width:30%;
+.lineright {
+  width: 30%;
   margin-right: 10px;
   text-align: right;
 }
 
-.blank{
-  flex-basis:10%;
+.blank {
+  flex-basis: 10%;
 }
 
-.boxtitle{
+.boxtitle {
   font-size: 1.5vw;
   margin-left: 10px;
 }
 
-.boxbody{
+.boxbody {
   font-size: 1.5vw;
   margin: 10px;
 }
 
-.boxbodyright{
+.boxbodyright {
   font-size: 1.5vw;
   margin: 10px;
   text-align: right;
 }
 
-.boxtitleright{
+.boxtitleright {
   font-size: 1.5vw;
   text-align: right;
   margin-right: 10px;
 }
 
-
-
-@media only screen and (max-width: 500px){
-  .flex{
-    display:flex;
-    height:15vh;
+@media only screen and (max-width: 500px) {
+  .flex {
+    display: flex;
+    height: 15vh;
   }
   .layout {
     display: flex;
     flex-direction: column;
     height: auto;
-    font-family: 'Lato';
-    padding-top: 12%;
-  }
- 
-}
-
-
-@media only screen and (max-width: 800px){
-  .flex{
-    display:flex;
-    height:18vh;
-  }
-  .layout {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    font-family: 'Lato';
+    font-family: "Lato";
     padding-top: 12%;
   }
 }
 
-@media only screen and (min-width: 1200px){
-  .flex{
-    display:flex;
-    height:40vh;
+@media only screen and (max-width: 800px) {
+  .flex {
+    display: flex;
+    height: 18vh;
   }
   .layout {
     display: flex;
     flex-direction: column;
     height: auto;
-    font-family: 'Lato';
-    padding-top: 5%;
+    font-family: "Lato";
+    padding-top: 12%;
   }
 }
 
-@media only screen and (min-width: 1800px){
-  .flex{
-    display:flex;
-    height:40vh;
+@media only screen and (min-width: 1200px) {
+  .flex {
+    display: flex;
+    height: 40vh;
   }
   .layout {
     display: flex;
     flex-direction: column;
     height: auto;
-    font-family: 'Lato';
+    font-family: "Lato";
     padding-top: 5%;
   }
 }
 
+@media only screen and (min-width: 1800px) {
+  .flex {
+    display: flex;
+    height: 40vh;
+  }
+  .layout {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    font-family: "Lato";
+    padding-top: 5%;
+  }
+}
 
 .SlickCarousel {
   text-align: center;
   /* width: 70%; */
   margin-left: 20%;
 }
- 
+
 .SlickCarousel-logo {
   height: 40vmin;
 }
- 
+
 .SlickCarousel-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -167,18 +160,17 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
- 
+
 .SlickCarousel-link {
   color: #09d3ac;
 }
- 
+
 .slides .slick-prev,
 .slides .slick-next {
   position: absolute;
   top: 50%;
   z-index: 1;
 }
-
 
 .slides {
   position: relative;
@@ -188,7 +180,7 @@
 .slides .slick-next {
   position: absolute;
   top: 50%;
-  z-index:1;
+  z-index: 1;
 }
 
 .slides .slick-prev {
@@ -207,74 +199,71 @@
 
 /*This below is from the previos alice carousel part*/
 
+.previmg {
+  // height: 20%;
+  // width: 20%;
 
-.previmg{
-// height: 20%;
-// width: 20%;
+  //testing reponsive
+  width: 20%;
+  height: undefined;
+  aspect-ratio: 135/76;
 
-//testing reponsive
-width: 20%;
-height: undefined;
-aspect-ratio: 135/76;
-
-opacity:0.3;
-position: absolute;
-object-fit: cover
+  opacity: 0.3;
+  position: absolute;
+  object-fit: cover;
 }
-
 
 .projectcontainer {
-// margin-top: 64px;
-// margin-left: 64px;
-display:flex;
-margin-top: 5%;
-margin-bottom: 3%;
-// border: 3px solid black;
+  // margin-top: 64px;
+  // margin-left: 64px;
+  display: flex;
+  margin-top: 5%;
+  margin-bottom: 3%;
+  // border: 3px solid black;
 }
-
 
 //This my original way of doing container
 .carouselcontainer {
-// border: 3px solid black;
-// float: left;
-margin: 10px;
-flex-basis: 50%;
-width: 45%;}
+  // border: 3px solid black;
+  // float: left;
+  margin: 10px;
+  flex-basis: 50%;
+  width: 45%;
+}
 
 .detailcontainer {
   flex-basis: 50%;
-// border: 3px solid black;
-// float: left;
-width: 55%;
-margin: 10px;
+  // border: 3px solid black;
+  // float: left;
+  width: 55%;
+  margin: 10px;
 }
 
 .detailcontainerleft {
-/* display: inline; */
-/* border: 3px solid black; */
-flex-basis: 50%;
-// float: left;
-width: 55%;
-margin-right: 5%;
+  /* display: inline; */
+  /* border: 3px solid black; */
+  flex-basis: 50%;
+  // float: left;
+  width: 55%;
+  margin-right: 5%;
 }
 
 .projecttitle {
-/* width: 70%; */
-text-align: left;
-/* margin-top: 10%; */
-/* border: 3px solid red; */
+  /* width: 70%; */
+  text-align: left;
+  /* margin-top: 10%; */
+  /* border: 3px solid red; */
 }
 
 .projectbody {
-margin-top: 5%;
-/* border: 3px solid blue; */
-text-align: left;
-font-weight: lighter;
-
+  margin-top: 5%;
+  /* border: 3px solid blue; */
+  text-align: left;
+  font-weight: lighter;
 }
 
 .projectrow {
-margin-top: 15%;
-position: relative;
-border: solid yellow;
+  margin-top: 15%;
+  position: relative;
+  border: solid yellow;
 }

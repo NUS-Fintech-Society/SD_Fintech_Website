@@ -1,19 +1,13 @@
 import React, { useState } from "react";
-import Head from "next/head";
 import styles from "./DefaultDepartmentLayout.module.scss";
-
-import NavBar from "components/NavBar/NavBar";
-import Footer from "components/Footer/Footer";
 
 import Slider from "react-slick";
 import DefaultLayout from "components/Layouts/DefaultLayout/DefaultLayout";
 
 const DefaultDepartmentLayout = (props) => {
-
   const [currentImageIndex, setCurrentImageIndex] = useState(3);
   const [currentImageIndexTwo, setCurrentImageIndexTwo] = useState(3);
   const [data, setData] = useState(props.department);
-
 
   const changeImage = (e) => {
     if (e.item == 0) {
@@ -55,25 +49,24 @@ const DefaultDepartmentLayout = (props) => {
         breakpoint: 700,
         settings: {
           arrows: false,
-          slidesToShow: 3
-        }
+          slidesToShow: 3,
+        },
       },
       {
         breakpoint: 500,
         settings: {
           arrows: false,
-          slidesToShow: 2
-        }
+          slidesToShow: 2,
+        },
       },
       {
         breakpoint: 400,
         settings: {
           arrows: false,
-          slidesToShow: 1
-        }
-      }
-    ]
-
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   const settingsTwo = {
@@ -100,34 +93,37 @@ const DefaultDepartmentLayout = (props) => {
         breakpoint: 700,
         settings: {
           arrows: false,
-          slidesToShow: 3
-        }
+          slidesToShow: 3,
+        },
       },
       {
         breakpoint: 500,
         settings: {
           arrows: false,
-          slidesToShow: 2
-        }
+          slidesToShow: 2,
+        },
       },
       {
         breakpoint: 400,
         settings: {
           arrows: false,
-          slidesToShow: 1
-        }
-      }
-    ]
-
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
-
 
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
       <div
         className={className}
-        style={{ ...style, display: "block", background: "grey", marginTop: '38%' }}
+        style={{
+          ...style,
+          display: "block",
+          background: "grey",
+          marginTop: "38%",
+        }}
         onClick={onClick}
       />
     );
@@ -138,12 +134,16 @@ const DefaultDepartmentLayout = (props) => {
     return (
       <div
         className={className}
-        style={{ ...style, display: "block", background: "grey", marginTop: '38%' }}
+        style={{
+          ...style,
+          display: "block",
+          background: "grey",
+          marginTop: "38%",
+        }}
         onClick={onClick}
       />
     );
   }
-
 
   return (
     <div>
@@ -153,50 +153,43 @@ const DefaultDepartmentLayout = (props) => {
             <h1>{data.deptName}</h1>
           </div>
           <div className={styles.flex}>
-
             <div className={styles.blank}></div>
             <div className={styles.container}>
               <div className={styles.boxtitle}>
                 <h3>Purpose</h3>
               </div>
-              <div className={styles.boxbody}>
-                {data.purpose}
-              </div>
+              <div className={styles.boxbody}>{data.purpose}</div>
               <hr className={styles.line}></hr>
-              <div className={styles.imageleft}>
-              </div>
+              <div className={styles.imageleft}></div>
             </div>
 
             <div className={styles.container}>
               <div className={styles.boxtitleright}>
                 <h3>Goal</h3>
               </div>
-              <div className={styles.boxbodyright}>
-                {data.goal}
-              </div>
+              <div className={styles.boxbodyright}>{data.goal}</div>
               <hr className={styles.lineright}></hr>
-              <div className={styles.image}>
-              </div>
+              <div className={styles.image}></div>
             </div>
             <div className={styles.blank}></div>
-
           </div>
           <div>
-
             {/* PROJECT 1 */}
             <div className={styles.projectcontainer}>
               <div className={styles.blank}></div>
-              <div className={styles.carouselcontainer} >
-                <img src={data.projectOne.imageURLs[currentImageIndex]} className={styles.previmg} />
-                <div className={styles.SlickCarousel}
-                  style={{ padding: 24 }}>
+              <div className={styles.carouselcontainer}>
+                <img
+                  src={data.projectOne.imageURLs[currentImageIndex]}
+                  className={styles.previmg}
+                />
+                <div className={styles.SlickCarousel} style={{ padding: 24 }}>
                   <Slider {...settings}>
                     {data.projectOne.carouselArray.map((photo) => {
                       return (
                         <div>
                           <img width="100%" src={photo.url} />
                         </div>
-                      )
+                      );
                     })}
                   </Slider>
                 </div>
@@ -210,13 +203,8 @@ const DefaultDepartmentLayout = (props) => {
                   <h3>{data.projectOne.title}</h3>
 
                   {data.projectOne.details.map((detail) => {
-                    return (
-                      <div>
-                        {detail}
-                      </div>
-                    )
+                    return <div>{detail}</div>;
                   })}
-
                 </div>
                 <div style={{ clear: "both" }}></div>
               </div>
@@ -225,10 +213,8 @@ const DefaultDepartmentLayout = (props) => {
 
             <div style={{ clear: "both" }}></div>
 
-
             {/* PROJECT 2 */}
-            <div className={styles.projectcontainer} >
-
+            <div className={styles.projectcontainer}>
               <div className={styles.blank}></div>
 
               <div className={styles.detailcontainerleft}>
@@ -239,27 +225,24 @@ const DefaultDepartmentLayout = (props) => {
                   <h3>{data.projectTwo.title}</h3>
 
                   {data.projectTwo.details.map((detail) => {
-                    return (
-                      <div>
-                        {detail}
-                      </div>
-                    )
+                    return <div>{detail}</div>;
                   })}
-
                 </div>
                 <div style={{ clear: "both" }}></div>
               </div>
               <div className={styles.carouselcontainer}>
-                <img src={data.projectTwo.imageURLs[currentImageIndexTwo]} className={styles.previmg} />
-                <div className={styles.SlickCarousel}
-                  style={{ padding: 24 }}>
+                <img
+                  src={data.projectTwo.imageURLs[currentImageIndexTwo]}
+                  className={styles.previmg}
+                />
+                <div className={styles.SlickCarousel} style={{ padding: 24 }}>
                   <Slider {...settingsTwo}>
                     {data.projectTwo.carouselArray.map((photo) => {
                       return (
                         <div>
                           <img width="100%" src={photo.url} />
                         </div>
-                      )
+                      );
                     })}
                   </Slider>
                 </div>
@@ -271,10 +254,8 @@ const DefaultDepartmentLayout = (props) => {
           </div>
         </div>
       </DefaultLayout>
-    </div >
+    </div>
   );
 };
-
-
 
 export default DefaultDepartmentLayout;
