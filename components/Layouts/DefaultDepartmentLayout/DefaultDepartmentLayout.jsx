@@ -181,10 +181,7 @@ const DefaultDepartmentLayout = (props) => {
             <div className={styles.blank}></div>
 
           </div>
-
           <div>
-
-
 
             {/* PROJECT 1 */}
             <div className={styles.projectcontainer}>
@@ -211,10 +208,15 @@ const DefaultDepartmentLayout = (props) => {
                 </div>
                 <div className={styles.projecttitle}>
                   <h3>{data.projectOne.title}</h3>
-                  {data.projectOne.detailOne}
-                  <div>
-                    {data.projectOne.detailTwo}
-                  </div>
+
+                  {data.projectOne.details.map((detail) => {
+                    return (
+                      <div>
+                        {detail}
+                      </div>
+                    )
+                  })}
+
                 </div>
                 <div style={{ clear: "both" }}></div>
               </div>
@@ -235,10 +237,15 @@ const DefaultDepartmentLayout = (props) => {
                 </div>
                 <div className={styles.projecttitle}>
                   <h3>{data.projectTwo.title}</h3>
-                  {data.projectTwo.detailOne}
-                  <div>
-                    {data.projectTwo.detailTwo}
-                  </div>
+
+                  {data.projectTwo.details.map((detail) => {
+                    return (
+                      <div>
+                        {detail}
+                      </div>
+                    )
+                  })}
+
                 </div>
                 <div style={{ clear: "both" }}></div>
               </div>
