@@ -181,10 +181,7 @@ const DefaultDepartmentLayout = (props) => {
             <div className={styles.blank}></div>
 
           </div>
-
           <div>
-
-
 
             {/* PROJECT 1 */}
             <div className={styles.projectcontainer}>
@@ -240,13 +237,6 @@ const DefaultDepartmentLayout = (props) => {
                 </div>
                 <div className={styles.projecttitle}>
                   <h3>{data.projectTwo.title}</h3>
-                  {/* {data.projectTwo.detailOne}
-                  <div>
-                    {data.projectTwo.detailTwo}
-                  </div>
-                  <div>
-                    {data.projectTwo.detailThree}
-                  </div> */}
 
                   {data.projectTwo.details.map((detail) => {
                     return (
