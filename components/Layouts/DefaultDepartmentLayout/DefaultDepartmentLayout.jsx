@@ -6,6 +6,7 @@ import NavBar from "components/NavBar/NavBar";
 import Footer from "components/Footer/Footer";
 
 import Slider from "react-slick";
+import DefaultLayout from "components/Layouts/DefaultLayout/DefaultLayout";
 
 const DefaultDepartmentLayout = (props) => {
 
@@ -146,129 +147,124 @@ const DefaultDepartmentLayout = (props) => {
 
   return (
     <div>
-      <Head>
-        <title>NUS FinTech Society</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
-      </Head>
-      <div className={styles.layout}>
-
-
-        <div className={styles.title}>
-          <h1>{data.deptName}</h1>
-        </div>
-        <div className={styles.flex}>
-
-          <div className={styles.blank}></div>
-          <div className={styles.container}>
-            <div className={styles.boxtitle}>
-              <h3>Purpose</h3>
-            </div>
-            <div className={styles.boxbody}>
-              {data.purpose}
-            </div>
-            <hr className={styles.line}></hr>
-            <div className={styles.imageleft}>
-            </div>
+      <DefaultLayout>
+        <div className={styles.layout}>
+          <div className={styles.title}>
+            <h1>{data.deptName}</h1>
           </div>
+          <div className={styles.flex}>
 
-          <div className={styles.container}>
-            <div className={styles.boxtitleright}>
-              <h3>Goal</h3>
-            </div>
-            <div className={styles.boxbodyright}>
-              {data.goal}
-            </div>
-            <hr className={styles.lineright}></hr>
-            <div className={styles.image}>
-            </div>
-          </div>
-          <div className={styles.blank}></div>
-
-        </div>
-
-        <div>
-
-
-
-          {/* PROJECT 1 */}
-          <div className={styles.projectcontainer}>
             <div className={styles.blank}></div>
-            <div className={styles.carouselcontainer} >
-              <img src={data.projectOne.imageURLs[currentImageIndex]} className={styles.previmg} />
-              <div className={styles.SlickCarousel}
-                style={{ padding: 24 }}>
-                <Slider {...settings}>
-                  {data.projectOne.carouselArray.map((photo) => {
-                    return (
-                      <div>
-                        <img width="100%" src={photo.url} />
-                      </div>
-                    )
-                  })}
-                </Slider>
+            <div className={styles.container}>
+              <div className={styles.boxtitle}>
+                <h3>Purpose</h3>
               </div>
-              <div style={{ clear: "both" }}></div>
+              <div className={styles.boxbody}>
+                {data.purpose}
+              </div>
+              <hr className={styles.line}></hr>
+              <div className={styles.imageleft}>
+              </div>
             </div>
-            <div className={styles.detailcontainer}>
-              <div className={styles.projecttitle}>
-                <h1>________________ Project 1</h1>
+
+            <div className={styles.container}>
+              <div className={styles.boxtitleright}>
+                <h3>Goal</h3>
               </div>
-              <div className={styles.projecttitle}>
-                <h3>{data.projectOne.title}</h3>
-                {data.projectOne.detailOne}
-                <div>
-                  {data.projectOne.detailTwo}
+              <div className={styles.boxbodyright}>
+                {data.goal}
+              </div>
+              <hr className={styles.lineright}></hr>
+              <div className={styles.image}>
+              </div>
+            </div>
+            <div className={styles.blank}></div>
+
+          </div>
+
+          <div>
+
+
+
+            {/* PROJECT 1 */}
+            <div className={styles.projectcontainer}>
+              <div className={styles.blank}></div>
+              <div className={styles.carouselcontainer} >
+                <img src={data.projectOne.imageURLs[currentImageIndex]} className={styles.previmg} />
+                <div className={styles.SlickCarousel}
+                  style={{ padding: 24 }}>
+                  <Slider {...settings}>
+                    {data.projectOne.carouselArray.map((photo) => {
+                      return (
+                        <div>
+                          <img width="100%" src={photo.url} />
+                        </div>
+                      )
+                    })}
+                  </Slider>
                 </div>
+                <div style={{ clear: "both" }}></div>
               </div>
-              <div style={{ clear: "both" }}></div>
-            </div>
-            <div className={styles.blank}></div>
-          </div>
-
-          <div style={{ clear: "both" }}></div>
-
-
-          {/* PROJECT 2 */}
-          <div className={styles.projectcontainer} >
-
-            <div className={styles.blank}></div>
-
-            <div className={styles.detailcontainerleft}>
-              <div className={styles.projecttitle}>
-                <h1>Project 2 ________________ </h1>
-              </div>
-              <div className={styles.projecttitle}>
-                <h3>{data.projectTwo.title}</h3>
-                {data.projectTwo.detailOne}
-                <div>
-                  {data.projectTwo.detailTwo}
+              <div className={styles.detailcontainer}>
+                <div className={styles.projecttitle}>
+                  <h1>________________ Project 1</h1>
                 </div>
+                <div className={styles.projecttitle}>
+                  <h3>{data.projectOne.title}</h3>
+                  {data.projectOne.detailOne}
+                  <div>
+                    {data.projectOne.detailTwo}
+                  </div>
+                </div>
+                <div style={{ clear: "both" }}></div>
               </div>
-              <div style={{ clear: "both" }}></div>
+              <div className={styles.blank}></div>
             </div>
-            <div className={styles.carouselcontainer}>
-              <img src={data.projectTwo.imageURLs[currentImageIndexTwo]} className={styles.previmg} />
-              <div className={styles.SlickCarousel}
-                style={{ padding: 24 }}>
-                <Slider {...settingsTwo}>
-                  {data.projectTwo.carouselArray.map((photo) => {
-                    return (
-                      <div>
-                        <img width="100%" src={photo.url} />
-                      </div>
-                    )
-                  })}
-                </Slider>
-              </div>
-              <div style={{ clear: "both" }}></div>
-            </div>
+
             <div style={{ clear: "both" }}></div>
-            <div className={styles.blank}></div>
+
+
+            {/* PROJECT 2 */}
+            <div className={styles.projectcontainer} >
+
+              <div className={styles.blank}></div>
+
+              <div className={styles.detailcontainerleft}>
+                <div className={styles.projecttitle}>
+                  <h1>Project 2 ________________ </h1>
+                </div>
+                <div className={styles.projecttitle}>
+                  <h3>{data.projectTwo.title}</h3>
+                  {data.projectTwo.detailOne}
+                  <div>
+                    {data.projectTwo.detailTwo}
+                  </div>
+                </div>
+                <div style={{ clear: "both" }}></div>
+              </div>
+              <div className={styles.carouselcontainer}>
+                <img src={data.projectTwo.imageURLs[currentImageIndexTwo]} className={styles.previmg} />
+                <div className={styles.SlickCarousel}
+                  style={{ padding: 24 }}>
+                  <Slider {...settingsTwo}>
+                    {data.projectTwo.carouselArray.map((photo) => {
+                      return (
+                        <div>
+                          <img width="100%" src={photo.url} />
+                        </div>
+                      )
+                    })}
+                  </Slider>
+                </div>
+                <div style={{ clear: "both" }}></div>
+              </div>
+              <div style={{ clear: "both" }}></div>
+              <div className={styles.blank}></div>
+            </div>
           </div>
         </div>
-      </div>
+      </DefaultLayout>
     </div >
-
   );
 };
 
