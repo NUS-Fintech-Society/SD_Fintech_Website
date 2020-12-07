@@ -6,7 +6,6 @@ import Button from "@material-ui/core/Button";
 
 const DepartmentCard = (props) => {
   const { icon, title, description, route } = props;
-  console.log(route);
   return (
     <div className={styles.container}>
       <img src={icon} alt={title} className={styles.image} />

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 
 import styles from "styles/pages/Events.module.scss";
 
-
 import DefaultLayout from "components/Layouts/DefaultLayout/DefaultLayout";
 import EventsCalendar from "components/Calendar/EventsCalendar";
 import EventCard from "components/EventCard/EventCard";
@@ -14,12 +13,10 @@ const Events = (props) => {
 
   const showLatestEvent = (eventList) => {
     console.assert(eventList.length != 0);
-    const currentDate = new Date();
-    const result = eventList.filter((event) => event.start >= currentDate);
-    result.sort((eventOne, eventTwo) => {
-      return eventOne.start - eventTwo.start;
+    eventList.sort((eventOne, eventTwo) => {
+      return eventTwo.start - eventOne.start;
     });
-    return result[0];
+    return eventList[0];
   };
 
   useEffect(() => {
