@@ -1,15 +1,29 @@
 import React, { useState, useEffect } from "react";
+import Please from "pleasejs";
 
 import styles from "styles/pages/Events.module.scss";
 
 import DefaultLayout from "components/Layouts/DefaultLayout/DefaultLayout";
 import EventsCalendar from "components/Calendar/EventsCalendar";
 import EventCard from "components/EventCard/EventCard";
-import events from "data/events";
+
+import request from "util/request";
 
 const Events = (props) => {
   const [isLoading, setIsLoading] = useState(true);
+  const [events, setEvents] = useState();
   const [selectedEvent, setSelectedEvent] = useState();
+
+  const fetchEvents = async () => {
+    try {
+      const response = await request.get("events/");
+      response.data.map((event) => (event.background = Please.make_color()));
+      setEvents(response.data);
+      setSelectedEvent(showLatestEvent(response.data));
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   const showLatestEvent = (eventList) => {
     console.assert(eventList.length != 0);
@@ -20,8 +34,9 @@ const Events = (props) => {
   };
 
   useEffect(() => {
-    setSelectedEvent(showLatestEvent(events));
-    setIsLoading(false);
+    fetchEvents().then(() => {
+      setIsLoading(false);
+    });
   }, []);
 
   const setEvent = (event) => {
@@ -35,7 +50,9 @@ const Events = (props) => {
           <main className={styles.main}>
             <h1>Our Events</h1>
             <div className={styles.eventsContainer}>
-              <EventsCalendar events={events} setEvent={setEvent} />
+              {!isLoading && (
+                <EventsCalendar events={events} setEvent={setEvent} />
+              )}
               <div className={styles.eventCardContainer}>
                 {!isLoading && <EventCard event={selectedEvent} />}
               </div>

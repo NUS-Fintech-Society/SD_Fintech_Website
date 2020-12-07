@@ -18,7 +18,7 @@ const EventCard = (props) => {
   };
 
   const formDate = (start, end) => {
-    return parseTime(start) + " - " + parseTime(end);
+    return parseTime(new Date(start)) + " - " + parseTime(new Date(end));
   };
 
   return (
@@ -26,7 +26,7 @@ const EventCard = (props) => {
       className={styles.eventCard}
       style={{ backgroundColor: event.background }}
     >
-      <h1 className={styles.title}>{event.title}</h1>
+      <h1 className={styles.title}>{event.name}</h1>
       <div className={styles.iconTextContainer}>
         <div className={styles.iconContainer}>
           <LocationIcon className={styles.icon} />
