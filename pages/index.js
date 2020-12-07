@@ -36,14 +36,14 @@ const Home = (props) => {
             </p>
           </div>
           <div className={styles.descriptionContainer}>
-            <p>
+            <p id="ourTeam" >
               We currently have over 80 members, each with a strong grasp of
               their individual research areas.
             </p>
           </div>
         </div>
         <div className={styles.ourTeam}>
-          <h1>Our Team</h1>
+          <h1 >Our Team</h1>
           <div className={styles.cardsContainer}>
             {departments.map((department) => (
               <div className={styles.cardContainer}>
@@ -62,7 +62,7 @@ const Home = (props) => {
           <h1>Upcoming Events</h1>
         </div>
         <div>
-          <h1>Contact Us</h1>
+          <h1 id="contactUs">Contact Us</h1>
         </div>
       </main>
     </DefaultLayout>

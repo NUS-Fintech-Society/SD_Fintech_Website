@@ -13,7 +13,7 @@ const NavBar = (props) => {
         </div>
         <div className={styles.navbar_logo}>
           <img
-            src="/images/SocietyLogo.png"
+            src="/images/SocietyLogo.png"  
             alt="society logo"
             className={styles.image}
           />
@@ -28,10 +28,10 @@ const NavBar = (props) => {
               <Link href="/events">Events</Link>
             </li>
             <li>
-              <Link href="#">Our Team</Link>
+              <Link href="#ourTeam">Our Team</Link>
             </li>
             <li>
-              <Link href="#">Contact Us</Link>
+              <Link href="#contactUs">Contact Us</Link>
             </li>
           </ul>
         </div>
