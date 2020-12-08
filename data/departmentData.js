@@ -212,8 +212,8 @@ export default [
           "BNP Paribas is a French Multinational Bank that offers clients solutions for capital markets, securities services, financing, treasury and financial advisory. NUS Fintech Society is collaborating with their Corporate Treasury unit to work on interesting projects like Cash Flow Forecasting and Fraud Detection.",
           "Cash Flow Forecasting:",
           "Creating a cash flow forecasting model for BNPP clients to have a clearer understanding of their working capital",
-          "Fraud Detection",
-          "Creating a transparent and itnerpretable model to detect corporate fraud",
+          "Fraud Detection:",
+          "Creating a transparent and interpretable model to detect corporate fraud",
         ],
         imageURLs: [
           "https://images.unsplash.com/photo-1596006889651-0cfd9863d722?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
@@ -244,6 +244,83 @@ export default [
           },
         ],
       },
+      {
+        id: 3,
+        title: "Algo Trading",
+        details: [
+          "Our algo trading teams experiment with and try out cutting edge machine learning algorithms for trading. Previous works include Generative Adversarial Networks for price prediction, and a comprehensive Comparison of Prophet, LSTM and Decision Trees for Price Signal prediction.",
+          "The current teams are working on:",
+          "- Reinforcement learning for Cryptocurrency trading",
+          "- Paper trading of algorithms like pairs trading, leveraged ERTF on Quantconnect",
+          "- Ongoing Collaborating with NUS Fintech Lab on this topic"
+        ],
+        imageURLs: [
+          "https://images.unsplash.com/photo-1554744512-d6c603f27c54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          "https://images.unsplash.com/photo-1538592116845-119a3974c958?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          "https://images.unsplash.com/photo-1560958089-b8a1929cea89?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          "https://images.unsplash.com/photo-1536700503339-1e4b06520771?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        ],
+        carouselArray: [
+          {
+            name: "Photo 1",
+            url:
+              "https://images.unsplash.com/photo-1554744512-d6c603f27c54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          },
+          {
+            name: "Photo 2",
+            url:
+              "https://images.unsplash.com/photo-1538592116845-119a3974c958?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          },
+          {
+            name: "Photo 3",
+            url:
+              "https://images.unsplash.com/photo-1560958089-b8a1929cea89?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          },
+          {
+            name: "Photo 4",
+            url:
+              "https://images.unsplash.com/photo-1536700503339-1e4b06520771?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          },
+        ],
+      },
+      {
+        id: 4,
+        title: "Natural Language Processing of Financial News",
+        details: [
+          "Increasingly, many investors are looking to alternative data to find buy signals for stocks. The most popular of which is Sentiment Analysis since the price of a stock is usually highly correlated with market sentiment. ",
+          "Previously, our members built a sentiment analysis dashboard for Financial Data provider SmartKarma which scored stocks based on market outlook. ",
+          "Currently, our members are also creating a public web application to implement markets sentiment analysis on Financial News. This will be available for use soon on the Fintech website.",
+          "In addition, our training wing members are all trying their hand at building their own NLP model for stock price signal prediction.",
+        ],
+        imageURLs: [
+          "https://images.unsplash.com/photo-1596006889651-0cfd9863d722?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          "https://images.unsplash.com/photo-1558368718-808f08b6d9a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          "https://images.unsplash.com/photo-1572191267783-5618f992aff5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          "https://images.unsplash.com/photo-1554744512-783e8dc69b10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        ],
+        carouselArray: [
+          {
+            name: "Photo 1",
+            url:
+              "https://images.unsplash.com/photo-1596006889651-0cfd9863d722?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          },
+          {
+            name: "Photo 2",
+            url:
+              "https://images.unsplash.com/photo-1558368718-808f08b6d9a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          },
+          {
+            name: "Photo 3",
+            url:
+              "https://images.unsplash.com/photo-1572191267783-5618f992aff5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          },
+          {
+            name: "Photo 4",
+            url:
+              "https://images.unsplash.com/photo-1554744512-783e8dc69b10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          },
+        ],
+      }
     ],
   },
 ];

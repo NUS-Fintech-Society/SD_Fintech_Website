@@ -219,12 +219,13 @@
   display: flex;
   margin-top: 5%;
   margin-bottom: 3%;
-  // border: 3px solid black;
+  align-items: center;
+  //border: 3px solid blue;
 }
 
 //This my original way of doing container
 .carouselcontainer {
-  // border: 3px solid black;
+  //border: 3px solid black;
   // float: left;
   margin: 10px;
   flex-basis: 50%;
@@ -241,7 +242,7 @@
 
 .detailcontainerleft {
   /* display: inline; */
-  /* border: 3px solid black; */
+   //border: 3px solid black;
   flex-basis: 50%;
   // float: left;
   width: 55%;
