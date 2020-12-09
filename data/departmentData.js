@@ -3,81 +3,116 @@ export default [
     id: 0,
     deptName: "Blockchain Department",
     purpose:
-      "Equip our members with practical knowledge of Blockchain technology",
+      "Raise professionals and enthusiasts of blockchain, cryptocurrency, and distributed ledger technology and equip them with a welath of knowledge and experience",
     goal:
-      "To nurture a community of blockchain enthusiasts, where members can learn and grow",
-    projectOne: {
-      title: "Cryptocurrency Investment Framework",
-      details: [
-        "1. Flaws of fundamental",
-        "2. Advantages of certain indicators",
-        "3. Alternative methods of trading",
-      ],
-      imageURLs: [
-        "https://images.unsplash.com/photo-1554744512-d6c603f27c54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-        "https://images.unsplash.com/photo-1538592116845-119a3974c958?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-        "https://images.unsplash.com/photo-1560958089-b8a1929cea89?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-        "https://images.unsplash.com/photo-1536700503339-1e4b06520771?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-      ],
-      carouselArray: [
-        {
-          name: "Photo 1",
-          url:
-            "https://images.unsplash.com/photo-1554744512-d6c603f27c54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-        },
-        {
-          name: "Photo 2",
-          url:
-            "https://images.unsplash.com/photo-1538592116845-119a3974c958?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-        },
-        {
-          name: "Photo 3",
-          url:
-            "https://images.unsplash.com/photo-1560958089-b8a1929cea89?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-        },
-        {
-          name: "Photo 4",
-          url:
-            "https://images.unsplash.com/photo-1536700503339-1e4b06520771?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-        },
-      ],
-    },
-
-    projectTwo: {
-      title: "Blockchain for supply chain operations",
-      details: [
-        "1. Seafood - illegal and unethical fishing",
-        "2. Diamond - countering the problem of blood diamonds",
-      ],
-      imageURLs: [
-        "https://images.unsplash.com/photo-1596006889651-0cfd9863d722?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-        "https://images.unsplash.com/photo-1558368718-808f08b6d9a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-        "https://images.unsplash.com/photo-1572191267783-5618f992aff5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-        "https://images.unsplash.com/photo-1554744512-783e8dc69b10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-      ],
-      carouselArray: [
-        {
-          name: "Photo 1",
-          url:
-            "https://images.unsplash.com/photo-1596006889651-0cfd9863d722?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-        },
-        {
-          name: "Photo 2",
-          url:
-            "https://images.unsplash.com/photo-1558368718-808f08b6d9a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-        },
-        {
-          name: "Photo 3",
-          url:
-            "https://images.unsplash.com/photo-1572191267783-5618f992aff5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-        },
-        {
-          name: "Photo 4",
-          url:
-            "https://images.unsplash.com/photo-1554744512-783e8dc69b10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-        },
-      ],
-    },
+      "1. Building and Expanding Knowledge: Gaining a broad understanding of the Blockchain ecosystem through internal education sessions and externall hosted workshops, seminars and courses. 2. Build expetise through industry-grade projects: Execute projects with external partners to produce projects of tangible value that adds to a portfolio that enables penetration into the Blockchain space ",
+    projects: [
+      {
+        id: 1,
+        title: "Charity Chain",
+        details: [
+          "People often find themselves skeptical of donations to charity organizations, such as the organization's authenticity and usage of funds. This proof of concept project aims to build a public, user-friendly platform that makes the identification of any charity and your own record of donation simple.",
+        ],
+        imageURLs: [
+          "https://images.unsplash.com/photo-1554744512-d6c603f27c54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          "https://images.unsplash.com/photo-1538592116845-119a3974c958?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          "https://images.unsplash.com/photo-1560958089-b8a1929cea89?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          "https://images.unsplash.com/photo-1536700503339-1e4b06520771?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        ],
+        carouselArray: [
+          {
+            name: "Photo 1",
+            url:
+              "https://images.unsplash.com/photo-1554744512-d6c603f27c54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          },
+          {
+            name: "Photo 2",
+            url:
+              "https://images.unsplash.com/photo-1538592116845-119a3974c958?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          },
+          {
+            name: "Photo 3",
+            url:
+              "https://images.unsplash.com/photo-1560958089-b8a1929cea89?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          },
+          {
+            name: "Photo 4",
+            url:
+              "https://images.unsplash.com/photo-1536700503339-1e4b06520771?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          },
+        ],
+      },
+      {
+        id: 2,
+        title: "E-Auction Platform",
+        details: [
+          "Centralized E-Auctions face the problems of a lack of trust from participants, hidden middlemen costs and a risk of corruption. This decentralized application demonstrates how the trust, authenticity and anonymity of auction bids can be improved by migrating to a blockchain-based system.",
+        ],
+        imageURLs: [
+          "https://images.unsplash.com/photo-1596006889651-0cfd9863d722?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          "https://images.unsplash.com/photo-1558368718-808f08b6d9a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          "https://images.unsplash.com/photo-1572191267783-5618f992aff5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          "https://images.unsplash.com/photo-1554744512-783e8dc69b10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        ],
+        carouselArray: [
+          {
+            name: "Photo 1",
+            url:
+              "https://images.unsplash.com/photo-1596006889651-0cfd9863d722?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          },
+          {
+            name: "Photo 2",
+            url:
+              "https://images.unsplash.com/photo-1558368718-808f08b6d9a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          },
+          {
+            name: "Photo 3",
+            url:
+              "https://images.unsplash.com/photo-1572191267783-5618f992aff5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          },
+          {
+            name: "Photo 4",
+            url:
+              "https://images.unsplash.com/photo-1554744512-783e8dc69b10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          },
+        ],
+      },
+      {
+        id: 3,
+        title: "Game",
+        details: [
+          "The vast majority of online games stores store in-gamg data on a centralized server, with gamers lacking personal ownership of valuable in-game items and vulnerable to hacks and game-economy manipulation. Blockchain, as a distributed database is able to return this ownership to the gamers. In this proof of concept, we demonstrate how games can be built on top of a distributed platform such as Ethereum.",
+        ],
+        imageURLs: [
+          "https://images.unsplash.com/photo-1554744512-d6c603f27c54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          "https://images.unsplash.com/photo-1538592116845-119a3974c958?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          "https://images.unsplash.com/photo-1560958089-b8a1929cea89?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          "https://images.unsplash.com/photo-1536700503339-1e4b06520771?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        ],
+        carouselArray: [
+          {
+            name: "Photo 1",
+            url:
+              "https://images.unsplash.com/photo-1554744512-d6c603f27c54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          },
+          {
+            name: "Photo 2",
+            url:
+              "https://images.unsplash.com/photo-1538592116845-119a3974c958?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          },
+          {
+            name: "Photo 3",
+            url:
+              "https://images.unsplash.com/photo-1560958089-b8a1929cea89?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          },
+          {
+            name: "Photo 4",
+            url:
+              "https://images.unsplash.com/photo-1536700503339-1e4b06520771?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          },
+        ],
+      },
+    ],
   },
   {
     id: 1,
@@ -252,7 +287,7 @@ export default [
           "The current teams are working on:",
           "- Reinforcement learning for Cryptocurrency trading",
           "- Paper trading of algorithms like pairs trading, leveraged ERTF on Quantconnect",
-          "- Ongoing Collaborating with NUS Fintech Lab on this topic"
+          "- Ongoing Collaborating with NUS Fintech Lab on this topic",
         ],
         imageURLs: [
           "https://images.unsplash.com/photo-1554744512-d6c603f27c54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
@@ -320,7 +355,7 @@ export default [
               "https://images.unsplash.com/photo-1554744512-783e8dc69b10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
           },
         ],
-      }
+      },
     ],
   },
 ];
