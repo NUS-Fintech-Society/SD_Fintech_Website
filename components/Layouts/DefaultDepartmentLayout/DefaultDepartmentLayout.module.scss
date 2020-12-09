@@ -17,6 +17,27 @@
   font-size: 1.5vw;
 }
 
+.projectNumberingRow {
+  //font-size: 1.5vw;
+  // border:3px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;  
+}
+
+.projectNumberingLineOdd {
+  width:60%;
+  font-size:1.0vw;
+  text-align: center;
+}
+
+.projectNumberingTextOdd {
+  width:40%;
+  font-size:1.5vw;
+  text-align: center;
+  //align-content: center;
+}
+
 .container {
   background-color: #ededed;
   flex-basis: 50%;

@@ -114,14 +114,19 @@ const ProjLayout = (props) => {
         <div style={{ clear: "both" }}></div>
       </div>
       <div className={styles.detailcontainer}>
-        <div className={styles.projecttitle}>
-          <h1>_______________ Project {project.id}</h1>
+        <div className={styles.projectNumberingRow}>
+          <div className={styles.projectNumberingLineOdd}>
+            <h1>_____________________</h1>
+          </div>
+          <div className={styles.projectNumberingTextOdd}>
+            <h1>Project {project.id}</h1>
+          </div>
         </div>
         <div className={styles.projecttitle}>
           <h3>{project.title}</h3>
 
           {project.details.map((detail) => {
-            return <div style={{marginBottom:'3%'}}>{detail}</div>;
+            return <div style={{ marginBottom: "3%" }}>{detail}</div>;
             //return <div style={{marginBottom:20}}>{detail}</div>;
           })}
         </div>
@@ -143,7 +148,7 @@ const ProjLayout = (props) => {
           <h3>{project.title}</h3>
 
           {project.details.map((detail) => {
-            return <div style={{marginBottom:'3%'}}>{detail}</div>;
+            return <div style={{ marginBottom: "3%" }}>{detail}</div>;
             //return <div style={{marginBottom:20}}>{detail}</div>;
           })}
         </div>
