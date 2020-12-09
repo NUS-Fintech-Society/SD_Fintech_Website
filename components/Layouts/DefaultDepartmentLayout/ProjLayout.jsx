@@ -116,7 +116,7 @@ const ProjLayout = (props) => {
       <div className={styles.detailcontainer}>
         <div className={styles.projectNumberingRow}>
           <div className={styles.projectNumberingLineOdd}>
-            <h1>_____________________</h1>
+            <h1>______________________</h1>
           </div>
           <div className={styles.projectNumberingTextOdd}>
             <h1>Project {project.id}</h1>
@@ -126,7 +126,11 @@ const ProjLayout = (props) => {
           <h3>{project.title}</h3>
 
           {project.details.map((detail) => {
-            return <div style={{ marginBottom: "3%" }}>{detail}</div>;
+            return (
+              <div style={{ marginBottom: "3%", textAlign: "justify" }}>
+                {detail}
+              </div>
+            );
             //return <div style={{marginBottom:20}}>{detail}</div>;
           })}
         </div>
@@ -141,14 +145,23 @@ const ProjLayout = (props) => {
       <div className={styles.blank}></div>
 
       <div className={styles.detailcontainerleft}>
-        <div className={styles.projecttitle}>
-          <h1>Project {project.id} _____________ </h1>
+        <div className={styles.projectNumberingRow}>
+          <div className={styles.projectNumberingTextEven}>
+            <h1>Project {project.id}</h1>
+          </div>
+          <div className={styles.projectNumberingLineEven}>
+            <h1>______________________</h1>
+          </div>
         </div>
         <div className={styles.projecttitle}>
           <h3>{project.title}</h3>
 
           {project.details.map((detail) => {
-            return <div style={{ marginBottom: "3%" }}>{detail}</div>;
+            return (
+              <div style={{ marginBottom: "3%", textAlign: "justify" }}>
+                {detail}
+              </div>
+            );
             //return <div style={{marginBottom:20}}>{detail}</div>;
           })}
         </div>

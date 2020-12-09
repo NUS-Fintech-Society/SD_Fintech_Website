@@ -19,22 +19,35 @@
 
 .projectNumberingRow {
   //font-size: 1.5vw;
-  // border:3px solid black;
+  //border:3px solid black;
   display: flex;
   flex-direction: row;
   justify-content: space-between;  
 }
 
 .projectNumberingLineOdd {
-  width:60%;
+  width:55%;
   font-size:1.0vw;
-  text-align: center;
+  text-align: right;
 }
 
 .projectNumberingTextOdd {
   width:40%;
   font-size:1.5vw;
-  text-align: center;
+  text-align: right;
+  //align-content: center;
+}
+
+.projectNumberingLineEven {
+  width:55%;
+  font-size:1.0vw;
+  text-align: left;
+}
+
+.projectNumberingTextEven {
+  width:40%;
+  font-size:1.5vw;
+  text-align: left;
   //align-content: center;
 }
 
@@ -241,6 +254,7 @@
   margin-top: 5%;
   margin-bottom: 3%;
   align-items: center;
+  align-content: space-between;
   //border: 3px solid blue;
 }
 
@@ -250,24 +264,26 @@
   // float: left;
   margin: 10px;
   flex-basis: 50%;
-  width: 45%;
+  width: 30%;
 }
 
 .detailcontainer {
   flex-basis: 50%;
-  // border: 3px solid black;
+  //border: 3px solid black;
   // float: left;
-  width: 55%;
+  //width: 57%;
   margin: 10px;
+  margin-left: 3%;
 }
 
 .detailcontainerleft {
   /* display: inline; */
-   //border: 3px solid black;
+  //border: 3px solid black;
   flex-basis: 50%;
   // float: left;
-  width: 55%;
-  margin-right: 5%;
+  //width: 50%;
+  margin: 10px;
+  margin-right: 3%;
 }
 
 .projecttitle {
