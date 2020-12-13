@@ -15,8 +15,8 @@ const DeptInfo = (props) => {
             <h3>Purpose</h3>
           </div>
           <div className={styles.boxbody}>{deptInfo.purpose}</div>
-          <hr className={styles.line}></hr>
-          <div className={styles.imageleft}></div>
+          {/* <hr className={styles.line}></hr> */}
+          {/* <div className={styles.imageleft}></div> */}
         </div>
 
         <div className={styles.container}>
@@ -24,8 +24,8 @@ const DeptInfo = (props) => {
             <h3>Goal</h3>
           </div>
           <div className={styles.boxbodyright}>{deptInfo.goal}</div>
-          <hr className={styles.lineright}></hr>
-          <div className={styles.image}></div>
+          {/* <hr className={styles.lineright}></hr>
+          <div className={styles.image}></div> */}
         </div>
         <div className={styles.blank}></div>
       </div>

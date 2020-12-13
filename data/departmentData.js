@@ -3,9 +3,9 @@ export default [
     id: 0,
     deptName: "Blockchain Department",
     purpose:
-      "Raise professionals and enthusiasts of blockchain, cryptocurrency, and distributed ledger technology and equip them with a welath of knowledge and experience",
+      "Raise professionals and enthusiasts of blockchain, cryptocurrency, and distributed ledger technology to be early adopters, pioneers, and trailblazers of the industry.",
     goal:
-      "1. Building and Expanding Knowledge: Gaining a broad understanding of the Blockchain ecosystem through internal education sessions and externall hosted workshops, seminars and courses. 2. Build expetise through industry-grade projects: Execute projects with external partners to produce projects of tangible value that adds to a portfolio that enables penetration into the Blockchain space ",
+      "Provide ample connections and opportunities to the best companies, organizations, and individuals in the blockchain sphere, create solutions of tangible and industrial value.",
     projects: [
       {
         id: 1,
