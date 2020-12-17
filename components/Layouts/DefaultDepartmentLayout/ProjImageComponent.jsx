@@ -4,7 +4,8 @@ import Slider from "react-slick";
 
 const ProjImageComponent = (props) => {
   const project = props.project;
-  const [currentImageIndex, setCurrentImageIndex] = useState(3);
+  const imageCount = project.imageURLs.length;
+  const [currentImageIndex, setCurrentImageIndex] = useState(imageCount - 1);
 
   const settings = {
     dots: true,
@@ -17,7 +18,7 @@ const ProjImageComponent = (props) => {
     className: "slides",
     beforeChange: (current, next) => {
       if (next == 0) {
-        setCurrentImageIndex(3);
+        setCurrentImageIndex(imageCount - 1);
       } else {
         setCurrentImageIndex(next - 1);
       }
@@ -104,16 +105,19 @@ const ProjImageComponent = (props) => {
   );
 
   const imageComponent = () => (
-    <div style={{ width: "50%" }}>
+    <div className={styles.carouselcontainer}>
       <img
-        src={project.imageURLs[0]}
-        //className={styles.previmg}
+        src={project.imageURLs[imageCount-1]}
+        style={{
+          width: "100%",
+          //aspectRatio: "135/76", doesn't seem to change anything ? need to test more with more photos
+        }}
       />
+      {/* <div style={{ clear: "both" }} /> */}
     </div>
   );
 
-  if (project.imageURLs.length > 0) {
-    //this should be 1, not too sure why it's not working
+  if (imageCount > 1) {
     return carouselComponent();
   }
 

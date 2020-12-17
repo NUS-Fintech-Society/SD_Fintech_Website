@@ -35,10 +35,7 @@ export default [
           "The vast majority of online games stores store in-gamg data on a centralized server, with gamers lacking personal ownership of valuable in-game items and vulnerable to hacks and game-economy manipulation. Blockchain, as a distributed database is able to return this ownership to the gamers. In this proof of concept, we demonstrate how games can be built on top of a distributed platform such as Ethereum.",
         ],
         imageURLs: [
-          "https://images.unsplash.com/photo-1554744512-d6c603f27c54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-          "https://images.unsplash.com/photo-1538592116845-119a3974c958?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-          "https://images.unsplash.com/photo-1560958089-b8a1929cea89?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-          "https://images.unsplash.com/photo-1536700503339-1e4b06520771?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+          "https://i.imgur.com/3cW4VHI.jpg"
         ],
       },
     ],
