@@ -1,15 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styles from "./DefaultDepartmentLayout.module.scss";
 import Slider from "react-slick";
 
 const ProjImageComponent = (props) => {
   const project = props.project;
   const [currentImageIndex, setCurrentImageIndex] = useState(3);
-
-  useEffect(() => {
-      console.log('project printing below:');
-      console.log(project);
-  }, []);
 
   const settings = {
     dots: true,
@@ -87,7 +82,7 @@ const ProjImageComponent = (props) => {
     );
   }
 
-  return (
+  const carouselComponent = () => (
     <div className={styles.carouselcontainer}>
       <img
         src={project.imageURLs[currentImageIndex]}
@@ -95,10 +90,10 @@ const ProjImageComponent = (props) => {
       />
       <div className={styles.SlickCarousel} style={{ padding: 24 }}>
         <Slider {...settings}>
-          {project.carouselArray.map((photo) => {
+          {project.imageURLs.map((photo) => {
             return (
               <div>
-                <img width="100%" src={photo.url} />
+                <img width="100%" src={photo} />
               </div>
             );
           })}
@@ -107,6 +102,22 @@ const ProjImageComponent = (props) => {
       <div style={{ clear: "both" }} />
     </div>
   );
+
+  const imageComponent = () => (
+    <div style={{ width: "50%" }}>
+      <img
+        src={project.imageURLs[0]}
+        //className={styles.previmg}
+      />
+    </div>
+  );
+
+  if (project.imageURLs.length > 0) {
+    //this should be 1, not too sure why it's not working
+    return carouselComponent();
+  }
+
+  return imageComponent();
 };
 
 export default ProjImageComponent;
