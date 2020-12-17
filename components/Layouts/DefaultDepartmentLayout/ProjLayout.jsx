@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./DefaultDepartmentLayout.module.scss";
-
+import ProjImageComponent from "./ProjImageComponent";
 import Slider from "react-slick";
 
 const ProjLayout = (props) => {
@@ -95,12 +95,12 @@ const ProjLayout = (props) => {
   const renderOddProj = () => (
     <div className={styles.projectcontainer}>
       <div className={styles.blank}></div>
-      <div className={styles.carouselcontainer}>
-        <img
+      {/* <div className={styles.carouselcontainer}> */}
+        {/* <img
           src={project.imageURLs[currentImageIndex]}
           className={styles.previmg}
-        />
-        <div className={styles.SlickCarousel} style={{ padding: 24 }}>
+        /> */}
+        {/* <div className={styles.SlickCarousel} style={{ padding: 24 }}>
           <Slider {...settings}>
             {project.carouselArray.map((photo) => {
               return (
@@ -110,9 +110,12 @@ const ProjLayout = (props) => {
               );
             })}
           </Slider>
-        </div>
-        <div style={{ clear: "both" }}></div>
-      </div>
+        </div> */}
+        
+        <ProjImageComponent project={project} />
+
+        {/* <div style={{ clear: "both" }}></div> */}
+      {/* </div> */}
       <div className={styles.detailcontainer}>
         <div className={styles.projectNumberingRow}>
           <div className={styles.projectNumberingLineOdd}>
@@ -167,24 +170,7 @@ const ProjLayout = (props) => {
         </div>
         <div style={{ clear: "both" }}></div>
       </div>
-      <div className={styles.carouselcontainer}>
-        <img
-          src={project.imageURLs[currentImageIndex]}
-          className={styles.previmg}
-        />
-        <div className={styles.SlickCarousel} style={{ padding: 24 }}>
-          <Slider {...settings}>
-            {project.carouselArray.map((photo) => {
-              return (
-                <div>
-                  <img width="100%" src={photo.url} />
-                </div>
-              );
-            })}
-          </Slider>
-        </div>
-        <div style={{ clear: "both" }}></div>
-      </div>
+      <ProjImageComponent project={project} />
       <div style={{ clear: "both" }}></div>
       <div className={styles.blank}></div>
     </div>
