@@ -7,9 +7,9 @@ import DepartmentCard from "components/DepartmentCard/DepartmentCard";
 
 import departments from "data/departmentInfo";
 
+
 const Home = (props) => {
   const typing = useTypewriter("Ideate. Innovate. Inspire.");
-
   return (
     <DefaultLayout>
       <main className={styles.main}>
@@ -25,6 +25,7 @@ const Home = (props) => {
           </div>
           <img src="/images/exco.png" alt="exco" className={styles.exco} />
         </div>
+        <FadeInSection>
         <div className={styles.aboutUs}>
           <h1>About Us</h1>
           <div className={styles.descriptionContainer}>
@@ -41,32 +42,64 @@ const Home = (props) => {
               their individual research areas.
             </p>
           </div>
-        </div>
-        <div className={styles.ourTeam}>
-          <h1 >Our Team</h1>
-          <div className={styles.cardsContainer}>
-            {departments.map((department) => (
-              <div className={styles.cardContainer}>
-                <DepartmentCard
-                  id={department.title}
-                  title={department.title}
-                  description={department.description}
-                  icon={department.icon}
-                  route={department.route}
-                />
-              </div>
-            ))}
+        </div> 
+        </FadeInSection>
+        <FadeInSection>
+          <div className={styles.ourTeam}>
+            <h1 >Our Team</h1>
+            <div className={styles.cardsContainer}>
+              {departments.map((department) => (
+                <div className={styles.cardContainer}>
+                  <DepartmentCard
+                    id={department.title}
+                    title={department.title}
+                    description={department.description}
+                    icon={department.icon}
+                    route={department.route}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-        <div>
-          <h1>Upcoming Events</h1>
-        </div>
-        <div>
-          <h1 id="contactUs">Contact Us</h1>
-        </div>
+        </FadeInSection>
+          
+        <FadeInSection>
+          <div>
+            <h1>Upcoming Events</h1>
+          </div>
+        </FadeInSection>
+
+        <FadeInSection>
+          <div>
+            <h1 id="contactUs">Contact Us</h1>
+          </div>
+        </FadeInSection>
+
+
       </main>
     </DefaultLayout>
   );
 };
+
+//component to allow fade in to happen just add <FadeInSection> to the parts you wanna fade in
+function FadeInSection(props) {
+  const [isVisible, setVisible] = React.useState(true);
+  const domRef = React.useRef();
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => setVisible(entry.isIntersecting));
+    });
+    observer.observe(domRef.current);
+    return () => observer.unobserve(domRef.current);
+  }, []);
+  return (
+    <div
+      className={isVisible ? styles.fadeVisible : styles.fade}
+      ref={domRef}
+    >
+      {props.children}
+    </div>
+  );
+}
 
 export default Home;
