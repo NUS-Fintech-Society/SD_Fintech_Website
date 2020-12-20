@@ -77,20 +77,66 @@
     .cardsContainer {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      row-gap: 20px;
-      width: 100%;
-      justify-self: center;
-      justify-content: center;
-      align-items: center;
-      align-self: center;
+      row-gap: 30px;
+      column-gap: 30px;
+      width: 60%;
+      justify-items: center;
 
       .cardContainer {
         display: flex;
-        justify-content: center;
+        align-self: center;
         width: 100%;
         height: 100%;
       }
     }
+  }
+
+  .contactUs {
+    height: 700px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    align-items: center;
+    padding-top: 24px;
+    flex-direction: column;
+
+    h1 {
+      color: $primary-white-1;
+    }
+
+    .iconTextContainer {
+      display: flex;
+      flex-direction: row;
+      margin-top: 6px;
+      text-align: left;
+
+      p {
+        color: $primary-white-1;
+        margin: 0;
+      }
+
+      .icon {
+        color: $primary-white-1;
+        margin-right: 12px;
+        margin-top: 2px;
+        height: 18px;
+      }
+    }
+  }
+
+  .contactUs::after {
+    content: "";
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url("../../public/images/NUS_SOC.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: -1;
+    opacity: 0.8;
   }
 }
 
@@ -102,6 +148,19 @@
       .exco {
         margin-top: 1rem;
         width: 100%;
+      }
+    }
+
+    .ourTeam {
+      .cardsContainer {
+        width: 100%;
+      }
+    }
+
+    .contactUs {
+      .iconTextContainer {
+        margin-left: 20px;
+        text-align: left;
       }
     }
   }

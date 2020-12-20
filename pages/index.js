@@ -2,6 +2,9 @@ import React from "react";
 import styles from "styles/pages/Home.module.scss";
 import useTypewriter from "react-typewriter-hook";
 
+import LocationIcon from "@material-ui/icons/PlaceOutlined";
+import MailIcon from "@material-ui/icons/MailOutline";
+
 import DefaultLayout from "components/Layouts/DefaultLayout/DefaultLayout";
 import DepartmentCard from "components/DepartmentCard/DepartmentCard";
 
@@ -46,7 +49,7 @@ const Home = (props) => {
           <h1>Our Team</h1>
           <div className={styles.cardsContainer}>
             {departments.map((department) => (
-              <div className={styles.cardContainer}>
+              <div className={styles.cardContainer} key={department.title}>
                 <DepartmentCard
                   id={department.title}
                   title={department.title}
@@ -61,8 +64,21 @@ const Home = (props) => {
         <div>
           <h1>Upcoming Events</h1>
         </div>
-        <div>
+        <div className={styles.contactUs}>
           <h1>Contact Us</h1>
+          <div>
+            <div className={styles.iconTextContainer}>
+              <LocationIcon className={styles.icon} />
+              <p>
+                NUS School of Computing, COM1, 13 Computing Drive, Singapore
+                117417
+              </p>
+            </div>
+            <div className={styles.iconTextContainer}>
+              <MailIcon className={styles.icon} />
+              <p>nusfintech@gmail.com</p>
+            </div>
+          </div>
         </div>
       </main>
     </DefaultLayout>
