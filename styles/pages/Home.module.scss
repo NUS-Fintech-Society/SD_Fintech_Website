@@ -123,6 +123,31 @@
 	}
 }
 
+.sponsors {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+.images {
+	max-width: 256px;
+	height: auto;
+}
+
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.column {
+	float: left;
+	width: 33.33%;
+	padding: 10px;
+}
+
 @media (max-width: 769px) {
 	.main {
 		padding: 0 0 0 0;
@@ -133,5 +158,9 @@
 				width: 100%;
 			}
 		}
+	}
+
+	.column {
+		width: 100%;
 	}
 }
