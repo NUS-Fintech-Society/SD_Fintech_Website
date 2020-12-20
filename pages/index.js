@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "styles/pages/Home.module.scss";
 import useTypewriter from "react-typewriter-hook";
-
+import { useForm } from "react-hook-form";
 import LocationIcon from "@material-ui/icons/PlaceOutlined";
 import MailIcon from "@material-ui/icons/MailOutline";
 
@@ -10,8 +10,25 @@ import DepartmentCard from "components/DepartmentCard/DepartmentCard";
 
 import departments from "data/departmentInfo";
 
+import request from "util/request";
+
 const Home = (props) => {
   const typing = useTypewriter("Ideate. Innovate. Inspire.");
+  const { register, handleSubmit, watch, errors } = useForm();
+  const [formState, setFormState] = useState({});
+
+  const onSubmit = async (data) => {
+    try {
+      const response = await request.post("contact/", data);
+      setFormState({ name: "", email: "", message: "" });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handleChange = (e) => {
+    setFormState({ ...formState, [e.target.name]: e.target.value });
+  };
 
   return (
     <DefaultLayout>
@@ -78,6 +95,55 @@ const Home = (props) => {
               <MailIcon className={styles.icon} />
               <p>nusfintech@gmail.com</p>
             </div>
+            <form onSubmit={handleSubmit(onSubmit)} autocomplete="off">
+              <div className={styles.inputContainer}>
+                <input
+                  className={styles.input}
+                  id="name"
+                  name="name"
+                  placeholder="Name"
+                  ref={register({ required: true })}
+                  onChange={handleChange}
+                  value={formState.name}
+                />
+                {errors.name && <p>Required</p>}
+              </div>
+              <div className={styles.inputContainer}>
+                <input
+                  className={styles.input}
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                  onChange={handleChange}
+                  value={formState.email}
+                  ref={register({
+                    required: "Required",
+                    pattern: {
+                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                      message: "Invalid email address",
+                    },
+                  })}
+                />
+                {errors.email && <p>{errors.email.message}</p>}
+              </div>
+              <div className={styles.inputContainer}>
+                <textarea
+                  className={styles.inputArea}
+                  placeholder="Message"
+                  id="message"
+                  name="message"
+                  onChange={handleChange}
+                  value={formState.message}
+                  ref={register({ required: true })}
+                ></textarea>
+                {errors.message && <p>Required</p>}
+              </div>
+              <input
+                type="submit"
+                className={styles.submitButton}
+                value="Send"
+              />
+            </form>
           </div>
         </div>
       </main>
