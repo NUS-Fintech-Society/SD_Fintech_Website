@@ -1,14 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "styles/pages/Home.module.scss";
 import useTypewriter from "react-typewriter-hook";
 
 import DefaultLayout from "components/Layouts/DefaultLayout/DefaultLayout";
 import DepartmentCard from "components/DepartmentCard/DepartmentCard";
 
-import departments from "data/departmentInfo";
+//import departments from "data/departmentInfo";
+import request from "util/request";
 
 const Home = (props) => {
   const typing = useTypewriter("Ideate. Innovate. Inspire.");
+  const [departments, setDepartments] = useState([]);
+
+  useEffect(()=> {
+    loadDepartments();
+  },[]);
+
+  const loadDepartments = async () => {
+    try {
+      const response = await request.get("departments/");
+      setDepartments(response.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <DefaultLayout>
@@ -48,8 +63,8 @@ const Home = (props) => {
             {departments.map((department) => (
               <div className={styles.cardContainer}>
                 <DepartmentCard
-                  id={department.title}
-                  title={department.title}
+                  id={department.id}
+                  title={department.name}
                   description={department.description}
                   icon={department.icon}
                   route={department.route}
