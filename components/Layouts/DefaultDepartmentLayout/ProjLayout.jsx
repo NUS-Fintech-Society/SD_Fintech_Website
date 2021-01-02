@@ -6,7 +6,9 @@ import Slider from "react-slick";
 const ProjLayout = (props) => {
   const project = props.project;
   const [currentImageIndex, setCurrentImageIndex] = useState(3);
-  const projectOddIndex = props.project.id % 2 == 1;
+  //const projectOddIndex = props.project.id % 2 == 1;
+  const projectIndex = props.index;
+  const projectOddIndex = projectIndex % 2 ==1;
 
   const changeImage = (e) => {
     if (e.item == 0) {
@@ -94,28 +96,33 @@ const ProjLayout = (props) => {
 
   const renderOddProj = () => (
     <div className={styles.projectcontainer}>
-      <div className={styles.blank}></div>
-        <ProjImageComponent project={project} />
+      <div className={styles.blank}/>
+      <ProjImageComponent project={project} />
       <div className={styles.detailcontainer}>
         <div className={styles.projectNumberingRow}>
           <div className={styles.projectNumberingLineOdd}>
             <h1>______________________</h1>
           </div>
           <div className={styles.projectNumberingTextOdd}>
-            <h1>Project {project.id}</h1>
+            <h1>Project {projectIndex + 1}</h1>
           </div>
         </div>
         <div className={styles.projecttitle}>
           <h3>{project.title}</h3>
 
-          {project.details.map((detail) => {
+          {/* {project.details.map((detail) => {
             return (
               <div style={{ marginBottom: "3%", textAlign: "justify" }}>
                 {detail}
               </div>
             );
             //return <div style={{marginBottom:20}}>{detail}</div>;
-          })}
+          })} */}
+
+          {/* Changed to a single para now instead of an array of strings */}
+          <div style={{ marginBottom: "3%", textAlign: "justify" }}>
+            {project.details}
+          </div>
         </div>
         <div style={{ clear: "both" }}></div>
       </div>
@@ -130,7 +137,8 @@ const ProjLayout = (props) => {
       <div className={styles.detailcontainerleft}>
         <div className={styles.projectNumberingRow}>
           <div className={styles.projectNumberingTextEven}>
-            <h1>Project {project.id}</h1>
+            {/* <h1>Project {project.id}</h1> */}
+            <h1>Project {projectIndex + 1}</h1>
           </div>
           <div className={styles.projectNumberingLineEven}>
             <h1>______________________</h1>
@@ -139,14 +147,18 @@ const ProjLayout = (props) => {
         <div className={styles.projecttitle}>
           <h3>{project.title}</h3>
 
-          {project.details.map((detail) => {
+          {/* {project.details.map((detail) => {
             return (
               <div style={{ marginBottom: "3%", textAlign: "justify" }}>
                 {detail}
               </div>
             );
             //return <div style={{marginBottom:20}}>{detail}</div>;
-          })}
+          })} */}
+
+          <div style={{ marginBottom: "3%", textAlign: "justify" }}>
+            {project.details}
+          </div>
         </div>
         <div style={{ clear: "both" }}></div>
       </div>

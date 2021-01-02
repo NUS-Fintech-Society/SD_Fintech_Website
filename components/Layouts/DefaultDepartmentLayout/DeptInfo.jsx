@@ -6,7 +6,7 @@ const DeptInfo = (props) => {
   return (
     <div className={styles.layout}>
       <div className={styles.title}>
-        <h1>{deptInfo.deptName}</h1>
+        <h1>{deptInfo.name}</h1>
       </div>
       <div className={styles.flex}>
         <div className={styles.blank}></div>

@@ -4,7 +4,7 @@ import Slider from "react-slick";
 
 const ProjImageComponent = (props) => {
   const project = props.project;
-  const imageCount = project.imageURLs.length;
+  const imageCount = project.imageUrls.length;
   const [currentImageIndex, setCurrentImageIndex] = useState(imageCount - 1);
 
   const settings = {
@@ -86,15 +86,15 @@ const ProjImageComponent = (props) => {
   const carouselComponent = () => (
     <div className={styles.carouselcontainer}>
       <img
-        src={project.imageURLs[currentImageIndex]}
+        src={project.imageUrls[currentImageIndex].url}
         className={styles.previmg}
       />
       <div className={styles.SlickCarousel} style={{ padding: 24 }}>
         <Slider {...settings}>
-          {project.imageURLs.map((photo) => {
+          {project.imageUrls.map((photo) => {
             return (
               <div>
-                <img width="100%" src={photo} />
+                <img width="100%" src={photo.url} />
               </div>
             );
           })}
@@ -107,7 +107,7 @@ const ProjImageComponent = (props) => {
   const imageComponent = () => (
     <div className={styles.carouselcontainer}>
       <img
-        src={project.imageURLs[imageCount-1]}
+        src={project.imageUrls[imageCount-1].url}
         style={{
           width: "100%",
           //aspectRatio: "135/76", doesn't seem to change anything ? need to test more with more photos
