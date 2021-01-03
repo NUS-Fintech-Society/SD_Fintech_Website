@@ -9,7 +9,7 @@ const DepartmentCard = (props) => {
   return (
     <div className={styles.container}>
       <img src={icon} alt={title} className={styles.image} />
-      <h3>{title}</h3>
+       <h3>{title}</h3>
       <p>{description}</p>
       <Link href={route} passHref={true}>
         <Button component="a" variant="contained" className={styles.button}>

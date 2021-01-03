@@ -1,7 +1,7 @@
 import styles from "./DefaultDepartmentLayout.module.scss";
 
 const DeptInfo = (props) => {
-    const deptInfo = props.deptInfo;
+  const deptInfo = props.deptInfo;
 
   return (
     <div className={styles.layout}>

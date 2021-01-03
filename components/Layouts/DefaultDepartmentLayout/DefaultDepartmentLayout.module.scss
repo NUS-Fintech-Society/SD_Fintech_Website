@@ -19,34 +19,33 @@
 
 .projectNumberingRow {
   //font-size: 1.5vw;
-  //border:3px solid black;
+  // border: 3px solid blue;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;  
+  justify-content: space-between;
 }
 
 .projectNumberingLineOdd {
-  width:55%;
-  font-size:1.0vw;
-  text-align: right;
+  // width: 55%;
+  font-size: 1vw;
 }
 
 .projectNumberingTextOdd {
-  width:40%;
-  font-size:1.5vw;
+  // width: 40%;
+  font-size: 1.5vw;
   text-align: right;
   //align-content: center;
 }
 
 .projectNumberingLineEven {
-  width:55%;
-  font-size:1.0vw;
-  text-align: left;
+  //width: 55%;
+  font-size: 1vw;
+  text-align: right;
 }
 
 .projectNumberingTextEven {
-  width:40%;
-  font-size:1.5vw;
+  //width: 40%;
+  font-size: 1.5vw;
   text-align: left;
   //align-content: center;
 }
@@ -102,12 +101,12 @@
 }
 
 .boxbody {
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   margin: 10px;
 }
 
 .boxbodyright {
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   margin: 10px;
   text-align: right;
 }
@@ -255,7 +254,9 @@
   margin-bottom: 3%;
   align-items: center;
   align-content: space-between;
-  //border: 3px solid blue;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 //This my original way of doing container
@@ -263,34 +264,45 @@
   //border: 3px solid black;
   // float: left;
   margin: 10px;
-  flex-basis: 50%;
+  flex-basis: 30%;
   width: 30%;
+  // margin-right: 7%;
 }
 
 .detailcontainer {
-  flex-basis: 50%;
-  //border: 3px solid black;
-  // float: left;
+  flex-basis: 55%;
+  // border: 3px solid black;
   //width: 57%;
   margin: 10px;
   margin-left: 3%;
+  // margin-right: 5%;
 }
 
 .detailcontainerleft {
   /* display: inline; */
-  //border: 3px solid black;
-  flex-basis: 50%;
+  // border: 3px solid black;
+  flex-basis: 55%;
   // float: left;
   //width: 50%;
   margin: 10px;
   margin-right: 3%;
+  // margin-left: 5%;
 }
 
 .projecttitle {
   /* width: 70%; */
   text-align: left;
-  /* margin-top: 10%; */
-  /* border: 3px solid red; */
+  h3 {
+    color: $primary-grey-1;
+    font-family: "Lato";
+  }
+}
+
+.projectdetailtext {
+  margin-bottom: "3%";
+  text-align: "justify";
+  white-space: pre-line; //for paragraphing
+  font-size: 1vw;
 }
 
 .projectbody {
