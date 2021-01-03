@@ -5,7 +5,7 @@ import departmentData from "data/departmentData";
 
 const MachineLearning = (props) => {
   return (
-      <DefaultDepartmentLayout department = {departmentData[2]} />
+      <DefaultDepartmentLayout deptId={2} />
   );
 };
 
