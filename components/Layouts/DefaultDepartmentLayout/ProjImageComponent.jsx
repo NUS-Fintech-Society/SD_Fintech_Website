@@ -107,7 +107,8 @@ const ProjImageComponent = (props) => {
   const imageComponent = () => (
     <div className={styles.carouselcontainer}>
       <img
-        src={project.imageUrls[imageCount-1].url}
+      //this is to generate a default photo for when no image is added
+        src={imageCount!=0? project.imageUrls[imageCount-1].url : "https://i.imgur.com/LRTL24O.jpeg"}
         style={{
           width: "100%",
           //aspectRatio: "135/76", doesn't seem to change anything ? need to test more with more photos
