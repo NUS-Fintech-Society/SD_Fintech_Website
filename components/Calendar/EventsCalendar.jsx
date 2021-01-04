@@ -15,7 +15,7 @@ const EventsCalendar = (props) => {
   const EventView = (event) => {
     return (
       <div className={styles.eventView}>
-        <p>{event.title}</p>
+        <p>{event.event.name}</p>
       </div>
     );
   };
