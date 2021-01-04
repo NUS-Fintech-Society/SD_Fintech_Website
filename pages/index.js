@@ -35,35 +35,25 @@ const Home = (props) => {
       <main className={styles.main}>
         <div className={styles.landing}>
           <div className={styles.details}>
-            <img
-              src="/images/SocietyLogo.png"
-              alt="society logo"
-              className={styles.logo}
-            />
-            <h1>NUS FinTech Society</h1>
-            <p>{typing}</p>
+            <p className={styles.title}>{typing}</p>
+            <div className={styles.aboutUs}>
+              <div className={styles.descriptionContainer}>
+                <p className={styles.text}>
+                  NUS FinTech Society was founded under NUS School of Computing
+                  by a group of like-minded individuals with a passion in
+                  pursuing research and driving applications in the realms of
+                  Blockchain and Machine Learning.
+                </p>
+              </div>
+              <div className={styles.descriptionContainer}>
+                <p id="ourTeam" className={styles.text}>
+                  We currently have over 80 members, each with a strong grasp of
+                  their individual research areas.
+                </p>
+              </div>
+            </div>
           </div>
-          <img src="/images/exco.png" alt="exco" className={styles.exco} />
         </div>
-        <FadeInSection>
-          <div className={styles.aboutUs}>
-            <h1>About Us</h1>
-            <div className={styles.descriptionContainer}>
-              <p>
-                NUS FinTech Society was founded under NUS School of Computing by
-                a group of like-minded individuals with a passion in pursuing
-                research and driving applications in the realms of Blockchain
-                and Machine Learning.
-              </p>
-            </div>
-            <div className={styles.descriptionContainer}>
-              <p id="ourTeam">
-                We currently have over 80 members, each with a strong grasp of
-                their individual research areas.
-              </p>
-            </div>
-          </div>
-        </FadeInSection>
         <FadeInSection>
           <div className={styles.ourTeam}>
             <h1>Our Team</h1>
