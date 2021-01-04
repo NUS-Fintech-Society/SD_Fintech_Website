@@ -28,10 +28,10 @@ const NavBar = (props) => {
               <Link href="/events">Events</Link>
             </li>
             <li>
-              <Link href="#ourTeam">Our Team</Link>
+              <Link href="/#ourTeam">Our Team</Link>
             </li>
             <li>
-              <Link href="#contactUs">Contact Us</Link>
+              <Link href="/#contact">Contact Us</Link>
             </li>
           </ul>
         </div>

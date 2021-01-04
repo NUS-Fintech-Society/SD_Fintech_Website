@@ -20,6 +20,9 @@
 .fadeVisible {
   -webkit-animation: fadeEffect 1.5s;
   animation: fadeEffect 1.5s; /* Fading effect takes 1 second */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .fade {
@@ -243,9 +246,10 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    margin-top: 60px;
 
     .images {
-      max-width: 256px;
+      max-width: 160px;
       height: auto;
     }
 

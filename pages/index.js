@@ -89,8 +89,8 @@ const Home = (props) => {
           </div>
         </FadeInSection>
 
-        <FadeInSection>
-          <div className={styles.contactUs}>
+        <div className={styles.contactUs} id="contact">
+          <FadeInSection>
             <h1>Contact Us</h1>
             <div>
               <div className={styles.iconTextContainer}>
@@ -154,8 +154,8 @@ const Home = (props) => {
                 />
               </form>
             </div>
-          </div>
-        </FadeInSection>
+          </FadeInSection>
+        </div>
 
         <FadeInSection>
           <div className={styles.sponsors}>
