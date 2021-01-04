@@ -1,14 +1,75 @@
-import React from "react";
 import styles from "styles/pages/Home.module.scss";
 import useTypewriter from "react-typewriter-hook";
 
 import DefaultLayout from "components/Layouts/DefaultLayout/DefaultLayout";
 import DepartmentCard from "components/DepartmentCard/DepartmentCard";
-
+import TimelineCard from "components/Timeline/Timeline";
 import departments from "data/departmentInfo";
 
+import request from "util/request";
+import React, { useState, useEffect } from "react";
+
 const Home = (props) => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [noEvents, setNoEvents] = useState(true);
   const typing = useTypewriter("Ideate. Innovate. Inspire.");
+  const [items, setItems] = useState();
+
+  useEffect(() => {
+    fetchEvents().then(() => {
+      setIsLoading(false);
+    });
+  }, []);
+
+  const fetchEvents = async () => {
+    try {
+      const response = await request.get("events/");
+      setItems(sortEvents(response.data));
+      
+      console.log(noEvents);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const sortEvents = (list) => {
+    console.assert(list.length != 0);
+
+    list.sort((eventOne, eventTwo) => {
+      console.log(eventTwo.start + " " + eventOne.start);
+      var dateOne = new Date(eventOne.start);
+      var dateTwo = new Date(eventTwo.start)
+      return dateOne.getTime() - dateTwo.getTime();
+    });
+    var i = 0;
+    while (i < list.length) {
+      var date = new Date(list[i].end);
+      var datetoday = new Date();
+      console.log("date" + date);
+      console.log("datetoday" + datetoday);
+      if (date < datetoday) {
+        console.log("remove" + list[i].name);
+        list.splice(i, 1);
+      } else {
+        i = i + 1;
+      }
+    }
+    if (list.length > 4) {
+      for (var i = 0; i < list.length; i++) {
+        if (i >= 4) {
+          list.splice(i, 1);
+        }
+      }
+    }
+    if(list.length==0){
+      setNoEvents(false); 
+      console.log("done false");
+     }
+  
+    // console.log("end " + list[0].start)
+    return list;
+  }
+
 
   return (
     <DefaultLayout>
@@ -58,9 +119,24 @@ const Home = (props) => {
             ))}
           </div>
         </div>
-        <div>
-          <h1>Upcoming Events</h1>
+        <div className={styles.event}>
+          <div className={styles.headerevent}>
+            <h1>Upcoming Events</h1>
+          </div>
+          {!isLoading && noEvents && (
+            <TimelineCard
+              items={items}
+            />
+          )}
+          {!isLoading && !noEvents && (
+            <div className={styles.headerevent}>
+            <p>
+              There are currently no upcoming events.
+            </p>
+            </div>
+          )}
         </div>
+
         <div>
           <h1>Contact Us</h1>
         </div>
