@@ -1,5 +1,37 @@
 @import "styles/variables.scss";
 
+@-webkit-keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeVisible {
+  -webkit-animation: fadeEffect 1.5s;
+  animation: fadeEffect 1.5s; /* Fading effect takes 1 second */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fade {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+  will-change: opacity, visibility;
+}
+
 .container {
   padding: 0 0.5rem;
   display: flex;
@@ -206,6 +238,32 @@
     left: 0px;
     z-index: -1;
     opacity: 0.8;
+  }
+
+  .sponsors {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 60px;
+
+    .images {
+      max-width: 160px;
+      height: auto;
+    }
+
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .column {
+      float: left;
+      width: 33.33%;
+      padding: 10px;
+    }
   }
 }
 
