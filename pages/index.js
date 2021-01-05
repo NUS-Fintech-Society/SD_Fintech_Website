@@ -56,7 +56,14 @@ const Home = (props) => {
         </div>
         <FadeInSection>
           <div className={styles.ourTeam}>
-            <h1>Our Team</h1>
+            <div className={styles.textContainer}>
+              <h1>Our Team</h1>
+              <div className={styles.underline}></div>
+              <p>
+                NUS FinTech Society comprises of four different teams:
+                Operations, Machine Learning, DevOps, as well as Blockchain
+              </p>
+            </div>
             <div className={styles.cardsContainer}>
               {departments.map((department) => (
                 <div className={styles.cardContainer} key={department.title}>
@@ -78,74 +85,6 @@ const Home = (props) => {
             <h1>Upcoming Events</h1>
           </div>
         </FadeInSection>
-
-        <div className={styles.contactUs} id="contact">
-          <FadeInSection>
-            <h1>Contact Us</h1>
-            <div>
-              <div className={styles.iconTextContainer}>
-                <LocationIcon className={styles.icon} />
-                <p>
-                  NUS School of Computing, COM1, 13 Computing Drive, Singapore
-                  117417
-                </p>
-              </div>
-              <div className={styles.iconTextContainer}>
-                <MailIcon className={styles.icon} />
-                <p>nusfintech@gmail.com</p>
-              </div>
-              <form onSubmit={handleSubmit(onSubmit)} autocomplete="off">
-                <div className={styles.inputContainer}>
-                  <input
-                    className={styles.input}
-                    id="name"
-                    name="name"
-                    placeholder="Name"
-                    ref={register({ required: true })}
-                    onChange={handleChange}
-                    value={formState.name}
-                  />
-                  {errors.name && <p>Required</p>}
-                </div>
-                <div className={styles.inputContainer}>
-                  <input
-                    className={styles.input}
-                    id="email"
-                    name="email"
-                    placeholder="Email"
-                    onChange={handleChange}
-                    value={formState.email}
-                    ref={register({
-                      required: "Required",
-                      pattern: {
-                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                        message: "Invalid email address",
-                      },
-                    })}
-                  />
-                  {errors.email && <p>{errors.email.message}</p>}
-                </div>
-                <div className={styles.inputContainer}>
-                  <textarea
-                    className={styles.inputArea}
-                    placeholder="Message"
-                    id="message"
-                    name="message"
-                    onChange={handleChange}
-                    value={formState.message}
-                    ref={register({ required: true })}
-                  ></textarea>
-                  {errors.message && <p>Required</p>}
-                </div>
-                <input
-                  type="submit"
-                  className={styles.submitButton}
-                  value="Send"
-                />
-              </form>
-            </div>
-          </FadeInSection>
-        </div>
 
         <FadeInSection>
           <div className={styles.sponsors}>
@@ -246,6 +185,74 @@ const Home = (props) => {
             </div>
           </div>
         </FadeInSection>
+
+        <div className={styles.contactUs} id="contact">
+          <FadeInSection>
+            <h1>Contact Us</h1>
+            <div>
+              <div className={styles.iconTextContainer}>
+                <LocationIcon className={styles.icon} />
+                <p>
+                  NUS School of Computing, COM1, 13 Computing Drive, Singapore
+                  117417
+                </p>
+              </div>
+              <div className={styles.iconTextContainer}>
+                <MailIcon className={styles.icon} />
+                <p>nusfintech@gmail.com</p>
+              </div>
+              <form onSubmit={handleSubmit(onSubmit)} autocomplete="off">
+                <div className={styles.inputContainer}>
+                  <input
+                    className={styles.input}
+                    id="name"
+                    name="name"
+                    placeholder="Name"
+                    ref={register({ required: true })}
+                    onChange={handleChange}
+                    value={formState.name}
+                  />
+                  {errors.name && <p>Required</p>}
+                </div>
+                <div className={styles.inputContainer}>
+                  <input
+                    className={styles.input}
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                    onChange={handleChange}
+                    value={formState.email}
+                    ref={register({
+                      required: "Required",
+                      pattern: {
+                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                        message: "Invalid email address",
+                      },
+                    })}
+                  />
+                  {errors.email && <p>{errors.email.message}</p>}
+                </div>
+                <div className={styles.inputContainer}>
+                  <textarea
+                    className={styles.inputArea}
+                    placeholder="Message"
+                    id="message"
+                    name="message"
+                    onChange={handleChange}
+                    value={formState.message}
+                    ref={register({ required: true })}
+                  ></textarea>
+                  {errors.message && <p>Required</p>}
+                </div>
+                <input
+                  type="submit"
+                  className={styles.submitButton}
+                  value="Send"
+                />
+              </form>
+            </div>
+          </FadeInSection>
+        </div>
       </main>
     </DefaultLayout>
   );

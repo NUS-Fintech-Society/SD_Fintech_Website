@@ -13,7 +13,7 @@ const NavBar = (props) => {
         </div>
         <div className={styles.navbar_logo}>
           <img
-            src="/images/SocietyLogo.png"  
+            src="/images/SocietyLogo.png"
             alt="society logo"
             className={styles.image}
           />
