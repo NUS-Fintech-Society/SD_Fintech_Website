@@ -176,7 +176,7 @@
 .SlickCarousel {
   text-align: center;
   /* width: 70%; */
-  margin-left: 20%;
+  // margin-left: 20%;
 }
 
 .SlickCarousel-logo {
@@ -258,12 +258,12 @@
   //below 2 numbers control vertical whitespace
   padding-left: 12%;
   padding-right: 12%;
-  border: 3px solid red;
+  // border: 3px solid red;
 }
 
 //This my original way of doing container
 .carouselcontainer {
-  border: 3px solid black;
+  // border: 3px solid black;
   // float: left;
   // margin: 10px;
   // flex-basis: 50%;
@@ -273,7 +273,7 @@
 
 .detailcontainer {
   // flex-basis: 40%;
-  border: 3px solid black;
+  // border: 3px solid black;
   width: 50%;
   margin: 10px;
   margin-left: 3%;
@@ -282,7 +282,7 @@
 
 .detailcontainerleft {
   /* display: inline; */
-  border: 3px solid black;
+  // border: 3px solid black;
   // flex-basis: 40%;
   // float: left;
   width: 50%;

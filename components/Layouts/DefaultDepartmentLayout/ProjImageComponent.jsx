@@ -85,7 +85,18 @@ const ProjImageComponent = (props) => {
 
   const carouselComponent = () => (
     <div className={styles.carouselcontainer}>
-      <img
+      <div className={styles.SlickCarousel} style={{ padding: 24 }}>
+        <Slider {...settings}>
+          {project.imageUrls.map((photo) => {
+            return (
+              <div>
+                <img width="100%" src={photo.url} />
+              </div>
+            );
+          })}
+        </Slider>
+      </div>
+      {/* <img
         src={project.imageUrls[currentImageIndex].url}
         className={styles.previmg}
       />
@@ -100,15 +111,19 @@ const ProjImageComponent = (props) => {
           })}
         </Slider>
       </div>
-      <div style={{ clear: "both" }} />
+      <div style={{ clear: "both" }} /> */}
     </div>
   );
 
   const imageComponent = () => (
     <div className={styles.carouselcontainer}>
       <img
-      //this is to generate a default photo for when no image is added
-        src={imageCount!=0? project.imageUrls[imageCount-1].url : "https://i.imgur.com/LRTL24O.jpeg"}
+        //this is to generate a default photo for when no image is added
+        src={
+          imageCount != 0
+            ? project.imageUrls[imageCount - 1].url
+            : "https://i.imgur.com/LRTL24O.jpeg"
+        }
         style={{
           width: "100%",
           //aspectRatio: "135/76", doesn't seem to change anything ? need to test more with more photos
