@@ -13,8 +13,8 @@ import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
 import Link from "next/link";
 
 const TimelineCard = (props) => {
-    const {items } = props;
-    
+
+  const { items } = props;
   const parseTime = (date) => {
     const options = {
       month: "short",
@@ -24,58 +24,60 @@ const TimelineCard = (props) => {
     };
     return date.toLocaleString("en-GB", options);
   };
-
+ 
   const formDate = (start, end) => {
     return parseTime(new Date(start)) + " - " + parseTime(new Date(end));
   };
-    return (
-      <div className={styles.event}>
-           <Timeline align="alternate">
-              { items.map(item => {
-                return (
-                  <TimelineItem >
-                    <TimelineOppositeContent>
-                      <Typography variant="body2" color="textSecondary">
-                        {formDate(item.start, item.end)}
-                      </Typography>
-                    </TimelineOppositeContent>
-                    <TimelineSeparator>
-                      <TimelineDot className={styles.icon}>
-                        <CalendarTodayIcon />
-                      </TimelineDot>
-                      <TimelineConnector className={styles.icon} />
-                    </TimelineSeparator>
-                    <TimelineContent>
-                      <Typography variant="h6" component="h1">
-                        <div className={styles.timelineheader}>{item.name}</div>
-
-                      </Typography>
-                      <Typography variant="body1" color="textSecondary">
-                        <div className={styles.timelineheader}>
-                          Location: {item.location}
-                        </div>
-                      </Typography>
-                      <div>
-                      <Link href="/events" >
+  return (
+    
+    <div className={styles.event}>
+      <Timeline align="alternate">
+        {items.map(item => {
+          return (
+            <TimelineItem >
+              <TimelineOppositeContent>
+                <Typography variant="body2" color="textSecondary">
+                  {formDate(item.start, item.end)}
+                </Typography>
+              </TimelineOppositeContent>
+              <TimelineSeparator>
+                <TimelineDot className={styles.icon}>
+                  <CalendarTodayIcon />
+                </TimelineDot>
+                <TimelineConnector className={styles.icon} />
+              </TimelineSeparator>
+              <TimelineContent>
+                <Typography variant="h6" component="h1">
+                  <div className={styles.timelineheader}>{item.name}</div>
+                </Typography>
+                <Typography variant="body1" color="textSecondary">
+                  <div className={styles.timelineheader}>
+                    Location: {item.location}
+                  </div>
+                </Typography>
+                <div>
+                  <Link href={{ pathname: '/eventsHome', query: { object: JSON.stringify(item) } }} >
                         <button className={styles.rightbutton}>View More</button>
-                       </Link>
-                        &nbsp;
-                      </div>
-                      <div>
-                        &nbsp;
-                      </div>
-                      <div>
-                        &nbsp;
-                      </div>
-                    </TimelineContent>
-                  </TimelineItem>
-                )
-              })
+                  </Link> 
 
-              }
-            </Timeline>
-      </div>
-    );
-  };
+                  &nbsp;               
+                </div>
+                <div>
+                  &nbsp;
+                </div>
+                <div>
+                  &nbsp;
+                </div>
+              </TimelineContent>
+            </TimelineItem>
+          )
+        })
+
+        }
+      </Timeline>
+    </div>
+  );
   
-  export default TimelineCard;
+};
+
+export default TimelineCard;

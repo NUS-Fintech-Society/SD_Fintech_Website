@@ -24,9 +24,7 @@ const Home = (props) => {
   const fetchEvents = async () => {
     try {
       const response = await request.get("events/");
-      setItems(sortEvents(response.data));
-      
-      console.log(noEvents);
+      setItems(sortEvents(response.data));  
     } catch (err) {
       console.log(err);
     }
@@ -36,7 +34,6 @@ const Home = (props) => {
     console.assert(list.length != 0);
 
     list.sort((eventOne, eventTwo) => {
-      console.log(eventTwo.start + " " + eventOne.start);
       var dateOne = new Date(eventOne.start);
       var dateTwo = new Date(eventTwo.start)
       return dateOne.getTime() - dateTwo.getTime();
@@ -45,10 +42,7 @@ const Home = (props) => {
     while (i < list.length) {
       var date = new Date(list[i].end);
       var datetoday = new Date();
-      console.log("date" + date);
-      console.log("datetoday" + datetoday);
       if (date < datetoday) {
-        console.log("remove" + list[i].name);
         list.splice(i, 1);
       } else {
         i = i + 1;
@@ -63,10 +57,8 @@ const Home = (props) => {
     }
     if(list.length==0){
       setNoEvents(false); 
-      console.log("done false");
      }
   
-    // console.log("end " + list[0].start)
     return list;
   }
 
