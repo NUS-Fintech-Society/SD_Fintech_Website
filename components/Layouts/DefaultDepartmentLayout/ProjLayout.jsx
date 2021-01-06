@@ -100,9 +100,9 @@ const ProjLayout = (props) => {
       <ProjImageComponent project={project} />
       <div className={styles.detailcontainer}>
         <div className={styles.projectNumberingRow}>
-          <div className={styles.projectNumberingLineOdd}>
-            <h1>__________________________________________</h1>
-          </div>
+          {/* <div className={styles.projectNumberingLineOdd}>
+            <h1>________________________</h1>
+          </div> */}
           <div className={styles.projectNumberingTextOdd}>
             <h2>Project {projectIndex + 1}</h2>
           </div>
@@ -126,9 +126,9 @@ const ProjLayout = (props) => {
             {/* <h1>Project {project.id}</h1> */}
             <h2>Project {projectIndex + 1}</h2>
           </div>
-          <div className={styles.projectNumberingLineEven}>
-            <h1>__________________________________________</h1>
-          </div>
+          {/* <div className={styles.projectNumberingLineEven}>
+            <h1>________________________</h1>
+          </div> */}
         </div>
         <div className={styles.projecttitle}>
           <h3>{project.title}</h3>
