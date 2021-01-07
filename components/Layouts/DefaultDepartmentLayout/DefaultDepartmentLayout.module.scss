@@ -5,7 +5,7 @@
   flex-direction: column;
   height: auto;
   font-family: "Lato";
-  padding-top: 5%;
+  padding-top: 3%;
 }
 
 .title {
@@ -25,10 +25,10 @@
   justify-content: space-between;
 }
 
-.projectNumberingLineOdd {
-  // width: 55%;
-  font-size: 1vw;
-}
+// .projectNumberingLineOdd {
+//   // width: 55%;
+//   font-size: 1vw;
+// }
 
 .projectNumberingTextOdd {
   // width: 40%;
@@ -37,11 +37,11 @@
   //align-content: center;
 }
 
-.projectNumberingLineEven {
-  //width: 55%;
-  font-size: 1vw;
-  text-align: right;
-}
+// .projectNumberingLineEven {
+//   //width: 55%;
+//   font-size: 1vw;
+//   text-align: right;
+// }
 
 .projectNumberingTextEven {
   //width: 40%;
@@ -51,11 +51,16 @@
 }
 
 .container {
-  background-color: #ededed;
-  flex-basis: 50%;
+  // background-color: #ededed;
+  background-color: #1f2c42;
+  flex-basis: 40%;
   box-sizing: border-box;
-  margin: 10px;
-  position: relative;
+  margin-right: 2%;
+  margin-left: 2%;
+  //position:relativedisplay: flexbox;
+  // height: min-content;
+  // width: min-content;
+  // color: "#ffffff";
 }
 
 .flex {
@@ -101,12 +106,12 @@
 }
 
 .boxbody {
-  font-size: 1.3vw;
+  font-size: 1.2vw;
   margin: 10px;
 }
 
 .boxbodyright {
-  font-size: 1.3vw;
+  font-size: 1.2vw;
   margin: 10px;
   text-align: right;
 }
@@ -230,34 +235,18 @@
   font-size: 48px;
 }
 
-/*This below is from the previos alice carousel part*/
-
-.previmg {
-  // height: 20%;
-  // width: 20%;
-
-  //testing reponsive
-  width: 20%;
-  height: undefined;
-  aspect-ratio: 135/76;
-
-  opacity: 0.3;
-  position: absolute;
-  object-fit: cover;
-}
-
 .projectcontainer {
   // margin-top: 64px;
   // margin-left: 64px;
   display: flex;
   margin-top: 5%;
-  margin-bottom: 3%;
+  // margin-bottom: 3%;
   align-items: center;
   align-content: space-between;
   justify-content: space-between;
   //below 2 numbers control vertical whitespace
-  padding-left: 12%;
-  padding-right: 12%;
+  padding-left: 15%;
+  padding-right: 15%;
   // border: 3px solid red;
 }
 
@@ -275,7 +264,7 @@
   // flex-basis: 40%;
   // border: 3px solid black;
   width: 50%;
-  margin: 10px;
+  // margin: 10px;
   margin-left: 3%;
   // margin-right: 5%;
 }
@@ -286,7 +275,7 @@
   // flex-basis: 40%;
   // float: left;
   width: 50%;
-  margin: 10px;
+  // margin: 10px;
   margin-right: 3%;
   // margin-left: 5%;
 }
@@ -307,15 +296,9 @@
   font-size: 1vw;
 }
 
-.projectbody {
-  margin-top: 5%;
-  /* border: 3px solid blue; */
-  text-align: left;
-  font-weight: lighter;
-}
-
-.projectrow {
-  margin-top: 15%;
-  position: relative;
-  border: solid yellow;
-}
+// .projectbody {
+//   margin-top: 5%;
+//   /* border: 3px solid blue; */
+//   text-align: left;
+//   font-weight: lighter;
+// }

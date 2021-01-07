@@ -6,26 +6,25 @@ const DeptInfo = (props) => {
   return (
     <div className={styles.layout}>
       <div className={styles.title}>
-        <h1>{deptInfo.name}</h1>
+        <h2>{deptInfo.name} Department</h2>
       </div>
       <div className={styles.flex}>
-        <div className={styles.blank}></div>
+        <div className={styles.blank} />
         <div className={styles.container}>
           <div className={styles.boxtitle}>
-            <h3>Purpose</h3>
+            <h3 style={{ color: "#ffffff" }}>Purpose</h3>
           </div>
-          <div className={styles.boxbody}>{deptInfo.purpose}</div>
-          {/* <hr className={styles.line}></hr> */}
-          {/* <div className={styles.imageleft}></div> */}
+          <div className={styles.boxbody}>
+            <p style={{ color: "#ffffff" }}>{deptInfo.purpose}</p>
+          </div>
         </div>
-
         <div className={styles.container}>
           <div className={styles.boxtitleright}>
-            <h3>Goal</h3>
+            <h3 style={{ color: "#ffffff" }}>Goal</h3>
           </div>
-          <div className={styles.boxbodyright}>{deptInfo.goal}</div>
-          {/* <hr className={styles.lineright}></hr>
-          <div className={styles.image}></div> */}
+          <div className={styles.boxbodyright}>
+            <p style={{ color: "#ffffff" }}> {deptInfo.goal}</p>
+          </div>
         </div>
         <div className={styles.blank}></div>
       </div>
