@@ -23,9 +23,6 @@ const SideDrawer = (props) => {
 				</DropDown>
 
 				<li>
-					<a href="/#ourTeam">Our Team</a>
-				</li>
-				<li>
 					<a href="/#contact">Contact Us</a>
 				</li>
 			</ul>
@@ -48,18 +45,23 @@ function DropDown(props) {
 function DropDownMenu() {
 	function DropDownItem(props) {
 		return (
-			<a href="#" className={styles.dropdown_menu_item}>
+			<a href={props.href} className={styles.dropdown_menu_item}>
 				{props.children}
 			</a>
 		);
 	}
-
 	return (
 		<div className={styles.dropdown_menu}>
-			<DropDownItem>Operations</DropDownItem>
-			<DropDownItem>Machine Learning</DropDownItem>
-			<DropDownItem>Blockchain</DropDownItem>
-			<DropDownItem>DevOps</DropDownItem>
+			<DropDownItem href="/department/operations">
+				Operations
+			</DropDownItem>
+			<DropDownItem href="/department/machinelearning">
+				Machine Learning
+			</DropDownItem>
+			<DropDownItem href="/department/blockchain">
+				Blockchain
+			</DropDownItem>
+			<DropDownItem href="/department/devops">DevOps</DropDownItem>
 		</div>
 	);
 }

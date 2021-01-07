@@ -13,8 +13,8 @@ import departments from "data/departmentInfo";
 import request from "util/request";
 
 const Home = (props) => {
-	const typing = useTypewriter("Ideate. Innovate. Inspire.");
-	const { register, handleSubmit, watch, errors } = useForm();
+	const typing = useTypewriter("— Ideate. Innovate. Inspire.");
+	const { register, handleSubmit, errors } = useForm();
 	const [formState, setFormState] = useState({});
 
 	const onSubmit = async (data) => {
@@ -35,8 +35,14 @@ const Home = (props) => {
 			<main className={styles.main}>
 				<div className={styles.landing}>
 					<div className={styles.details}>
-						<p className={styles.title}>{typing}</p>
+						<div className={styles.titleContainer}>
+							<p className={styles.title}>NUS Fintech Society</p>
+							<p className={styles.subtitle}>{typing}</p>
+						</div>
 						<div className={styles.aboutUs}>
+							<div className={styles.descriptionContainer}>
+								<p className={styles.about}>About Us</p>
+							</div>
 							<div className={styles.descriptionContainer}>
 								<p className={styles.text}>
 									NUS FinTech Society was founded under NUS
@@ -44,21 +50,16 @@ const Home = (props) => {
 									like-minded individuals with a passion in
 									pursuing research and driving applications
 									in the realms of Blockchain and Machine
-									Learning.
-								</p>
-							</div>
-							<div className={styles.descriptionContainer}>
-								<p id="ourTeam" className={styles.text}>
-									We currently have over 80 members, each with
-									a strong grasp of their individual research
-									areas.
+									Learning. We currently have over 80 members,
+									each with a strong grasp of their individual
+									research areas.
 								</p>
 							</div>
 						</div>
 					</div>
 				</div>
 				<FadeInSection>
-					<div className={styles.ourTeam}>
+					<div id="ourTeam" className={styles.ourTeam}>
 						<div className={styles.textContainer}>
 							<h1>Our Team</h1>
 							<div className={styles.underline}></div>
