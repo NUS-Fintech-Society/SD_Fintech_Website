@@ -33,7 +33,7 @@
 }
 
 .main {
-  padding: 3rem 0 0 0;
+  padding: 6rem 0 0 0;
   flex: 1;
   display: flex;
   justify-content: center;
@@ -43,15 +43,30 @@
 
   h1 {
     color: $primary-blue-1;
-    font-family: sans-serif;
     text-align: center;
   }
 
   .landing {
-    .title {
-      color: $primary-white-1;
-      font-size: 50px;
-      text-align: center;
+    .titleContainer {
+      text-align: left;
+      align-self: flex-start;
+      margin-left: 36px;
+      margin-bottom: 30px;
+
+      .title {
+        font-size: 80px;
+        text-align: left;
+        margin: 20px 0 40px 0;
+      }
+
+      .subtitle {
+        font-size: 50px;
+        text-align: left;
+        margin: 20px 0 40px 0;
+        font-style: italic;
+        color: $primary-blue-2;
+        font-weight: 100;
+      }
     }
 
     width: 70%;
@@ -60,9 +75,10 @@
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    background-color: $primary-blue-1;
+    background-color: $primary-white-1;
     padding: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 4rem;
+    margin-left: 10rem;
 
     .details {
       display: flex;
@@ -70,10 +86,25 @@
       align-items: center;
       justify-content: center;
 
-      .text {
-        font-size: $font-size-2;
+      .descriptionContainer {
+        width: 40%;
+        margin-left: 10rem;
+      }
+
+      .about {
+        text-align: left;
+        color: $primary-blue-2;
+        font-size: $font-size-1;
         font-weight: $font-weight-regular;
-        color: $primary-white-1;
+        line-height: 0;
+      }
+
+      .text {
+        text-align: left;
+        font-size: $font-size-1;
+        font-weight: $font-weight-regular;
+        color: $primary-grey-1;
+        line-height: 1.5;
       }
     }
 
@@ -101,7 +132,6 @@
     justify-content: center;
     flex-direction: row;
     text-align: center;
-    margin-top: 5rem;
     margin-bottom: 5rem;
 
     h1 {
@@ -109,7 +139,7 @@
     }
 
     .underline {
-      border-bottom: 10px solid #70dbdb;
+      border-bottom: 10px solid $primary-blue-2;
       width: 160px;
       opacity: 0.5;
     }
@@ -294,6 +324,22 @@
     padding: 0 0 0 0;
 
     .landing {
+      margin-left: 70px;
+      margin-bottom : 10px;
+
+      .titleContainer {
+        margin: 70px 0px 0px 0px;
+      }
+
+      .aboutUs {
+        margin-bottom: 10px;
+
+        .descriptionContainer {
+          width: 100%;
+          margin-left: 20px;
+        }
+      }
+
       .exco {
         margin-top: 1rem;
         width: 100%;
@@ -304,7 +350,7 @@
       flex-direction: column;
 
       .textContainer {
-        text-align: center;
+        text-align: left;
         width: 30%;
         margin-right: 0px;
         justify-content: center;
