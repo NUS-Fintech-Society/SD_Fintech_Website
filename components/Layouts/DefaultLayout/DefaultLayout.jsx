@@ -4,9 +4,8 @@ import styles from "./DefaultLayout.module.scss";
 
 import NavBar from "components/NavBar/NavBar";
 import Footer from "components/Footer/Footer";
-import SideDrawer from "components/SideDrawer/SideDrawer"
+import SideDrawer from "components/SideDrawer/SideDrawer";
 import Backdrop from "components/Backdrop/Backdrop";
-
 
 const DefaultLayout = (props) => {
   const [isSideDrawerOpen, setIsSideDrawerOpen] = useState(false);
@@ -33,12 +32,10 @@ const DefaultLayout = (props) => {
       <div>
         {isSideDrawerOpen && <Backdrop click={backDropClickHandler}></Backdrop>}
       </div>
-      <main style={{ marginTop: '64px' }}>
-        {props.children}
-      </main>
+      <main>{props.children}</main>
       <Footer />
     </div>
   );
-}
+};
 
 export default DefaultLayout;
