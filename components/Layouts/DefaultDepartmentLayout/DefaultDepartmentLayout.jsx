@@ -31,7 +31,7 @@ const DefaultDepartmentLayout = (props) => {
         <div style={{backgroundColor:'rgba(196, 196, 196, 0.2)',paddingBottom:'3%'}}>
           {data &&
             data.projects.map((project, index) => (
-              <ProjLayout key={project.id} project={project} index={index} />
+              <ProjLayout key={project.id} project={project} index={index} deptId={deptId}/>
             ))}
         </div>
       </DefaultLayout>

@@ -123,8 +123,9 @@ const ProjLayout = (props) => {
       <div className={styles.detailcontainerleft}>
         <div className={styles.projectNumberingRow}>
           <div className={styles.projectNumberingTextEven}>
-            {/* <h1>Project {project.id}</h1> */}
-            <h2>Project {projectIndex + 1}</h2>
+            {/* We use the word Event for operations department */}
+            {props.deptId == 1 && <h2>Event {projectIndex + 1}</h2>}
+            {props.deptId != 1 && <h2>Project {projectIndex + 1}</h2>}
           </div>
           {/* <div className={styles.projectNumberingLineEven}>
             <h1>________________________</h1>
