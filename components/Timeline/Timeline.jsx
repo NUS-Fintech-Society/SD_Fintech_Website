@@ -42,7 +42,7 @@ const TimelineCard = (props) => {
               </TimelineOppositeContent>
               <TimelineSeparator>
                 <TimelineDot className={styles.icon}>
-                  <CalendarTodayIcon />
+                  {/* <CalendarTodayIcon /> */}
                 </TimelineDot>
                 <TimelineConnector className={styles.icon} />
               </TimelineSeparator>
