@@ -12,9 +12,9 @@ import DepartmentCard from "components/DepartmentCard/DepartmentCard";
 import request from "util/request";
 
 const Home = (props) => {
-  const typing = useTypewriter("Ideate. Innovate. Inspire.");
+  const typing = useTypewriter("— Ideate. Innovate. Inspire.");
   const [departments, setDepartments] = useState([]);
-  const { register, handleSubmit, watch, errors } = useForm();
+  const { register, handleSubmit, errors } = useForm();
   const [formState, setFormState] = useState({});
 
   useEffect(() => {
