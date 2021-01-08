@@ -48,27 +48,29 @@ const Home = (props) => {
       <main className={styles.main}>
         <div className={styles.landing}>
           <div className={styles.details}>
-            <p className={styles.title}>{typing}</p>
+            <div className={styles.titleContainer}>
+              <p className={styles.title}>NUS Fintech Society</p>
+              <p className={styles.subtitle}>{typing}</p>
+            </div>
             <div className={styles.aboutUs}>
+              <div className={styles.descriptionContainer}>
+                <p className={styles.about}>About Us</p>
+              </div>
               <div className={styles.descriptionContainer}>
                 <p className={styles.text}>
                   NUS FinTech Society was founded under NUS School of Computing
                   by a group of like-minded individuals with a passion in
                   pursuing research and driving applications in the realms of
-                  Blockchain and Machine Learning.
-                </p>
-              </div>
-              <div className={styles.descriptionContainer}>
-                <p id="ourTeam" className={styles.text}>
-                  We currently have over 80 members, each with a strong grasp of
-                  their individual research areas.
+                  Blockchain and Machine Learning. We currently have over 80
+                  members, each with a strong grasp of their individual research
+                  areas.
                 </p>
               </div>
             </div>
           </div>
         </div>
         <FadeInSection>
-          <div className={styles.ourTeam}>
+          <div id="ourTeam" className={styles.ourTeam}>
             <div className={styles.textContainer}>
               <h1>Our Team</h1>
               <div className={styles.underline}></div>
@@ -102,98 +104,119 @@ const Home = (props) => {
         <FadeInSection>
           <div className={styles.sponsors}>
             <h1 id="Sponsors">Sponsors</h1>
-            <div class={styles.row}>
-              <div class={styles.column}>
-                <a href="https://www.blockventure.com/">
-                  <img
-                    className={styles.images}
-                    alt="BlockVenture"
-                    src="/sponsors/BlockVenture.png"
-                  ></img>
-                </a>
+            <div className={styles.row}>
+              <div className={styles.column}>
+                <div className={styles.imageContainer}>
+                  <a href="https://www.blockventure.com/">
+                    <img
+                      className={styles.images}
+                      alt="BlockVenture"
+                      src="/sponsors/BlockVenture.png"
+                    ></img>
+                  </a>
+                </div>
               </div>
-              <div class={styles.column}>
-                <a href="https://www.bnpparibas.com.sg/en/">
-                  <img
-                    className={styles.images}
-                    alt="bnp-paribas-logo"
-                    src="/sponsors/BnpParibasLogo.png"
-                  ></img>
-                </a>
+              <div className={styles.column}>
+                <div className={styles.imageContainer}>
+                  <a href="https://www.bnpparibas.com.sg/en/">
+                    <img
+                      className={styles.images}
+                      alt="bnp-paribas-logo"
+                      src="/sponsors/BnpParibasLogo.png"
+                    ></img>
+                  </a>
+                </div>
               </div>
-              <div class={styles.column}>
-                <a href="https://www.db.com/singapore/">
-                  <img
-                    className={styles.images}
-                    alt="DeutscheBank"
-                    src="/sponsors/DeutschBank.png"
-                  ></img>
-                </a>
+              <div className={styles.column}>
+                <div className={styles.imageContainer}>
+                  <a href="https://www.db.com/singapore/">
+                    <img
+                      className={styles.images}
+                      alt="DeutscheBank"
+                      src="/sponsors/DeutschBank.png"
+                    ></img>
+                  </a>
+                </div>
               </div>
-              <div class={styles.column}>
-                <a href="https://www.dytechlab.com/">
-                  <img
-                    className={styles.images}
-                    alt="DymnamicTechLab"
-                    src="/sponsors/DymnamicTechLab.png"
-                  ></img>
-                </a>
+              <div className={styles.column}>
+                <div className={styles.imageContainer}>
+                  <a href="https://www.dytechlab.com/">
+                    <img
+                      className={styles.images}
+                      alt="DymnamicTechLab"
+                      src="/sponsors/DymnamicTechLab.png"
+                    ></img>
+                  </a>
+                </div>
               </div>
-              <div class={styles.column}>
-                <a href="http://www.favour-capital.com/en/">
-                  <img
-                    className={styles.images}
-                    alt="FavourCapital"
-                    src="/sponsors/FavourCapital.png"
-                  ></img>
-                </a>
+              <div className={styles.column}>
+                <div className={styles.imageContainer}>
+                  <a href="http://www.favour-capital.com/en/">
+                    <img
+                      className={styles.images}
+                      alt="FavourCapital"
+                      src="/sponsors/FavourCapital.png"
+                    ></img>
+                  </a>
+                </div>
               </div>
+            </div>
 
-              <div class={styles.column}>
-                <a href="https://ripple.com/">
-                  <img
-                    className={styles.images}
-                    alt="RippleLogo"
-                    src="/sponsors/RippleLogo.png"
-                  ></img>
-                </a>
+            <div className={styles.row}>
+              <div className={styles.column}>
+                <div className={styles.imageContainer}>
+                  <a href="https://wirexapp.com/en">
+                    <img
+                      className={styles.images}
+                      alt="Wirex"
+                      src="/sponsors/Wirex.png"
+                    ></img>
+                  </a>
+                </div>
               </div>
-
-              <div class={styles.column}>
-                <a href="https://www.roostoo.com/">
-                  <img
-                    className={styles.images}
-                    alt="Roostoo"
-                    src="/sponsors/Roostoo.png"
-                  ></img>
-                </a>
+              <div className={styles.column}>
+                <div className={styles.imageContainer}>
+                  <a href="https://www.roostoo.com/">
+                    <img
+                      className={styles.images}
+                      alt="Roostoo"
+                      src="/sponsors/Roostoo.png"
+                    ></img>
+                  </a>
+                </div>
               </div>
-              <div class={styles.column}>
-                <a href="https://www.sherjan.com/">
-                  <img
-                    className={styles.images}
-                    alt="Sherjan"
-                    src="/sponsors/Sherjan.png"
-                  ></img>
-                </a>
+              <div className={styles.column}>
+                <div className={styles.imageContainer}>
+                  <a href="https://ripple.com/">
+                    <img
+                      className={styles.images}
+                      alt="RippleLogo"
+                      src="/sponsors/RippleLogo.png"
+                    ></img>
+                  </a>
+                </div>
               </div>
-              <div class={styles.column}>
-                <a href="https://www.studentcoin.org/">
-                  <img
-                    className={styles.images}
-                    alt="StudentCoin"
-                    src="/sponsors/StudentCoin.png"
-                  ></img>
-                </a>
+              <div className={styles.column}>
+                <div className={styles.imageContainer}>
+                  <a href="https://www.sherjan.com/">
+                    <img
+                      className={styles.images}
+                      alt="Sherjan"
+                      src="/sponsors/Sherjan.png"
+                    ></img>
+                  </a>
+                </div>
               </div>
-              <div class={styles.column}>
-                <a href="https://wirexapp.com/en">
-                  <img
-                    className={styles.images}
-                    alt="Wirex"
-                    src="/sponsors/Wirex.png"
-                  ></img>
-                </a>
+              <div className={styles.column}>
+                <div className={styles.imageContainer}>
+                  <a href="https://www.studentcoin.org/">
+                    <img
+                      className={styles.images}
+                      alt="StudentCoin"
+                      src="/sponsors/StudentCoin.png"
+                    ></img>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -214,7 +237,7 @@ const Home = (props) => {
                 <MailIcon className={styles.icon} />
                 <p>nusfintech@gmail.com</p>
               </div>
-              <form onSubmit={handleSubmit(onSubmit)} autocomplete="off">
+              <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
                 <div className={styles.inputContainer}>
                   <input
                     className={styles.input}
