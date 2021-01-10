@@ -28,9 +28,21 @@ const NavBar = (props) => {
 							<Link href="/events">Events</Link>
 						</li>
 
-						<DropDown name="Our Team ⇂">
+						{/* <DropDown name="Our Team ⇂">
 							<DropDownMenu></DropDownMenu>
-						</DropDown>
+						</DropDown> */}
+
+						<div className={styles.dropdown}>
+							<a className={styles.navbar_items}>Our Team ⇂</a>
+							<div className={styles.dropdown_content}>
+								<a href="/department/operations">Operations</a>
+								<a href="/department/machinelearning">
+									Machine Learning
+								</a>
+								<a href="/department/blockchain">Blockchain</a>
+								<a href="/department/devops">DevOps</a>
+							</div>
+						</div>
 
 						<li>
 							<Link href="/#contact">Contact Us</Link>
@@ -41,41 +53,5 @@ const NavBar = (props) => {
 		</header>
 	);
 };
-
-function DropDown(props) {
-	const [open, setOpen] = useState(false);
-	return (
-		<li className={styles.navbar_items}>
-			<a href="#" onClick={() => setOpen(!open)}>
-				{props.name}
-			</a>
-			{open && props.children}
-		</li>
-	);
-}
-
-function DropDownMenu() {
-	function DropDownItem(props) {
-		return (
-			<a href={props.href} className={styles.dropdown_menu_item}>
-				{props.children}
-			</a>
-		);
-	}
-	return (
-		<div className={styles.dropdown_menu}>
-			<DropDownItem href="/department/operations">
-				Operations
-			</DropDownItem>
-			<DropDownItem href="/department/machinelearning">
-				Machine Learning
-			</DropDownItem>
-			<DropDownItem href="/department/blockchain">
-				Blockchain
-			</DropDownItem>
-			<DropDownItem href="/department/devops">DevOps</DropDownItem>
-		</div>
-	);
-}
 
 export default NavBar;
