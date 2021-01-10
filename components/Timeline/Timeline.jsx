@@ -58,7 +58,7 @@ const TimelineCard = (props) => {
                   </div>
                 </Typography>
                 <div className={styles.button}>
-                  <Link href={{ pathname: '/eventsHome', query: { object: JSON.stringify(item) } }} >
+                  <Link href={{ pathname: '/eventsTimeline', query: { object: JSON.stringify(item) } }} >
                         <button className={styles.rightbutton}>View More</button>
                   </Link> 
 
