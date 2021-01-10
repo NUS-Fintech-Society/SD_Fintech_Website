@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import styles from "styles/pages/Home.module.scss";
 import useTypewriter from "react-typewriter-hook";
 import { useForm } from "react-hook-form";
@@ -6,39 +7,15 @@ import MailIcon from "@material-ui/icons/MailOutline";
 
 import DefaultLayout from "components/Layouts/DefaultLayout/DefaultLayout";
 import DepartmentCard from "components/DepartmentCard/DepartmentCard";
-import TimelineCard from "components/Timeline/Timeline";
+
 import departments from "data/departmentInfo";
 
-
 import request from "util/request";
-import React, { useState, useEffect } from "react";
 
 const Home = (props) => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [noEvents, setNoEvents] = useState(true);
-  // const typing = useTypewriter("Ideate. Innovate. Inspire.");
-  const [items, setItems] = useState();
- const typing = useTypewriter("— Ideate. Innovate. Inspire.");
+  const typing = useTypewriter("— Ideate. Innovate. Inspire.");
   const { register, handleSubmit, errors } = useForm();
   const [formState, setFormState] = useState({});
-  
-  useEffect(() => {
-    fetchEvents().then(() => {
-      setIsLoading(false);
-    });
-  }, []);
-
-  const fetchEvents = async () => {
-    try {
-      const response = await request.get("events/");
-      setItems(sortEvents(response.data));  
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-// const Home = (props) => {
- 
 
   const onSubmit = async (data) => {
     try {
@@ -48,38 +25,6 @@ const Home = (props) => {
       console.log(err);
     }
   };
-
-  const sortEvents = (list) => {
-    console.assert(list.length != 0);
-
-    list.sort((eventOne, eventTwo) => {
-      var dateOne = new Date(eventOne.start);
-      var dateTwo = new Date(eventTwo.start)
-      return dateOne.getTime() - dateTwo.getTime();
-    });
-    var i = 0;
-    while (i < list.length) {
-      var date = new Date(list[i].end);
-      var datetoday = new Date();
-      if (date < datetoday) {
-        list.splice(i, 1);
-      } else {
-        i = i + 1;
-      }
-    }
-    if (list.length > 4) {
-      for (var i = 0; i < list.length; i++) {
-        if (i >= 4) {
-          list.splice(i, 1);
-        }
-      }
-    }
-    if(list.length==0){
-      setNoEvents(false); 
-     }
-  
-    return list;
-  }
 
   const handleChange = (e) => {
     setFormState({ ...formState, [e.target.name]: e.target.value });
@@ -110,7 +55,7 @@ const Home = (props) => {
               </div>
             </div>
           </div>
-        {/* </div> */}
+        </div>
         <FadeInSection>
           <div id="ourTeam" className={styles.ourTeam}>
             <div className={styles.textContainer}>
@@ -137,28 +82,11 @@ const Home = (props) => {
           </div>
         </FadeInSection>
 
-        {/* <FadeInSection> */}
-       
-            
-            <div className={styles.event}>
-          <div className={styles.headerevent}>
+        <FadeInSection>
+          <div>
             <h1>Upcoming Events</h1>
           </div>
-          {!isLoading && noEvents && (
-            <TimelineCard
-              items={items}
-            />
-          )}
-          {!isLoading && !noEvents && (
-            <div className={styles.headerevent}>
-            <p>
-              There are currently no upcoming events.
-            </p>
-            </div>
-          )}
-   
-          </div>
-        {/* </FadeInSection> */}
+        </FadeInSection>
 
         <FadeInSection>
           <div className={styles.sponsors}>
@@ -278,10 +206,9 @@ const Home = (props) => {
                 </div>
               </div>
             </div>
-          </div> 
-          </FadeInSection>
-       
-      
+          </div>
+        </FadeInSection>
+
         <div className={styles.contactUs} id="contact">
           <FadeInSection>
             <h1>Contact Us</h1>
@@ -348,8 +275,6 @@ const Home = (props) => {
               </form>
             </div>
           </FadeInSection>
-        </div>
-        {/* </div> */}
         </div>
       </main>
     </DefaultLayout>
