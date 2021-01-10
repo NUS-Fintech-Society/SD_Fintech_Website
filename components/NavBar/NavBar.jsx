@@ -33,7 +33,7 @@ const NavBar = (props) => {
 						</DropDown> */}
 
 						<div className={styles.dropdown}>
-							<a className={styles.navbar_items}>Our Team ⇂</a>
+							<a className={styles.navbar_items}>Our Team</a>
 							<div className={styles.dropdown_content}>
 								<a href="/department/operations">Operations</a>
 								<a href="/department/machinelearning">
