@@ -1,12 +1,12 @@
 import React from "react";
 
 import DefaultDepartmentLayout from "components/Layouts/DefaultDepartmentLayout/DefaultDepartmentLayout";
-import departmentData from "data/departmentData";
 
-const DevOps = (props) => {
+const Operations = (props) => {
   return (
-    <DefaultDepartmentLayout deptId = {4} />
+      <DefaultDepartmentLayout deptId={1} />
   );
 };
 
-export default DevOps;
+export default Operations;
+

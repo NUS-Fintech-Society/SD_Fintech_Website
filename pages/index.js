@@ -1,28 +1,27 @@
+import React, { useEffect, useState } from "react";
 import styles from "styles/pages/Home.module.scss";
 import useTypewriter from "react-typewriter-hook";
 import { useForm } from "react-hook-form";
 import LocationIcon from "@material-ui/icons/PlaceOutlined";
 import MailIcon from "@material-ui/icons/MailOutline";
-
+import TimelineCard from "components/Timeline/Timeline";
 import DefaultLayout from "components/Layouts/DefaultLayout/DefaultLayout";
 import DepartmentCard from "components/DepartmentCard/DepartmentCard";
-import TimelineCard from "components/Timeline/Timeline";
-import departments from "data/departmentInfo";
 
-
+//import departments from "data/departmentInfo";
 import request from "util/request";
-import React, { useState, useEffect } from "react";
 
 const Home = (props) => {
   const [isLoading, setIsLoading] = useState(true);
   const [noEvents, setNoEvents] = useState(true);
-  // const typing = useTypewriter("Ideate. Innovate. Inspire.");
   const [items, setItems] = useState();
   const typing = useTypewriter("— Ideate. Innovate. Inspire.");
+  const [departments, setDepartments] = useState([]);
   const { register, handleSubmit, errors } = useForm();
   const [formState, setFormState] = useState({});
 
   useEffect(() => {
+    loadDepartments(); 
     fetchEvents().then(() => {
       setIsLoading(false);
     });
@@ -36,9 +35,15 @@ const Home = (props) => {
       console.log(err);
     }
   };
-
-  // const Home = (props) => {
-
+ 
+  const loadDepartments = async () => {
+    try {
+      const response = await request.get("departments/");
+      setDepartments(response.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   const onSubmit = async (data) => {
     try {
@@ -84,9 +89,8 @@ const Home = (props) => {
   const handleChange = (e) => {
     setFormState({ ...formState, [e.target.name]: e.target.value });
   };
-
-  return (
-    <DefaultLayout>
+return (
+<DefaultLayout>
       <main className={styles.main}>
         <div className={styles.landing}>
           <div className={styles.details}>
@@ -110,41 +114,41 @@ const Home = (props) => {
               </div>
             </div>
           </div>
-          {/* </div> */}
-          <FadeInSection>
-            <div id="ourTeam" className={styles.ourTeam}>
-              <div className={styles.textContainer}>
-                <h1>Our Team</h1>
-                <div className={styles.underline}></div>
-                <p>
-                  NUS FinTech Society comprises of four different teams:
-                  Operations, Machine Learning, DevOps, as well as Blockchain
+        </div>
+        <FadeInSection>
+          <div id="ourTeam" className={styles.ourTeam}>
+            <div className={styles.textContainer}>
+              <h1>Our Team</h1>
+              <div className={styles.underline}></div>
+              <p>
+                NUS FinTech Society comprises of four different teams:
+                Operations, Machine Learning, DevOps, as well as Blockchain
               </p>
-              </div>
-              <div className={styles.cardsContainer}>
-                {departments.map((department) => (
-                  <div className={styles.cardContainer} key={department.title}>
-                    <DepartmentCard
-                      id={department.title}
-                      title={department.title}
-                      description={department.description}
-                      icon={department.icon}
-                      route={department.route}
-                    />
-                  </div>
-                ))}
-              </div>
             </div>
-          </FadeInSection>
-
-          {/* <FadeInSection> */}
-
-
-          <div className={styles.event}>
-            <div className={styles.headerevent}>
-              <h1>Upcoming Events</h1>
+            <div className={styles.cardsContainer}>
+              {departments.map((department) => (
+                <div className={styles.cardContainer} key={department.title}>
+                  <DepartmentCard
+                    id={department.id}
+                    title={department.name}
+                    description={department.description}
+                    icon={department.icon}
+                    route={department.route}
+                  />
+                </div>
+              ))}
             </div>
+          </div>
+        </FadeInSection>
+
+
+        <FadeInSection>
+          <div>
+            <h1>Upcoming Events</h1>
+          </div>
+
             {!isLoading && noEvents && (
+              
               <TimelineCard
                 items={items}
               />
@@ -153,209 +157,204 @@ const Home = (props) => {
               <div className={styles.headerevent}>
                 <p>
                   There are currently no upcoming events.
-            </p>
+                </p>
               </div>
             )}
+        </FadeInSection>
 
-          </div>
-          {/* </FadeInSection> */}
 
-          <FadeInSection>
-            <div className={styles.sponsors}>
-              <h1 id="Sponsors">Sponsors</h1>
-              <div className={styles.row}>
-                <div className={styles.column}>
-                  <div className={styles.imageContainer}>
-                    <a href="https://www.blockventure.com/">
-                      <img
-                        className={styles.images}
-                        alt="BlockVenture"
-                        src="/sponsors/BlockVenture.png"
-                      ></img>
-                    </a>
-                  </div>
-                </div>
-                <div className={styles.column}>
-                  <div className={styles.imageContainer}>
-                    <a href="https://www.bnpparibas.com.sg/en/">
-                      <img
-                        className={styles.images}
-                        alt="bnp-paribas-logo"
-                        src="/sponsors/BnpParibasLogo.png"
-                      ></img>
-                    </a>
-                  </div>
-                </div>
-                <div className={styles.column}>
-                  <div className={styles.imageContainer}>
-                    <a href="https://www.db.com/singapore/">
-                      <img
-                        className={styles.images}
-                        alt="DeutscheBank"
-                        src="/sponsors/DeutschBank.png"
-                      ></img>
-                    </a>
-                  </div>
-                </div>
-                <div className={styles.column}>
-                  <div className={styles.imageContainer}>
-                    <a href="https://www.dytechlab.com/">
-                      <img
-                        className={styles.images}
-                        alt="DymnamicTechLab"
-                        src="/sponsors/DymnamicTechLab.png"
-                      ></img>
-                    </a>
-                  </div>
-                </div>
-                <div className={styles.column}>
-                  <div className={styles.imageContainer}>
-                    <a href="http://www.favour-capital.com/en/">
-                      <img
-                        className={styles.images}
-                        alt="FavourCapital"
-                        src="/sponsors/FavourCapital.png"
-                      ></img>
-                    </a>
-                  </div>
+        <FadeInSection>
+          <div className={styles.sponsors}>
+            <h1 id="Sponsors">Sponsors</h1>
+            <div className={styles.row}>
+              <div className={styles.column}>
+                <div className={styles.imageContainer}>
+                  <a href="https://www.blockventure.com/">
+                    <img
+                      className={styles.images}
+                      alt="BlockVenture"
+                      src="/sponsors/BlockVenture.png"
+                    ></img>
+                  </a>
                 </div>
               </div>
-
-              <div className={styles.row}>
-                <div className={styles.column}>
-                  <div className={styles.imageContainer}>
-                    <a href="https://wirexapp.com/en">
-                      <img
-                        className={styles.images}
-                        alt="Wirex"
-                        src="/sponsors/Wirex.png"
-                      ></img>
-                    </a>
-                  </div>
+              <div className={styles.column}>
+                <div className={styles.imageContainer}>
+                  <a href="https://www.bnpparibas.com.sg/en/">
+                    <img
+                      className={styles.images}
+                      alt="bnp-paribas-logo"
+                      src="/sponsors/BnpParibasLogo.png"
+                    ></img>
+                  </a>
                 </div>
-                <div className={styles.column}>
-                  <div className={styles.imageContainer}>
-                    <a href="https://www.roostoo.com/">
-                      <img
-                        className={styles.images}
-                        alt="Roostoo"
-                        src="/sponsors/Roostoo.png"
-                      ></img>
-                    </a>
-                  </div>
+              </div>
+              <div className={styles.column}>
+                <div className={styles.imageContainer}>
+                  <a href="https://www.db.com/singapore/">
+                    <img
+                      className={styles.images}
+                      alt="DeutscheBank"
+                      src="/sponsors/DeutschBank.png"
+                    ></img>
+                  </a>
                 </div>
-                <div className={styles.column}>
-                  <div className={styles.imageContainer}>
-                    <a href="https://ripple.com/">
-                      <img
-                        className={styles.images}
-                        alt="RippleLogo"
-                        src="/sponsors/RippleLogo.png"
-                      ></img>
-                    </a>
-                  </div>
+              </div>
+              <div className={styles.column}>
+                <div className={styles.imageContainer}>
+                  <a href="https://www.dytechlab.com/">
+                    <img
+                      className={styles.images}
+                      alt="DymnamicTechLab"
+                      src="/sponsors/DymnamicTechLab.png"
+                    ></img>
+                  </a>
                 </div>
-                <div className={styles.column}>
-                  <div className={styles.imageContainer}>
-                    <a href="https://www.sherjan.com/">
-                      <img
-                        className={styles.images}
-                        alt="Sherjan"
-                        src="/sponsors/Sherjan.png"
-                      ></img>
-                    </a>
-                  </div>
-                </div>
-                <div className={styles.column}>
-                  <div className={styles.imageContainer}>
-                    <a href="https://www.studentcoin.org/">
-                      <img
-                        className={styles.images}
-                        alt="StudentCoin"
-                        src="/sponsors/StudentCoin.png"
-                      ></img>
-                    </a>
-                  </div>
+              </div>
+              <div className={styles.column}>
+                <div className={styles.imageContainer}>
+                  <a href="http://www.favour-capital.com/en/">
+                    <img
+                      className={styles.images}
+                      alt="FavourCapital"
+                      src="/sponsors/FavourCapital.png"
+                    ></img>
+                  </a>
                 </div>
               </div>
             </div>
-          </FadeInSection>
 
-
-          <div className={styles.contactUs} id="contact">
-            <FadeInSection>
-              <h1>Contact Us</h1>
-              <div>
-                <div className={styles.iconTextContainer}>
-                  <LocationIcon className={styles.icon} />
-                  <p>
-                    NUS School of Computing, COM1, 13 Computing Drive, Singapore
-                    117417
-                </p>
+            <div className={styles.row}>
+              <div className={styles.column}>
+                <div className={styles.imageContainer}>
+                  <a href="https://wirexapp.com/en">
+                    <img
+                      className={styles.images}
+                      alt="Wirex"
+                      src="/sponsors/Wirex.png"
+                    ></img>
+                  </a>
                 </div>
-                <div className={styles.iconTextContainer}>
-                  <MailIcon className={styles.icon} />
-                  <p>nusfintech@gmail.com</p>
-                </div>
-                <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
-                  <div className={styles.inputContainer}>
-                    <input
-                      className={styles.input}
-                      id="name"
-                      name="name"
-                      placeholder="Name"
-                      ref={register({ required: true })}
-                      onChange={handleChange}
-                      value={formState.name}
-                    />
-                    {errors.name && <p>Required</p>}
-                  </div>
-                  <div className={styles.inputContainer}>
-                    <input
-                      className={styles.input}
-                      id="email"
-                      name="email"
-                      placeholder="Email"
-                      onChange={handleChange}
-                      value={formState.email}
-                      ref={register({
-                        required: "Required",
-                        pattern: {
-                          value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                          message: "Invalid email address",
-                        },
-                      })}
-                    />
-                    {errors.email && <p>{errors.email.message}</p>}
-                  </div>
-                  <div className={styles.inputContainer}>
-                    <textarea
-                      className={styles.inputArea}
-                      placeholder="Message"
-                      id="message"
-                      name="message"
-                      onChange={handleChange}
-                      value={formState.message}
-                      ref={register({ required: true })}
-                    ></textarea>
-                    {errors.message && <p>Required</p>}
-                  </div>
-                  <input
-                    type="submit"
-                    className={styles.submitButton}
-                    value="Send"
-                  />
-                </form>
               </div>
-            </FadeInSection>
+              <div className={styles.column}>
+                <div className={styles.imageContainer}>
+                  <a href="https://www.roostoo.com/">
+                    <img
+                      className={styles.images}
+                      alt="Roostoo"
+                      src="/sponsors/Roostoo.png"
+                    ></img>
+                  </a>
+                </div>
+              </div>
+              <div className={styles.column}>
+                <div className={styles.imageContainer}>
+                  <a href="https://ripple.com/">
+                    <img
+                      className={styles.images}
+                      alt="RippleLogo"
+                      src="/sponsors/RippleLogo.png"
+                    ></img>
+                  </a>
+                </div>
+              </div>
+              <div className={styles.column}>
+                <div className={styles.imageContainer}>
+                  <a href="https://www.sherjan.com/">
+                    <img
+                      className={styles.images}
+                      alt="Sherjan"
+                      src="/sponsors/Sherjan.png"
+                    ></img>
+                  </a>
+                </div>
+              </div>
+              <div className={styles.column}>
+                <div className={styles.imageContainer}>
+                  <a href="https://www.studentcoin.org/">
+                    <img
+                      className={styles.images}
+                      alt="StudentCoin"
+                      src="/sponsors/StudentCoin.png"
+                    ></img>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
-          {/* </div> */}
+        </FadeInSection>
+
+        <div className={styles.contactUs} id="contact">
+          <FadeInSection>
+            <h1>Contact Us</h1>
+            <div>
+              <div className={styles.iconTextContainer}>
+                <LocationIcon className={styles.icon} />
+                <p>
+                  NUS School of Computing, COM1, 13 Computing Drive, Singapore
+                  117417
+                </p>
+              </div>
+              <div className={styles.iconTextContainer}>
+                <MailIcon className={styles.icon} />
+                <p>nusfintech@gmail.com</p>
+              </div>
+              <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
+                <div className={styles.inputContainer}>
+                  <input
+                    className={styles.input}
+                    id="name"
+                    name="name"
+                    placeholder="Name"
+                    ref={register({ required: true })}
+                    onChange={handleChange}
+                    value={formState.name}
+                  />
+                  {errors.name && <p>Required</p>}
+                </div>
+                <div className={styles.inputContainer}>
+                  <input
+                    className={styles.input}
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                    onChange={handleChange}
+                    value={formState.email}
+                    ref={register({
+                      required: "Required",
+                      pattern: {
+                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                        message: "Invalid email address",
+                      },
+                    })}
+                  />
+                  {errors.email && <p>{errors.email.message}</p>}
+                </div>
+                <div className={styles.inputContainer}>
+                  <textarea
+                    className={styles.inputArea}
+                    placeholder="Message"
+                    id="message"
+                    name="message"
+                    onChange={handleChange}
+                    value={formState.message}
+                    ref={register({ required: true })}
+                  ></textarea>
+                  {errors.message && <p>Required</p>}
+                </div>
+                <input
+                  type="submit"
+                  className={styles.submitButton}
+                  value="Send"
+                />
+              </form>
+            </div>
+          </FadeInSection>
         </div>
       </main>
     </DefaultLayout>
   );
 };
-
 //component to allow fade in to happen just add <FadeInSection> to the parts you wanna fade in
 function FadeInSection(props) {
   const [isVisible, setVisible] = React.useState(true);
