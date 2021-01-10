@@ -12,18 +12,18 @@ const DeptInfo = (props) => {
         <div className={styles.blank} />
         <div className={styles.container}>
           <div className={styles.boxtitle}>
-            <h3 style={{ color: "#ffffff" }}>Purpose</h3>
+            <h3>Purpose</h3>
           </div>
           <div className={styles.boxbody}>
-            <p style={{ color: "#ffffff" }}>{deptInfo.purpose}</p>
+            <p>{deptInfo.purpose}</p>
           </div>
         </div>
         <div className={styles.container}>
           <div className={styles.boxtitleright}>
-            <h3 style={{ color: "#ffffff" }}>Goal</h3>
+            <h3>Goal</h3>
           </div>
           <div className={styles.boxbodyright}>
-            <p style={{ color: "#ffffff" }}> {deptInfo.goal}</p>
+            <p> {deptInfo.goal}</p>
           </div>
         </div>
         <div className={styles.blank}></div>

@@ -52,11 +52,15 @@
 
 .container {
   // background-color: #ededed;
-  background-color: #1f2c42;
+  // background-color: #1f2c42;
+  background-color: #c4c4c4;
+  opacity: 0.85;
+  // background-color: "rgba(196, 196, 196, 0.2)";
   flex-basis: 40%;
   box-sizing: border-box;
   margin-right: 2%;
   margin-left: 2%;
+  padding: 1%;
   //position:relativedisplay: flexbox;
   // height: min-content;
   // width: min-content;
@@ -65,36 +69,36 @@
 
 .flex {
   display: flex;
-  height: 35vh;
+  // height: 35vh;
 }
 
-.image {
-  position: absolute;
-  width: 30%; /*image width*/
-  height: 50%; /*image height*/
-  bottom: 0px;
-  background: url("/blockchain.jpg") no-repeat;
-}
+// .image {
+//   position: absolute;
+//   width: 30%; /*image width*/
+//   height: 50%; /*image height*/
+//   bottom: 0px;
+//   background: url("/blockchain.jpg") no-repeat;
+// }
 
-.imageleft {
-  position: absolute;
-  width: 30%; /*image width*/
-  height: 50%; /*image height*/
-  bottom: 0px;
-  right: 0px;
-  background: url("/blockchain.jpg") no-repeat;
-}
+// .imageleft {
+//   position: absolute;
+//   width: 30%; /*image width*/
+//   height: 50%; /*image height*/
+//   bottom: 0px;
+//   right: 0px;
+//   background: url("/blockchain.jpg") no-repeat;
+// }
 
-.line {
-  width: 30%;
-  margin-left: 10px;
-}
+// .line {
+//   width: 30%;
+//   margin-left: 10px;
+// }
 
-.lineright {
-  width: 30%;
-  margin-right: 10px;
-  text-align: right;
-}
+// .lineright {
+//   width: 30%;
+//   margin-right: 10px;
+//   text-align: right;
+// }
 
 .blank {
   flex-basis: 10%;
@@ -125,7 +129,7 @@
 @media only screen and (max-width: 500px) {
   .flex {
     display: flex;
-    height: 15vh;
+    // height: 15vh;
   }
   .layout {
     display: flex;
@@ -139,7 +143,7 @@
 @media only screen and (max-width: 800px) {
   .flex {
     display: flex;
-    height: 18vh;
+    // height: 18vh;
   }
   .layout {
     display: flex;
@@ -153,7 +157,7 @@
 @media only screen and (min-width: 1200px) {
   .flex {
     display: flex;
-    height: 40vh;
+    // height: 40vh;
   }
   .layout {
     display: flex;
@@ -167,7 +171,7 @@
 @media only screen and (min-width: 1800px) {
   .flex {
     display: flex;
-    height: 40vh;
+    // height: 40vh;
   }
   .layout {
     display: flex;
@@ -178,62 +182,63 @@
   }
 }
 
-.SlickCarousel {
-  text-align: center;
-  /* width: 70%; */
-  // margin-left: 20%;
-}
+// .SlickCarousel {
+//   // text-align: center;
+//   // padding: 24;
+//   /* width: 70%; */
+//   // margin-left: 20%;
+// }
 
-.SlickCarousel-logo {
-  height: 40vmin;
-}
+// .SlickCarousel-logo {
+//   height: 40vmin;
+// }
 
-.SlickCarousel-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+// .SlickCarousel-header {
+//   background-color: #282c34;
+//   min-height: 100vh;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   font-size: calc(10px + 2vmin);
+//   color: white;
+// }
 
-.SlickCarousel-link {
-  color: #09d3ac;
-}
+// .SlickCarousel-link {
+//   color: #09d3ac;
+// }
 
-.slides .slick-prev,
-.slides .slick-next {
-  position: absolute;
-  top: 50%;
-  z-index: 1;
-}
+// .slides .slick-prev,
+// .slides .slick-next {
+//   position: absolute;
+//   top: 50%;
+//   z-index: 1;
+// }
 
-.slides {
-  position: relative;
-}
+// .slides {
+//   position: relative;
+// }
 
-.slides .slick-prev,
-.slides .slick-next {
-  position: absolute;
-  top: 50%;
-  z-index: 1;
-}
+// .slides .slick-prev,
+// .slides .slick-next {
+//   position: absolute;
+//   top: 50%;
+//   z-index: 1;
+// }
 
-.slides .slick-prev {
-  left: 5%;
-}
+// .slides .slick-prev {
+//   left: 5%;
+// }
 
-.slides .slick-next {
-  right: 5%;
-}
+// .slides .slick-next {
+//   right: 5%;
+// }
 
-.next-slick-arrow,
-.prev-slick-arrow {
-  color: #000000;
-  font-size: 48px;
-}
+// .next-slick-arrow,
+// .prev-slick-arrow {
+//   color: #000000;
+//   font-size: 48px;
+// }
 
 .projectcontainer {
   // margin-top: 64px;

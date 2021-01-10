@@ -85,7 +85,7 @@ const ProjImageComponent = (props) => {
 
   const carouselComponent = () => (
     <div className={styles.carouselcontainer}>
-      <div className={styles.SlickCarousel} style={{ padding: 24 }}>
+      {/* <div>*/}
         <Slider {...settings}>
           {project.imageUrls.map((photo) => {
             return (
@@ -95,7 +95,7 @@ const ProjImageComponent = (props) => {
             );
           })}
         </Slider>
-      </div>
+      {/* </div> */}
       {/* <img
         src={project.imageUrls[currentImageIndex].url}
         className={styles.previmg}
