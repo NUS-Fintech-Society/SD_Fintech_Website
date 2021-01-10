@@ -53,11 +53,11 @@ const TimelineCard = (props) => {
                   <span className={styles.timelineheader}>{item.name}</span>
                 </Typography>
                 <Typography variant="body1" color="textSecondary">
-                  <span className={styles.timelineheader}>
+                  <div className={styles.timelineheader}>
                     Location: {item.location}
-                  </span>
+                  </div>
                 </Typography>
-                <div>
+                <div className={styles.button}>
                   <Link href={{ pathname: '/eventsHome', query: { object: JSON.stringify(item) } }} >
                         <button className={styles.rightbutton}>View More</button>
                   </Link> 
