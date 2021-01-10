@@ -12,6 +12,8 @@ import Typography from '@material-ui/core/Typography';
 import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
 import Link from "next/link";
 
+
+
 const TimelineCard = (props) => {
 
   const { items } = props;
@@ -48,12 +50,12 @@ const TimelineCard = (props) => {
               </TimelineSeparator>
               <TimelineContent>
                 <Typography variant="h6" component="h1">
-                  <div className={styles.timelineheader}>{item.name}</div>
+                  <span className={styles.timelineheader}>{item.name}</span>
                 </Typography>
                 <Typography variant="body1" color="textSecondary">
-                  <div className={styles.timelineheader}>
+                  <span className={styles.timelineheader}>
                     Location: {item.location}
-                  </div>
+                  </span>
                 </Typography>
                 <div>
                   <Link href={{ pathname: '/eventsHome', query: { object: JSON.stringify(item) } }} >
@@ -81,3 +83,4 @@ const TimelineCard = (props) => {
 };
 
 export default TimelineCard;
+
