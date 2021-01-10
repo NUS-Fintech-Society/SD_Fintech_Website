@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "styles/pages/Home.module.scss";
 import useTypewriter from "react-typewriter-hook";
 import { useForm } from "react-hook-form";
@@ -8,14 +8,27 @@ import MailIcon from "@material-ui/icons/MailOutline";
 import DefaultLayout from "components/Layouts/DefaultLayout/DefaultLayout";
 import DepartmentCard from "components/DepartmentCard/DepartmentCard";
 
-import departments from "data/departmentInfo";
-
+//import departments from "data/departmentInfo";
 import request from "util/request";
 
 const Home = (props) => {
   const typing = useTypewriter("— Ideate. Innovate. Inspire.");
+  const [departments, setDepartments] = useState([]);
   const { register, handleSubmit, errors } = useForm();
   const [formState, setFormState] = useState({});
+
+  useEffect(() => {
+    loadDepartments();
+  }, []);
+
+  const loadDepartments = async () => {
+    try {
+      const response = await request.get("departments/");
+      setDepartments(response.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   const onSubmit = async (data) => {
     try {
@@ -70,8 +83,8 @@ const Home = (props) => {
               {departments.map((department) => (
                 <div className={styles.cardContainer} key={department.title}>
                   <DepartmentCard
-                    id={department.title}
-                    title={department.title}
+                    id={department.id}
+                    title={department.name}
                     description={department.description}
                     icon={department.icon}
                     route={department.route}
@@ -280,7 +293,6 @@ const Home = (props) => {
     </DefaultLayout>
   );
 };
-
 //component to allow fade in to happen just add <FadeInSection> to the parts you wanna fade in
 function FadeInSection(props) {
   const [isVisible, setVisible] = React.useState(true);

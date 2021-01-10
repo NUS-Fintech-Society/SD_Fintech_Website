@@ -5,7 +5,7 @@
   flex-direction: column;
   height: auto;
   font-family: "Lato";
-  padding-top: 5%;
+  padding-top: 3%;
 }
 
 .title {
@@ -17,12 +17,50 @@
   font-size: 1.5vw;
 }
 
+.projectNumberingRow {
+  //font-size: 1.5vw;
+  // border: 3px solid blue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+// .projectNumberingLineOdd {
+//   // width: 55%;
+//   font-size: 1vw;
+// }
+
+.projectNumberingTextOdd {
+  // width: 40%;
+  font-size: 1.5vw;
+  text-align: right;
+  //align-content: center;
+}
+
+// .projectNumberingLineEven {
+//   //width: 55%;
+//   font-size: 1vw;
+//   text-align: right;
+// }
+
+.projectNumberingTextEven {
+  //width: 40%;
+  font-size: 1.5vw;
+  text-align: left;
+  //align-content: center;
+}
+
 .container {
-  background-color: #ededed;
-  flex-basis: 50%;
+  // background-color: #ededed;
+  background-color: #1f2c42;
+  flex-basis: 40%;
   box-sizing: border-box;
-  margin: 10px;
-  position: relative;
+  margin-right: 2%;
+  margin-left: 2%;
+  //position:relativedisplay: flexbox;
+  // height: min-content;
+  // width: min-content;
+  // color: "#ffffff";
 }
 
 .flex {
@@ -68,12 +106,12 @@
 }
 
 .boxbody {
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   margin: 10px;
 }
 
 .boxbodyright {
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   margin: 10px;
   text-align: right;
 }
@@ -143,7 +181,7 @@
 .SlickCarousel {
   text-align: center;
   /* width: 70%; */
-  margin-left: 20%;
+  // margin-left: 20%;
 }
 
 .SlickCarousel-logo {
@@ -197,73 +235,70 @@
   font-size: 48px;
 }
 
-/*This below is from the previos alice carousel part*/
-
-.previmg {
-  // height: 20%;
-  // width: 20%;
-
-  //testing reponsive
-  width: 20%;
-  height: undefined;
-  aspect-ratio: 135/76;
-
-  opacity: 0.3;
-  position: absolute;
-  object-fit: cover;
-}
-
 .projectcontainer {
   // margin-top: 64px;
   // margin-left: 64px;
   display: flex;
   margin-top: 5%;
-  margin-bottom: 3%;
-  // border: 3px solid black;
+  // margin-bottom: 3%;
+  align-items: center;
+  align-content: space-between;
+  justify-content: space-between;
+  //below 2 numbers control vertical whitespace
+  padding-left: 15%;
+  padding-right: 15%;
+  // border: 3px solid red;
 }
 
 //This my original way of doing container
 .carouselcontainer {
   // border: 3px solid black;
   // float: left;
-  margin: 10px;
-  flex-basis: 50%;
-  width: 45%;
+  // margin: 10px;
+  // flex-basis: 50%;
+  width: 60%;
+  // margin-right: 7%;
 }
 
 .detailcontainer {
-  flex-basis: 50%;
+  // flex-basis: 40%;
   // border: 3px solid black;
-  // float: left;
-  width: 55%;
-  margin: 10px;
+  width: 50%;
+  // margin: 10px;
+  margin-left: 3%;
+  // margin-right: 5%;
 }
 
 .detailcontainerleft {
   /* display: inline; */
-  /* border: 3px solid black; */
-  flex-basis: 50%;
+  // border: 3px solid black;
+  // flex-basis: 40%;
   // float: left;
-  width: 55%;
-  margin-right: 5%;
+  width: 50%;
+  // margin: 10px;
+  margin-right: 3%;
+  // margin-left: 5%;
 }
 
 .projecttitle {
   /* width: 70%; */
   text-align: left;
-  /* margin-top: 10%; */
-  /* border: 3px solid red; */
+  h3 {
+    color: $primary-grey-1;
+    font-family: "Lato";
+  }
 }
 
-.projectbody {
-  margin-top: 5%;
-  /* border: 3px solid blue; */
-  text-align: left;
-  font-weight: lighter;
+.projectdetailtext {
+  margin-bottom: "3%";
+  text-align: "justify";
+  white-space: pre-line; //for paragraphing
+  font-size: 1vw;
 }
 
-.projectrow {
-  margin-top: 15%;
-  position: relative;
-  border: solid yellow;
-}
+// .projectbody {
+//   margin-top: 5%;
+//   /* border: 3px solid blue; */
+//   text-align: left;
+//   font-weight: lighter;
+// }
