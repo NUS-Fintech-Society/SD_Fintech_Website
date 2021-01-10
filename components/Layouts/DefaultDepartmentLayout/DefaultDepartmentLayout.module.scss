@@ -18,87 +18,35 @@
 }
 
 .projectNumberingRow {
-  //font-size: 1.5vw;
-  // border: 3px solid blue;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-// .projectNumberingLineOdd {
-//   // width: 55%;
-//   font-size: 1vw;
-// }
-
 .projectNumberingTextOdd {
-  // width: 40%;
   font-size: 1.5vw;
   text-align: right;
-  //align-content: center;
 }
 
-// .projectNumberingLineEven {
-//   //width: 55%;
-//   font-size: 1vw;
-//   text-align: right;
-// }
-
 .projectNumberingTextEven {
-  //width: 40%;
   font-size: 1.5vw;
   text-align: left;
-  //align-content: center;
 }
 
 .container {
-  // background-color: #ededed;
-  // background-color: #1f2c42;
   background-color: #c4c4c4;
   opacity: 0.85;
-  // background-color: "rgba(196, 196, 196, 0.2)";
   flex-basis: 40%;
   box-sizing: border-box;
   margin-right: 2%;
   margin-left: 2%;
   padding: 1%;
-  //position:relativedisplay: flexbox;
-  // height: min-content;
-  // width: min-content;
-  // color: "#ffffff";
 }
 
 .flex {
   display: flex;
   // height: 35vh;
 }
-
-// .image {
-//   position: absolute;
-//   width: 30%; /*image width*/
-//   height: 50%; /*image height*/
-//   bottom: 0px;
-//   background: url("/blockchain.jpg") no-repeat;
-// }
-
-// .imageleft {
-//   position: absolute;
-//   width: 30%; /*image width*/
-//   height: 50%; /*image height*/
-//   bottom: 0px;
-//   right: 0px;
-//   background: url("/blockchain.jpg") no-repeat;
-// }
-
-// .line {
-//   width: 30%;
-//   margin-left: 10px;
-// }
-
-// .lineright {
-//   width: 30%;
-//   margin-right: 10px;
-//   text-align: right;
-// }
 
 .blank {
   flex-basis: 10%;
@@ -182,111 +130,32 @@
   }
 }
 
-// .SlickCarousel {
-//   // text-align: center;
-//   // padding: 24;
-//   /* width: 70%; */
-//   // margin-left: 20%;
-// }
-
-// .SlickCarousel-logo {
-//   height: 40vmin;
-// }
-
-// .SlickCarousel-header {
-//   background-color: #282c34;
-//   min-height: 100vh;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//   font-size: calc(10px + 2vmin);
-//   color: white;
-// }
-
-// .SlickCarousel-link {
-//   color: #09d3ac;
-// }
-
-// .slides .slick-prev,
-// .slides .slick-next {
-//   position: absolute;
-//   top: 50%;
-//   z-index: 1;
-// }
-
-// .slides {
-//   position: relative;
-// }
-
-// .slides .slick-prev,
-// .slides .slick-next {
-//   position: absolute;
-//   top: 50%;
-//   z-index: 1;
-// }
-
-// .slides .slick-prev {
-//   left: 5%;
-// }
-
-// .slides .slick-next {
-//   right: 5%;
-// }
-
-// .next-slick-arrow,
-// .prev-slick-arrow {
-//   color: #000000;
-//   font-size: 48px;
-// }
-
 .projectcontainer {
-  // margin-top: 64px;
-  // margin-left: 64px;
   display: flex;
   margin-top: 5%;
-  // margin-bottom: 3%;
   align-items: center;
   align-content: space-between;
   justify-content: space-between;
-  //below 2 numbers control vertical whitespace
+  //below 2 numbers control surrounding vertical whitespace
   padding-left: 15%;
   padding-right: 15%;
-  // border: 3px solid red;
 }
 
-//This my original way of doing container
 .carouselcontainer {
-  // border: 3px solid black;
-  // float: left;
-  // margin: 10px;
-  // flex-basis: 50%;
   width: 60%;
-  // margin-right: 7%;
 }
 
 .detailcontainer {
-  // flex-basis: 40%;
-  // border: 3px solid black;
   width: 50%;
-  // margin: 10px;
   margin-left: 3%;
-  // margin-right: 5%;
 }
 
 .detailcontainerleft {
-  /* display: inline; */
-  // border: 3px solid black;
-  // flex-basis: 40%;
-  // float: left;
   width: 50%;
-  // margin: 10px;
   margin-right: 3%;
-  // margin-left: 5%;
 }
 
 .projecttitle {
-  /* width: 70%; */
   text-align: left;
   h3 {
     color: $primary-grey-1;
@@ -300,10 +169,3 @@
   white-space: pre-line; //for paragraphing
   font-size: 1vw;
 }
-
-// .projectbody {
-//   margin-top: 5%;
-//   /* border: 3px solid blue; */
-//   text-align: left;
-//   font-weight: lighter;
-// }
