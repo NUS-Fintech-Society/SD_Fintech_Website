@@ -23,35 +23,11 @@ const ProjImageComponent = (props) => {
         setCurrentImageIndex(next - 1);
       }
     },
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-
-    responsive: [
-      {
-        breakpoint: 700,
-        settings: {
-          arrows: false,
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 500,
-        settings: {
-          arrows: false,
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 400,
-        settings: {
-          arrows: false,
-          slidesToShow: 1,
-        },
-      },
-    ],
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />
   };
 
-  function SampleNextArrow(props) {
+  function NextArrow(props) {
     const { className, style, onClick } = props;
     return (
       <div
@@ -67,7 +43,7 @@ const ProjImageComponent = (props) => {
     );
   }
 
-  function SamplePrevArrow(props) {
+  function PrevArrow(props) {
     const { className, style, onClick } = props;
     return (
       <div
@@ -85,7 +61,6 @@ const ProjImageComponent = (props) => {
 
   const carouselComponent = () => (
     <div className={styles.carouselcontainer}>
-      <div className={styles.SlickCarousel} style={{ padding: 24 }}>
         <Slider {...settings}>
           {project.imageUrls.map((photo) => {
             return (
@@ -95,23 +70,6 @@ const ProjImageComponent = (props) => {
             );
           })}
         </Slider>
-      </div>
-      {/* <img
-        src={project.imageUrls[currentImageIndex].url}
-        className={styles.previmg}
-      />
-      <div className={styles.SlickCarousel} style={{ padding: 24 }}>
-        <Slider {...settings}>
-          {project.imageUrls.map((photo) => {
-            return (
-              <div>
-                <img width="100%" src={photo.url} />
-              </div>
-            );
-          })}
-        </Slider>
-      </div>
-      <div style={{ clear: "both" }} /> */}
     </div>
   );
 
@@ -126,10 +84,8 @@ const ProjImageComponent = (props) => {
         }
         style={{
           width: "100%",
-          //aspectRatio: "135/76", doesn't seem to change anything ? need to test more with more photos
         }}
       />
-      {/* <div style={{ clear: "both" }} /> */}
     </div>
   );
 
