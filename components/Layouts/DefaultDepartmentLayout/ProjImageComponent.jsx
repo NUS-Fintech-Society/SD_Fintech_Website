@@ -1,63 +1,57 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./DefaultDepartmentLayout.module.scss";
 import Slider from "react-slick";
 
 const ProjImageComponent = (props) => {
   const project = props.project;
   const imageCount = project.imageUrls.length;
-  const [currentImageIndex, setCurrentImageIndex] = useState(imageCount - 1);
 
   const settings = {
     dots: true,
-    fade: true,
+    // fade: true,
+    autoplay: true,
+    // autoplaySpeed: 4000, default is 3000
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     arrows: true,
     slidesToScroll: 1,
     className: "slides",
-    beforeChange: (current, next) => {
-      if (next == 0) {
-        setCurrentImageIndex(imageCount - 1);
-      } else {
-        setCurrentImageIndex(next - 1);
-      }
-    },
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />
+    // nextArrow: <NextArrow />,
+    // prevArrow: <PrevArrow />
   };
 
-  function NextArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{
-          ...style,
-          display: "block",
-          background: "grey",
-          marginTop: "38%",
-        }}
-        onClick={onClick}
-      />
-    );
-  }
+  // function NextArrow(props) {
+  //   const { className, style, onClick } = props;
+  //   return (
+  //     <div
+  //       className={className}
+  //       style={{
+  //         ...style,
+  //         display: "block",
+  //         background: "grey",
+  //         marginTop: "38%",
+  //       }}
+  //       onClick={onClick}
+  //     />
+  //   );
+  // }
 
-  function PrevArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{
-          ...style,
-          display: "block",
-          background: "grey",
-          marginTop: "38%",
-        }}
-        onClick={onClick}
-      />
-    );
-  }
+  // function PrevArrow(props) {
+  //   const { className, style, onClick } = props;
+  //   return (
+  //     <div
+  //       className={className}
+  //       style={{
+  //         ...style,
+  //         display: "block",
+  //         background: "grey",
+  //         marginTop: "38%",
+  //       }}
+  //       onClick={onClick}
+  //     />
+  //   );
+  // }
 
   const carouselComponent = () => (
     <div className={styles.carouselcontainer}>
