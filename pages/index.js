@@ -4,7 +4,7 @@ import useTypewriter from "react-typewriter-hook";
 import { useForm } from "react-hook-form";
 import LocationIcon from "@material-ui/icons/PlaceOutlined";
 import MailIcon from "@material-ui/icons/MailOutline";
-
+import TimelineCard from "components/Timeline/Timeline";
 import DefaultLayout from "components/Layouts/DefaultLayout/DefaultLayout";
 import DepartmentCard from "components/DepartmentCard/DepartmentCard";
 
@@ -12,15 +12,30 @@ import DepartmentCard from "components/DepartmentCard/DepartmentCard";
 import request from "util/request";
 
 const Home = (props) => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [noEvents, setNoEvents] = useState(true);
+  const [items, setItems] = useState();
   const typing = useTypewriter("— Ideate. Innovate. Inspire.");
   const [departments, setDepartments] = useState([]);
   const { register, handleSubmit, errors } = useForm();
   const [formState, setFormState] = useState({});
 
   useEffect(() => {
-    loadDepartments();
+    loadDepartments(); 
+    fetchEvents().then(() => {
+      setIsLoading(false);
+    });
   }, []);
 
+  const fetchEvents = async () => {
+    try {
+      const response = await request.get("events/");
+      setItems(sortEvents(response.data));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+ 
   const loadDepartments = async () => {
     try {
       const response = await request.get("departments/");
@@ -39,12 +54,43 @@ const Home = (props) => {
     }
   };
 
+  const sortEvents = (list) => {
+    console.assert(list.length != 0);
+
+    list.sort((eventOne, eventTwo) => {
+      var dateOne = new Date(eventOne.start);
+      var dateTwo = new Date(eventTwo.start)
+      return dateOne.getTime() - dateTwo.getTime();
+    });
+    var i = 0;
+    while (i < list.length) {
+      var date = new Date(list[i].end);
+      var datetoday = new Date();
+      if (date < datetoday) {
+        list.splice(i, 1);
+      } else {
+        i = i + 1;
+      }
+    }
+    if (list.length > 4) {
+      for (var i = 0; i < list.length; i++) {
+        if (i >= 4) {
+          list.splice(i, 1);
+        }
+      }
+    }
+    if (list.length == 0) {
+      setNoEvents(false);
+    }
+
+    return list;
+  }
+
   const handleChange = (e) => {
     setFormState({ ...formState, [e.target.name]: e.target.value });
   };
-
-  return (
-    <DefaultLayout>
+return (
+<DefaultLayout>
       <main className={styles.main}>
         <div className={styles.landing}>
           <div className={styles.details}>
@@ -95,11 +141,27 @@ const Home = (props) => {
           </div>
         </FadeInSection>
 
+
         <FadeInSection>
           <div>
             <h1>Upcoming Events</h1>
           </div>
+
+            {!isLoading && noEvents && (
+              
+              <TimelineCard
+                items={items}
+              />
+            )}
+            {!isLoading && !noEvents && (
+              <div className={styles.headerevent}>
+                <p>
+                  There are currently no upcoming events.
+                </p>
+              </div>
+            )}
         </FadeInSection>
+
 
         <FadeInSection>
           <div className={styles.sponsors}>
