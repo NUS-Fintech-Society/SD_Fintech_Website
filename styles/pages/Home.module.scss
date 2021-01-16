@@ -432,10 +432,28 @@
 			}
 		}
 
-		.partners {
+		.sponsors {
+			.row {
+				margin-left: 50%;
+				margin-right: 50%;
+			}
 			.column {
 				width: 100%;
 				padding: 10px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+
+		.partners {
+			.row {
+				margin-left: 50%;
+				margin-right: 50%;
+			}
+			.column {
+				width: 100%;
+				padding: 10px;
+				justify-content: center;
 			}
 		}
 
