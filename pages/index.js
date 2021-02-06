@@ -158,22 +158,25 @@ const Home = (props) => {
 					<div className={styles.sponsors}>
 						<div className={styles.row}>
 							<div className={styles.column}>
-								<h1 id="Sponsors">Sponsor</h1>
-								<div className={styles.imageContainer}>
-									<a href="https://fintechlab.nus.edu.sg/">
+								<h1 id="Sponsors">Sponsors</h1>
+								<a href="https://fintechlab.nus.edu.sg/">
+									<div className={styles.imageContainer}>
 										<img
 											className={styles.images}
 											alt="bnp-paribas-logo"
 											src="/sponsors/nusFintechLab.jpg"
 										></img>
-									</a>
+									</div>
+								</a>
+								<div className={styles.word}>
+									<h4>NUS Fintech Lab</h4>
 								</div>
 							</div>
 
 							<div className={styles.column}>
 								<h1 id="Sponsors">Mentor</h1>
 								<div className={styles.picture}>
-									<a href="linkedin.com/in/keithcarter/">
+									<a href="https://www.linkedin.com/in/keithcarter/">
 										<img
 											className={styles.images}
 											alt="keithCarter"
