@@ -294,8 +294,8 @@
 	}
 
 	.sponsors {
-		display: flex;
-		align-items: center;
+		display: inline-flex;
+		align-items: flex-end;
 		justify-content: center;
 		flex-direction: column;
 		text-align: center;
@@ -339,15 +339,17 @@
 		.row {
 			margin-top: 10px;
 			margin-bottom: 10px;
-			display: table;
+			display: inline-flex;
+			text-align: center;
+			justify-content: center;
 		}
 
 		.column {
 			display: table-cell;
 			text-align: center;
 			float: left;
-			width: 50%;
 			padding: 25px;
+			padding-inline: 20%;
 		}
 	}
 
@@ -434,14 +436,7 @@
 
 		.sponsors {
 			.row {
-				margin-left: 50%;
-				margin-right: 50%;
-			}
-			.column {
-				width: 100%;
-				padding: 10px;
-				margin-left: auto;
-				margin-right: auto;
+				display: table;
 			}
 		}
 

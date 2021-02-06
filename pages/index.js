@@ -156,9 +156,9 @@ const Home = (props) => {
 
 				<FadeInSection>
 					<div className={styles.sponsors}>
-						<h1 id="Sponsors">Sponsors</h1>
 						<div className={styles.row}>
 							<div className={styles.column}>
+								<h1 id="Sponsors">Sponsor</h1>
 								<div className={styles.imageContainer}>
 									<a href="https://fintechlab.nus.edu.sg/">
 										<img
@@ -169,7 +169,9 @@ const Home = (props) => {
 									</a>
 								</div>
 							</div>
+
 							<div className={styles.column}>
+								<h1 id="Sponsors">Mentor</h1>
 								<div className={styles.picture}>
 									<a href="linkedin.com/in/keithcarter/">
 										<img
@@ -184,7 +186,6 @@ const Home = (props) => {
 								</div>
 							</div>
 						</div>
-						<div className={styles.row}></div>
 					</div>
 				</FadeInSection>
 
