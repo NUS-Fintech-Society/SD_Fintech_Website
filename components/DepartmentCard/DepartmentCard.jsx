@@ -2,7 +2,6 @@ import React from "react";
 
 import Link from "next/link";
 import styles from "./DepartmentCard.module.scss";
-import Button from "@material-ui/core/Button";
 
 const DepartmentCard = (props) => {
   const { icon, title, description, route } = props;

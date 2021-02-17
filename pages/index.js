@@ -8,7 +8,6 @@ import TimelineCard from "components/Timeline/Timeline";
 import DefaultLayout from "components/Layouts/DefaultLayout/DefaultLayout";
 import DepartmentCard from "components/DepartmentCard/DepartmentCard";
 
-//import departments from "data/departmentInfo";
 import request from "util/request";
 
 const Home = (props) => {
@@ -89,6 +88,7 @@ const Home = (props) => {
 	const handleChange = (e) => {
 		setFormState({ ...formState, [e.target.name]: e.target.value });
 	};
+
 	return (
 		<DefaultLayout>
 			<main className={styles.main}>
