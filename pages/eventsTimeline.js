@@ -6,7 +6,7 @@ import styles from "styles/pages/Events.module.scss";
 import DefaultLayout from "components/Layouts/DefaultLayout/DefaultLayout";
 import EventsCalendar from "components/Calendar/EventsCalendar";
 import EventCard from "components/EventCard/EventCard";
-import { withRouter } from 'next/router';
+import { withRouter } from "next/router";
 import request from "util/request";
 
 const Events = ({ router: { query } }) => {
@@ -26,15 +26,15 @@ const Events = ({ router: { query } }) => {
   };
 
   const showEvent = (eventList) => {
-      var numEvent=0;
+    var numEvent = 0;
     console.assert(eventList.length != 0);
     eventList.sort((eventOne, eventTwo) => {
-        return eventTwo.start - eventOne.start;
-      });
-        for(var i=0; i<eventList.length; i++){
-        if(eventList[i].name===displayEvent.name){
-            numEvent = i;
-        }
+      return eventTwo.start - eventOne.start;
+    });
+    for (var i = 0; i < eventList.length; i++) {
+      if (eventList[i].name === displayEvent.name) {
+        numEvent = i;
+      }
     }
     return eventList[numEvent];
   };

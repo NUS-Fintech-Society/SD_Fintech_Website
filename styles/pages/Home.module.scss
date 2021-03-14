@@ -119,7 +119,6 @@
 		justify-content: center;
 		flex-direction: column;
 		text-align: center;
-		margin-bottom: 5rem;
 
 		.descriptionContainer {
 			width: 60%;
@@ -132,6 +131,7 @@
 		justify-content: center;
 		flex-direction: row;
 		text-align: center;
+		padding-top: 7rem;
 		margin-bottom: 5rem;
 
 		h1 {
@@ -295,9 +295,9 @@
 
 	.sponsors {
 		display: inline-flex;
-		align-items: flex-end;
-		justify-content: center;
-		flex-direction: column;
+		width: 1000px;
+		justify-content: space-evenly;
+		flex-direction: row;
 		text-align: center;
 		margin-top: 60px;
 
@@ -334,22 +334,6 @@
 				padding-left: 20px;
 				padding-right: 20px;
 			}
-		}
-
-		.row {
-			margin-top: 10px;
-			margin-bottom: 10px;
-			display: inline-flex;
-			text-align: center;
-			justify-content: center;
-		}
-
-		.column {
-			display: table-cell;
-			text-align: center;
-			float: left;
-			padding: 25px;
-			padding-inline: 20%;
 		}
 	}
 
@@ -435,9 +419,9 @@
 		}
 
 		.sponsors {
-			.row {
-				display: table;
-			}
+			width: 100%;
+			flex-direction: column;
+			align-items: center;
 		}
 
 		.partners {
