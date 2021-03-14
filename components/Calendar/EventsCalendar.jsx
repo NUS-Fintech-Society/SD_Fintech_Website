@@ -14,9 +14,9 @@ const EventsCalendar = (props) => {
 
   const EventView = (event) => {
     return (
-      <div className={styles.eventView}>
+      <span className={styles.eventView}>
         <p>{event.event.name}</p>
-      </div>
+      </span>
     );
   };
 
@@ -65,11 +65,11 @@ const EventsCalendar = (props) => {
   return (
     <div className={styles.calendar}>
       <Calendar
+        popup
         localizer={localizer}
         events={events}
         startAccessor="start"
         endAccessor="end"
-        views={["month", "week", "agenda"]}
         onSelectEvent={(e) => setEvent(e)}
         components={{
           event: EventView,

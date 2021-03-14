@@ -9,6 +9,11 @@
 .eventView {
   font-family: "Lato";
   font-size: $font-size-1;
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .toolbar {
