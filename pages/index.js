@@ -178,7 +178,7 @@ const Home = (props) => {
                   <img
                     className={styles.images}
                     alt="keithCarter"
-                    src="/sponsors/keithCarter.png"
+                    src="/sponsors/keithCarter.jpeg"
                   ></img>
                 </a>
                 <div className={styles.word}>
