@@ -28,8 +28,9 @@ const Events = (props) => {
   const showLatestEvent = (eventList) => {
     console.assert(eventList.length != 0);
     eventList.sort((eventOne, eventTwo) => {
-      return eventTwo.start - eventOne.start;
+      return new Date(eventTwo.start) - new Date(eventOne.start);
     });
+    console.log(eventList);
     return eventList[0];
   };
 

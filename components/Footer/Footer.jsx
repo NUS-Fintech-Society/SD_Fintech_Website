@@ -12,19 +12,19 @@ const Footer = (props) => {
       <div className={styles.container}>
         <div className={styles.row}>
           <li>
-            <Link href="https://www.instagram.com/nusfintech/">
+            <a href="https://www.instagram.com/nusfintech/">
               <AiOutlineInstagram className={styles.icon} />
-            </Link>
+            </a>
           </li>
           <li>
-            <Link href="https://github.com/nusfintech">
+            <a href="https://github.com/nusfintech">
               <AiOutlineGithub className={styles.icon} />
-            </Link>
+            </a>
           </li>
           <li>
-            <Link href="https://www.linkedin.com/company/nus-fintech-society/">
+            <a href="https://www.linkedin.com/company/nus-fintech-society/">
               <AiOutlineLinkedin className={styles.icon} />
-            </Link>
+            </a>
           </li>
         </div>
         <div className={styles.row}>
