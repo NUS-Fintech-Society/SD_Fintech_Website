@@ -1,5 +1,6 @@
 {
   "name": "fintech-website",
+  "homepage": "http://www.fintechsociety.comp.nus.edu.sg/",
   "version": "0.1.0",
   "private": true,
   "scripts": {
