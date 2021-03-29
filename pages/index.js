@@ -128,7 +128,7 @@ const Home = (props) => {
             </div>
             <div className={styles.cardsContainer}>
               {departments.map((department) => (
-                <div className={styles.cardContainer} key={department.title}>
+                <div className={styles.cardContainer} key={department.id}>
                   <DepartmentCard
                     id={department.id}
                     title={department.name}

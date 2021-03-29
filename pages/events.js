@@ -30,7 +30,6 @@ const Events = (props) => {
     eventList.sort((eventOne, eventTwo) => {
       return new Date(eventTwo.start) - new Date(eventOne.start);
     });
-    console.log(eventList);
     return eventList[0];
   };
 
