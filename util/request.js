@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://data-eye-289210.df.r.appspot.com/",
+  baseURL: process.env.NEXT_PUBLIC_BACKEND_URL,
 });
 
 const request = {
