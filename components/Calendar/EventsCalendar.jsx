@@ -39,7 +39,7 @@ const EventsCalendar = (props) => {
           <IconButton onClick={goBack}>
             <LeftArrow />
           </IconButton>
-          <p>
+          <p className={styles.label}>
             {props.label.split(" ")[0]} <span>{props.label.split(" ")[1]}</span>
           </p>
           <IconButton onClick={goNext}>

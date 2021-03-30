@@ -18,14 +18,14 @@
 
 .toolbar {
   padding: 3px 3px 3px 5px;
+  width: 400px;
 
   .labelContainer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 400px;
 
-    p {
+    .label {
       font-size: $font-size-5;
       font-family: "Lato";
       font-weight: $font-weight-dark;
@@ -33,6 +33,22 @@
 
       span {
         font-weight: $font-weight-light;
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .calendar {
+    width: 300px;
+  }
+
+  .toolbar {
+    width: 300px;
+
+    .labelContainer {
+      .label {
+        font-size: $font-size-4;
       }
     }
   }
