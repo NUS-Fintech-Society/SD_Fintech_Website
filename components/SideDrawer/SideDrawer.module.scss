@@ -1,0 +1,71 @@
+@import "styles/variables.scss";
+
+.side_drawer {
+	height: 100%;
+	background: white;
+	box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 70%;
+	max-width: 400px;
+	z-index: 200;
+	transform: translateX(-100%);
+	transition: transform 0.2s ease-out;
+}
+
+.side_drawer ul {
+	height: 100%;
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-family: "Lato";
+}
+
+.side_drawer li {
+	margin: 0.5rem 0;
+}
+
+.side_drawer a {
+	color: black;
+	text-decoration: none;
+	font-size: 1.2rem;
+	font-family: "Lato";
+}
+
+.side_drawer a:hover,
+.side_drawer a:active {
+	color: gray;
+}
+
+.side_drawer_open {
+	@extend.side_drawer;
+	transform: translateX(0);
+}
+
+.dropdown_menu {
+	position: absolute;
+	overflow: hidden;
+	padding: 0.5rem;
+	background-color: rgb(255, 255, 255); //can be changed to a nicer colour
+}
+
+.dropdown_menu_item {
+	height: 35px;
+	display: flex;
+	align-items: center;
+	border-radius: 8px;
+	transition: background 5000ms;
+	padding: 0.5rem;
+}
+
+.dropdown_menu_item:hover {
+	color: $primary-grey-1;
+}
+
+@media (min-width: 769px) {
+	.side_drawer {
+		display: none;
+	}
+}

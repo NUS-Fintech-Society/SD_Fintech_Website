@@ -1,0 +1,29 @@
+@import "styles/variables.scss";
+.event{
+     width:150%;
+
+     .button{
+        margin: 0 auto;
+    display: block;
+    text-align: center;
+     }
+
+    .rightbutton{
+        text-align: center;
+      border: none;
+      color:white;
+      padding:5px;
+        margin-top: 1rem;
+        background-color: #5398B9;
+        color: $primary-white-1;
+      
+    }
+
+    .timelineheader{
+      color:#54585A;
+      text-align: center;
+    }
+    .icon{
+      background-color:#A8ACAE;
+    }
+  }

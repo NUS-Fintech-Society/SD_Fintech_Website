@@ -1,14 +1,11 @@
 import React from "react";
 
-import DefaultLayout from "components/Layouts/DefaultLayout/DefaultLayout";
+import DefaultDepartmentLayout from "components/Layouts/DefaultDepartmentLayout/DefaultDepartmentLayout";
+import departmentData from "data/departmentData";
 
 const DevOps = (props) => {
   return (
-    <DefaultLayout>
-      <div>
-        <h1>DevOps Page</h1>
-      </div>
-    </DefaultLayout>
+    <DefaultDepartmentLayout deptId = {4} />
   );
 };
 
