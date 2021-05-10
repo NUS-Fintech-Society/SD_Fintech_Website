@@ -8,62 +8,26 @@ const ProjImageComponent = (props) => {
 
   const settings = {
     dots: true,
-    // fade: true,
     autoplay: true,
-    // autoplaySpeed: 4000, default is 3000
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     arrows: false,
     slidesToScroll: 1,
     className: "slides",
-    // nextArrow: <NextArrow />,
-    // prevArrow: <PrevArrow />
   };
-
-  // function NextArrow(props) {
-  //   const { className, style, onClick } = props;
-  //   return (
-  //     <div
-  //       className={className}
-  //       style={{
-  //         ...style,
-  //         display: "block",
-  //         background: "grey",
-  //         marginTop: "38%",
-  //       }}
-  //       onClick={onClick}
-  //     />
-  //   );
-  // }
-
-  // function PrevArrow(props) {
-  //   const { className, style, onClick } = props;
-  //   return (
-  //     <div
-  //       className={className}
-  //       style={{
-  //         ...style,
-  //         display: "block",
-  //         background: "grey",
-  //         marginTop: "38%",
-  //       }}
-  //       onClick={onClick}
-  //     />
-  //   );
-  // }
 
   const carouselComponent = () => (
     <div className={styles.carouselcontainer}>
-        <Slider {...settings}>
-          {project.imageUrls.map((photo) => {
-            return (
-              <div>
-                <img width="100%" src={photo.url} />
-              </div>
-            );
-          })}
-        </Slider>
+      <Slider {...settings}>
+        {project.imageUrls.map((photo) => {
+          return (
+            <div>
+              <img width="100%" src={photo.url} />
+            </div>
+          );
+        })}
+      </Slider>
     </div>
   );
 

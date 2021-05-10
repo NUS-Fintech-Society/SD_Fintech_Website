@@ -38,9 +38,7 @@ const TimelineCard = (props) => {
                 </Typography>
               </TimelineOppositeContent>
               <TimelineSeparator>
-                <TimelineDot className={styles.icon}>
-                  {/* <CalendarTodayIcon /> */}
-                </TimelineDot>
+                <TimelineDot className={styles.icon}></TimelineDot>
                 <TimelineConnector className={styles.icon} />
               </TimelineSeparator>
               <TimelineContent>
