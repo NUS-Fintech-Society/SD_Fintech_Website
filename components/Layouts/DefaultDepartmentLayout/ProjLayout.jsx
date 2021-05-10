@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./DefaultDepartmentLayout.module.scss";
 import ProjImageComponent from "./ProjImageComponent";
-import Slider from "react-slick";
 
 const ProjLayout = (props) => {
   const project = props.project;
@@ -13,11 +12,9 @@ const ProjLayout = (props) => {
       <ProjImageComponent project={project} />
       <div className={styles.detailcontainer}>
         <div className={styles.projectNumberingRow}>
-          {/* <div className={styles.projectNumberingLineOdd}>
-            <h1>________________________</h1>
-          </div> */}
           <div className={styles.projectNumberingTextOdd}>
-            <h2>Project {projectIndex + 1}</h2>
+            {props.deptId == 1 && <h2>Event {projectIndex + 1}</h2>}
+            {props.deptId != 1 && <h2>Project {projectIndex + 1}</h2>}
           </div>
         </div>
         <div className={styles.projecttitle}>
@@ -33,13 +30,9 @@ const ProjLayout = (props) => {
       <div className={styles.detailcontainerleft}>
         <div className={styles.projectNumberingRow}>
           <div className={styles.projectNumberingTextEven}>
-            {/* We use the word Event for operations department */}
             {props.deptId == 1 && <h2>Event {projectIndex + 1}</h2>}
             {props.deptId != 1 && <h2>Project {projectIndex + 1}</h2>}
           </div>
-          {/* <div className={styles.projectNumberingLineEven}>
-            <h1>________________________</h1>
-          </div> */}
         </div>
         <div className={styles.projecttitle}>
           <h3>{project.title}</h3>
