@@ -1,4 +1,20 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NUS FinTech Website Frontend
+
+This repository contains the code for the frontend of the official NUS FinTech Website.
+
+It is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## Installation
+
+1. Clone the repository and install the dependencies of the project.
+```
+npm install
+```
+
+2. Create a .env.local file and insert the backend url which can be obtained from the backend repository or the vercel project dashboard.
+```
+NEXT_PUBLIC_BACKEND_URL=<url>
+```
 
 ## Getting Started
 
@@ -21,10 +37,8 @@ To learn more about Next.js, take a look at the following resources:
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Deployed on Vercel
 
-## Deploy on Vercel
+The project is deployed on the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The domain is mapped to the nus computing domain at https://www.fintechsociety.comp.nus.edu.sg/.
