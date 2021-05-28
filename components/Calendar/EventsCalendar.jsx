@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "react-big-calendar/lib/css/react-big-calendar.css";
 import styles from "./EventsCalendar.module.scss";
 
 import moment from "moment";
