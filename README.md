@@ -42,3 +42,7 @@ To learn more about Next.js, take a look at the following resources:
 The project is deployed on the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 The domain is mapped to the nus computing domain at https://www.fintechsociety.comp.nus.edu.sg/.
+
+## Hosting
+
+For queries related to the hostname and to request for a change in hosting ip for existing hostnames managed by SOC, contact Lim Sing Ing at limsi@nus.edu.sg
