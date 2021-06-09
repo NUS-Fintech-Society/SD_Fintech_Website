@@ -49,4 +49,4 @@ The domain is mapped to the nus computing domain at https://www.fintechsociety.c
 
 ## Hosting
 
-For help to request for a change in hosting ip for existing hostnames managed by SOC, contact Sing Ing at limsi@nus.edu.sg
+For help to request for a change in hosting ip for existing hostnames managed by SOC, contact Sing Ing at limsi@nus.edu.sg.
