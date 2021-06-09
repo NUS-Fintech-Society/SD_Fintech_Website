@@ -13,7 +13,11 @@ npm install
 
 2. Create a .env.local file and insert the backend url which can be obtained from the backend repository or the vercel project dashboard.
 ```
-NEXT_PUBLIC_BACKEND_URL=<url>
+// production database
+NEXT_PUBLIC_BACKEND_URL=data-eye-289210.df.r.appspot.com/
+
+// local database => use this for development mode
+NEXT_PUBLIC_BACKEND_URL=http://127.0.0.1:8000/
 ```
 
 ## Getting Started
