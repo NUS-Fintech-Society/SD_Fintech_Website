@@ -7,11 +7,13 @@ It is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-a
 ## Installation
 
 1. Clone the repository and install the dependencies of the project.
+
 ```
 npm install
 ```
 
 2. Create a .env.local file and insert the backend url which can be obtained from the backend repository or the vercel project dashboard.
+
 ```
 // production database
 NEXT_PUBLIC_BACKEND_URL=data-eye-289210.df.r.appspot.com/
@@ -50,3 +52,16 @@ The domain is mapped to the nus computing domain at https://www.fintechsociety.c
 ## Hosting
 
 For help to request for a change in hosting ip for existing hostnames managed by SOC, contact Sing Ing at limsi@nus.edu.sg.
+
+## Documentation
+
+Refer to this [link](https://nus-fintech-society.github.io/SD_Fintech_Website/) for NUS Fintech technical documentation.
+
+Once PR is merged to master, changes made to **docs** folder will be reflected in the github page website.
+
+[just-the-docs](https://github.com/pmarsceill/just-the-docs) is used for template's documentation. You should also install the necessary [Jekyll tools](https://jekyllrb.com/docs/configuration/) in order to contribute in this section.
+
+To run Jekyll locally:
+
+1. Run `bundle exec jekyll serve --config _config_local.yml` on your terminal.
+2. Open `localhost:4000` on your browser.
