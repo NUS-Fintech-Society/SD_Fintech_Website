@@ -35,7 +35,7 @@ const Events = (props) => {
 
   useEffect(() => {
     fetchEvents().then(() => {
-      setIsLoading(false);
+      // setIsLoading(false);
     });
   }, []);
 
@@ -57,9 +57,13 @@ const Events = (props) => {
                 {!isLoading && <EventCard event={selectedEvent} />}
               </div>
             </div>
+
+            Hello
           </main>
         </div>
       </DefaultLayout>
+
+
     </div>
   );
 };

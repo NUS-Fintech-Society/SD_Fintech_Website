@@ -22,7 +22,7 @@ const Home = (props) => {
   useEffect(() => {
     loadDepartments();
     fetchEvents().then(() => {
-      setIsLoading(false);
+      // setIsLoading(false);
     });
   }, []);
 
