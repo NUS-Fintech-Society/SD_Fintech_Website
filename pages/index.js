@@ -240,7 +240,7 @@ const Home = (props) => {
               </div>
               <div className={styles.iconTextContainer}>
                 <MailIcon className={styles.icon} />
-                <p>nusfintech@gmail.com</p>
+                <p>nusfintech.ops@gmail.com</p>
               </div>
               <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
                 <div className={styles.inputContainer}>
