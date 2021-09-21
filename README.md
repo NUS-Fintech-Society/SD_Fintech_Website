@@ -17,7 +17,7 @@ It is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-a
 4. Add a .env.local file in the project root with the following content:
 
         // production database
-        NEXT_PUBLIC_BACKEND_URL=data-eye-289210.df.r.appspot.com/
+        NEXT_PUBLIC_BACKEND_URL=https://data-eye-289210.df.r.appspot.com/
 
 5. Run the development server
 
