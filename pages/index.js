@@ -14,6 +14,8 @@ const Home = (props) => {
   const [isLoading, setIsLoading] = useState(true);
   const [noEvents, setNoEvents] = useState(true);
   const [items, setItems] = useState();
+  const [events, setEvents] = useState([]);
+  const [members, setMembers] = useState([]);
   const typing = useTypewriter("— Ideate. Innovate. Inspire.");
   const [departments, setDepartments] = useState([]);
   const { register, handleSubmit, errors } = useForm();
@@ -25,6 +27,36 @@ const Home = (props) => {
       setIsLoading(false);
     });
   }, []);
+
+  const fetchMembers = async () => {
+    try {
+      // assume API call returns array of members, but for now i'll use the arr of events
+      const response = await request.get("events/")
+      setMembers(response.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const getMemberCount = () => {
+    fetchMembers();
+    return members.length;
+  };
+
+  const getEventCount = () => {
+    getEvents();
+    return events.length;
+  };
+
+  const getEvents = async () => {
+    try {
+      // assume API call returns array of members, but for now i'll use the arr of events
+      const response = await request.get("events/")
+      setEvents(response.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   const fetchEvents = async () => {
     try {
@@ -229,6 +261,26 @@ const Home = (props) => {
 
         <div className={styles.contactUs} id="contact">
           <FadeInSection>
+            <div className={styles.statistics}>
+              <div className={styles.statRow}>
+                <div className={styles.statCol}>
+                  <h1>{getMemberCount()}</h1>
+                  <h2>FinTech Members</h2>
+                </div>
+                <div className={styles.statCol}>
+                  <h1>12</h1>
+                  <h2>Projects Completed</h2>
+                </div>
+                <div className={styles.statCol}>
+                  <h1>{getEventCount()}</h1>
+                  <h2>Events Organised</h2>
+                </div>
+                <div className={styles.statCol}>
+                  <h1>800</h1>
+                  <h2>Event Participants</h2>
+                </div>
+              </div>
+            </div>
             <h1>Contact Us</h1>
             <div>
               <div className={styles.iconTextContainer}>
