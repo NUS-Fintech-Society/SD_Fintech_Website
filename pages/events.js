@@ -9,6 +9,8 @@ import EventCard from "components/EventCard/EventCard";
 
 import request from "util/request";
 
+const eventsData = require('data/mock/events.json')
+
 const Events = (props) => {
   const [isLoading, setIsLoading] = useState(true);
   const [events, setEvents] = useState();
@@ -16,10 +18,9 @@ const Events = (props) => {
 
   const fetchEvents = async () => {
     try {
-      const response = await request.get("events/");
-      response.data.map((event) => (event.background = Please.make_color()));
-      setEvents(response.data);
-      setSelectedEvent(showLatestEvent(response.data));
+      eventsData.map((event) => (event.background = Please.make_color()));
+      setEvents(eventsData);
+      setSelectedEvent(showLatestEvent(eventsData));
     } catch (err) {
       console.log(err);
     }

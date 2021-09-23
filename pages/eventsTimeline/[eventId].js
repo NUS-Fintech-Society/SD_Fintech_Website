@@ -9,6 +9,9 @@ import EventsCalendar from "components/Calendar/EventsCalendar";
 import EventCard from "components/EventCard/EventCard";
 import request from "util/request";
 
+import * as eventsData from 'data/mock/events.json';
+
+
 const EventsTimeline = (props) => {
   const router = useRouter();
   const { eventId } = router.query;
@@ -18,10 +21,10 @@ const EventsTimeline = (props) => {
 
   const fetchEvents = async () => {
     try {
-      const response = await request.get("events/");
-      response.data.map((event) => (event.background = Please.make_color()));
-      setEvents(response.data);
-      setSelectedEvent(showEvent(response.data));
+      const data = Array.from(eventsData)
+      data.map((event) => (event.background = Please.make_color()));
+      setEvents(data);
+      setSelectedEvent(showEvent(data));
     } catch (err) {
       console.log(err);
     }
