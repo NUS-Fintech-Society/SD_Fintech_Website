@@ -5,6 +5,8 @@ import DeptInfo from "./DeptInfo";
 import ProjLayout from "./ProjLayout";
 import request from "util/request";
 
+import * as departmentsData from 'data/mock/departments.json';
+
 const DefaultDepartmentLayout = (props) => {
   const deptId = props.deptId;
   const [data, setData] = useState();
@@ -17,8 +19,8 @@ const DefaultDepartmentLayout = (props) => {
     try {
       //doing departments/deptId-Id doesn't work, getting a CORS error.
       //Access to XMLHttpRequest blocked. Temporary workaround
-      const response = await request.get("departments/");
-      setData(response.data[deptId - 1]);
+      const data = Array.from(departmentsData);
+      setData(data[deptId - 1]);
     } catch (err) {
       console.log(err);
     }

@@ -10,6 +10,10 @@ import DepartmentCard from "components/DepartmentCard/DepartmentCard";
 
 import request from "util/request";
 
+import * as eventsData from 'data/mock/events.json';
+import * as departmentsData from 'data/mock/departments.json';
+
+
 const Home = (props) => {
   const [isLoading, setIsLoading] = useState(true);
   const [noEvents, setNoEvents] = useState(true);
@@ -28,8 +32,7 @@ const Home = (props) => {
 
   const fetchEvents = async () => {
     try {
-      const response = await request.get("events/");
-      setItems(sortEvents(response.data));
+      setItems(sortEvents(Array.from(eventsData)));
     } catch (err) {
       console.log(err);
     }
@@ -37,8 +40,7 @@ const Home = (props) => {
 
   const loadDepartments = async () => {
     try {
-      const response = await request.get("departments/");
-      setDepartments(response.data);
+      setDepartments(Array.from(departmentsData));
     } catch (err) {
       console.log(err);
     }
