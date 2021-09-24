@@ -10,13 +10,16 @@
 
 .title {
   text-align: center;
-  font-size: 1.5vw;
+  font-size: 1.8vw;
 }
 
 .projecttitle {
-  font-size: 1.5vw;
-}
+  font-size: 1.8vw;
 
+  h3 {
+    margin-top: 0;
+  }
+}
 .projectNumberingRow {
   display: flex;
   flex-direction: row;
@@ -24,12 +27,12 @@
 }
 
 .projectNumberingTextOdd {
-  font-size: 1.5vw;
+  font-size: 1.6vw;
   text-align: right;
 }
 
 .projectNumberingTextEven {
-  font-size: 1.5vw;
+  font-size: 1.6vw;
   text-align: left;
 }
 
@@ -53,7 +56,7 @@
 }
 
 .boxtitle {
-  font-size: 1.5vw;
+  font-size: 1.6vw;
   margin-left: 10px;
 }
 
@@ -69,7 +72,7 @@
 }
 
 .boxtitleright {
-  font-size: 1.5vw;
+  font-size: 1.6vw;
   text-align: right;
   margin-right: 10px;
 }
@@ -167,5 +170,5 @@
   margin-bottom: "3%";
   text-align: "justify";
   white-space: pre-line; //for paragraphing
-  font-size: 1vw;
+  font-size: 1.8rem;
 }
