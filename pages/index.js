@@ -261,6 +261,13 @@ const Home = (props) => {
 
         <div className={styles.contactUs} id="contact">
           <FadeInSection>
+          <script>
+            Statistics section preliminarily in the ContactUs page
+            but was initially planned to be directly above it.
+            Additionally, the data in each section is still a WIP.
+            Best case scenario would be to have the API being able
+            to retrieve all the necessary info.
+          </script>
             <div className={styles.statistics}>
               <div className={styles.statRow}>
                 <div className={styles.statCol}>
