@@ -28,36 +28,6 @@ const Home = (props) => {
     });
   }, []);
 
-  const fetchMembers = async () => {
-    try {
-      // assume API call returns array of members, but for now i'll use the arr of events
-      const response = await request.get("events/")
-      setMembers(response.data);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  const getMemberCount = () => {
-    fetchMembers();
-    return members.length;
-  };
-
-  const getEventCount = () => {
-    getEvents();
-    return events.length;
-  };
-
-  const getEvents = async () => {
-    try {
-      // assume API call returns array of members, but for now i'll use the arr of events
-      const response = await request.get("events/")
-      setEvents(response.data);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
   const fetchEvents = async () => {
     try {
       const response = await request.get("events/");
@@ -147,6 +117,30 @@ const Home = (props) => {
             </div>
           </div>
         </div>
+
+        <FadeInSection>
+          <div className={styles.statistics}>
+            <h1>Our History</h1>
+            <div className={styles.statRow}>
+              <div className={styles.statCol}>
+                <h1>123</h1>
+                <p>FinTech Members</p>
+              </div>
+              <div className={styles.statCol}>
+                <h1>12</h1>
+                <p>Projects Completed</p>
+              </div>
+              <div className={styles.statCol}>
+                <h1>10</h1>
+                <p>Events Organised</p>
+              </div>
+              <div className={styles.statCol}>
+                <h1>800</h1>
+                <p>Event Participants</p>
+              </div>
+            </div>
+          </div>
+        </FadeInSection>
 
         <FadeInSection>
           <div id="ourTeam" className={styles.ourTeam}>
@@ -261,33 +255,6 @@ const Home = (props) => {
 
         <div className={styles.contactUs} id="contact">
           <FadeInSection>
-          <script>
-            Statistics section preliminarily in the ContactUs page
-            but was initially planned to be directly above it.
-            Additionally, the data in each section is still a WIP.
-            Best case scenario would be to have the API being able
-            to retrieve all the necessary info.
-          </script>
-            <div className={styles.statistics}>
-              <div className={styles.statRow}>
-                <div className={styles.statCol}>
-                  <h1>{getMemberCount()}</h1>
-                  <h2>FinTech Members</h2>
-                </div>
-                <div className={styles.statCol}>
-                  <h1>12</h1>
-                  <h2>Projects Completed</h2>
-                </div>
-                <div className={styles.statCol}>
-                  <h1>{getEventCount()}</h1>
-                  <h2>Events Organised</h2>
-                </div>
-                <div className={styles.statCol}>
-                  <h1>800</h1>
-                  <h2>Event Participants</h2>
-                </div>
-              </div>
-            </div>
             <h1>Contact Us</h1>
             <div>
               <div className={styles.iconTextContainer}>

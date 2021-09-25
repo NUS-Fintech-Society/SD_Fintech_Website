@@ -176,7 +176,7 @@
 	}
 
 	.contactUs {
-		height: 725px;
+		height: 700px;
 		width: 100%;
 		display: flex;
 		position: relative;
@@ -293,6 +293,7 @@
 		opacity: 0.8;
 	}
 
+
 	.sponsors {
 		display: inline-flex;
 		width: 1000px;
@@ -338,19 +339,28 @@
 	}
 
 	.statistics {
+
+		h1 {
+			color: $primary-white-1;
+			text-align: center;
+		}
+
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
 		text-align: center;
+		width: 2000px;
+		color: $primary-white-1;
+		padding-top: 40px;
 
-
+		background-size: 100% auto;
+		background-position: center;
+		background-image: url("../../public/images/alessio-soggetti-17_tB-oI0ao-unsplash.jpg");
 
 		.statRow {
 			display: table;
-			width: 100%;
-			border-left: 0.5px solid white;
-			border-right: 0.5px solid white;
+			width: 850px;
 		}
 		.statCol {
 			text-align: center;
@@ -358,22 +368,6 @@
 			float: left;
 			width: 25%;
 			padding: 12px;
-			border-right: 0.5px solid white;
-			border-left: 0.5px solid white;
-			color: white;
-
-		}
-		.border {
-			width: 0px;
-			border: 2px solid $primary-grey-1;
-			height: 100px;
-		}
-		.statLastCol {
-			display: table-cell;
-			text-align: center;
-			float: none;
-			width: 25%;
-			padding: 15px;
 		}
 
 	}
@@ -478,7 +472,6 @@
 		}
 
 		.contactUs {
-			height: 925px;
 			.iconTextContainer {
 				margin-left: 20px;
 				text-align: left;
@@ -486,6 +479,10 @@
 		}
 
 		.statistics  {
+			align-content: center;
+			.statRow {
+				width: 600px;
+			}
 			.statCol {
 				width: 50%;
 			}
