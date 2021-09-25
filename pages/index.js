@@ -126,7 +126,7 @@ const Home = (props) => {
                 <h1>
                   <CountUp
                     end={123}
-                    duration={3}
+                    duration={2}
                   />
                 </h1>
                 <p>FinTech Members</p>
@@ -144,7 +144,7 @@ const Home = (props) => {
                 <h1>
                 <CountUp
                   end={10}
-                  duration={1}
+                  duration={2}
                 />
                 </h1>
                 <p>Events Organised</p>
@@ -153,7 +153,7 @@ const Home = (props) => {
                 <h1>
                   <CountUp
                     end={801}
-                    duration={4}
+                    duration={2}
                   />
                 </h1>
                 <p>Event Participants</p>
