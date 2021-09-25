@@ -339,24 +339,16 @@
 	}
 
 	.statistics {
-
-		h1 {
-			color: $primary-white-1;
-			text-align: center;
-		}
-
 		display: flex;
-		align-items: center;
 		justify-content: center;
 		flex-direction: column;
 		text-align: center;
-		width: 2000px;
-		color: $primary-white-1;
+		width: 100%;
 		padding-top: 40px;
-
+		border-radius: 8px;
+		color: $primary-black-1;
 		background-size: 100% auto;
-		background-position: center;
-		background-image: url("../../public/images/alessio-soggetti-17_tB-oI0ao-unsplash.jpg");
+		background-color: #F5F5F5;
 
 		.statRow {
 			display: table;
@@ -480,8 +472,9 @@
 
 		.statistics  {
 			align-content: center;
+			width: 100%;
 			.statRow {
-				width: 600px;
+				width: 100%;
 			}
 			.statCol {
 				width: 50%;

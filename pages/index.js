@@ -120,7 +120,6 @@ const Home = (props) => {
 
         <FadeInSection>
           <div className={styles.statistics}>
-            <h1>Our History</h1>
             <div className={styles.statRow}>
               <div className={styles.statCol}>
                 <h1>123</h1>
