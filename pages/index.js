@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "styles/pages/Home.module.scss";
 import useTypewriter from "react-typewriter-hook";
 import { useForm } from "react-hook-form";
+import CountUp from "react-countup";
 import LocationIcon from "@material-ui/icons/PlaceOutlined";
 import MailIcon from "@material-ui/icons/MailOutline";
 import TimelineCard from "components/Timeline/Timeline";
@@ -122,19 +123,39 @@ const Home = (props) => {
           <div className={styles.statistics}>
             <div className={styles.statRow}>
               <div className={styles.statCol}>
-                <h1>123</h1>
+                <h1>
+                  <CountUp
+                    end={123}
+                    duration={3}
+                  />
+                </h1>
                 <p>FinTech Members</p>
               </div>
               <div className={styles.statCol}>
-                <h1>12</h1>
+                <h1>
+                  <CountUp
+                    end={42}
+                    duration={2}
+                  />
+                </h1>
                 <p>Projects Completed</p>
               </div>
               <div className={styles.statCol}>
-                <h1>10</h1>
+                <h1>
+                <CountUp
+                  end={10}
+                  duration={1}
+                />
+                </h1>
                 <p>Events Organised</p>
               </div>
               <div className={styles.statCol}>
-                <h1>800</h1>
+                <h1>
+                  <CountUp
+                    end={801}
+                    duration={4}
+                  />
+                </h1>
                 <p>Event Participants</p>
               </div>
             </div>
