@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./NavBar.module.scss";
 import Link from "next/link";
-import Alert from "@material-ui/lab/alert";
+import Alert from "@material-ui/lab/Alert";
 import DrawerToggleButton from "components/SideDrawer/DrawerToggleButton";
 import InfoIcon from "@material-ui/icons/Info";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core";
