@@ -4,8 +4,6 @@ import Link from "next/link";
 
 import DrawerToggleButton from "components/SideDrawer/DrawerToggleButton";
 
-import Notice from "components/Notice/Notice";
-
 const NavBar = (props) => {
   return (
     <header className={styles.navbar}>
@@ -48,9 +46,6 @@ const NavBar = (props) => {
           </ul>
         </div>
       </nav>
-      <div>
-        <Notice></Notice>
-      </div>
     </header>
   );
 };
