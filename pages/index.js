@@ -124,6 +124,7 @@ const Home = (props) => {
         <FadeInSection>
           <div className={styles.statisticsWithIcon}>
             <div className={styles.statRow}>
+<<<<<<< HEAD
               <div className={styles.statColLeft}>
                 <FaceIcon className={styles.statIcon}/>
                 <div className={styles.statText}>
@@ -147,6 +148,43 @@ const Home = (props) => {
                   </h1>
                   <p>Projects Completed</p>
                 </div>
+=======
+              <div className={styles.statCol}>
+                <h1>
+                  <CountUp
+                    end={123}
+                    duration={2}
+                  />
+                </h1>
+                <p>FinTech Members</p>
+              </div>
+              <div className={styles.statCol}>
+                <h1>
+                  <CountUp
+                    end={42}
+                    duration={2}
+                  />
+                </h1>
+                <p>Projects Completed</p>
+              </div>
+              <div className={styles.statCol}>
+                <h1>
+                <CountUp
+                  end={10}
+                  duration={2}
+                />
+                </h1>
+                <p>Events Organised</p>
+              </div>
+              <div className={styles.statCol}>
+                <h1>
+                  <CountUp
+                    end={801}
+                    duration={2}
+                  />
+                </h1>
+                <p>Event Participants</p>
+>>>>>>> 920c183e32f4db6e0a167fb5f68210f42be89791
               </div>
             </div>
           </div>
