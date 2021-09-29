@@ -244,7 +244,8 @@ const Home = (props) => {
                 <MailIcon className={styles.icon} />
                 <p>nusfintech.ops@gmail.com</p>
               </div>
-              <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
+              
+              {/* <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
                 <div className={styles.inputContainer}>
                   <input
                     className={styles.input}
@@ -292,7 +293,7 @@ const Home = (props) => {
                   className={styles.submitButton}
                   value="Send"
                 />
-              </form>
+              </form>*/ }
             </div>
           </FadeInSection>
         </div>
