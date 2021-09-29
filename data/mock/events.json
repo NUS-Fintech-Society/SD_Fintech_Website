@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "Crowdfunding Workshop",
+    "location": "Zoom Conferencing",
+    "description": "Workshop: Why Crowdfunding is the Preferred Choice for Startup Fundraising by Edwin Chan, founder of Fundedhere: startup and SMEs crowdfunding platform.",
+    "start": "2021-01-15T06:00:00Z",
+    "end": "2021-01-15T07:00:00Z"
+  },
+  {
+    "id": 2,
+    "name": "Innovative and Design Thinking Workshop",
+    "location": "Zoom Conferencing",
+    "description": "Innovative and Design Thinking Workshop (Perspective from BNP Paribas) by Hon Kok Wai: Director, Transaction Banking product management, APAC at BNP Paribas. Topics covered include introduction to innovation (BNPP Innovation Lab), transaction banking and approach to co-creation, as well as problems in transaction banking today and call for responses.",
+    "start": "2021-01-18T06:00:00Z",
+    "end": "2021-01-18T07:00:00Z"
+  },
+  {
+    "id": 3,
+    "name": "Introduction to Decentralised Finance Workshop",
+    "location": "Zoom Conferencing",
+    "description": "Workshop: Introduction to Decentralised Finance by Jeff Zhang, Binance Community Manager. The workshop will discuss the risks and benefits of decentralised finance (DeFi) to the general public.",
+    "start": "2021-01-19T12:00:00Z",
+    "end": "2021-01-19T13:00:00Z"
+  },
+  {
+    "id": 4,
+    "name": "BSC Stream Transformations with ParsiQL workshop",
+    "location": "Zoom Conferencing",
+    "description": "BSC Stream Transformations with ParsiQL workshop by Anatoly Ressin, Chief Blockchain Architect at PARSIQ. Topics include what are data streams? How do live data streams function in blockchains? How to transform live data streams using PARSIQ's stream manipulation language?",
+    "start": "2021-01-20T12:00:00Z",
+    "end": "2021-01-20T13:00:00Z"
+  },
+  {
+    "id": 5,
+    "name": "Fintech Month Hackathon Closing Ceremony",
+    "location": "Zoom Conferencing",
+    "description": "The Fintech Month Hackathon Closing Ceremony will include the finalist pitch and prize presentation. The top 8 finalist teams of the Hackathon to pitch their solutions to a panel of esteemed judges. The judging panel is made up of professors and experts from the FinTech Industry.",
+    "start": "2021-01-30T04:00:00Z",
+    "end": "2021-01-30T06:00:00Z"
+  },
+  {
+    "id": 6,
+    "name": "Welcome Tea",
+    "location": "Zoom",
+    "description": "Interested in finance and technology? Looking for a place to meet like-minded enthusiasts? NUS Fintech Society is the place you want to be! Join us in our Welcome Tea session! Sign up for Welcome Tea session: https://forms.gle/GoVJGghWmtJUEtn59",
+    "start": "2021-08-06T12:00:00Z",
+    "end": "2021-08-06T13:30:00Z"
+  },
+  {
+    "id": 7,
+    "name": "Recruitment for AY 21/22",
+    "location": "Singapore",
+    "description": "Sign up and join our society! Find out more on our Instagram account @nusfintech. Sign up link to society: https://bit.ly/nusfintechsocietysignup",
+    "start": "2021-07-26T16:00:00Z",
+    "end": "2021-08-15T16:00:00Z"
+  },
+  {
+    "id": 8,
+    "name": "September Society Meeting",
+    "location": "MS Teams",
+    "description": "1st Society Meeting of AY21/22",
+    "start": "2021-09-04T02:00:00Z",
+    "end": "2021-09-04T04:00:00Z"
+  }
+]
