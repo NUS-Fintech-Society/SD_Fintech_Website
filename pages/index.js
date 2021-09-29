@@ -2,9 +2,12 @@ import React, { useEffect, useState } from "react";
 import styles from "styles/pages/Home.module.scss";
 import useTypewriter from "react-typewriter-hook";
 import { useForm } from "react-hook-form";
+import CountUp from "react-countup";
 import LocationIcon from "@material-ui/icons/PlaceOutlined";
 import MailIcon from "@material-ui/icons/MailOutline";
 import { Container } from '@mui/material';
+import FaceIcon from "@material-ui/icons/Face";
+import ProjectIcon from "@material-ui/icons/Work"
 import TimelineCard from "components/Timeline/Timeline";
 import DefaultLayout from "components/Layouts/DefaultLayout/DefaultLayout";
 import DepartmentCard from "components/DepartmentCard/DepartmentCard";
@@ -19,6 +22,8 @@ const Home = (props) => {
   const [isLoading, setIsLoading] = useState(true);
   const [noEvents, setNoEvents] = useState(true);
   const [items, setItems] = useState();
+  const [events, setEvents] = useState([]);
+  const [members, setMembers] = useState([]);
   const typing = useTypewriter("— Ideate. Innovate. Inspire.");
   const [departments, setDepartments] = useState([]);
   const { register, handleSubmit, errors } = useForm();
@@ -42,15 +47,6 @@ const Home = (props) => {
   const loadDepartments = async () => {
     try {
       setDepartments(Array.from(departmentsData));
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  const onSubmit = async (data) => {
-    try {
-      const response = await request.post("contact/", data);
-      setFormState({ name: "", email: "", message: "" });
     } catch (err) {
       console.log(err);
     }
@@ -120,7 +116,7 @@ const Home = (props) => {
         </div>
 
         <FadeInSection>
-          {/* Added Container maxWidth for our team section specifically but dk if it works yet */}
+          {/* Added Container maxWidth for our team section specifically*/}
           <Container maxWidth="xl" >
           <div id="ourTeam" className={styles.ourTeam}>
             <div className={styles.textContainer}>
@@ -298,7 +294,7 @@ const Home = (props) => {
                   className={styles.submitButton}
                   value="Send"
                 />
-              </form>*/ }
+              </form> */}
             </div>
           </FadeInSection>
         </div>
