@@ -5,6 +5,8 @@ import { useForm } from "react-hook-form";
 import CountUp from "react-countup";
 import LocationIcon from "@material-ui/icons/PlaceOutlined";
 import MailIcon from "@material-ui/icons/MailOutline";
+import FaceIcon from "@material-ui/icons/Face";
+import ProjectIcon from "@material-ui/icons/Work"
 import TimelineCard from "components/Timeline/Timeline";
 import DefaultLayout from "components/Layouts/DefaultLayout/DefaultLayout";
 import DepartmentCard from "components/DepartmentCard/DepartmentCard";
@@ -120,43 +122,31 @@ const Home = (props) => {
         </div>
 
         <FadeInSection>
-          <div className={styles.statistics}>
+          <div className={styles.statisticsWithIcon}>
             <div className={styles.statRow}>
-              <div className={styles.statCol}>
-                <h1>
-                  <CountUp
-                    end={123}
-                    duration={3}
-                  />
-                </h1>
-                <p>FinTech Members</p>
+              <div className={styles.statColLeft}>
+                <FaceIcon className={styles.statIcon}/>
+                <div className={styles.statText}>
+                  <h1>
+                    <CountUp
+                      end={204}
+                      duration={2}
+                    />
+                  </h1>
+                  <p>Fintech Members</p>
+                </div>
               </div>
-              <div className={styles.statCol}>
-                <h1>
-                  <CountUp
-                    end={42}
-                    duration={2}
-                  />
-                </h1>
-                <p>Projects Completed</p>
-              </div>
-              <div className={styles.statCol}>
-                <h1>
-                <CountUp
-                  end={10}
-                  duration={1}
-                />
-                </h1>
-                <p>Events Organised</p>
-              </div>
-              <div className={styles.statCol}>
-                <h1>
-                  <CountUp
-                    end={801}
-                    duration={4}
-                  />
-                </h1>
-                <p>Event Participants</p>
+              <div className={styles.statColRight}>
+                <ProjectIcon className={styles.statIcon}/>
+                <div className={styles.statText}>
+                  <h1>
+                    <CountUp
+                      end={23}
+                      duration={1}
+                      />
+                  </h1>
+                  <p>Projects Completed</p>
+                </div>
               </div>
             </div>
           </div>
