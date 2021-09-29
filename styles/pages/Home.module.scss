@@ -183,7 +183,7 @@
 		box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 		align-items: center;
 		padding-top: 24px;
-		margin-top: 100px;
+		margin-top: 20px;
 		flex-direction: column;
 
 		h1 {
@@ -293,6 +293,7 @@
 		opacity: 0.8;
 	}
 
+
 	.sponsors {
 		display: inline-flex;
 		width: 1000px;
@@ -333,6 +334,55 @@
 				color: black;
 				padding-left: 20px;
 				padding-right: 20px;
+			}
+		}
+	}
+
+	.statisticsWithIcon {
+		display: flex;
+		flex-direction: column;
+		padding: 48px 16px 48px 16px;
+		border-radius: 8px;
+		color: $primary-black-1;
+		background-color: #F5F5F5;
+
+		.statRow {
+			width: 800px;
+		}
+
+		.statColLeft {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			float: left;
+			width: 50%;
+			.statIcon {
+				color: black;
+				height: 64px;
+				width: 64px;
+			}
+			.statText {
+				text-align: center;
+				padding-left: 15%;
+				width: auto;
+			}
+		}
+		.statColRight {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			float: left;
+			width: 50%;
+			border-left: 1px solid $primary-black-1;
+			.statIcon {
+				color: black;
+				height: 64px;
+				width: 64px;
+			}
+			.statText {
+				text-align: center;
+				padding-left: 15%;
+				width: auto;
 			}
 		}
 	}
@@ -441,6 +491,21 @@
 				margin-left: 20px;
 				text-align: left;
 			}
+		}
+
+		.statisticsWithIcon  {
+			width: 90%;
+			.statRow {
+				width: 100%;
+			}
+			.statColLeft {
+				width: 100%;
+			}
+			.statColRight {
+				width: 100%;
+				border-left: 0px;
+			}
+
 		}
 	}
 }

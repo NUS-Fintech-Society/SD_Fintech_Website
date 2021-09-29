@@ -2,8 +2,11 @@ import React, { useEffect, useState } from "react";
 import styles from "styles/pages/Home.module.scss";
 import useTypewriter from "react-typewriter-hook";
 import { useForm } from "react-hook-form";
+import CountUp from "react-countup";
 import LocationIcon from "@material-ui/icons/PlaceOutlined";
 import MailIcon from "@material-ui/icons/MailOutline";
+import FaceIcon from "@material-ui/icons/Face";
+import ProjectIcon from "@material-ui/icons/Work"
 import TimelineCard from "components/Timeline/Timeline";
 import DefaultLayout from "components/Layouts/DefaultLayout/DefaultLayout";
 import DepartmentCard from "components/DepartmentCard/DepartmentCard";
@@ -18,6 +21,8 @@ const Home = (props) => {
   const [isLoading, setIsLoading] = useState(true);
   const [noEvents, setNoEvents] = useState(true);
   const [items, setItems] = useState();
+  const [events, setEvents] = useState([]);
+  const [members, setMembers] = useState([]);
   const typing = useTypewriter("— Ideate. Innovate. Inspire.");
   const [departments, setDepartments] = useState([]);
   const { register, handleSubmit, errors } = useForm();
@@ -117,6 +122,37 @@ const Home = (props) => {
             </div>
           </div>
         </div>
+
+        <FadeInSection>
+          <div className={styles.statisticsWithIcon}>
+            <div className={styles.statRow}>
+              <div className={styles.statColLeft}>
+                <FaceIcon className={styles.statIcon}/>
+                <div className={styles.statText}>
+                  <h1>
+                    <CountUp
+                      end={204}
+                      duration={2}
+                    />
+                  </h1>
+                  <p>Fintech Members</p>
+                </div>
+              </div>
+              <div className={styles.statColRight}>
+                <ProjectIcon className={styles.statIcon}/>
+                <div className={styles.statText}>
+                  <h1>
+                    <CountUp
+                      end={23}
+                      duration={1}
+                      />
+                  </h1>
+                  <p>Projects Completed</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </FadeInSection>
 
         <FadeInSection>
           <div id="ourTeam" className={styles.ourTeam}>
