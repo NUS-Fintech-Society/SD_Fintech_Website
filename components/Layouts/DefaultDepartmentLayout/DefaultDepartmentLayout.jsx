@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import DefaultLayout from "components/Layouts/DefaultLayout/DefaultLayout";
 import DeptInfo from "./DeptInfo";
 import ProjLayout from "./ProjLayout";
-import request from "util/request";
 
 import * as departmentsData from 'data/mock/departments.json';
 

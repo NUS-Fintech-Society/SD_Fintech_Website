@@ -12,7 +12,6 @@ import TimelineCard from "components/Timeline/Timeline";
 import DefaultLayout from "components/Layouts/DefaultLayout/DefaultLayout";
 import DepartmentCard from "components/DepartmentCard/DepartmentCard";
 
-import request from "util/request";
 
 import * as eventsData from 'data/mock/events.json';
 import * as departmentsData from 'data/mock/departments.json';
