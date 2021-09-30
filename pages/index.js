@@ -113,6 +113,37 @@ const Home = (props) => {
             </div>
           </div>
         </div>
+        
+        <FadeInSection>
+          <div className={styles.statisticsWithIcon}>
+            <div className={styles.statRow}>
+              <div className={styles.statColLeft}>
+                <FaceIcon className={styles.statIcon}/>
+                <div className={styles.statText}>
+                  <h1>
+                    <CountUp
+                      end={204}
+                      duration={2}
+                    />
+                  </h1>
+                  <p>Fintech Members</p>
+                </div>
+              </div>
+              <div className={styles.statColRight}>
+                <ProjectIcon className={styles.statIcon}/>
+                <div className={styles.statText}>
+                  <h1>
+                    <CountUp
+                      end={23}
+                      duration={1}
+                      />
+                  </h1>
+                  <p>Projects Completed</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </FadeInSection>
 
         <FadeInSection>
           {/* Added Container maxWidth for our team section specifically*/}
