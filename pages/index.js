@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import CountUp from "react-countup";
 import LocationIcon from "@material-ui/icons/PlaceOutlined";
 import MailIcon from "@material-ui/icons/MailOutline";
-import { Container } from '@mui/material';
+import { Container } from "@material-ui/core";
 import FaceIcon from "@material-ui/icons/Face";
 import ProjectIcon from "@material-ui/icons/Work"
 import TimelineCard from "components/Timeline/Timeline";
