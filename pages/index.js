@@ -5,13 +5,13 @@ import { useForm } from "react-hook-form";
 import CountUp from "react-countup";
 import LocationIcon from "@material-ui/icons/PlaceOutlined";
 import MailIcon from "@material-ui/icons/MailOutline";
+import { Container } from "@material-ui/core";
 import FaceIcon from "@material-ui/icons/Face";
 import ProjectIcon from "@material-ui/icons/Work"
 import TimelineCard from "components/Timeline/Timeline";
 import DefaultLayout from "components/Layouts/DefaultLayout/DefaultLayout";
 import DepartmentCard from "components/DepartmentCard/DepartmentCard";
 
-import request from "util/request";
 
 import * as eventsData from 'data/mock/events.json';
 import * as departmentsData from 'data/mock/departments.json';
@@ -46,15 +46,6 @@ const Home = (props) => {
   const loadDepartments = async () => {
     try {
       setDepartments(Array.from(departmentsData));
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  const onSubmit = async (data) => {
-    try {
-      const response = await request.post("contact/", data);
-      setFormState({ name: "", email: "", message: "" });
     } catch (err) {
       console.log(err);
     }
@@ -122,7 +113,7 @@ const Home = (props) => {
             </div>
           </div>
         </div>
-
+        
         <FadeInSection>
           <div className={styles.statisticsWithIcon}>
             <div className={styles.statRow}>
@@ -155,6 +146,8 @@ const Home = (props) => {
         </FadeInSection>
 
         <FadeInSection>
+          {/* Added Container maxWidth for our team section specifically*/}
+          <Container maxWidth="xl" >
           <div id="ourTeam" className={styles.ourTeam}>
             <div className={styles.textContainer}>
               <h1>Our Team</h1>
@@ -178,6 +171,7 @@ const Home = (props) => {
               ))}
             </div>
           </div>
+          </Container>
         </FadeInSection>
 
         <FadeInSection>
@@ -280,6 +274,8 @@ const Home = (props) => {
                 <MailIcon className={styles.icon} />
                 <p>nusfintech.ops@gmail.com</p>
               </div>
+              
+              {/* // TODO: Integrate form with third-party service or back-end service
               <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
                 <div className={styles.inputContainer}>
                   <input
@@ -328,7 +324,7 @@ const Home = (props) => {
                   className={styles.submitButton}
                   value="Send"
                 />
-              </form>
+              </form> */}
             </div>
           </FadeInSection>
         </div>

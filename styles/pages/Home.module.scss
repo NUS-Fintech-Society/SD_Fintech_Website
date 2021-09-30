@@ -1,35 +1,35 @@
 @import "styles/variables.scss";
 
 @-webkit-keyframes fadeEffect {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @keyframes fadeEffect {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .fadeVisible {
-	-webkit-animation: fadeEffect 1.5s;
-	animation: fadeEffect 1.5s; /* Fading effect takes 1 second */
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  -webkit-animation: fadeEffect 1.5s;
+  animation: fadeEffect 1.5s; /* Fading effect takes 1 second */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .fade {
-	opacity: 0;
-	visibility: hidden;
-	transition: opacity 0.6s ease-out, transform 1.2s ease-out;
-	will-change: opacity, visibility;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+  will-change: opacity, visibility;
 }
 
 .main {
@@ -176,14 +176,15 @@
 	}
 
 	.contactUs {
-		height: 700px;
+		height: auto;
 		width: 100%;
 		display: flex;
 		position: relative;
 		box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 		align-items: center;
-		padding-top: 24px;
-		margin-top: 20px;
+		padding-top: 72px;
+		padding-bottom: 72px;
+		margin-top: 100px;
 		flex-direction: column;
 
 		h1 {
