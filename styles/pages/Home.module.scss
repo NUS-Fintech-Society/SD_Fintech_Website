@@ -413,6 +413,55 @@
     }
   }
 
+  .statisticsWithIcon {
+    display: flex;
+    flex-direction: column;
+    padding: 48px 16px 48px 16px;
+    border-radius: 8px;
+    color: $primary-black-1;
+    background-color: #f5f5f5;
+
+    .statRow {
+      width: 800px;
+    }
+
+    .statColLeft {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      float: left;
+      width: 50%;
+      .statIcon {
+        color: black;
+        height: 64px;
+        width: 64px;
+      }
+      .statText {
+        text-align: center;
+        padding-left: 15%;
+        width: auto;
+      }
+    }
+    .statColRight {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      float: left;
+      width: 50%;
+      border-left: 1px solid $primary-black-1;
+      .statIcon {
+        color: black;
+        height: 64px;
+        width: 64px;
+      }
+      .statText {
+        text-align: center;
+        padding-left: 15%;
+        width: auto;
+      }
+    }
+  }
+
   .partners {
     display: flex;
     align-items: center;
@@ -514,8 +563,22 @@
 
     .contactUs {
       .iconTextContainer {
-        margin-left: 2rem;
+        margin-left: 20px;
         text-align: left;
+      }
+    }
+
+    .statisticsWithIcon {
+      width: 90%;
+      .statRow {
+        width: 100%;
+      }
+      .statColLeft {
+        width: 100%;
+      }
+      .statColRight {
+        width: 100%;
+        border-left: 0px;
       }
     }
   }

@@ -7,7 +7,6 @@ import DefaultLayout from "components/Layouts/DefaultLayout/DefaultLayout";
 import EventsCalendar from "components/Calendar/EventsCalendar";
 import EventCard from "components/EventCard/EventCard";
 
-import request from "util/request";
 
 const eventsData = require('data/mock/events.json')
 

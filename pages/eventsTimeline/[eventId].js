@@ -7,7 +7,7 @@ import styles from "styles/pages/Events.module.scss";
 import DefaultLayout from "components/Layouts/DefaultLayout/DefaultLayout";
 import EventsCalendar from "components/Calendar/EventsCalendar";
 import EventCard from "components/EventCard/EventCard";
-import request from "util/request";
+
 
 import * as eventsData from 'data/mock/events.json';
 
