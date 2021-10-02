@@ -1,3 +1,5 @@
+@import ".././util/mixins";
+
 html,
 body {
   height: 100%;
@@ -6,6 +8,22 @@ body {
   scroll-behavior: smooth;
   font-family: Lato, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  font-size: 62.5%; // 1rem = 10px
+  font-weight: 400;
+  line-height: 1.2;
+
+  @include respond(tab-land) {
+    font-size: 56%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 43%;
+  }
 }
 
 a {
@@ -13,6 +31,8 @@ a {
   text-decoration: none;
 }
 
-* {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }

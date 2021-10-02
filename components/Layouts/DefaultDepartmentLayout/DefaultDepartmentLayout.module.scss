@@ -10,13 +10,16 @@
 
 .title {
   text-align: center;
-  font-size: 1.5vw;
+  font-size: 1.7vw;
 }
 
 .projecttitle {
   font-size: 1.5vw;
-}
 
+  h3 {
+    margin-top: 0;
+  }
+}
 .projectNumberingRow {
   display: flex;
   flex-direction: row;
@@ -167,5 +170,5 @@
   margin-bottom: "3%";
   text-align: "justify";
   white-space: pre-line; //for paragraphing
-  font-size: 1vw;
+  font-size: 1.8rem;
 }
