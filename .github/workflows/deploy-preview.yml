@@ -15,6 +15,7 @@ jobs:
       # - run: npm ci && npm run build
       - run: npm install --global yarn
       - run: npm install --global next
+      - run: npm install
       - run: yarn export
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
