@@ -16,7 +16,7 @@ jobs:
       - run: npm install --global yarn
       - run: npm install --global next
       - run: npm install
-      - run: yarn export
+      - run: yarn build && yarn export
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
