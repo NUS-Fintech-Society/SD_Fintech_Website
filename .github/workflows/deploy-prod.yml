@@ -3,10 +3,10 @@ name: Deploy to Live Channel
 on:
   push:
     branches:
-      - main
-    # Optionally configure to run only for specific files. For example:
-    # paths:
-    # - "website/**"
+      - master
+      
+env:
+  NEXT_PUBLIC_BACKEND_URL: ${{secrets.NEXT_PUBLIC_BACKEND_URL}}
 
 jobs:
   deploy_live_website:
@@ -14,11 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       # Add any build steps here. For example:
-      # - run: npm ci && npm run build
-      - run: npm install --global yarn
-      - run: npm install --global next
-      - run: npm install
-      - run: yarn build && yarn export
+      - run: yarn && yarn build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
