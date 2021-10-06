@@ -28,6 +28,8 @@ const Home = (props) => {
   const { register, handleSubmit, errors } = useForm();
   const [formState, setFormState] = useState({});
 
+  console.log("TEST: TO BE REMOVED")
+
   useEffect(() => {
     loadDepartments();
     fetchEvents().then(() => {
