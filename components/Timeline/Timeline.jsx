@@ -35,7 +35,6 @@ const TimelineCard = (props) => {
               <TimelineOppositeContent>
                 <Typography
                   className={styles.timelinedate}
-                  variant="body2"
                   color="textSecondary"
                 >
                   {formDate(item.start, item.end)}
@@ -52,7 +51,6 @@ const TimelineCard = (props) => {
                 <div>
                   <Typography
                     className={styles.timelinelocation}
-                    variant="body1"
                     color="textSecondary"
                   >
                     Location: {item.location}
