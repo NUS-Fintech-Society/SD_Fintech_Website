@@ -33,7 +33,11 @@ const TimelineCard = (props) => {
           return (
             <TimelineItem key={item.id}>
               <TimelineOppositeContent>
-                <Typography variant="body2" color="textSecondary">
+                <Typography
+                  className={styles.timelinedate}
+                  variant="body2"
+                  color="textSecondary"
+                >
                   {formDate(item.start, item.end)}
                 </Typography>
               </TimelineOppositeContent>
@@ -42,11 +46,15 @@ const TimelineCard = (props) => {
                 <TimelineConnector className={styles.icon} />
               </TimelineSeparator>
               <TimelineContent>
-                <Typography variant="h6" component="h1">
+                <Typography variant="h6" component="alignLeft">
                   <span className={styles.timelineheader}>{item.name}</span>
                 </Typography>
-                <div className={styles.timelineheader}>
-                  <Typography variant="body1" color="textSecondary">
+                <div>
+                  <Typography
+                    className={styles.timelinelocation}
+                    variant="body1"
+                    color="textSecondary"
+                  >
                     Location: {item.location}
                   </Typography>
                 </div>
