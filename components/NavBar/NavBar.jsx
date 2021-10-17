@@ -41,6 +41,10 @@ const NavBar = (props) => {
             </div>
 
             <li>
+              <Link href="/faq">FAQ</Link> 
+            </li>  
+
+            <li>
               <Link href="/#contact">Contact Us</Link>
             </li>
           </ul>
