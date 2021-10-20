@@ -6,7 +6,7 @@ const Faq = (props) => {
 return(
     <div>
         <DefaultLayout>
-            <h1 style={{fontSize:80, marginTop: 300, textAlign: 'center'}}>
+            <h1 style={{fontSize:60, marginTop: 300, textAlign: 'center'}}>
                 Work in progress
             </h1>
         </DefaultLayout>

@@ -41,7 +41,7 @@ const NavBar = (props) => {
             </div>
 
             <li>
-              <Link href="/faq">FAQ</Link> 
+              <Link href="/faq">FAQs</Link> 
             </li>  
 
             <li>
