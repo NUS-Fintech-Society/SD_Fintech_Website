@@ -72,6 +72,22 @@
       }
     }
 
+    /*.titleContainer::after{
+      content: "";
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("../../public/images/exco.png");
+      background-size: cover;
+      position: absolute;
+      width: 100%;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      display: flex;
+      z-index: -1;
+      opacity: 0.8;
+
+    }*/
     width: 70%;
     display: flex;
     flex-direction: row;
@@ -417,21 +433,37 @@
   .statisticsWithIcon {
     display: flex;
     flex-direction: column;
+    //width: fi;
     padding: 48px 16px 48px 16px;
     border-radius: 8px;
+    align-items: center;
+    align-content: center;
+
     color: $primary-black-1;
     background-color: #f5f5f5;
 
     .statRow {
-      width: 800px;
+      // width: 800px;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      //margin: auto;
+  
     }
 
     .statColLeft {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       float: left;
-      width: 50%;
+      //width: fit-content;
+      margin-inline: 5vw;
+      //margin-left: 5vw;
+      //margin-right: 5vw;
+      //padding-left: 5%;
+      //padding-right: 5%;
+      // width: 25%;
       .statIcon {
         color: black;
         height: 64px;
@@ -439,17 +471,20 @@
       }
       .statText {
         text-align: center;
-        padding-left: 15%;
+        //padding-left: 5%;
+        //padding-right: 5%;
+        
+        //padding : 10%;
         width: auto;
       }
     }
-    .statColRight {
+    /*.statColRight {
       display: flex;
       justify-content: center;
       align-items: center;
       float: left;
-      width: 50%;
-      border-left: 1px solid $primary-black-1;
+      // width: 25%;
+      // border-left: 1px solid $primary-black-1;
       .statIcon {
         color: black;
         height: 64px;
@@ -460,7 +495,7 @@
         padding-left: 15%;
         width: auto;
       }
-    }
+    }*/
   }
 
   .partners {
