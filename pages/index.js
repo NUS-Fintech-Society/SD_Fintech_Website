@@ -7,15 +7,13 @@ import LocationIcon from "@material-ui/icons/PlaceOutlined";
 import MailIcon from "@material-ui/icons/MailOutline";
 import { Container } from "@material-ui/core";
 import FaceIcon from "@material-ui/icons/Face";
-import ProjectIcon from "@material-ui/icons/Work"
+import ProjectIcon from "@material-ui/icons/Work";
 import TimelineCard from "components/Timeline/Timeline";
 import DefaultLayout from "components/Layouts/DefaultLayout/DefaultLayout";
 import DepartmentCard from "components/DepartmentCard/DepartmentCard";
 
-
-import * as eventsData from 'data/mock/events.json';
-import * as departmentsData from 'data/mock/departments.json';
-
+import * as eventsData from "data/mock/events.json";
+import * as departmentsData from "data/mock/departments.json";
 
 const Home = (props) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -113,30 +111,24 @@ const Home = (props) => {
             </div>
           </div>
         </div>
-        
+
         <FadeInSection>
           <div className={styles.statisticsWithIcon}>
             <div className={styles.statRow}>
               <div className={styles.statColLeft}>
-                <FaceIcon className={styles.statIcon}/>
+                <FaceIcon className={styles.statIcon} />
                 <div className={styles.statText}>
                   <h1>
-                    <CountUp
-                      end={204}
-                      duration={2}
-                    />
+                    <CountUp end={204} duration={2} />
                   </h1>
                   <p>Fintech Members</p>
                 </div>
               </div>
               <div className={styles.statColRight}>
-                <ProjectIcon className={styles.statIcon}/>
+                <ProjectIcon className={styles.statIcon} />
                 <div className={styles.statText}>
                   <h1>
-                    <CountUp
-                      end={23}
-                      duration={1}
-                      />
+                    <CountUp end={23} duration={1} />
                   </h1>
                   <p>Projects Completed</p>
                 </div>
@@ -147,30 +139,25 @@ const Home = (props) => {
 
         <FadeInSection>
           {/* Added Container maxWidth for our team section specifically*/}
-          <Container maxWidth="xl" >
-          <div id="ourTeam" className={styles.ourTeam}>
-            <div className={styles.textContainer}>
-              <h1>Our Team</h1>
-              <div className={styles.underline}></div>
-              <p>
-                NUS FinTech Society comprises of four different teams:
-                Operations, Machine Learning, DevOps, as well as Blockchain
-              </p>
+          <Container maxWidth="xl">
+            <div>
+              <h1 className={styles.ourTeams}>Our Teams</h1>
             </div>
-            <div className={styles.cardsContainer}>
-              {departments.map((department) => (
-                <div className={styles.cardContainer} key={department.id}>
-                  <DepartmentCard
-                    id={department.id}
-                    title={department.name}
-                    description={department.description}
-                    icon={department.icon}
-                    route={department.route}
-                  />
-                </div>
-              ))}
+            <div id="teamInfo" className={styles.ourTeam}>
+              <div className={styles.cardsContainer}>
+                {departments.map((department) => (
+                  <div className={styles.cardContainer} key={department.id}>
+                    <DepartmentCard
+                      id={department.id}
+                      title={department.name}
+                      description={department.description}
+                      icon={department.icon}
+                      route={department.route}
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
           </Container>
         </FadeInSection>
 
@@ -274,7 +261,7 @@ const Home = (props) => {
                 <MailIcon className={styles.icon} />
                 <p>nusfintech.ops@gmail.com</p>
               </div>
-              
+
               {/* // TODO: Integrate form with third-party service or back-end service
               <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
                 <div className={styles.inputContainer}>
