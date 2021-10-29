@@ -13,6 +13,7 @@ import ParticipantsIcon from "@material-ui/icons/Person";
 import TimelineCard from "components/Timeline/Timeline";
 import DefaultLayout from "components/Layouts/DefaultLayout/DefaultLayout";
 import DepartmentCard from "components/DepartmentCard/DepartmentCard";
+import Head from "next/head";
 
 
 import * as eventsData from 'data/mock/events.json';
@@ -93,27 +94,35 @@ const Home = (props) => {
     <DefaultLayout>
       <main className={styles.main}>
         <div className={styles.landing}>
-          <div className={styles.details}>
-            <div className={styles.titleContainer}>
-              <p className={styles.title}>NUS Fintech Society</p>
-              <p className={styles.subtitle}>{typing}</p>
-            </div>
-            <div className={styles.aboutUs}>
-              <div className={styles.descriptionContainer}>
-                <p className={styles.about}>About Us</p>
+          {/* Added Container maxWidth for bout Us section specifically*/}
+          <Container maxWidth="xl" >
+            <div className={styles.details}>
+              <div className={styles.titleContainer}>
+                <p className={styles.title}>NUS Fintech Society</p>
+                <p className={styles.subtitle}>{typing}</p>
               </div>
-              <div className={styles.descriptionContainer}>
-                <p className={styles.text}>
-                  NUS FinTech Society was founded under NUS School of Computing
-                  by a group of like-minded individuals with a passion in
-                  pursuing research and driving applications in the realms of
-                  Blockchain and Machine Learning. We currently have over 80
-                  members, each with a strong grasp of their individual research
-                  areas.
-                </p>
+              <div className={styles.aboutUs}>
+                <div className={styles.descriptionContainer}>
+                  <p className={styles.about}>About Us</p>
+                  <p className={styles.text}>
+                    NUS FinTech Society was founded under NUS School of Computing
+                    by a group of like-minded individuals with a passion in
+                    pursuing research and driving applications in the realms of
+                    Blockchain and Machine Learning. We currently have over 80
+                    members, each with a strong grasp of their individual research
+                    areas.
+                  </p>
+                </div>
+                <div className={styles.logoContainer}>
+                  <img
+                    src="/images/SocietyLogo.png"
+                    alt="society logo"
+                    className={styles.image}
+                  />
+                </div>
               </div>
             </div>
-          </div>
+          </Container>
         </div>
 
         <FadeInSection>
