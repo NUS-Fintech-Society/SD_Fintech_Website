@@ -1,0 +1,64 @@
+@import "styles/variables.scss";
+
+.event {
+  width: 100%;
+
+  .button {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+  }
+  .image {
+      width: 50%;
+      display: block;
+      text-align: center;
+      
+  }
+  .rightbutton {
+    text-align: center;
+    border: none;
+    color: white;
+    padding: 5px;
+    margin-top: 1rem;
+    background-color: #5398b9;
+    color: $primary-white-1;
+    font-size: $font-size-1;
+    border-radius: 0.2rem;
+    box-shadow: 0.5rem 0.5rem 1rem rgba($color: #000000, $alpha: 0.2);
+    transition: all 0.2s;
+  }
+
+  .rightbutton:hover {
+    transform: translateY(-0.3rem);
+  }
+
+  .rightbutton:visited,
+  .rightbutton:active {
+    transform: translateY(-0.1rem);
+  }
+
+  .timelineheader {
+    font-size: $font-size-3;
+    font-weight: bold;
+    color: #54585a;
+    text-align: center;
+
+  }
+
+  .timelinedate,
+  .timelinedescription {
+    font-size: $font-size-1;
+  }
+
+  .icon {
+    background-color: #6b95df;
+    //#a8acae;
+  }
+}
+
+@media (max-width: 850px) {
+  .event {
+    width: 100%;
+  }
+
+}
