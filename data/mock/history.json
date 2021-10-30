@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "NUS Fintech Society Founded",
+    "description": "Lorem1 Ipsum is simply dummy text of the printing and typesetting industry.",
+    "date": "July 2018",
+    "link": "https://medium.com/@nusfintech.bc",
+    "image": "/images/exco.png"
+  },
+  {
+    "id": 2,
+    "name": "Event Two",
+    "description": "Lorem2 Ipsum is simply dummy text of the printing and typesetting industry.",
+    "date": "July 2018",
+    "link": "https://medium.com/@nusfintech.bc",
+    "image": "/images/exco.png"
+  },
+  {
+    "id": 3,
+    "name": "Event Three",
+    "description": "Lorem3 Ipsum is simply dummy text of the printing and typesetting industry.",
+    "date": "July 2018",
+    "link": "https://medium.com/@nusfintech.bc",
+    "image": "/images/NUS_SOC.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Event Four",
+    "description": "Lorem4 Ipsum is simply dummy text of the printing and typesetting industry.",
+    "date": "July 2018",
+    "link": "https://medium.com/@nusfintech.bc",
+    "image": "/images/exco.png"
+  }
+]

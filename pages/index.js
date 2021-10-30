@@ -11,13 +11,17 @@ import ProjectIcon from "@material-ui/icons/Work";
 import EventIcon from "@material-ui/icons/Event";
 import ParticipantsIcon from "@material-ui/icons/Person";
 import TimelineCard from "components/Timeline/Timeline";
+import HistoryCard from "components/History/History";
 import DefaultLayout from "components/Layouts/DefaultLayout/DefaultLayout";
 import DepartmentCard from "components/DepartmentCard/DepartmentCard";
 import Head from "next/head";
 
 
+
 import * as eventsData from 'data/mock/events.json';
 import * as departmentsData from 'data/mock/departments.json';
+import * as historyData from 'data/mock/history.json';
+
 
 
 const Home = (props) => {
@@ -28,11 +32,13 @@ const Home = (props) => {
   const [members, setMembers] = useState([]);
   const typing = useTypewriter("— Ideate. Innovate. Inspire.");
   const [departments, setDepartments] = useState([]);
+  const [history, setHistory] = useState([]);
   const { register, handleSubmit, errors } = useForm();
   const [formState, setFormState] = useState({});
 
   useEffect(() => {
     loadDepartments();
+    loadHistory();
     fetchEvents().then(() => {
       setIsLoading(false);
     });
@@ -41,6 +47,14 @@ const Home = (props) => {
   const fetchEvents = async () => {
     try {
       setItems(sortEvents(Array.from(eventsData)));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const loadHistory = async () => {
+    try {
+      setHistory(Array.from(historyData));
     } catch (err) {
       console.log(err);
     }
@@ -178,6 +192,12 @@ const Home = (props) => {
               </div>
             </div>
           </div>
+        </FadeInSection>
+        <FadeInSection>
+          <div>
+            <h1>History</h1>
+          </div>
+          <HistoryCard items={history} />
         </FadeInSection>
 
         <FadeInSection>
