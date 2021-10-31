@@ -27,7 +27,6 @@ const NavBar = (props) => {
             <li>
               <Link href="/events">Events</Link>
             </li>
-
             <div className={styles.dropdown}>
               <Link className={styles.navbar_items} href="/#ourTeam">
                 Our Team
@@ -39,7 +38,10 @@ const NavBar = (props) => {
                 <a href="/department/devops">DevOps</a>
               </div>
             </div>
-
+            {/* TODO: Add menu item once FAQ page is complete */}
+            {/* <li>
+              <Link href="/faq">FAQ</Link> 
+            </li>   */}
             <li>
               <Link href="/#contact">Contact Us</Link>
             </li>
