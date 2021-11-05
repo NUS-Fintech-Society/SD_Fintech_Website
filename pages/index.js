@@ -162,6 +162,31 @@ const Home = (props) => {
         </FadeInSection>
 
         <FadeInSection>
+          <div className={styles.individualDepartment}>
+            <div className={styles.departRow}>
+              <div className={styles.colLeft}>
+                <FaceIcon className={styles.icon} />
+                <div className={styles.text}>
+                  <h1>
+                    <CountUp end={204} duration={2} />
+                  </h1>
+                  <p>Fintech Members</p>
+                </div>
+              </div>
+              <div className={styles.colRight}>
+                <ProjectIcon className={styles.icon} />
+                <div className={styles.text}>
+                  <h1>
+                    <CountUp end={23} duration={1} />
+                  </h1>
+                  <p>Projects Completed</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </FadeInSection>
+
+        <FadeInSection>
           <div>
             <h1>Upcoming Events</h1>
           </div>

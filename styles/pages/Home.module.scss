@@ -442,6 +442,55 @@
     }
   }
 
+  .individualDepartment {
+    display: flex;
+    flex-direction: column;
+    padding: 48px 16px 48px 16px;
+    border-radius: 8px;
+    color: $primary-black-1;
+    background-color: #f5f5f5;
+
+    .departRow {
+      width: 800px;
+    }
+
+    .colLeft {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      float: left;
+      width: 50%;
+      .icon {
+        color: black;
+        height: 64px;
+        width: 64px;
+      }
+      .text {
+        text-align: center;
+        padding-left: 15%;
+        width: auto;
+      }
+    }
+    .colRight {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      float: left;
+      width: 50%;
+      border-left: 1px solid $primary-black-1;
+      .icon {
+        color: black;
+        height: 64px;
+        width: 64px;
+      }
+      .text {
+        text-align: center;
+        padding-left: 15%;
+        width: auto;
+      }
+    }
+  }
+
   .partners {
     display: flex;
     align-items: center;
@@ -557,6 +606,19 @@
         width: 100%;
       }
       .statColRight {
+        width: 100%;
+        border-left: 0px;
+      }
+    }
+    .individualDepartment {
+      width: 90%;
+      .departRow {
+        width: 100%;
+      }
+      .colLeft {
+        width: 100%;
+      }
+      .colRight {
         width: 100%;
         border-left: 0px;
       }
