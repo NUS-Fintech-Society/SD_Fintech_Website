@@ -142,7 +142,7 @@ const Home = (props) => {
         <FadeInSection>
           <div className={styles.statisticsWithIcon}>
             <div className={styles.statRow}>
-              <div className={styles.statColLeft}>
+              <div className={styles.statCol}>
                 <FaceIcon className={styles.statIcon} />
                 <div className={styles.statText}>
                   <h1>
@@ -154,7 +154,7 @@ const Home = (props) => {
                   <p>Members</p>
                 </div>
               </div>
-              <div className={styles.statColLeft}>
+              <div className={styles.statCol}>
                 <ProjectIcon className={styles.statIcon} />
                 <div className={styles.statText}>
                   <h1>
@@ -166,7 +166,7 @@ const Home = (props) => {
                   <p>Projects</p>
                 </div>
               </div>
-              <div className={styles.statColLeft}>
+              <div className={styles.statCol}>
                 <EventIcon className={styles.statIcon} />
                 <div className={styles.statText}>
                   <h1>
@@ -178,7 +178,7 @@ const Home = (props) => {
                   <p>Events</p>
                 </div>
               </div>
-              <div className={styles.statColLeft}>
+              <div className={styles.statCol}>
                 <ParticipantsIcon className={styles.statIcon} />
                 <div className={styles.statText}>
                   <h1>
