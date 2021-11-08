@@ -130,12 +130,10 @@
 
   .aboutUsContainer {
     display: flex;
-    flex-direction: row;
   }
 
   .aboutUs {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
 
@@ -433,17 +431,12 @@
     flex-direction: column;
     padding: 48px 16px 48px 16px;
     border-radius: 8px;
-    align-items: center;
-    align-content: center;
-
     color: $primary-black-1;
     background-color: #ffffff;
 
     .statRow {
       width: 1200px;
       display: flex;
-      flex-direction: row;
-
     }
 
     .statColLeft {
@@ -460,28 +453,9 @@
       }
       .statText {
         text-align: center;
-        //padding-left: 15%;
         width: auto;
       }
     }
-    /*.statColRight {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      float: left;
-      // width: 25%;
-      // border-left: 1px solid $primary-black-1;
-      .statIcon {
-        color: black;
-        height: 64px;
-        width: 64px;
-      }
-      .statText {
-        text-align: center;
-        padding-left: 15%;
-        width: auto;
-      }
-    }*/
   }
 
   .partners {
