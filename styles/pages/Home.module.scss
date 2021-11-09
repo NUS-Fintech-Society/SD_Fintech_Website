@@ -569,12 +569,10 @@
     }
 
     .statisticsWithIcon {
-      width: 90%;
+      width: 100%;
       .statRow {
         width: 100%;
-      }
-      .statCol {
-        width: 100%;
+        display: flex;
       }
     }
   }
