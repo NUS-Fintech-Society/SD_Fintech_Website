@@ -8,8 +8,11 @@ import MailIcon from "@material-ui/icons/MailOutline";
 import { Container } from "@material-ui/core";
 import FaceIcon from "@material-ui/icons/Face";
 import ProjectIcon from "@material-ui/icons/Work";
+<<<<<<< HEAD
 import EventIcon from "@material-ui/icons/Event";
 import ParticipantsIcon from "@material-ui/icons/Person";
+=======
+>>>>>>> master
 import TimelineCard from "components/Timeline/Timeline";
 import HistoryCard from "components/History/History";
 import DefaultLayout from "components/Layouts/DefaultLayout/DefaultLayout";
@@ -17,12 +20,17 @@ import DepartmentCard from "components/DepartmentCard/DepartmentCard";
 import Head from "next/head";
 
 
+<<<<<<< HEAD
 
 import * as eventsData from 'data/mock/events.json';
 import * as departmentsData from 'data/mock/departments.json';
 import * as historyData from 'data/mock/history.json';
 
 
+=======
+import * as eventsData from "data/mock/events.json";
+import * as departmentsData from "data/mock/departments.json";
+>>>>>>> master
 
 const Home = (props) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -198,16 +206,11 @@ const Home = (props) => {
 
         <FadeInSection>
           {/* Added Container maxWidth for our team section specifically*/}
-          <Container maxWidth="xl" >
-            <div id="ourTeam" className={styles.ourTeam}>
-              <div className={styles.textContainer}>
-                <h1>Our Team</h1>
-                <div className={styles.underline}></div>
-                <p>
-                  NUS FinTech Society comprises of four different teams:
-                  Operations, Machine Learning, DevOps, as well as Blockchain
-                </p>
-              </div>
+          <Container maxWidth="xl">
+            <div>
+              <h1 className={styles.ourTeams}>Our Teams</h1>
+            </div>
+            <div id="teamInfo" className={styles.ourTeam}>
               <div className={styles.cardsContainer}>
                 {departments.map((department) => (
                   <div className={styles.cardContainer} key={department.id}>
