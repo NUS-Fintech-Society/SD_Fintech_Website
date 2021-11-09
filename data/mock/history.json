@@ -9,7 +9,7 @@
   },
   {
     "id": 2,
-    "name": "Event Two",
+    "name": "Milestone 1",
     "description": "Lorem2 Ipsum is simply dummy text of the printing and typesetting industry.",
     "date": "July 2018",
     "link": "https://medium.com/@nusfintech.bc",
@@ -17,7 +17,7 @@
   },
   {
     "id": 3,
-    "name": "Event Three",
+    "name": "Milestone 2",
     "description": "Lorem3 Ipsum is simply dummy text of the printing and typesetting industry.",
     "date": "July 2018",
     "link": "https://medium.com/@nusfintech.bc",
@@ -25,7 +25,7 @@
   },
   {
     "id": 4,
-    "name": "Event Four",
+    "name": "Milestone 3",
     "description": "Lorem4 Ipsum is simply dummy text of the printing and typesetting industry.",
     "date": "July 2018",
     "link": "https://medium.com/@nusfintech.bc",
