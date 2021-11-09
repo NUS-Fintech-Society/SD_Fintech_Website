@@ -108,7 +108,7 @@ const Home = (props) => {
     <DefaultLayout>
       <main className={styles.main}>
         <div className={styles.landing}>
-          {/* Added Container maxWidth for bout Us section specifically*/}
+          {/* Added Container maxWidth for about Us section specifically*/}
           <Container maxWidth="xl" >
             <div className={styles.details}>
               <div className={styles.titleContainer}>
@@ -131,7 +131,6 @@ const Home = (props) => {
                   <img
                     src="/images/SocietyLogo.png"
                     alt="society logo"
-                    className={styles.image}
                   />
                 </div>
               </div>

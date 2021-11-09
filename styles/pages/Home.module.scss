@@ -73,7 +73,7 @@
     }
     // title Container includes about us and statistic row
     
-    width: 70%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -88,6 +88,7 @@
       background: linear-gradient(rgba(255, 255, 255, 0.6), rgb(255, 255, 255)),
         url("../../public/images/exco.png");
       background-size: cover;
+      background-repeat: no-repeat;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -95,11 +96,12 @@
 
       .descriptionContainer {
         width: 40%;
-        margin-left: 10rem;
+        margin-left: 3em;
       }
 
       .about {
         text-align: left;
+        justify-content: flex-start;
         color: $primary-blue-2;
         font-size: $font-size-3;
         font-weight: $font-weight-regular;
@@ -144,7 +146,7 @@
     }
     
     .logoContainer {
-      width: 40%;
+      width: 30rem;
     }
   }
 
@@ -435,7 +437,7 @@
     background-color: #ffffff;
 
     .statRow {
-      width: 1200px;
+      width: 120rem;
       display: flex;
     }
 
@@ -508,6 +510,9 @@
       }
 
       .aboutUs {
+        display: flex;
+        // fix flex direction when view port changes
+        flex-direction: column;
         margin-bottom: 10px;
 
         .descriptionContainer {
@@ -569,12 +574,8 @@
       .statRow {
         width: 100%;
       }
-      .statColLeft {
+      .statCol {
         width: 100%;
-      }
-      .statColRight {
-        width: 100%;
-        border-left: 0px;
       }
     }
   }
