@@ -11,6 +11,7 @@ import ProjectIcon from "@material-ui/icons/Work";
 import TimelineCard from "components/Timeline/Timeline";
 import DefaultLayout from "components/Layouts/DefaultLayout/DefaultLayout";
 import DepartmentCard from "components/DepartmentCard/DepartmentCard";
+import DepartmentSection from "components/DepartmentSection/DepartmentSection";
 
 import * as eventsData from "data/mock/events.json";
 import * as departmentsData from "data/mock/departments.json";
@@ -162,26 +163,19 @@ const Home = (props) => {
         </FadeInSection>
 
         <FadeInSection>
-          <div className={styles.individualDepartment}>
-            <div className={styles.departRow}>
-              <div className={styles.colLeft}>
-                <FaceIcon className={styles.icon} />
-                <div className={styles.text}>
-                  <h1>
-                    <CountUp end={204} duration={2} />
-                  </h1>
-                  <p>Fintech Members</p>
+          <div id="departmentSection">
+            <div>
+              {departments.map((department) => (
+                <div key={department.id}>
+                  <DepartmentSection
+                    id={department.id}
+                    title={department.name}
+                    description={department.description}
+                    icon={department.icon}
+                    route={department.route}
+                  />
                 </div>
-              </div>
-              <div className={styles.colRight}>
-                <ProjectIcon className={styles.icon} />
-                <div className={styles.text}>
-                  <h1>
-                    <CountUp end={23} duration={1} />
-                  </h1>
-                  <p>Projects Completed</p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </FadeInSection>
