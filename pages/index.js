@@ -103,7 +103,7 @@ const Home = (props) => {
                   NUS FinTech Society was founded under NUS School of Computing
                   by a group of like-minded individuals with a passion in
                   pursuing research and driving applications in the realms of
-                  Blockchain and Machine Learning. We currently have over 80
+                  Blockchain and Machine Learning. We currently have over 200
                   members, each with a strong grasp of their individual research
                   areas.
                 </p>
