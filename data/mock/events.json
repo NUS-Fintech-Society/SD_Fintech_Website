@@ -70,5 +70,117 @@
     "description": "2nd Society Meeting of AY21/22",
     "start": "2021-10-16T02:00:00Z",
     "end": "2021-10-16T03:30:00Z"
+  },
+  {
+    "id": 10,
+    "name": "Natural Language Processing in Fintech",
+    "start": "2022-01-05T03:00:00Z",
+    "end": "2022-01-05T04:00:00Z",
+    "location": "Zoom Conferencing",
+    "description": "Machine Learning Workshop 1"
+  },
+  {
+    "id": 11,
+    "name": "Model Interpretability in Risk Analytics",
+    "start": "2022-01-06T03:00:00Z",
+    "end": "2022-01-06T04:00:00Z",
+    "location": "Zoom Conferencing",
+    "description": "Machine Learning Workshop 2"
+  },
+  {
+    "id": 12,
+    "name": "Intro to Blockchain",
+    "start": "2022-01-07T03:00:00Z",
+    "end": "2022-01-07T04:00:00Z",
+    "location": "Zoom Conferencing",
+    "description": "Blockchain Workshop 1"
+  },
+  {
+    "id": 13,
+    "name": "Web2 to Web3: The new Internet",
+    "start": "2022-01-08T03:00:00Z",
+    "end": "2022-01-08T04:00:00Z",
+    "location": "Zoom Conferencing",
+    "description": "Blockchain Workshop 2"
+  },
+  {
+    "id": 14,
+    "name": "Intro to Asset Tokenization",
+    "start": "2022-01-10T08:00:00Z",
+    "end": "2022-01-10T09:00:00Z",
+    "location": "Zoom Conferencing",
+    "description": "Industry workshop by HG Exchange"
+  },
+  {
+    "id": 15,
+    "name": "Stocks vs Crypto",
+    "start": "2022-01-11T08:00:00Z",
+    "end": "2022-01-11T09:00:00Z",
+    "location": "Zoom Conferencing",
+    "description": "Industry workshop by Bybit"
+  },
+  {
+    "id": 16,
+    "name": "Getting started with Stellar",
+    "start": "2022-01-11T12:00:00Z",
+    "end": "2022-01-11T13:00:00Z",
+    "location": "Zoom Conferencing",
+    "description": "Industry workshop by Stellar"
+  },
+  {
+    "id": 16,
+    "name": "How revolut makes foreign exchange faster and cheaper than traditional money changers?",
+    "start": "2022-01-12T08:00:00Z",
+    "end": "2022-01-12T09:00:00Z",
+    "location": "Zoom Conferencing",
+    "description": "Industry workshop by Revolut"
+  },
+  {
+    "id": 17,
+    "name": "Token Market Making",
+    "start": "2022-01-12T12:00:00Z",
+    "end": "2022-01-12T13:00:00Z",
+    "location": "Zoom Conferencing",
+    "description": "Industry workshop by AlphaLab Capital"
+  },
+  {
+    "id": 18,
+    "name": "Navigating the Multi-Chain Landscape",
+    "start": "2022-01-13T08:00:00Z",
+    "end": "2022-01-13T09:00:00Z",
+    "location": "Zoom Conferencing",
+    "description": "Industry workshop by OIO Singapore"
+  },
+  {
+    "id": 19,
+    "name": "TBC",
+    "start": "2022-01-13T12:00:00Z",
+    "end": "2022-01-13T13:00:00Z",
+    "location": "Zoom Conferencing",
+    "description": "Industry workshop by Startbahn"
+  },
+  {
+    "id": 20,
+    "name": "FinTech for Personal Finance",
+    "start": "2022-01-10T12:00:00Z",
+    "end": "2022-01-10T13:00:00Z",
+    "location": "TBC",
+    "description": "Symposium with speakers from Futu Singapore, Stashaway, Revolut and ByBit"
+  },
+  {
+    "id": 21,
+    "name": " Careers in FinTech (General)",
+    "start": "2022-01-14T10:30:00Z",
+    "end": "2022-01-14T12:00:00Z",
+    "location": "TBC - Shaw Foundation Alumni House",
+    "description": "Symposium with speakers from Spenmo, Helicap and SeaMoney(tbc)"
+  },
+  {
+    "id": 22,
+    "name": " Careers in Crypto",
+    "start": "2022-01-14T12:00:00Z",
+    "end": "2022-01-14T14:00:00Z",
+    "location": "Utown Auditorium 2",
+    "description": "Symposium with speakers from DeFiance Capital, Octava, IndexCoop, Messari and ByBit"
   }
 ]
