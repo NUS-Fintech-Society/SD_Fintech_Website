@@ -67,13 +67,6 @@ const Home = (props) => {
         i = i + 1;
       }
     }
-    if (list.length > 4) {
-      for (var i = 0; i < list.length; i++) {
-        if (i >= 4) {
-          list.splice(i, 1);
-        }
-      }
-    }
     if (list.length == 0) {
       setNoEvents(false);
     }

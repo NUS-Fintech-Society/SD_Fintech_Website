@@ -29,7 +29,7 @@ const TimelineCard = (props) => {
   return (
     <div className={styles.event}>
       <Timeline align="alternate">
-        {items.map((item) => {
+        {items.map((item, index) => {
           return (
             <TimelineItem key={item.id}>
               <TimelineOppositeContent>
@@ -44,31 +44,59 @@ const TimelineCard = (props) => {
                 <TimelineDot className={styles.icon}></TimelineDot>
                 <TimelineConnector className={styles.icon} />
               </TimelineSeparator>
-              <TimelineContent>
-                <Typography variant="h6" component="alignLeft">
-                  <span className={styles.timelineheader}>{item.name}</span>
-                </Typography>
-                <div>
-                  <Typography
-                    className={styles.timelinelocation}
-                    color="textSecondary"
-                  >
-                    Location: {item.location}
+              {index % 2 == 0 ? (
+                <TimelineContent>
+                  <Typography variant="h6" component="alignLeft">
+                    <span className={styles.timelineheader}>{item.name}</span>
                   </Typography>
-                </div>
-                <div className={styles.button}>
-                  <Link
-                    href={{
-                      pathname: `/eventsTimeline/${item.id}`,
-                    }}
-                  >
-                    <button className={styles.rightbutton}>View More</button>
-                  </Link>
-                  &nbsp;
-                </div>
-                <div>&nbsp;</div>
-                <div>&nbsp;</div>
-              </TimelineContent>
+                  <div>
+                    <Typography
+                      className={styles.timelinelocation}
+                      color="textSecondary"
+                    >
+                      Location: {item.location}
+                    </Typography>
+                  </div>
+                  <div className={styles.button1}>
+                    <Link
+                      href={{
+                        pathname: `/eventsTimeline/${item.id}`,
+                      }}
+                    >
+                      <button className={styles.rightbutton}>View More</button>
+                    </Link>
+                    &nbsp;
+                  </div>
+                  <div>&nbsp;</div>
+                  <div>&nbsp;</div>
+                </TimelineContent>
+              ) : (
+                <TimelineContent>
+                  <Typography variant="h6" component="alignRight">
+                    <span className={styles.timelineheader}>{item.name}</span>
+                  </Typography>
+                  <div>
+                    <Typography
+                      className={styles.timelinelocation}
+                      color="textSecondary"
+                    >
+                      Location: {item.location}
+                    </Typography>
+                  </div>
+                  <div className={styles.button2}>
+                    <Link
+                      href={{
+                        pathname: `/eventsTimeline/${item.id}`,
+                      }}
+                    >
+                      <button className={styles.rightbutton}>View More</button>
+                    </Link>
+                    &nbsp;
+                  </div>
+                  <div>&nbsp;</div>
+                  <div>&nbsp;</div>
+                </TimelineContent>
+              )}
             </TimelineItem>
           );
         })}
