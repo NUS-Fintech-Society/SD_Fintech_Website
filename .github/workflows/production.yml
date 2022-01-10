@@ -1,0 +1,20 @@
+name: Deploy Staging
+
+on:
+  push:
+    branches:
+      - stg
+
+jobs:
+  build_and_deploy_staging:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      # Add any build steps here. For example:
+      - run: yarn && yarn build
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}'
+          projectId: sd-fintech-website-stg
+          channelId: live
