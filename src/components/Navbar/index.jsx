@@ -1,28 +1,41 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { AppBar, Box, IconButton, Toolbar } from '@material-ui/core'
+import { AppBar, Box, Toolbar } from '@material-ui/core'
+import Tab from './Tab'
 
 const NAVIGATION = [
   {
     main: 'Home',
+    children: [],
   },
   {
     main: 'Departments',
+    children: [
+      'Machine Learning',
+      'Blockchain',
+      'Software Development',
+      'Operations',
+    ],
   },
   {
-    main: 'Contact',
+    main: 'Content',
+    children: ['Blogs', 'Courses'],
+  },
+  {
+    main: 'Events',
+    children: [],
   },
   {
     main: 'Recruitment',
+    children: [],
   },
   {
-    main: 'FAQs',
+    main: 'FAQ',
+    children: [],
   },
   {
-    main: 'Contact Us',
-  },
-  {
-    main: 'Login',
+    main: 'Contact',
+    children: [],
   },
 ]
 
@@ -54,9 +67,7 @@ const Navbar = () => {
             <img src="society-logo-white.png" alt="FTS Logo" height="100%" />
           </Box>
           {NAVIGATION.map((item, index) => (
-            <IconButton key={index} className={classes.navItem}>
-              {item.main}
-            </IconButton>
+            <Tab key={index} data={item} />
           ))}
         </Toolbar>
       </AppBar>

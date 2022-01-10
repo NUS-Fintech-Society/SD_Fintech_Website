@@ -1,6 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { Box, Typography } from '@material-ui/core'
+import { Box, Button, Typography } from '@material-ui/core'
+import ExitToAppIcon from '@material-ui/icons/ExitToApp'
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -21,6 +22,9 @@ const useStyles = makeStyles(() => ({
   subTitle: {
     fontStyle: 'italic',
   },
+  btn: {
+    marginTop: 16,
+  },
 }))
 
 const Hero = () => {
@@ -34,6 +38,14 @@ const Hero = () => {
       <Typography className={classes.subTitle} color="textSecondary">
         -Ideate, Innovate, Inspire
       </Typography>
+      <Button
+        className={classes.btn}
+        variant="contained"
+        color="secondary"
+        startIcon={<ExitToAppIcon />}
+      >
+        Login
+      </Button>
     </Box>
   )
 }
