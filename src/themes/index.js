@@ -4,10 +4,13 @@ import typography from './typography'
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#E13766',
+      main: '#101F40',
     },
     secondary: {
-      main: '#101F40',
+      main: '#FDB44B',
+    },
+    tertiary: {
+      main: '#00BBF0',
     },
     success: {
       main: '#4BB543',
@@ -23,11 +26,11 @@ const theme = createTheme({
     },
     background: {
       primary: '#FFFFFF',
-      secondary: '#F5F5F5',
+      secondary: '#F0F0F5',
     },
   },
   shape: {
-    borderRadius: 16,
+    borderRadius: 20,
   },
   typography: typography,
   overrides: {

@@ -1,33 +1,33 @@
-const headerFontFamily = 'Roboto'
+const headerFontFamily = 'Lato'
+const textFontFamily = 'Lato'
 const typography = {
-  fontFamily: 'Roboto',
   h1: {
     fontFamily: headerFontFamily,
-    fontSize: 60,
+    fontSize: 72,
     color: '#000000',
     fontWeight: 700,
   },
   h2: {
     fontFamily: headerFontFamily,
-    fontSize: 50,
+    fontSize: 60,
     color: '#000000',
     fontWeight: 700,
   },
   h3: {
     fontFamily: headerFontFamily,
-    fontSize: 45,
+    fontSize: 48,
     color: '#000000',
     fontWeight: 700,
   },
   h4: {
     fontFamily: headerFontFamily,
-    fontSize: 40,
+    fontSize: 42,
     color: '#000000',
     fontWeight: 400,
   },
   h5: {
     fontFamily: headerFontFamily,
-    fontSize: 35,
+    fontSize: 36,
     color: '#000000',
     fontWeight: 400,
   },
@@ -38,39 +38,45 @@ const typography = {
     fontWeight: 400,
   },
   subtitle1: {
+    fontFamily: textFontFamily,
     fontSize: 24,
     color: '#000000',
     fontWeight: 400,
   },
   subtitle2: {
+    fontFamily: textFontFamily,
     fontSize: 20,
     color: '#000000',
     fontWeight: 400,
   },
   body1: {
+    fontFamily: textFontFamily,
     fontSize: 18,
     color: '#000000',
     fontWeight: 400,
   },
   body2: {
+    fontFamily: textFontFamily,
     fontSize: 16,
     color: '#000000',
     fontWeight: 400,
   },
   button: {
+    fontFamily: textFontFamily,
     fontSize: 16,
-    fontWeight: 400,
+    fontWeight: 700,
     color: '#000000',
     textTransform: 'none',
   },
   overline: {
+    fontFamily: textFontFamily,
     fontSize: 16,
     fontWeight: 400,
     color: '#000000',
     textTransform: 'none',
   },
   caption: {
-    fontFamily: headerFontFamily,
+    fontFamily: textFontFamily,
     fontSize: 12,
     fontWeight: 400,
     letterSpacing: '1px',

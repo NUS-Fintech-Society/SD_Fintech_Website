@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: 12,
     },
     '& .MuiSvgIcon-root': {
-      color: theme.palette.secondary.main,
+      color: theme.palette.tertiary.main,
       fontSize: 32,
     },
   },
