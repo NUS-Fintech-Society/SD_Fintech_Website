@@ -1,10 +1,10 @@
-import { Box } from '@material-ui/core'
 import Example from '../../components/Example'
+import Layout from '../../components/Layout'
 
 const Home = () => (
-  <Box>
+  <Layout>
     <Example />
-  </Box>
+  </Layout>
 )
 
 export default Home
