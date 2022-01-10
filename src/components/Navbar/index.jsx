@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
   },
   navItem: {
     fontSize: theme.typography.body2.fontSize,
-    color: theme.palette.text.contrast,
+    color: theme.palette.text.secondary,
   },
 }))
 
