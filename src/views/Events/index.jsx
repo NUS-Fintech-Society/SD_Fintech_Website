@@ -91,7 +91,7 @@ const Events = () => {
                   end: a.end,
                 }))}
                 step={60}
-                defaultDate={new Date('')}
+                defaultDate={new Date()}
                 localizer={localizer}
                 popup={true}
                 startAccessor="start"
