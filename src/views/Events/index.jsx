@@ -1,10 +1,26 @@
-import { Box } from '@material-ui/core'
+import { Box, Container, makeStyles } from '@material-ui/core'
 import moment from 'moment'
 import EventCard from '../../components/EventCard'
 import Example from '../../components/Example'
 import Layout from '../../components/Layout'
 
+const useStyles = makeStyles((theme) => ({
+  root: {},
+  eventsList: {
+    display: 'flex',
+    gap: '2em',
+    flexWrap: 'wrap',
+    alignItems: 'stretch',
+    flexDirection: 'row',
+    height: 'max-content',
+    [theme.breakpoints.down('xs')]: {
+      flexDirection: 'column',
+    },
+  },
+}))
+
 const Events = () => {
+  const classes = useStyles()
   const events = [
     {
       date: moment('31 Oct 2021'),
@@ -26,17 +42,20 @@ const Events = () => {
   return (
     <Layout>
       <Example />
-      <Box style={{ display: 'flex', gap: '2em' }}>
-        {events.map((ev, index) => (
-          <EventCard
-            key={index}
-            date={ev.date}
-            location={ev.location}
-            title={ev.title}
-            description={ev.description}
-          />
-        ))}
-      </Box>
+      <Container maxWidth="lg">
+        <Box className={classes.eventsList}>
+          {events.map((ev, index) => (
+            <EventCard
+              key={index}
+              date={ev.date}
+              location={ev.location}
+              title={ev.title}
+              description={ev.description}
+            />
+          ))}
+        </Box>
+        Happy
+      </Container>
     </Layout>
   )
 }
