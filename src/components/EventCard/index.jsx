@@ -1,6 +1,9 @@
 import { Box, Typography } from '@material-ui/core'
 import { LocationOn } from '@material-ui/icons'
 import { makeStyles } from '@material-ui/styles'
+import moment from 'moment'
+import Dotdotdot from 'react-clamp'
+import PropTypes from 'prop-types'
 
 const useStyles = makeStyles({
   root: {
@@ -39,6 +42,7 @@ const useStyles = makeStyles({
     marginTop: '0.2em',
     color: '#FBBA5C',
     '& span': {
+      whiteSpace: 'nowrap',
       alignItems: 'center',
       display: 'flex',
     },
@@ -47,9 +51,14 @@ const useStyles = makeStyles({
     width: '100%',
     borderRadius: '1em',
   },
+  description: {
+    maxHeight: '10em',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+  },
 })
 
-const EventCard = () => {
+const EventCard = ({ date, location, title, description }) => {
   const classes = useStyles()
 
   return (
@@ -58,26 +67,37 @@ const EventCard = () => {
         <img src="image-events-default.jpg" className={classes.image} />
         <Box className={classes.cardHeader}>
           <Box className={classes.dateBox}>
-            Oct <br /> 5
+            {moment(date).format('MMM')}
+            <br />
+            {moment(date).format('D')}
           </Box>
           <Box>
             <Box className={classes.location}>
               <Typography variant="p">
                 <LocationOn />
-                Kent Ridge MRT
+                {location}
               </Typography>
             </Box>
             <Box>
-              <Typography variant="subtitle1">Event Title</Typography>
+              <Typography variant="subtitle1">{title}</Typography>
             </Box>
           </Box>
         </Box>
-        <Box>
-          <Typography variant="p">Lorem ipsum dolor sit amet</Typography>
+        <Box className={classes.description}>
+          <Typography variant="p">
+            <Dotdotdot clamp={5}>{description}</Dotdotdot>
+          </Typography>
         </Box>
       </Box>
     </>
   )
+}
+
+EventCard.propTypes = {
+  date: PropTypes.object,
+  location: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string,
 }
 
 export default EventCard
