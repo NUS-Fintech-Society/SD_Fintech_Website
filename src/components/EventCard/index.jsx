@@ -129,7 +129,7 @@ const EventCard = ({ date, location, title, description, imageUrl }) => {
           <Box>
             <Box className={classes.location}>
               <LocationOn />
-              <Typography variant="p">{location}</Typography>
+              <Typography variant="body1">{location}</Typography>
             </Box>
             <Box>
               <Typography variant="subtitle1">{title}</Typography>
@@ -137,13 +137,12 @@ const EventCard = ({ date, location, title, description, imageUrl }) => {
           </Box>
         </Box>
         <Box className={classes.description}>
-          <Typography variant="body">
-            <ClampLines
-              lines={5}
-              text={description}
-              buttons={false}
-            ></ClampLines>
-          </Typography>
+          <ClampLines
+            lines={5}
+            text={description}
+            buttons={false}
+            innerElement="p"
+          ></ClampLines>
         </Box>
       </Box>
     </>

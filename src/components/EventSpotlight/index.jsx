@@ -98,13 +98,12 @@ const EventSpotlight = ({ date, location, title, description, imageUrl }) => {
           </Box>
         </Box>
         <Box className={classes.description}>
-          <Typography variant="body">
-            <ClampLines
-              lines={5}
-              text={description}
-              buttons={false}
-            ></ClampLines>
-          </Typography>
+          <ClampLines
+            lines={5}
+            text={description}
+            buttons={false}
+            innerElement="p"
+          ></ClampLines>
         </Box>
       </Box>
     </>
