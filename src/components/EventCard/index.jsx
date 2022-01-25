@@ -19,10 +19,9 @@ const useStyles = makeStyles((theme) => ({
       width: '100%',
     },
     '&:hover': {
-      boxShadow: '0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0)',
+      boxShadow: '0px 10px 13px -7px #999999, 5px 5px 15px 5px rgba(0,0,0,0)',
 
       transform: 'translateY(-10px);',
-      backgroundColor: '#f5f5f5',
     },
   },
   cardHeader: {
@@ -33,6 +32,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('xs')]: {
       flexDirection: 'column',
       alignItems: 'flex-start',
+      '& > div > div > h6': {
+        marginTop: '0.3em',
+      },
     },
   },
   dateBox: {
@@ -68,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
       height: 'auto',
       padding: '0.2em',
       textAlign: 'center',
-      marginBottom: '-0.2em',
+      marginBottom: '-0.5em',
       '& *': {
         width: '100%',
       },
@@ -82,9 +84,13 @@ const useStyles = makeStyles((theme) => ({
     whiteSpace: 'nowrap',
     alignItems: 'center',
     display: 'flex',
-    '& span': {
+    '& p': {
       textOverflow: 'ellipsis',
       flex: '0 5 auto',
+      color: '#FBBA5C',
+    },
+    [theme.breakpoints.down('xs')]: {
+      height: '1.2em',
     },
   },
   imageCrop: {
@@ -102,6 +108,10 @@ const useStyles = makeStyles((theme) => ({
     maxHeight: '10em',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
+    [theme.breakpoints.down('xs')]: {
+      marginTop: '-0.5em',
+      marginBottom: '-0.5em',
+    },
   },
 }))
 

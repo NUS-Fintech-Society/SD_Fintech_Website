@@ -18,6 +18,31 @@ const useStyles = makeStyles((theme) => ({
     height: 'max-content',
     [theme.breakpoints.down('xs')]: {
       flexDirection: 'column',
+      gap: '1em',
+    },
+  },
+  spotlight: {
+    display: 'flex',
+    alignItems: 'stretch',
+    gap: '2em',
+    [theme.breakpoints.down('md')]: {
+      flexDirection: 'column',
+      alignItems: 'stretch',
+      gap: '1em',
+      marginBottom: '3em',
+    },
+
+    '& .calendar': {
+      flex: '1 1 50%',
+
+      '& .rbc-calendar': { height: '140vw', maxHeight: '40em' },
+    },
+    '& .event': {
+      flex: '1 1 50%',
+      [theme.breakpoints.down('md')]: {
+        display: 'flex',
+        justifyContent: 'center',
+      },
     },
   },
 }))
@@ -75,12 +100,18 @@ const Events = () => {
       <Container maxWidth="lg">
         <Typography
           variant="h4"
-          style={{ color: '#4B87B1', textAlign: 'center' }}
+          style={{
+            color: '#4B87B1',
+            textAlign: 'center',
+            display: 'block',
+            marginTop: '80px',
+            marginBottom: '40px',
+          }}
         >
           Upcoming Events
         </Typography>
-        <Box style={{ display: 'flex', alignItems: 'stretch' }}>
-          <Box style={{ width: '50%', minHeight: '40em' }}>
+        <Box className={classes.spotlight}>
+          <Box className="calendar">
             {events && (
               <Calendar
                 views={['day', 'month', 'week']}
@@ -100,7 +131,7 @@ const Events = () => {
               />
             )}
           </Box>
-          <Box style={{ width: '50%' }}>
+          <Box className="event">
             <EventSpotlight
               date={events.at(0).date}
               location={events.at(0).location}

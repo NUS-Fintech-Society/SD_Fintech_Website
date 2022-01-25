@@ -10,23 +10,23 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: '0px 10px 13px -7px #efefef, 5px 5px 15px 5px rgba(0,0,0,0)',
     maxWidth: '40em',
     padding: '1em',
-    transform: 'translateY(0px);',
-    transition: '0.5s',
     marginTop: '20px',
     borderRadius: '1.5em',
 
     [theme.breakpoints.down('xs')]: {
       width: '100%',
     },
-    '&:hover': {
-      boxShadow: '0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0)',
-
-      transform: 'translateY(-10px);',
-      backgroundColor: '#f5f5f5',
-    },
   },
   cardHeader: {
     display: 'inline-block',
+    [theme.breakpoints.down('xs')]: {
+      flexDirection: 'column',
+      alignItems: 'flex-start',
+      '& > div > h4': {
+        marginTop: '0.3em',
+        marginBottom: '0.3em',
+      },
+    },
   },
   date: {
     display: 'flex',
