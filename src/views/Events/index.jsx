@@ -6,6 +6,7 @@ import EventSpotlight from '../../components/EventSpotlight'
 import Layout from '../../components/Layout'
 
 import 'react-big-calendar/lib/css/react-big-calendar.css'
+// import './react-big-calendar.css'
 
 const useStyles = makeStyles((theme) => ({
   root: {},
@@ -35,7 +36,17 @@ const useStyles = makeStyles((theme) => ({
     '& .calendar': {
       flex: '1 1 50%',
 
-      '& .rbc-calendar': { height: '140vw', maxHeight: '40em' },
+      '& .rbc-calendar': {
+        height: '140vw',
+        maxHeight: '40em',
+        '& .rbc-month-view, .rbc-time-view, .rbc-week-view': {
+          borderRadius: '1em',
+          overflow: 'hidden',
+          '& .rbc-event': {
+            backgroundColor: '#4B87B1',
+          },
+        },
+      },
     },
     '& .event': {
       flex: '1 1 50%',
@@ -71,6 +82,8 @@ const events = [
     allDay: true,
     start: new Date('01/27/2022 01:00'),
     end: new Date('01/27/2022 02:00'),
+    imageUrl:
+      'https://images.unsplash.com/photo-1643037906067-e79f62e8f58c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
   },
   {
     id: 3,
@@ -79,6 +92,8 @@ const events = [
     end: new Date(new Date().setHours(new Date().getHours() + 3)),
     description: 'Near to today',
     location: 'here',
+    imageUrl:
+      'https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
   },
   {
     id: 4,
@@ -148,6 +163,7 @@ const Events = () => {
               location={ev.location}
               title={ev.title}
               description={ev.description}
+              imageUrl={ev?.imageUrl}
             />
           ))}
         </Box>

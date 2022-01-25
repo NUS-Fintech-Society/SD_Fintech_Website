@@ -19,13 +19,13 @@ const useStyles = makeStyles((theme) => ({
   },
   cardHeader: {
     display: 'inline-block',
+    '& > div > h4': {
+      marginTop: '0.3em',
+      marginBottom: '0.3em',
+    },
     [theme.breakpoints.down('xs')]: {
       flexDirection: 'column',
       alignItems: 'flex-start',
-      '& > div > h4': {
-        marginTop: '0.3em',
-        marginBottom: '0.3em',
-      },
     },
   },
   date: {
@@ -49,13 +49,10 @@ const useStyles = makeStyles((theme) => ({
   imageCrop: {
     borderRadius: '1em',
     overflow: 'hidden',
-    maxHeight: '400px',
-    '& img': {
-      maxWidth: '100%',
-      height: 'auto !important',
-      display: 'block',
-      width: 'auto\\9',
-    },
+    paddingBottom: 'calc(100% * 9 / 16)',
+    height: 0,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
   },
   description: {
     maxHeight: '10em',
@@ -70,12 +67,10 @@ const EventSpotlight = ({ date, location, title, description, imageUrl }) => {
   return (
     <>
       <Box className={classes.root}>
-        <Box className={classes.imageCrop}>
-          <img
-            src={imageUrl || 'default-event.jpg'}
-            className={classes.image}
-          />
-        </Box>
+        <Box
+          className={classes.imageCrop}
+          style={{ backgroundImage: `url(${imageUrl || 'default-event.jpg'})` }}
+        ></Box>
         <Box className={classes.cardHeader}>
           <Box>
             <Typography variant="h4">{title}</Typography>

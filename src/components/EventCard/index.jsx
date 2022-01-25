@@ -29,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'row',
     alignItems: 'center',
     gap: '0.5em',
+
     [theme.breakpoints.down('xs')]: {
       flexDirection: 'column',
       alignItems: 'flex-start',
@@ -96,13 +97,10 @@ const useStyles = makeStyles((theme) => ({
   imageCrop: {
     borderRadius: '1em',
     overflow: 'hidden',
-    maxHeight: '400px',
-    '& img': {
-      maxWidth: '100%',
-      height: 'auto !important',
-      display: 'block',
-      width: 'auto\\9',
-    },
+    paddingBottom: 'calc(100% * 9 / 16)',
+    height: 0,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
   },
   description: {
     maxHeight: '10em',
@@ -121,12 +119,10 @@ const EventCard = ({ date, location, title, description, imageUrl }) => {
   return (
     <>
       <Box className={classes.root}>
-        <Box className={classes.imageCrop}>
-          <img
-            src={imageUrl || 'default-event.jpg'}
-            className={classes.image}
-          />
-        </Box>
+        <Box
+          className={classes.imageCrop}
+          style={{ backgroundImage: `url(${imageUrl || 'default-event.jpg'})` }}
+        ></Box>
         <Box className={classes.cardHeader}>
           <Box className={classes.dateBox}>
             {moment(date).format('MMM')}
