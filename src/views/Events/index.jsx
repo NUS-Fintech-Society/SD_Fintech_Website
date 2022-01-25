@@ -167,7 +167,6 @@ const Events = () => {
             />
           ))}
         </Box>
-        Happy
       </Container>
     </Layout>
   )
