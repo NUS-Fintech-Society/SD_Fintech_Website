@@ -1,9 +1,9 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Box, IconButton } from '@material-ui/core'
-import GitHubIcon from '@mui/icons-material/GitHub'
-import InstagramIcon from '@mui/icons-material/Instagram'
-import LinkedInIcon from '@mui/icons-material/LinkedIn'
+import GitHubIcon from '@material-ui/icons/GitHub'
+import InstagramIcon from '@material-ui/icons/Instagram'
+import LinkedInIcon from '@material-ui/icons/LinkedIn'
 
 const useStyles = makeStyles((theme) => ({
   navBar: {
@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
 const Footer = () => {
   const classes = useStyles()
   return (
-    <React.Fragment>
+    <Box>
       <Box className={classes.navBar}>
         <IconButton
           className={classes.navItem}
@@ -62,7 +62,7 @@ const Footer = () => {
         </IconButton>
       </Box>
       <footer className={classes.footer}>© 2022 by NUS Fintech Society</footer>
-    </React.Fragment>
+    </Box>
   )
 }
 
