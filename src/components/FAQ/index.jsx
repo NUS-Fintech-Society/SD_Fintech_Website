@@ -64,10 +64,23 @@ const useStyles = makeStyles((theme) => ({
 
 const FAQ = () => {
   const classes = useStyles()
-  const [expanded, setExpanded] = useState(false)
+  const FAQState = {}
+  DUMMY_QA.qa
+    .map((el) => el.FAQs)
+    .flat()
+    .map((el) => el.id)
+    .forEach((el) => (FAQState[el] = false))
 
-  const handleChange = (panel) => (event, isExpanded) => {
-    setExpanded(isExpanded ? panel : false)
+  const [expandedState, setExpandedState] = useState(FAQState)
+
+  const expandHandler = (id) => () => {
+    const newList = { ...expandedState }
+    if (expandedState[id]) {
+      newList[id] = false
+    } else {
+      newList[id] = true
+    }
+    setExpandedState(newList)
   }
 
   return (
@@ -86,15 +99,11 @@ const FAQ = () => {
             </Typography>
             {qa.FAQs.map((faq) => {
               return (
-                <Accordion
-                  key={`${faq.id}`}
-                  square
-                  expanded={expanded === `${faq.id}`}
-                  onChange={handleChange(`${faq.id}`)}
-                >
+                <Accordion key={`${faq.id}`} square>
                   <AccordionSummary
+                    onClick={expandHandler(faq.id)}
                     expandIcon={
-                      expanded == `${faq.id}` ? (
+                      expandedState[faq.id] ? (
                         <RemoveCircleIcon
                           className={classes.section__icon}
                           fontSize="large"
@@ -114,12 +123,10 @@ const FAQ = () => {
                   <AccordionDetails>
                     {faq.A.split('\n').map((para, idx) => {
                       const strToBold = 'nusfintech.ops@gmail.com'
-                      // Split string by strToBold
                       const textArray = para.split(strToBold)
                       return (
-                        <Typography paragraph key={`${idx}`}>
+                        <Typography key={`${Math.random()}`} paragraph>
                           {idx === 0 && <strong> Answer: </strong>}
-                          {/* textArray.length === 2 if strToBold exists else 1. */}
                           {textArray.map((item, idx) => {
                             return (
                               <>
