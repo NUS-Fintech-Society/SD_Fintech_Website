@@ -2,8 +2,8 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Box, Grid, Typography } from '@material-ui/core'
 
-import sponsorsData from './Sponsors.json'
-import partnersData from './Partners.json'
+import sponsorsData from '../../data/credits/sponsors.json'
+import partnersData from '../../data/credits/partners.json'
 
 const useStyles = makeStyles((theme) => ({
   root: {
