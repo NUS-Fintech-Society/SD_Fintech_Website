@@ -81,14 +81,14 @@ const FAQ = () => {
       </Typography>
       {DUMMY_QA.qa.map((qa) => {
         return (
-          <Box key={qa.id} className={classes.section}>
+          <Box key={`${qa.id}`} className={classes.section}>
             <Typography variant="h6" className={classes.section__title}>
               {qa.section}
             </Typography>
             {qa.FAQs.map((faq) => {
               return (
                 <Accordion
-                  key={faq.id}
+                  key={`${faq.id}`}
                   square
                   expanded={expanded === `${faq.id}`}
                   onChange={handleChange(`${faq.id}`)}
@@ -118,14 +118,13 @@ const FAQ = () => {
                       // Split string by strToBold
                       const textArray = para.split(strToBold)
                       return (
-                        <Typography paragraph key={idx}>
+                        <Typography paragraph key={`${idx}`}>
                           {idx === 0 && <strong> Answer: </strong>}
                           {/* textArray.length === 2 if strToBold exists else 1. */}
                           {textArray.map((item, idx) => {
                             return (
                               <>
                                 {item}
-                                {/* insert strToBold after first element */}
                                 {idx !== textArray.length - 1 && (
                                   <b>{strToBold}</b>
                                 )}
