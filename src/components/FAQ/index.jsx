@@ -29,7 +29,6 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     width: '60vw',
     padding: '1rem',
-
     '& .MuiAccordion-root': {
       marginTop: '.8rem',
       borderRadius: '10px',
@@ -41,11 +40,11 @@ const useStyles = makeStyles((theme) => ({
       margin: '1rem 0 0 0',
     },
     '& .MuiAccordionSummary-content': {
-      paddng: '0 0.8rem 0 0.8rem',
+      padding: '0 0.8rem 0 0.8rem',
       margin: 0,
     },
     '& .MuiAccordionDetails-root': {
-      padding: '1rem 1rem 0 1rem',
+      padding: '0 1.8rem 0 1.8rem',
       display: 'flex',
       flexDirection: 'column',
     },
