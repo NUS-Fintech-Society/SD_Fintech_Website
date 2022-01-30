@@ -23,6 +23,7 @@ const theme = createTheme({
       secondary: '#FFFFFF',
       divider: '#888888',
       link: '#E13766',
+      link2: '#52BADD',
       chart: '#005792',
     },
     background: {

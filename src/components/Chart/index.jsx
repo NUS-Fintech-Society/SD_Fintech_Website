@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   },
   header: {
     color: theme.palette.text.chart,
-    fontSize: 42,
+    fontSize: '42px',
     [theme.breakpoints.down('sm')]: {
       fontSize: '35px',
     },
