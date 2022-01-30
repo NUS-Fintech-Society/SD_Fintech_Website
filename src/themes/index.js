@@ -23,10 +23,15 @@ const theme = createTheme({
       secondary: '#FFFFFF',
       divider: '#888888',
       link: '#E13766',
+      chart: '#005792',
     },
     background: {
       primary: '#FFFFFF',
       secondary: '#F0F0F5',
+    },
+    chart: {
+      line: '#000000',
+      shape: '#005792',
     },
   },
   shape: {
