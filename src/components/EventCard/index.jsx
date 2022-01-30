@@ -8,15 +8,17 @@ import PropTypes from 'prop-types'
 const useStyles = makeStyles((theme) => ({
   root: {
     boxShadow: '0px 10px 13px -7px #efefef, 5px 5px 15px 5px rgba(0,0,0,0)',
-    width: '20em',
     padding: '1em',
     transform: 'translateY(0px);',
     transition: '0.5s',
     marginTop: '20px',
     borderRadius: '1.5em',
-
+    width: '20em',
     [theme.breakpoints.down('xs')]: {
       width: '100%',
+    },
+    [theme.breakpoints.only('sm')]: {
+      width: '75%',
     },
     '&:hover': {
       boxShadow: '0px 10px 13px -7px #999999, 5px 5px 15px 5px rgba(0,0,0,0)',
@@ -135,7 +137,7 @@ const EventCard = ({ date, location, title, description, imageUrl }) => {
           <Box>
             <Box className={classes.location}>
               <LocationOn />
-              <Typography variant="body1">{location}</Typography>
+              <Typography>{location}</Typography>
             </Box>
             <Box>
               <Typography variant="subtitle1">{title}</Typography>

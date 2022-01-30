@@ -11,6 +11,7 @@ const theme = createTheme({
     },
     tertiary: {
       main: '#00BBF0',
+      darker: '#4B88B1',
     },
     success: {
       main: '#4BB543',

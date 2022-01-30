@@ -4,13 +4,14 @@ import { Calendar, momentLocalizer } from 'react-big-calendar'
 import EventCard from '../../components/EventCard'
 import EventSpotlight from '../../components/EventSpotlight'
 import Layout from '../../components/Layout'
+import eventsData from '../../data/events'
 
 import 'react-big-calendar/lib/css/react-big-calendar.css'
-// import './react-big-calendar.css'
+import theme from '../../themes'
 
 const useStyles = makeStyles((theme) => ({
-  root: {},
   eventsList: {
+    paddingTop: '2em',
     display: 'flex',
     gap: '2em',
     flexWrap: 'wrap',
@@ -38,13 +39,25 @@ const useStyles = makeStyles((theme) => ({
       flex: '1 1 50%',
 
       '& .rbc-calendar': {
-        height: '140vw',
+        height: '100vh',
+        [theme.breakpoints.down('md')]: {
+          height: '80vh',
+        },
         maxHeight: '40em',
         '& .rbc-month-view, .rbc-time-view, .rbc-week-view': {
           borderRadius: '1em',
           overflow: 'hidden',
           '& .rbc-event': {
             backgroundColor: '#4B87B1',
+          },
+        },
+        '& .rbc-toolbar': {
+          [theme.breakpoints.down('xs')]: {
+            display: 'block',
+            textAlign: 'center',
+          },
+          '& span': {
+            display: 'block',
           },
         },
       },
@@ -61,81 +74,12 @@ const useStyles = makeStyles((theme) => ({
 
 const localizer = momentLocalizer(moment)
 
-const events = [
-  {
-    id: 1,
-    title: 'It will be here',
-    date: new Date(),
-    location: 'Yusuf Ishak House;ladls',
-    description:
-      ':S DjJ ;lakJD;flkds;lfja;mx clkvnsghsdfja;dlskjfa;dlkj fa;lkjd ;alknvlcnva;lsdn fasdf;laskjd f;alkmvlxcnv;',
+const events = eventsData
 
-    start: new Date(),
-    end: new Date(),
-  },
-  {
-    id: 2,
-    title: 'It will be there yeah',
-    location: 'NUS School of Computing',
-    date: new Date('01/27/2022'),
-    description:
-      ':S DjJ ;lakJD;flkds;lfja;mx clkvnsghsdfja;dlskjfa;dlkj fa;lkjd ;alknvlcnva;lsdn fasdf;laskjd f;alkmvlxcnv;',
-    allDay: true,
-    start: new Date('01/27/2022 01:00'),
-    end: new Date('01/27/2022 02:00'),
-    imageUrl:
-      'https://images.unsplash.com/photo-1643037906067-e79f62e8f58c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
-  },
-  {
-    id: 3,
-    title: 'Today',
-    start: new Date(new Date().setHours(new Date().getHours() - 3)),
-    end: new Date(new Date().setHours(new Date().getHours() + 3)),
-    description: 'Near to today',
-    location: 'here',
-    imageUrl:
-      'https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
-  },
-  {
-    id: 4,
-    title: 'Tomorrow',
-    start: new Date(new Date().setDate(new Date().getDate() + 1)),
-    end: new Date(new Date().setDate(new Date().getDate() + 1)),
-    description: 'Near to tomorrow',
-    location: 'nus',
-  },
-  {
-    id: 12,
-    title: 'XIt will be there yeah',
-    location: 'NUS School of Computing',
-    date: new Date('01/27/2022'),
-    description:
-      ':S DjJ ;lakJD;flkds;lfja;mx clkvnsghsdfja;dlskjfa;dlkj fa;lkjd ;alknvlcnva;lsdn fasdf;laskjd f;alkmvlxcnv;',
-    allDay: true,
-    start: new Date('01/27/2022 01:00'),
-    end: new Date('01/27/2022 02:00'),
-    imageUrl:
-      'https://images.unsplash.com/photo-1643037906067-e79f62e8f58c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
-  },
-  {
-    id: 13,
-    title: 'XToday',
-    start: new Date(new Date().setHours(new Date().getHours() - 3)),
-    end: new Date(new Date().setHours(new Date().getHours() + 3)),
-    description: 'Near to today',
-    location: 'here',
-    imageUrl:
-      'https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
-  },
-  {
-    id: 14,
-    title: 'XTomorrow',
-    start: new Date(new Date().setDate(new Date().getDate() + 1)),
-    end: new Date(new Date().setDate(new Date().getDate() + 1)),
-    description: 'Near to tomorrow',
-    location: 'nus',
-  },
-]
+const upcomingEvents =
+  events && events.filter((x) => x.date.getTime() >= new Date().getTime())
+
+const spotlightEvent = events && upcomingEvents.at(0)
 
 const Events = () => {
   const classes = useStyles()
@@ -148,7 +92,7 @@ const Events = () => {
         <Typography
           variant="h4"
           style={{
-            color: '#4B87B1',
+            color: theme.palette.tertiary.darker,
             textAlign: 'center',
             display: 'block',
             marginTop: '80px',
@@ -179,25 +123,34 @@ const Events = () => {
             )}
           </Box>
           <Box className="event">
-            <EventSpotlight
-              date={events.at(0).date}
-              location={events.at(0).location}
-              title={events.at(0).title}
-              description={events.at(0).description}
-            />
+            {spotlightEvent && (
+              <EventSpotlight
+                date={spotlightEvent.date}
+                location={spotlightEvent.location}
+                title={spotlightEvent.title}
+                description={spotlightEvent.description}
+              />
+            )}
           </Box>
         </Box>
         <Box className={classes.eventsList}>
-          {events.splice(1).map((ev, index) => (
-            <EventCard
-              key={index}
-              date={ev.date}
-              location={ev.location}
-              title={ev.title}
-              description={ev.description}
-              imageUrl={ev?.imageUrl}
-            />
-          ))}
+          {upcomingEvents &&
+            (upcomingEvents.length >= 0 ? (
+              upcomingEvents
+                .splice(1)
+                .map((ev, index) => (
+                  <EventCard
+                    key={index}
+                    date={ev.date}
+                    location={ev.location}
+                    title={ev.title}
+                    description={ev.description}
+                    imageUrl={ev?.imageUrl}
+                  />
+                ))
+            ) : (
+              <Typography>No upcoming events, stay tuned!</Typography>
+            ))}
         </Box>
       </Container>
     </Layout>
