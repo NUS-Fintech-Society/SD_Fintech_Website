@@ -5,7 +5,8 @@ import AccordionDetails from '@material-ui/core/AccordionDetails'
 import AccordionSummary from '@material-ui/core/AccordionSummary'
 import AddCircleIcon from '@material-ui/icons/AddCircle'
 import RemoveCircleIcon from '@material-ui/icons/RemoveCircle'
-import DUMMY_QA from '../../data/FAQs,js'
+import DUMMY_QA from '../../data/FAQs.json'
+import parse, { domToReact } from 'html-react-parser'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -44,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
       margin: 0,
     },
     '& .MuiAccordionDetails-root': {
-      padding: '0 1.8rem 0 1.8rem',
+      padding: '0.5rem 1.8rem 0 1.8rem',
       display: 'flex',
       flexDirection: 'column',
     },
@@ -94,9 +95,17 @@ const FAQ = () => {
       {DUMMY_QA.qa.map((qa) => {
         return (
           <Box key={`${qa.id}`} className={classes.section}>
-            <Typography variant="h6" className={classes.section__title}>
-              {qa.section}
-            </Typography>
+            {parse(qa.section, {
+              replace: (domNode) => {
+                if (domNode.attribs) {
+                  return (
+                    <Typography variant="h6" className={classes.section__title}>
+                      {domNode.children[0].data}
+                    </Typography>
+                  )
+                }
+              },
+            })}
             {qa.FAQs.map((faq) => {
               return (
                 <Accordion key={`${faq.id}`} square>
@@ -117,28 +126,27 @@ const FAQ = () => {
                     }
                   >
                     <Typography>
-                      <b>{faq.Q}</b>
+                      {parse(faq.Q, {
+                        replace: (domNode) => {
+                          if (domNode.attribs) {
+                            return <b>{domNode.children[0].data}</b>
+                          }
+                        },
+                      })}
                     </Typography>
                   </AccordionSummary>
-                  <AccordionDetails>
-                    {faq.A.split('\n').map((para, idx) => {
-                      const strToBold = 'nusfintech.ops@gmail.com'
-                      const textArray = para.split(strToBold)
-                      return (
-                        <Typography key={`${Math.random()}`} paragraph>
-                          {idx === 0 && <strong> Answer: </strong>}
-                          {textArray.map((item, idx) => {
-                            return (
-                              <>
-                                {item}
-                                {idx !== textArray.length - 1 && (
-                                  <b>{strToBold}</b>
-                                )}
-                              </>
-                            )
-                          })}
-                        </Typography>
-                      )
+                  <AccordionDetails key={Math.random()}>
+                    {parse(faq.A, {
+                      replace: (domNode) => {
+                        if (domNode.name === 'p') {
+                          return (
+                            <Typography paragraph>
+                              {domNode.attribs.id === 'main' && <b>Answer: </b>}
+                              {domToReact(domNode.children)}
+                            </Typography>
+                          )
+                        }
+                      },
                     })}
                   </AccordionDetails>
                 </Accordion>
