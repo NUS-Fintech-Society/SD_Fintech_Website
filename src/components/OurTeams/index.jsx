@@ -82,8 +82,8 @@ const OurTeams = () => {
   return (
     <div className={classes.root}>
       <Typography className={classes.title}>Our Teams</Typography>
-      <Grid container direction="row" alignItems="stretch">
-        <Grid item xs={12} md={6}>
+      <Grid container direction="row" justify="center">
+        <Grid item xs={12} sm={12} md={6} lg={5}>
           <Box
             padding={4}
             justifyContent="space-evenly"
@@ -111,8 +111,7 @@ const OurTeams = () => {
                 adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                 exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur.
+                consequat.
               </Typography>
               <br />
               <a
@@ -126,7 +125,7 @@ const OurTeams = () => {
             <img className={classes.rightImage} alt="ml" src="ml.png"></img>
           </Box>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} sm={12} md={6} lg={5}>
           <Box
             padding={4}
             justifyContent="space-evenly"
@@ -162,7 +161,7 @@ const OurTeams = () => {
             </Box>
           </Box>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} sm={12} md={6} lg={5}>
           <Box
             padding={4}
             justifyContent="space-evenly"
@@ -202,7 +201,7 @@ const OurTeams = () => {
             ></img>
           </Box>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} sm={12} md={6} lg={5}>
           <Box
             padding={4}
             justifyContent="space-evenly"
