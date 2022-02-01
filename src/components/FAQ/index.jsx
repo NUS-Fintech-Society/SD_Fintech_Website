@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
       margin: '1rem 0 0 0',
     },
     '& .MuiAccordionSummary-content': {
-      padding: '0 0.8rem 0 0.8rem',
+      padding: '0.8rem',
       margin: 0,
     },
     '& .MuiAccordionDetails-root': {
@@ -95,17 +95,10 @@ const FAQ = () => {
       {DUMMY_QA.qa.map((qa) => {
         return (
           <Box key={`${qa.id}`} className={classes.section}>
-            {parse(qa.section, {
-              replace: (domNode) => {
-                if (domNode.attribs) {
-                  return (
-                    <Typography variant="h6" className={classes.section__title}>
-                      {domNode.children[0].data}
-                    </Typography>
-                  )
-                }
-              },
-            })}
+            <Typography variant="h6" className={classes.section__title}>
+              {qa.section}
+            </Typography>
+
             {qa.FAQs.map((faq) => {
               return (
                 <Accordion key={`${faq.id}`} square>
@@ -126,13 +119,7 @@ const FAQ = () => {
                     }
                   >
                     <Typography>
-                      {parse(faq.Q, {
-                        replace: (domNode) => {
-                          if (domNode.attribs) {
-                            return <b>{domNode.children[0].data}</b>
-                          }
-                        },
-                      })}
+                      <b>{faq.Q}</b>
                     </Typography>
                   </AccordionSummary>
                   <AccordionDetails key={Math.random()}>
@@ -141,7 +128,6 @@ const FAQ = () => {
                         if (domNode.name === 'p') {
                           return (
                             <Typography paragraph>
-                              {domNode.attribs.id === 'main' && <b>Answer: </b>}
                               {domToReact(domNode.children)}
                             </Typography>
                           )

@@ -2,53 +2,53 @@
   "qa": [
     {
       "id": 1,
-      "section": "<h1>Recruitment</h1>",
+      "section": "Recruitment",
       "FAQs": [
         {
           "id": 2,
-          "Q": "<b>Who do we reach out to if we have more enquiries?</b>",
-          "A": "<p id='main'> Please email our team at <b>nusfintech.ops@gmail.com</b>.</p>"
+          "Q": "Who do we reach out to if we have more enquiries?",
+          "A": "<p><b>Answer: </b>Please email our team at <b>nusfintech.ops@gmail.com</b>.</p>"
         },
         {
           "id": 3,
-          "Q": "<b>How do we sign-up?</b>",
-          "A": "<p id='main'>Sign-up links will be made available when registration opens. You may retrieve the links from our social media (<i>Instagram, Telegram, LinkedIn</i>). For overseas students, the links will be disseminated to their faculty who will then assist in disseminating the sign up links to them.</p> <p> Each team should only sign up <b>once</b>. Please appoint a team leader and fill up all team members’ particulars as stated in the form.</p> <p> In case of any changes, do email our team at <b>nusfintech.ops@gmail.com</b>.</p>"
+          "Q": "How do we sign-up?",
+          "A": "<p><b>Answer: </b>Sign-up links will be made available when registration opens. You may retrieve the links from our social media (<i>Instagram, Telegram, LinkedIn</i>). For overseas students, the links will be disseminated to their faculty who will then assist in disseminating the sign up links to them.</p> <p> Each team should only sign up <b>once</b>. Please appoint a team leader and fill up all team members’ particulars as stated in the form.</p> <p> In case of any changes, do email our team at <b>nusfintech.ops@gmail.com</b>.</p>"
         },
         {
           "id": 4,
-          "Q": "<b>Insert question here. What are the requirements of forming a team?</b>",
-          "A": "<p id='main'>I don't know either. Will let you know later!</p>"
+          "Q": "Insert question here. What are the requirements of forming a team?",
+          "A": "<p><b>Answer: </b>I don't know either. Will let you know later!</p>"
         },
         {
           "id": 5,
-          "Q": "<b>Insert question here. What are the requirements of forming a team?</b>",
-          "A": "<p id='main'>I don't know either. Will let you know later!</p>"
+          "Q": "Insert question here. What are the requirements of forming a team?",
+          "A": "<p><b>Answer: </b>I don't know either. Will let you know later!</p>"
         }
       ]
     },
     {
       "id": 10,
-      "section": "<h1>Courses</h1>",
+      "section": "Courses",
       "FAQs": [
         {
           "id": 6,
-          "Q": "<b>Insert question here. What are the requirements of forming a team?</b>",
-          "A": "<p id='main'>I don't know either. Will let you know later!</p>"
+          "Q": "Insert question here. What are the requirements of forming a team?",
+          "A": "<p><b>Answer: </b>I don't know either. Will let you know later!</p>"
         },
         {
           "id": 7,
-          "Q": "<b>Insert question here. What are the requirements of forming a team?</b>",
-          "A": "<p id='main'>I don't know either. Will let you know later!</p>"
+          "Q": "Insert question here. What are the requirements of forming a team?",
+          "A": "<p><b>Answer: </b>I don't know either. Will let you know later!</p>"
         },
         {
           "id": 8,
-          "Q": "<b>Insert question here. What are the requirements of forming a team?</b>",
-          "A": "<p id='main'>I don't know either. Will let you know later!</p>"
+          "Q": "Insert question here. What are the requirements of forming a team?",
+          "A": "<p><b>Answer: </b>I don't know either. Will let you know later!</p>"
         },
         {
           "id": 9,
-          "Q": "<b>Insert question here. What are the requirements of forming a team?</b>",
-          "A": "<p id='main'>I don't know either. Will let you know later!</p>"
+          "Q": "Insert question here. What are the requirements of forming a team?",
+          "A": "<p><b>Answer: </b>I don't know either. Will let you know later!</p>"
         }
       ]
     }
