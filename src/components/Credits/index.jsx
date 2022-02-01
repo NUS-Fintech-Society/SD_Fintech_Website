@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
   sectionHeader: {
     fontWeight: 600,
     [theme.breakpoints.down('xs')]: {
-      fontSize: 20,
+      fontSize: 32,
     },
   },
   rowWrapper: {
@@ -88,7 +88,7 @@ const Credits = () => {
           style={{ maxWidth: '900px' }}
         >
           {partnersData.map((sponsor, index) => (
-            <Grid item xs={12} sm={3} key={index}>
+            <Grid item xs={6} sm={3} key={index}>
               <img
                 src={sponsor.logo}
                 alt={sponsor.name}
