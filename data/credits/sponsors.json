@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "logo": "ripple-logo.png",
+    "name": "Ripple",
+    "website": "https://ripple.com/"
+  },
+  {
+    "id": 2,
+    "logo": "ripple-logo.png",
+    "name": "Ripple",
+    "website": "https://ripple.com/"
+  },
+  {
+    "id": 3,
+    "logo": "society-logo-black.png",
+    "name": "Ripple",
+    "website": "https://ripple.com/"
+  },
+  {
+    "id": 4,
+    "logo": "society-logo-black.png",
+    "name": "Ripple",
+    "website": "https://ripple.com/"
+  }
+]
