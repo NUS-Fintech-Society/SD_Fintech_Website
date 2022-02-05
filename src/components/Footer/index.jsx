@@ -7,7 +7,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn'
 
 const useStyles = makeStyles((theme) => ({
   navBar: {
-    background: theme.palette.background.tertiary,
+    backgroundColor: theme.palette.primary.main,
     textAlign: 'center',
     justifyContent: 'center',
     height: '40px',
@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   footer: {
-    background: theme.palette.background.tertiary,
+    backgroundColor: theme.palette.primary.main,
     fontSize: theme.typography.caption.fontSize,
     color: theme.palette.text.secondary,
     textAlign: 'center',
