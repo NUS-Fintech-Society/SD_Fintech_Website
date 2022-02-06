@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { makeStyles } from '@material-ui/core/styles'
 import { Box } from '@material-ui/core'
+import Footer from '../Footer'
 import Navbar from '../Navbar'
 
 const useStyles = makeStyles(() => ({
@@ -18,6 +19,7 @@ const Layout = (props) => {
     <Box className={classes.root}>
       <Navbar />
       <Box>{children}</Box>
+      <Footer />
     </Box>
   )
 }

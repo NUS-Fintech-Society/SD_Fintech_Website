@@ -3,6 +3,9 @@ import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheets } from '@material-ui/core/styles'
 import theme from '../themes'
 
+const CleanCSS = require('clean-css')
+const cleanCSS = new CleanCSS()
+
 export default class MyDocument extends Document {
   render() {
     return (
@@ -59,13 +62,19 @@ MyDocument.getInitialProps = async (ctx) => {
     })
 
   const initialProps = await Document.getInitialProps(ctx)
+  let css = sheets.toString()
+  if (css) {
+    css = cleanCSS.minify(css).styles
+  }
 
   return {
     ...initialProps,
     // Styles fragment is rendered after the app and page rendering finish.
     styles: [
       ...React.Children.toArray(initialProps.styles),
-      sheets.getStyleElement(),
+      <style id="jss-server-side" key="jss-server-side">
+        {css}
+      </style>,
     ],
   }
 }
