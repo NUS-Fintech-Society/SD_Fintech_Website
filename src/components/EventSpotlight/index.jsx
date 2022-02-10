@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/styles'
 import moment from 'moment'
 import ClampLines from 'react-clamp-lines'
 import PropTypes from 'prop-types'
+import theme from '../../themes'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -13,8 +14,17 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '20px',
     borderRadius: '1.5em',
 
+    transform: 'translateY(0px);',
+    transition: '0.5s',
     [theme.breakpoints.down('md')]: {
       width: '100%',
+      padding: '2em',
+    },
+
+    '&:hover': {
+      boxShadow: `0px 10px 13px -7px ${theme.palette.grey[500]}, 5px 5px 15px 5px rgba(0,0,0,0)`,
+
+      transform: 'translateY(-10px);',
     },
   },
   cardHeader: {
@@ -58,6 +68,10 @@ const useStyles = makeStyles((theme) => ({
     maxHeight: '10em',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
+    '& p': {
+      marginTop: 0,
+      marginBottom: 0,
+    },
   },
 }))
 
@@ -77,7 +91,12 @@ const EventSpotlight = ({ date, location, title, description, imageUrl }) => {
           </Box>
           <Box className={classes.date}>
             <span className="label">
-              <EventIcon />
+              <EventIcon
+                style={{
+                  fontSize: theme.typography.body1.fontSize,
+                  marginRight: '0.5em',
+                }}
+              />
               Date:
             </span>{' '}
             {moment(date).format('MMMM DD YYYY')}
@@ -85,7 +104,12 @@ const EventSpotlight = ({ date, location, title, description, imageUrl }) => {
           <Box>
             <Box className={classes.location}>
               <span className="label">
-                <LocationOn />
+                <LocationOn
+                  style={{
+                    fontSize: theme.typography.body1.fontSize,
+                    marginRight: '0.5em',
+                  }}
+                />
                 Location:
               </span>{' '}
               {location}

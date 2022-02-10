@@ -1,28 +1,17 @@
 import { Box, Container, makeStyles, Typography } from '@material-ui/core'
 import moment from 'moment'
 import { Calendar, momentLocalizer } from 'react-big-calendar'
-import EventCard from '../../components/EventCard'
 import EventSpotlight from '../../components/EventSpotlight'
 import Layout from '../../components/Layout'
 import eventsData from '../../data/events'
 
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 import theme from '../../themes'
+import EventCardList from '../../components/EventCardList'
 
 const useStyles = makeStyles((theme) => ({
   eventsList: {
     paddingTop: '2em',
-    display: 'flex',
-    gap: '2em',
-    flexWrap: 'wrap',
-    alignItems: 'stretch',
-    justifyContent: 'center',
-    flexDirection: 'row',
-    height: 'max-content',
-    [theme.breakpoints.down('xs')]: {
-      flexDirection: 'column',
-      gap: '1em',
-    },
   },
   spotlight: {
     display: 'flex',
@@ -88,7 +77,7 @@ const Events = () => {
 
   return (
     <Layout>
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" style={{ minHeight: 'calc(100vh - 126px)' }}>
         <Typography
           variant="h4"
           style={{
@@ -133,25 +122,11 @@ const Events = () => {
             )}
           </Box>
         </Box>
-        <Box className={classes.eventsList}>
-          {upcomingEvents &&
-            (upcomingEvents.length >= 0 ? (
-              upcomingEvents
-                .splice(1)
-                .map((ev, index) => (
-                  <EventCard
-                    key={index}
-                    date={ev.date}
-                    location={ev.location}
-                    title={ev.title}
-                    description={ev.description}
-                    imageUrl={ev?.imageUrl}
-                  />
-                ))
-            ) : (
-              <Typography>No upcoming events, stay tuned!</Typography>
-            ))}
-        </Box>
+        <EventCardList
+          eventList={upcomingEvents}
+          className={classes.eventsList}
+          empty={'No upcoming events, stay tuned!'}
+        />
       </Container>
     </Layout>
   )

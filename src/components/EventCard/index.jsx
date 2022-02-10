@@ -2,27 +2,22 @@ import { Box, Typography } from '@material-ui/core'
 import { LocationOn } from '@material-ui/icons'
 import { makeStyles } from '@material-ui/styles'
 import moment from 'moment'
-import ClampLines from 'react-clamp-lines'
 import PropTypes from 'prop-types'
+import ClampLines from 'react-clamp-lines'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    boxShadow: `0px 10px 13px -7px ${theme.palette.grey[200]}, 5px 5px 15px 5px rgba(0,0,0,0)`,
     padding: '1em',
     transform: 'translateY(0px);',
     transition: '0.5s',
-    marginTop: '20px',
+    marginBottom: '20px',
     borderRadius: '1.5em',
     width: '20em',
     [theme.breakpoints.down('xs')]: {
+      padding: '2em',
       width: '100%',
     },
-    [theme.breakpoints.only('sm')]: {
-      width: '75%',
-    },
     '&:hover': {
-      boxShadow: `0px 10px 13px -7px ${theme.palette.grey[500]}, 5px 5px 15px 5px rgba(0,0,0,0)`,
-
       transform: 'translateY(-10px);',
     },
   },
@@ -30,19 +25,23 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    gap: '0.5em',
+    gap: '0.3em',
+    '& > div > div > h6': {
+      marginTop: '-0.3em',
+    },
 
     [theme.breakpoints.down('xs')]: {
       flexDirection: 'column',
       alignItems: 'flex-start',
       '& > div > div > h6': {
-        marginTop: '0.3em',
+        marginTop: '0em',
+        marginBottom: '0.3em',
       },
     },
   },
   dateBox: {
     backgroundColor: theme.palette.secondary.light,
-    color: theme.palette.secondary,
+    color: theme.palette.secondary.main,
     borderRadius: '0.4em',
     width: '3em',
     height: '3em',
@@ -67,13 +66,14 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('xs')]: {
       visibility: 'visible',
       backgroundColor: theme.palette.secondary.light,
-      color: theme.palette.secondary,
+      color: theme.palette.secondary.main,
       borderRadius: '0.4em',
       width: 'auto',
       height: 'auto',
       padding: '0.2em',
       textAlign: 'center',
-      marginBottom: '-0.5em',
+      marginBottom: '-0.3em',
+      marginTop: '0.3em',
       '& *': {
         width: '100%',
       },
@@ -83,14 +83,14 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '-0.2em',
     marginBottom: '-0.2em',
     marginTop: '0.4em',
-    color: theme.palette.secondary,
+    color: theme.palette.secondary.main,
     whiteSpace: 'nowrap',
     alignItems: 'center',
     display: 'flex',
     '& p': {
       textOverflow: 'ellipsis',
       flex: '0 5 auto',
-      color: theme.palette.secondary,
+      color: theme.palette.secondary.main,
     },
     [theme.breakpoints.down('xs')]: {
       height: '1.2em',
@@ -111,6 +111,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('xs')]: {
       marginTop: '-0.5em',
       marginBottom: '-0.5em',
+    },
+    '& p': {
+      marginTop: 0,
+      marginBottom: 0,
     },
   },
 }))
@@ -136,7 +140,11 @@ const EventCard = ({ date, location, title, description, imageUrl }) => {
           </Box>
           <Box>
             <Box className={classes.location}>
-              <LocationOn />
+              <LocationOn
+                style={{
+                  fontSize: `1.1em`,
+                }}
+              />
               <Typography>{location}</Typography>
             </Box>
             <Box>
