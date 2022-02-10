@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    boxShadow: '0px 10px 13px -7px #efefef, 5px 5px 15px 5px rgba(0,0,0,0)',
+    boxShadow: `0px 10px 13px -7px ${theme.palette.grey[200]}, 5px 5px 15px 5px rgba(0,0,0,0)`,
     padding: '1em',
     transform: 'translateY(0px);',
     transition: '0.5s',
@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
       width: '75%',
     },
     '&:hover': {
-      boxShadow: '0px 10px 13px -7px #999999, 5px 5px 15px 5px rgba(0,0,0,0)',
+      boxShadow: `0px 10px 13px -7px ${theme.palette.grey[500]}, 5px 5px 15px 5px rgba(0,0,0,0)`,
 
       transform: 'translateY(-10px);',
     },
@@ -41,8 +41,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   dateBox: {
-    backgroundColor: '#FAE9D0',
-    color: '#FBBA5C',
+    backgroundColor: theme.palette.secondary.light,
+    color: theme.palette.secondary,
     borderRadius: '0.4em',
     width: '3em',
     height: '3em',
@@ -66,8 +66,8 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down('xs')]: {
       visibility: 'visible',
-      backgroundColor: '#FAE9D0',
-      color: '#FBBA5C',
+      backgroundColor: theme.palette.secondary.light,
+      color: theme.palette.secondary,
       borderRadius: '0.4em',
       width: 'auto',
       height: 'auto',
@@ -83,14 +83,14 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '-0.2em',
     marginBottom: '-0.2em',
     marginTop: '0.4em',
-    color: '#FBBA5C',
+    color: theme.palette.secondary,
     whiteSpace: 'nowrap',
     alignItems: 'center',
     display: 'flex',
     '& p': {
       textOverflow: 'ellipsis',
       flex: '0 5 auto',
-      color: '#FBBA5C',
+      color: theme.palette.secondary,
     },
     [theme.breakpoints.down('xs')]: {
       height: '1.2em',

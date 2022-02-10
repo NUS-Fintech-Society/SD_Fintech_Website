@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
           borderRadius: '1em',
           overflow: 'hidden',
           '& .rbc-event': {
-            backgroundColor: '#4B87B1',
+            backgroundColor: theme.palette.tertiary.dark,
           },
         },
         '& .rbc-toolbar': {
