@@ -1,21 +1,18 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Box, Container, Typography } from '@material-ui/core'
-import LinkedInIcon from '@material-ui/icons/LinkedIn'
-import InstagramIcon from '@material-ui/icons/Instagram'
-import GithubIcon from '@material-ui/icons/GitHub'
 import LocationIcon from '@material-ui/icons/Place'
 import MailIcon from '@material-ui/icons/Mail'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    minHeight: '50vh',
+    minHeight: '40vh',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
     backgroundImage:
-      'linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(NUS_SOC.jpg)',
+      'linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(nus-soc.jpg)',
     backgroundColor: theme.palette.background.secondary,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
@@ -28,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
   header: {
     textAlign: 'center',
     marginBottom: 32,
-    marginTop: 32,
+    marginTop: 24,
     [theme.breakpoints.down('xs')]: {
       fontSize: 32,
       marginBottom: 24,
@@ -44,22 +41,6 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('xs')]: {
       fontSize: 14,
     },
-  },
-  iconWrapper: {
-    position: 'relative',
-    zIndex: 1,
-    marginTop: 16,
-    '& :not(:first-child)': {
-      marginLeft: 12,
-    },
-  },
-  vector: {
-    zIndex: 0,
-    position: 'absolute',
-    display: 'flex',
-    bottom: '0',
-    left: '0',
-    right: '0',
   },
   button: {
     cursor: 'pointer',
@@ -88,32 +69,6 @@ const ContactUs = () => {
           <Typography className={classes.boldText}>
             nusfintech.ops@gmail.com
           </Typography>
-        </Box>
-        <Box className={classes.iconWrapper}>
-          <InstagramIcon
-            onClick={() =>
-              window.open(
-                'https://www.instagram.com/nusfintech/?hl=en',
-                '_blank'
-              )
-            }
-            className={classes.button}
-          />
-          <GithubIcon
-            onClick={() =>
-              window.open('https://github.com/NUS-Fintech-Society', '_blank')
-            }
-            className={classes.button}
-          />
-          <LinkedInIcon
-            onClick={() =>
-              window.open(
-                'https://www.linkedin.com/company/nus-fintech-society/',
-                '_blank'
-              )
-            }
-            className={classes.button}
-          />
         </Box>
       </Container>
     </Box>
