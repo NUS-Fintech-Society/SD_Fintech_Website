@@ -5,6 +5,7 @@ import Layout from '../../components/Layout'
 import Chart from '../../components/Chart'
 import OurTeams from '../../components/OurTeams'
 import Credits from '../../components/Credits'
+import ContactUs from '../../components/ContactUs'
 
 const Home = () => (
   <Layout>
@@ -14,6 +15,7 @@ const Home = () => (
     <OurTeams />
     <FAQ />
     <Credits />
+    <ContactUs />
   </Layout>
 )
 
