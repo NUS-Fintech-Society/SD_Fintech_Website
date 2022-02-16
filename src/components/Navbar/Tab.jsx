@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Menu, MenuItem, Typography } from '@material-ui/core'
+import { Button, Menu, MenuItem, Link, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import PropTypes from 'prop-types'
 
@@ -57,9 +57,14 @@ const Tab = (props) => {
         >
           {data.children.map((item, index) => (
             <MenuItem key={index}>
-              <Typography variant="body2" color="textSecondary">
+              {/*<Typography variant="body2" color="textSecondary">
                 {item}
-              </Typography>
+              </Typography>*/}
+              <Link href={item.path} variant="body2">
+                <Typography variant="body2" color="textSecondary">
+                  {item.title}
+                </Typography>
+              </Link>
             </MenuItem>
           ))}
         </Menu>

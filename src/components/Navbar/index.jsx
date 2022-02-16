@@ -11,10 +11,22 @@ const NAVIGATION = [
   {
     main: 'Departments',
     children: [
-      'Machine Learning',
-      'Blockchain',
-      'Software Development',
-      'Operations',
+      {
+        title: 'Machine Learning',
+        path: '/department/machinelearning'
+      },
+      {
+        title: 'Blockchain',
+        path: '/department/blockchain'
+      },
+      {
+        title: 'Software Development',
+        path: '/department/devops'
+      },
+      {
+        title: 'Operations',
+        path: '/department/operations'
+      }
     ],
   },
   {
