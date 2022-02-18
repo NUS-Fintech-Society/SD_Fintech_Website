@@ -36,13 +36,13 @@ const useStyles = makeStyles((theme) => ({
   },
   accordionBox: {
     borderRadius: '20px',
-    background: 'white',
-    boxShadow: '0 2px 5px #aaaaaa',
+    background: 'inherit',
     marginBottom: '20px'
   },
   accordion: {
     //  borderRadius: '20px',
     border: 'none',
+    background: 'inherit',
     boxShadow: 'none',
      '&::before': {
          opacity: 0
