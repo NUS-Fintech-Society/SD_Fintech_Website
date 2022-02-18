@@ -64,13 +64,15 @@ const useStyles = makeStyles((theme) => ({
       marginTop: '8px'
   },
   icon: {
+      width: '20px',
+      height: '20px',
+      fontFamily: 'Serif',
       border: '1px solid grey',
       color: 'grey',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-       borderRadius: '50%',
-      fontSize: '.8rem'
+      borderRadius: '50%'
   }
   
 }));
@@ -79,7 +81,7 @@ const useStyles = makeStyles((theme) => ({
 const Departments = () => {
     const classes = useStyles()
     const router = useRouter();
-    const [expanded, setExpanded] = useState(0);
+    const [expanded, setExpanded] = useState([]);
     const infoObj = departmentInfo.find(item=>(item.route == router.asPath));
     let dataObj = {};
     if(infoObj) {
@@ -88,8 +90,11 @@ const Departments = () => {
     }else {
             infoObj = {};
     }
-    const handleChange = (panel) => (event, newExpanded) => {
-        setExpanded(newExpanded ? panel : false);
+    const handleChange = (i) => (event, newExpanded) => {
+        console.log(event,7888, newExpanded, i,  newExpanded ? !expanded[i] : false);
+        const arr = [...expanded]
+        arr[i] = newExpanded ? !arr[i] : false;
+        setExpanded(arr);
     };
     // console.log(dataObj);
     return (
@@ -135,8 +140,8 @@ const Departments = () => {
                 <div className={classes.accordionBox}>
                     {
                         dataObj&&dataObj.projects?dataObj.projects.map((item, i)=>{
-                            return <Accordion className={classes.accordion} expanded={expanded ==i} onChange={handleChange(i)}>
-                                        <AccordionSummary expandIcon={expanded ==i?<Icon className={classes.icon}>-</Icon>:<Icon className={classes.icon}>+</Icon>} aria-controls="panel3a-content" className={classes.orangeBox} aria-controls="panel1d-content" id={'panel1d-header'+i}>
+                            return <Accordion className={classes.accordion} expanded={expanded[i]} onChange={handleChange(i)} key={i}>
+                                        <AccordionSummary expandIcon={ <Icon className={classes.icon} >{expanded[i]?'-':'+'}</Icon>}aria-controls="panel3a-content" className={classes.orangeBox} aria-controls="panel1d-content" id={'panel1d-header'+i}>
                                         <h3 >{item.title}</h3>
                                         </AccordionSummary>
                                         <AccordionDetails>
