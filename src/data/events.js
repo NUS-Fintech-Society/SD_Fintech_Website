@@ -1,70 +1,84 @@
 export default [
   {
-    title: 'It will be here',
-    date: new Date(),
-    location: 'Yusuf Ishak House;ladls',
+    title: 'Natural Language Processing in Fintech',
+    date: new Date('01/20/2022'),
+    start: new Date('01/20/2022 11:00'),
+    end: new Date('01/20/2022 12:00'),
+    location: 'Zoom',
     description:
-      ':S DjJ ;lakJD;flkds;lfja;mx clkvnsghsdfja;dlskjfa;dlkj fa;lkjd ;alknvlcnva;lsdn fasdf;laskjd f;alkmvlxcnv;',
-
-    start: new Date(),
-    end: new Date(),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   },
   {
-    title: 'It will be there yeah',
-    location: 'NUS School of Computing',
-    date: new Date('01/27/2022'),
+    title: 'NFT - State of the Art',
+    date: new Date('02/20/2022'),
+    start: new Date('02/20/2022 16:00'),
+    end: new Date('02/20/2022 17:00'),
+    location: 'Zoom',
     description:
-      ':S DjJ ;lakJD;flkds;lfja;mx clkvnsghsdfja;dlskjfa;dlkj fa;lkjd ;alknvlcnva;lsdn fasdf;laskjd f;alkmvlxcnv;',
-    start: new Date('01/27/2022 01:00'),
-    end: new Date('01/27/2022 02:00'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     imageUrl:
       'https://images.unsplash.com/photo-1643037906067-e79f62e8f58c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
   },
   {
-    title: 'Today',
-    date: new Date(new Date().setDate(new Date().getDate() + 1)),
-    start: new Date(new Date().setHours(new Date().getHours() - 3)),
-    end: new Date(new Date().setHours(new Date().getHours() + 3)),
-    description: 'Near to today',
-    location: 'here',
+    title: 'Careers in Crypto',
+    date: new Date('04/20/2022'),
+    start: new Date('04/20/2022 11:00'),
+    end: new Date('04/20/2022 13:00'),
+    location: 'Zoom',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     imageUrl:
       'https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
   },
   {
-    title: 'Tomorrow',
-    date: new Date(new Date().setDate(new Date().getDate() + 1)),
-    start: new Date(new Date().setDate(new Date().getDate() + 1)),
-    end: new Date(new Date().setDate(new Date().getDate() + 1)),
-    description: 'Near to tomorrow',
-    location: 'nus',
+    title: 'Stocks vs Crypto',
+    date: new Date('04/27/2022'),
+    start: new Date('04/27/2022 16:00'),
+    end: new Date('04/27/2022 18:00'),
+    location: 'Zoom',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   },
   {
-    title: 'XIt will be there yeah',
-    location: 'NUS School of Computing',
-    date: new Date(new Date().setDate(new Date().getDate() + 1)),
+    title: 'Web2 to Web3',
+    date: new Date('05/20/2022'),
+    start: new Date('05/20/2022 16:00'),
+    end: new Date('05/20/2022 18:00'),
+    location: 'Zoom',
     description:
-      ':S DjJ ;lakJD;flkds;lfja;mx clkvnsghsdfja;dlskjfa;dlkj fa;lkjd ;alknvlcnva;lsdn fasdf;laskjd f;alkmvlxcnv;',
-    start: new Date('01/27/2022 01:00'),
-    end: new Date('01/27/2022 02:00'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    imageUrl:
+      'https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+  },
+  {
+    title: 'Introduction to Asset Tokenisation',
+    date: new Date('05/20/2022'),
+    start: new Date('05/20/2022 16:00'),
+    end: new Date('05/20/2022 18:00'),
+    location: 'Zoom',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+  {
+    title: 'Careers in Fintech',
+    date: new Date('05/27/2022'),
+    start: new Date('05/27/2022 11:00'),
+    end: new Date('05/27/2022 13:00'),
+    location: 'Zoom',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     imageUrl:
       'https://images.unsplash.com/photo-1643037906067-e79f62e8f58c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
   },
   {
-    title: 'XToday',
-    start: new Date(new Date().setHours(new Date().getHours() - 3)),
-    end: new Date(new Date().setHours(new Date().getHours() + 3)),
-    date: new Date(new Date().setDate(new Date().getDate() + 1)),
-    description: 'Near to today',
-    location: 'here',
+    title: 'Navigating the Multi-Chain Landscape',
+    date: new Date('05/27/2022'),
+    start: new Date('05/27/2022 16:00'),
+    end: new Date('05/28/2022 18:00'),
+    location: 'Zoom',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     imageUrl:
-      'https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
-  },
-  {
-    title: 'XTomorrow',
-    start: new Date(new Date().setDate(new Date().getDate() + 1)),
-    end: new Date(new Date().setDate(new Date().getDate() + 1)),
-    date: new Date(new Date().setDate(new Date().getDate() + 1)),
-    description: 'Near to tomorrow',
-    location: 'nus',
+      'https://images.unsplash.com/photo-1643037906067-e79f62e8f58c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
   },
 ]

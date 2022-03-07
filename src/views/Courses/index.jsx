@@ -10,11 +10,6 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-const courses = coursesData
-
-const upcomingCourses =
-  courses && courses.filter((x) => x.date.getTime() >= new Date().getTime())
-
 const Courses = () => {
   const classes = useStyles()
 
@@ -33,7 +28,7 @@ const Courses = () => {
           Courses
         </Typography>
         <EventCardList
-          eventList={upcomingCourses}
+          eventList={coursesData}
           className={classes.coursesList}
           empty={'No upcoming courses, stay tuned!'}
         />

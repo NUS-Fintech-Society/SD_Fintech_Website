@@ -73,8 +73,6 @@ const spotlightEvent = events && upcomingEvents.at(0)
 const Events = () => {
   const classes = useStyles()
 
-  console.log(events.at(1))
-
   return (
     <Layout>
       <Container maxWidth="lg" style={{ minHeight: 'calc(100vh - 126px)' }}>
@@ -118,12 +116,13 @@ const Events = () => {
                 location={spotlightEvent.location}
                 title={spotlightEvent.title}
                 description={spotlightEvent.description}
+                imageUrl={spotlightEvent.imageUrl}
               />
             )}
           </Box>
         </Box>
         <EventCardList
-          eventList={upcomingEvents}
+          eventList={upcomingEvents.slice(1)}
           className={classes.eventsList}
           empty={'No upcoming events, stay tuned!'}
         />
