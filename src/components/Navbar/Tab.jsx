@@ -2,6 +2,7 @@ import React from 'react'
 import { Button, Menu, MenuItem, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import PropTypes from 'prop-types'
+import Link from 'next/link'
 
 const useStyles = makeStyles((theme) => ({
   btn: {
@@ -34,9 +35,11 @@ const Tab = (props) => {
   return (
     <div>
       <Button className={classes.btn} onClick={handleClick}>
-        <Typography variant="body2" color="textSecondary">
-          {data.main}
-        </Typography>
+        <Link href={`${data.redirect}`}>
+          <Typography variant="body2" color="textSecondary">
+            {data.main}
+          </Typography>
+        </Link>
       </Button>
       {data.children.length > 0 && (
         <Menu
@@ -57,9 +60,11 @@ const Tab = (props) => {
         >
           {data.children.map((item, index) => (
             <MenuItem key={index}>
-              <Typography variant="body2" color="textSecondary">
-                {item}
-              </Typography>
+              <Link href={`${item.redirect}`}>
+                <Typography variant="body2" color="textSecondary">
+                  {item.name}
+                </Typography>
+              </Link>
             </MenuItem>
           ))}
         </Menu>

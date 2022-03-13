@@ -68,7 +68,7 @@ const events = eventsData
 const upcomingEvents =
   events && events.filter((x) => x.date.getTime() >= new Date().getTime())
 
-const spotlightEvent = events && upcomingEvents.at(0)
+const spotlightEvent = events && upcomingEvents[0]
 
 const Events = () => {
   const classes = useStyles()

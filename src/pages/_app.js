@@ -4,9 +4,11 @@ import Head from 'next/head'
 import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import theme from '../themes'
+import { useSmoothScroll } from '../Util/SmoothScroll'
 
 export default function MyApp(props) {
   const { Component, pageProps } = props
+  useSmoothScroll()
 
   React.useEffect(() => {
     // Remove the server-side injected CSS.

@@ -53,7 +53,7 @@ const ContactUs = () => {
   const classes = useStyles()
 
   return (
-    <Box className={classes.root}>
+    <Box className={classes.root} id="contact">
       <Container className={classes.contentWrapper} maxWidth="md">
         <Typography variant="h3" className={classes.header}>
           CONTACT
