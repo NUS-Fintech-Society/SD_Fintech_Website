@@ -13,20 +13,20 @@ const NAVIGATION = [
     children: [
       {
         title: 'Machine Learning',
-        path: '/department/machinelearning'
+        path: '/department/machinelearning',
       },
       {
         title: 'Blockchain',
-        path: '/department/blockchain'
+        path: '/department/blockchain',
       },
       {
         title: 'Software Development',
-        path: '/department/devops'
+        path: '/department/devops',
       },
       {
         title: 'Operations',
-        path: '/department/operations'
-      }
+        path: '/department/operations',
+      },
     ],
   },
   {
