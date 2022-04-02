@@ -26,7 +26,7 @@ export default function MyApp(props) {
           name="description"
           content="Official Website of NUS Fintech Society"
         />
-        <link rel="shortcut icon" href="favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"

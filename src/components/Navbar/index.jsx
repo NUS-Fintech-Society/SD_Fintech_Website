@@ -92,7 +92,7 @@ const Navbar = () => {
       <AppBar color="primary" className={classes.root}>
         <Toolbar>
           <Box className={classes.title}>
-            <img src="society-logo-white.png" alt="FTS Logo" height="100%" />
+            <img src="/society-logo-white.png" alt="FTS Logo" height="100%" />
           </Box>
           {NAVIGATION.map((item, index) => (
             <Tab key={index} data={item} />

@@ -1,7 +1,8 @@
 import React from 'react'
-import { Button, Menu, MenuItem, Link, Typography } from '@material-ui/core'
+import { Button, Menu, MenuItem, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import PropTypes from 'prop-types'
+import Link from 'next/link'
 
 const useStyles = makeStyles((theme) => ({
   btn: {
