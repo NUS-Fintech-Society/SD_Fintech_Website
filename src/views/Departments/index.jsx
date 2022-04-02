@@ -1,8 +1,6 @@
 import { useState } from 'react'
 import Layout from '../../components/Layout'
 import { useRouter } from 'next/router'
-import departmentData from '../../../data/departments/departmentData'
-import departmentInfo from '../../../data/departments/departmentInfo'
 import { makeStyles } from '@material-ui/core/styles'
 import {
   Grid,
@@ -12,12 +10,14 @@ import {
   AccordionSummary,
   AccordionDetails,
   Icon,
+  Typography,
 } from '@material-ui/core'
-const useStyles = makeStyles(() => ({
+import { DEPARTMENT_DATA } from '../../../data/departments/data.js'
+
+const useStyles = makeStyles((theme) => ({
   root: {
-    minHeight: 'calc(100vh - 146px)',
-    marginTop: '76px',
-    color: '#9c9c9c',
+    minHeight: '100vh',
+    marginTop: '80px',
     '& .MuiAccordionSummary-root.Mui-expanded': {
       minHeight: 'auto',
     },
@@ -29,25 +29,31 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     alignItems: 'center',
   },
-  h2: {
-    width: '200px',
+  descWrapper: {
+    marginTop: '24px',
+    padding: '16px',
+    boxShadow: '4px 24px 60px rgba(0, 0, 0, 0.25)',
+    borderRadius: theme.shape.borderRadius,
+  },
+  purposeWrapper: {
+    display: 'grid',
+  },
+  deptHeader: {
+    width: '300px',
     marginLeft: '20px',
-    color: '#000000',
+    fontWeight: 600,
   },
   circle: {
     borderRadius: '50%',
     margin: '10px 10px 10px 0',
   },
-  h4: {
-    color: '#4987b1',
+  descHeader: {
+    color: theme.palette.text.navy,
   },
   accordionBox: {
-    borderRadius: '20px',
-    background: 'inherit',
     marginBottom: '20px',
   },
   accordion: {
-    //  borderRadius: '20px',
     border: 'none',
     background: 'inherit',
     boxShadow: 'none',
@@ -60,22 +66,27 @@ const useStyles = makeStyles(() => ({
     '& .MuiAccordionSummary-content h3': {
       margin: 0,
     },
-    '& .MuiAccordionSummary-root.Mui-expande': {
+    '& .MuiAccordionSummary-root.Mui-expanded': {
       minHeight: 'auto',
     },
   },
-
+  projectHeader: {
+    fontWeight: 600,
+  },
+  projectImg: {
+    width: '100%',
+    borderRadius: theme.shape.borderRadius,
+  },
   orangeBox: {
-    background: '#fdb44b',
-    borderRadius: '20px',
+    background: theme.palette.background.orange,
+    borderRadius: theme.shape.borderRadius,
     marginTop: '8px',
   },
   icon: {
     width: '20px',
     height: '20px',
     fontFamily: 'Serif',
-    border: '1px solid grey',
-    color: 'grey',
+    border: '1px solid',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -83,48 +94,50 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
+const getDepartmentFromPath = (path) => {
+  return path.split('/').pop()
+}
+
 const Departments = () => {
   const classes = useStyles()
   const router = useRouter()
   const [expanded, setExpanded] = useState([])
-  var infoObj = departmentInfo.find((item) => item.route == router.asPath)
-  let dataObj = {}
-  if (infoObj) {
-    dataObj = departmentData.find(
-      (item) => item.deptName == infoObj.title + ' Department'
-    )
-    if (!dataObj) dataObj = {}
-  } else {
-    infoObj = {}
-  }
+  const departmentKey = getDepartmentFromPath(router.pathname)
+  const dataObj = DEPARTMENT_DATA[departmentKey]
   const handleChange = (i) => (event, newExpanded) => {
-    console.log(event, 7888, newExpanded, i, newExpanded ? !expanded[i] : false)
     const arr = [...expanded]
     arr[i] = newExpanded ? !arr[i] : false
     setExpanded(arr)
   }
-  // console.log(dataObj);
+
   return (
     <Layout>
       <Container className={classes.root}>
         <Box className={classes.flex}>
-          <img src={infoObj.icon} alt="logo" />
-          <h2 className={classes.h2}>{dataObj.deptName || ''}</h2>
+          <img src={dataObj.icon} alt="logo" />
+          <Typography className={classes.deptHeader} variant="h6">
+            {dataObj.deptName || ''}
+          </Typography>
         </Box>
-        <Grid container spacing={2}>
-          <Grid item xs={8}>
+        <Grid container spacing={2} className={classes.descWrapper}>
+          <Grid item xs={8} className={classes.purposeWrapper}>
             <Box>
-              <h4 className={classes.h4}>Purpose</h4>
-              <p>{dataObj.purpose}</p>
+              <Typography className={classes.descHeader} variant="subtitle1">
+                Purpose
+              </Typography>
+              <Typography>{dataObj.purpose}</Typography>
             </Box>
             <Box>
-              <h4 className={classes.h4}>Vision</h4>
-              <p>{dataObj.goal}</p>
+              <Typography className={classes.descHeader} variant="subtitle1">
+                Vision
+              </Typography>
+              <Typography>{dataObj.goal}</Typography>
             </Box>
           </Grid>
           <Grid item xs={4}>
-            <h4 className={classes.h4}>Team Leads</h4>
-
+            <Typography className={classes.descHeader} variant="subtitle1">
+              Team Leads
+            </Typography>
             {dataObj && dataObj.teamLeads
               ? dataObj.teamLeads.map((item, i) => {
                   return (
@@ -135,19 +148,20 @@ const Departments = () => {
                         src={item.src}
                         alt="logo"
                       />
-                      <p>{item.name || ''}</p>
+                      <Typography>{item.name || ''}</Typography>
                     </Box>
                   )
                 })
               : ''}
           </Grid>
-
-          {/*<Grid item xs={4}>
-                        44
-                    </Grid>*/}
         </Grid>
-
-        <h4 className={classes.h4}>Our Projects</h4>
+        <Typography
+          className={classes.descHeader}
+          style={{ marginTop: '24px' }}
+          variant="subtitle1"
+        >
+          Our Projects
+        </Typography>
         <div className={classes.accordionBox}>
           {dataObj && dataObj.projects
             ? dataObj.projects.map((item, i) => {
@@ -168,16 +182,21 @@ const Departments = () => {
                       aria-controls="panel1d-content"
                       id={'panel1d-header' + i}
                     >
-                      <h3>{item.title}</h3>
+                      <Typography className={classes.projectHeader}>
+                        {item.title}
+                      </Typography>
                     </AccordionSummary>
                     <AccordionDetails>
                       <Grid container spacing={2}>
-                        <Grid item xs={6}>
-                          {item.details}
+                        <Grid item xs={12} sm={6}>
+                          <Typography>{item.details}</Typography>
                         </Grid>
-                        <Grid item xs={6}>
+                        <Grid item xs={12} sm={6}>
                           {item && item.imageURLs && item.imageURLs[0] ? (
-                            <img width="100%" src={item.imageURLs[0]} />
+                            <img
+                              src={item.imageURLs[0]}
+                              className={classes.projectImg}
+                            />
                           ) : (
                             ''
                           )}

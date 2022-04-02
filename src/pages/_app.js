@@ -4,9 +4,11 @@ import Head from 'next/head'
 import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import theme from '../themes'
+import { useSmoothScroll } from '../utils/SmoothScroll'
 
 export default function MyApp(props) {
   const { Component, pageProps } = props
+  useSmoothScroll()
 
   React.useEffect(() => {
     // Remove the server-side injected CSS.
@@ -24,7 +26,7 @@ export default function MyApp(props) {
           name="description"
           content="Official Website of NUS Fintech Society"
         />
-        <link rel="shortcut icon" href="favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
