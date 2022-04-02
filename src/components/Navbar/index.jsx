@@ -14,19 +14,19 @@ const NAVIGATION = [
     children: [
       {
         name: 'Machine Learning',
-        redirect: '',
+        redirect: '/department/machinelearning',
       },
       {
         name: 'Blockchain',
-        redirect: '',
+        redirect: '/department/blockchain',
       },
       {
         name: 'Software Development',
-        redirect: '',
+        redirect: '/department/software',
       },
       {
         name: 'Operations',
-        redirect: '',
+        redirect: '/department/operations',
       },
     ],
     redirect: '',
@@ -92,7 +92,7 @@ const Navbar = () => {
       <AppBar color="primary" className={classes.root}>
         <Toolbar>
           <Box className={classes.title}>
-            <img src="society-logo-white.png" alt="FTS Logo" height="100%" />
+            <img src="/society-logo-white.png" alt="FTS Logo" height="100%" />
           </Box>
           {NAVIGATION.map((item, index) => (
             <Tab key={index} data={item} />
