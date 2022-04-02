@@ -1,8 +1,6 @@
 import { useState } from 'react'
 import Layout from '../../components/Layout'
 import { useRouter } from 'next/router'
-import departmentData from '../../../data/departments/departmentData'
-import departmentInfo from '../../../data/departments/departmentInfo'
 import { makeStyles } from '@material-ui/core/styles'
 import {
   Grid,
@@ -14,8 +12,9 @@ import {
   Icon,
   Typography,
 } from '@material-ui/core'
-import theme from '../../themes'
-const useStyles = makeStyles(() => ({
+import { DEPARTMENT_DATA } from '../../../data/departments/data.js'
+
+const useStyles = makeStyles((theme) => ({
   root: {
     minHeight: '100vh',
     marginTop: '80px',
@@ -40,7 +39,7 @@ const useStyles = makeStyles(() => ({
     display: 'grid',
   },
   deptHeader: {
-    width: '200px',
+    width: '300px',
     marginLeft: '20px',
     fontWeight: 600,
   },
@@ -95,20 +94,16 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
+const getDepartmentFromPath = (path) => {
+  return path.split('/').pop()
+}
+
 const Departments = () => {
   const classes = useStyles()
   const router = useRouter()
   const [expanded, setExpanded] = useState([])
-  var infoObj = departmentInfo.find((item) => item.route == router.asPath)
-  let dataObj = {}
-  if (infoObj) {
-    dataObj = departmentData.find(
-      (item) => item.deptName == infoObj.title + ' Department'
-    )
-    if (!dataObj) dataObj = {}
-  } else {
-    infoObj = {}
-  }
+  const departmentKey = getDepartmentFromPath(router.pathname)
+  const dataObj = DEPARTMENT_DATA[departmentKey]
   const handleChange = (i) => (event, newExpanded) => {
     const arr = [...expanded]
     arr[i] = newExpanded ? !arr[i] : false
@@ -119,7 +114,7 @@ const Departments = () => {
     <Layout>
       <Container className={classes.root}>
         <Box className={classes.flex}>
-          <img src={infoObj.icon} alt="logo" />
+          <img src={dataObj.icon} alt="logo" />
           <Typography className={classes.deptHeader} variant="h6">
             {dataObj.deptName || ''}
           </Typography>

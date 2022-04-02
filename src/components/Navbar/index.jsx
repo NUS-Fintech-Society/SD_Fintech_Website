@@ -22,7 +22,7 @@ const NAVIGATION = [
       },
       {
         name: 'Software Development',
-        redirect: '/department/devops',
+        redirect: '/department/software',
       },
       {
         name: 'Operations',
