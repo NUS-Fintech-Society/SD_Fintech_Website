@@ -8,6 +8,7 @@ import Navbar from '../Navbar'
 const useStyles = makeStyles(() => ({
   root: {
     width: '100%',
+    scrollBehavior: 'smooth',
   },
 }))
 

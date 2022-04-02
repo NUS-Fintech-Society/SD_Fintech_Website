@@ -7,47 +7,63 @@ const NAVIGATION = [
   {
     main: 'Home',
     children: [],
+    redirect: '/',
   },
   {
     main: 'Departments',
     children: [
       {
-        title: 'Machine Learning',
-        path: '/department/machinelearning',
+        name: 'Machine Learning',
+        redirect: '/department/machinelearning',
       },
       {
-        title: 'Blockchain',
-        path: '/department/blockchain',
+        name: 'Blockchain',
+        redirect: '/department/blockchain',
       },
       {
-        title: 'Software Development',
-        path: '/department/devops',
+        name: 'Software Development',
+        redirect: '/department/devops',
       },
       {
-        title: 'Operations',
-        path: '/department/operations',
+        name: 'Operations',
+        redirect: '/department/operations',
       },
     ],
+    redirect: '',
   },
   {
     main: 'Content',
-    children: ['Blogs', 'Courses'],
+    children: [
+      {
+        name: 'Blogs',
+        redirect: '',
+      },
+      {
+        name: 'Courses',
+        redirect: '/courses',
+      },
+    ],
+    redirect: '',
   },
   {
     main: 'Events',
     children: [],
+    redirect: '/events',
   },
   {
     main: 'Recruitment',
     children: [],
+    redirect: '',
   },
   {
     main: 'FAQ',
     children: [],
+    redirect: '',
   },
   {
     main: 'Contact',
     children: [],
+    redirect: '/#contact',
   },
 ]
 
