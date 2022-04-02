@@ -27,10 +27,12 @@ const theme = createTheme({
       link: '#E13766',
       link2: '#52BADD',
       chart: '#005792',
+      navy: '#005792',
     },
     background: {
       primary: '#FFFFFF',
       secondary: '#F0F0F5',
+      orange: '#FDB44B',
     },
     chart: {
       line: '#000000',

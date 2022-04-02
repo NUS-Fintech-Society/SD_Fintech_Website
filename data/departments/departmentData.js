@@ -7,11 +7,11 @@ export default [
     teamLeads: [
       {
         name: 'Michael Tan',
-        src: '/images/michael_tan.png',
+        src: '/images/placeholder-male.png',
       },
       {
         name: 'Loh Zihua',
-        src: '/images/loh_zihua.png',
+        src: '/images/placeholder-female.jpg',
       },
     ],
     goal: 'Provide ample connections and opportunities to the best companies, organizations, and individuals in the blockchain sphere, create solutions of tangible and industrial value.',
@@ -54,11 +54,11 @@ export default [
     teamLeads: [
       {
         name: 'Michael Tan',
-        src: '/images/michael_tan.png',
+        src: '/images/placeholder-male.png',
       },
       {
         name: 'Loh Zihua',
-        src: '/images/loh_zihua.png',
+        src: '/images/placeholder-female.jpg',
       },
     ],
     goal: 'To nurture a community of blockchain enthusiasts, where members can learn',
@@ -101,11 +101,11 @@ export default [
     teamLeads: [
       {
         name: 'Michael Tan',
-        src: '/images/michael_tan.png',
+        src: '/images/placeholder-male.png',
       },
       {
         name: 'Loh Zihua',
-        src: '/images/loh_zihua.png',
+        src: '/images/placeholder-female.jpg',
       },
     ],
     goal: 'To foster a community of data-savvy members who are comfortable with wrangling and deriving insights from data',
@@ -184,11 +184,11 @@ export default [
     teamLeads: [
       {
         name: 'Michael Tan',
-        src: '/images/michael_tan.png',
+        src: '/images/placeholder-male.png',
       },
       {
         name: 'Loh Zihua',
-        src: '/images/loh_zihua.png',
+        src: '/images/placeholder-female.jpg',
       },
     ],
     goal: 'Propose specific work goals; formulate specific means and methods to achieve the goals; clarify the implementation plan to achieve the sub-goals; determine the specific person in charge of achieving the sub-goals, and discuss together, list the timetable for the realization of the goals, and clarify the implementation steps and the implementers and the realization of the goals. time period, etc.',
