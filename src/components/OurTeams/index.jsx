@@ -82,7 +82,7 @@ const OurTeams = () => {
   return (
     <div className={classes.root}>
       <Typography className={classes.title}>Our Teams</Typography>
-      <Grid container direction="row" justify="center">
+      <Grid container direction="row" justifyContent="center">
         <Grid item xs={12} sm={12} md={6} lg={5}>
           <Box
             padding={4}
@@ -114,12 +114,8 @@ const OurTeams = () => {
                 consequat.
               </Typography>
               <br />
-              <a
-                className={classes.link}
-                href={'http://www.google.com'}
-                passHref={true}
-              >
-                <a>Learn more &gt;&gt;</a>
+              <a className={classes.link} href={'http://www.google.com'}>
+                Learn more &gt;&gt;
               </a>
             </Box>
             <img className={classes.rightImage} alt="ml" src="ml.png"></img>
@@ -151,12 +147,8 @@ const OurTeams = () => {
                 nulla pariatur.
               </Typography>
               <br />
-              <a
-                className={classes.link}
-                href={'http://www.google.com'}
-                passHref={true}
-              >
-                <a>Learn more &gt;&gt;</a>
+              <a className={classes.link} href={'http://www.google.com'}>
+                Learn more &gt;&gt;
               </a>
             </Box>
           </Box>
@@ -186,12 +178,8 @@ const OurTeams = () => {
                 nulla pariatur.
               </Typography>
               <br />
-              <a
-                className={classes.link}
-                href={'http://www.google.com'}
-                passHref={true}
-              >
-                <a>Learn more &gt;&gt;</a>
+              <a className={classes.link} href={'http://www.google.com'}>
+                Learn more &gt;&gt;
               </a>
             </Box>
             <img
@@ -214,7 +202,6 @@ const OurTeams = () => {
             <Box
               flexDirection="column"
               display="flex"
-              ali
               className={classes.boxWrapper}
             >
               <Typography className={classes.teamTitle}>Blockchain</Typography>
@@ -228,12 +215,8 @@ const OurTeams = () => {
                 nulla pariatur.
               </Typography>
               <br />
-              <a
-                className={classes.link}
-                href={'http://www.google.com'}
-                passHref={true}
-              >
-                <a>Learn more &gt;&gt;</a>
+              <a className={classes.link} href={'http://www.google.com'}>
+                Learn more &gt;&gt;
               </a>
             </Box>
           </Box>
