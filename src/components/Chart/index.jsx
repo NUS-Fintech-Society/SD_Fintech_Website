@@ -4,20 +4,22 @@ import { Box, Typography } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: '0',
     margin: '0',
     boxSizing: 'border-box',
     textAlign: 'center',
     alignItems: 'center',
     color: theme.palette.text.secondary,
-    backgroundColor: theme.palette.background.primary,
+    backgroundColor: theme.palette.background.secondary,
+    padding: '64px 96px',
+    [theme.breakpoints.down('xs')]: {
+      padding: 32,
+    },
   },
   ol: {
     listStyle: 'none',
   },
   header: {
     color: theme.palette.text.chart,
-    fontSize: '42px',
     [theme.breakpoints.down('sm')]: {
       fontSize: '35px',
     },
@@ -176,7 +178,9 @@ const Chart = () => {
   return (
     <Box className={classes.root}>
       <br />
-      <Typography className={classes.header}>Club Structure</Typography>
+      <Typography className={classes.header} variant="h5">
+        Club Structure
+      </Typography>
       <br />
       <br />
       <div className={classes.container}>
