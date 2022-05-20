@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     padding: '96px 48px',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: theme.palette.background.secondary,
+    backgroundColor: theme.palette.background.primary,
     flexDirection: 'column',
     [theme.breakpoints.down('xs')]: {
       padding: '48px',
@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   sectionHeader: {
-    fontWeight: 600,
+    color: theme.palette.tertiary.dark,
     [theme.breakpoints.down('xs')]: {
       fontSize: 32,
     },
@@ -52,9 +52,6 @@ const Credits = () => {
 
   return (
     <Box className={classes.root}>
-      {/* <Typography variant="h3" className={classes.title}>
-        Partners
-      </Typography> */}
       <Box className={classes.sectionWrapper}>
         <Typography variant="h5" className={classes.sectionHeader}>
           Sponsors

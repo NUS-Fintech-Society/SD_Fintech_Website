@@ -15,7 +15,6 @@ const useStyles = makeStyles((theme) => ({
   title: {
     textAlign: 'center',
     color: theme.palette.text.chart,
-    fontSize: '42px',
     [theme.breakpoints.down('sm')]: {
       fontSize: '35px',
     },
@@ -81,7 +80,9 @@ const OurTeams = () => {
 
   return (
     <div className={classes.root}>
-      <Typography className={classes.title}>Our Teams</Typography>
+      <Typography className={classes.title} variant="h5">
+        Our Teams
+      </Typography>
       <Grid container direction="row" justifyContent="center">
         <Grid item xs={12} sm={12} md={6} lg={5}>
           <Box
