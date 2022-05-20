@@ -4,7 +4,7 @@ import { Box, Typography, Grid } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    minheight: '144vh',
+    minHeight: '100vh',
     width: '100%',
     position: 'relative',
     backgroundColor: theme.palette.background.primary,
@@ -69,8 +69,10 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   link: {
+    marginTop: 16,
+    fontWeight: 700,
     cursor: 'pointer',
-    color: theme.palette.text.link2,
+    color: theme.palette.tertiary.dark,
     textDecoration: 'none',
   },
 }))
@@ -108,14 +110,10 @@ const OurTeams = () => {
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
                 nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
                 in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.
+                nulla pariatur.
               </Typography>
               <br />
-              <a className={classes.link} href={'http://www.google.com'}>
+              <a className={classes.link} href={'/department/machinelearning'}>
                 Learn more &gt;&gt;
               </a>
             </Box>
@@ -148,7 +146,7 @@ const OurTeams = () => {
                 nulla pariatur.
               </Typography>
               <br />
-              <a className={classes.link} href={'http://www.google.com'}>
+              <a className={classes.link} href={'/department/operations'}>
                 Learn more &gt;&gt;
               </a>
             </Box>
@@ -168,7 +166,9 @@ const OurTeams = () => {
               display="flex"
               className={classes.boxWrapper}
             >
-              <Typography className={classes.teamTitle}>DevOps</Typography>
+              <Typography className={classes.teamTitle}>
+                Software Development
+              </Typography>
               <br />
               <Typography>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -179,7 +179,7 @@ const OurTeams = () => {
                 nulla pariatur.
               </Typography>
               <br />
-              <a className={classes.link} href={'http://www.google.com'}>
+              <a className={classes.link} href={'/department/software'}>
                 Learn more &gt;&gt;
               </a>
             </Box>
@@ -216,7 +216,7 @@ const OurTeams = () => {
                 nulla pariatur.
               </Typography>
               <br />
-              <a className={classes.link} href={'http://www.google.com'}>
+              <a className={classes.link} href={'/department/blockchain'}>
                 Learn more &gt;&gt;
               </a>
             </Box>
