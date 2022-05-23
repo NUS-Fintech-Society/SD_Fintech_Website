@@ -1,176 +1,118 @@
-import { Box, Typography } from '@material-ui/core'
+import { Box, Grid, Typography } from '@material-ui/core'
 import { LocationOn } from '@material-ui/icons'
 import { makeStyles } from '@material-ui/styles'
 import moment from 'moment'
 import PropTypes from 'prop-types'
-import ClampLines from 'react-clamp-lines'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: '1em',
-    transform: 'translateY(0px);',
-    transition: '0.5s',
-    marginBottom: '20px',
-    borderRadius: '1.5em',
-    width: '20em',
-    [theme.breakpoints.down('xs')]: {
-      padding: '2em',
-      width: '100%',
-    },
-    '&:hover': {
-      transform: 'translateY(-10px);',
-    },
+    height: 450,
+    backgroundColor: theme.palette.background.primary,
+    borderRadius: theme.shape.borderRadius,
+    boxShadow: '3px 6px #F0F0F0',
   },
-  cardHeader: {
-    display: 'flex',
-    flexDirection: 'row',
+  thumbnail: {
+    width: '100%',
+    height: '40%',
+    objectFit: 'cover',
+    objectPosition: 'center',
+    borderRadius: `${theme.shape.borderRadius}px ${theme.shape.borderRadius}px 0px 0px`,
+  },
+  contentWrapper: {
+    height: '60%',
+    padding: '8px 16px',
+  },
+  topSection: {
+    height: '40%',
     alignItems: 'center',
-    gap: '0.3em',
-    '& > div > div > h6': {
-      marginTop: '-0.3em',
-    },
-
-    [theme.breakpoints.down('xs')]: {
-      flexDirection: 'column',
-      alignItems: 'flex-start',
-      '& > div > div > h6': {
-        marginTop: '0em',
-        marginBottom: '0.3em',
-      },
-    },
   },
-  dateBox: {
+  dateWrapper: {
     backgroundColor: theme.palette.secondary.light,
-    color: theme.palette.secondary.main,
-    borderRadius: '0.4em',
-    width: '3em',
-    height: '3em',
+    padding: 8,
+    borderRadius: theme.shape.borderRadius,
     textAlign: 'center',
-    '& *': {
-      width: '100%',
-    },
-    [theme.breakpoints.down('xs')]: {
-      visibility: 'hidden',
-      height: '0',
-      width: 0,
-    },
-  },
-  dateBoxXS: {
-    [theme.breakpoints.up('xs')]: {
-      visibility: 'hidden',
-      width: 0,
-      height: 0,
-      margin: 0,
-      padding: 0,
-    },
-    [theme.breakpoints.down('xs')]: {
-      visibility: 'visible',
-      backgroundColor: theme.palette.secondary.light,
+    '& .MuiTypography-root': {
+      fontSize: 16,
       color: theme.palette.secondary.main,
-      borderRadius: '0.4em',
-      width: 'auto',
-      height: 'auto',
-      padding: '0.2em',
-      textAlign: 'center',
-      marginBottom: '-0.3em',
-      marginTop: '0.3em',
-      '& *': {
-        width: '100%',
-      },
     },
   },
-  location: {
-    marginLeft: '-0.2em',
-    marginBottom: '-0.2em',
-    marginTop: '0.4em',
-    color: theme.palette.secondary.main,
-    whiteSpace: 'nowrap',
-    alignItems: 'center',
+  titleLocWrapper: {
+    height: '100%',
     display: 'flex',
-    '& p': {
-      textOverflow: 'ellipsis',
-      flex: '0 5 auto',
-      color: theme.palette.secondary.main,
-    },
-    [theme.breakpoints.down('xs')]: {
-      height: '1.2em',
-    },
+    flexDirection: 'column',
+    justifyContent: 'center',
   },
-  imageCrop: {
-    borderRadius: '1em',
-    overflow: 'hidden',
-    paddingBottom: 'calc(100% * 9 / 16)',
-    height: 0,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
+  locationWrapper: {
+    display: 'flex',
+    maxHeight: '20%',
+  },
+  locationIcon: {
+    color: theme.palette.secondary.main,
+  },
+  locationTitle: {
+    color: theme.palette.secondary.main,
+    marginLeft: 4,
+  },
+  eventTitle: {
+    fontWeight: 700,
+    maxHeight: '80%',
+    fontSize: 18,
+    marginTop: 8,
+    overflowY: 'scroll',
+  },
+  bottomSection: {
+    height: '60%',
   },
   description: {
-    maxHeight: '10em',
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-    [theme.breakpoints.down('xs')]: {
-      marginTop: '-0.5em',
-      marginBottom: '-0.5em',
-    },
-    '& p': {
-      marginTop: 0,
-      marginBottom: 0,
-    },
+    height: '100%',
+    fontSize: 16,
+    overflowY: 'scroll',
   },
 }))
 
-const EventCard = ({ date, location, title, description, imageUrl }) => {
+const EventCard = (props) => {
+  const { event } = props
   const classes = useStyles()
 
   return (
-    <>
-      <Box className={classes.root}>
-        <Box
-          className={classes.imageCrop}
-          style={{ backgroundImage: `url(${imageUrl || 'default-event.jpg'})` }}
-        ></Box>
-        <Box className={classes.cardHeader}>
-          <Box className={classes.dateBox}>
-            {moment(date).format('MMM')}
-            <br />
-            {moment(date).format('D')}
-          </Box>
-          <Box className={classes.dateBoxXS}>
-            {moment(date).format('MMMM D')}
-          </Box>
-          <Box>
-            <Box className={classes.location}>
-              <LocationOn
-                style={{
-                  fontSize: `1.1em`,
-                }}
-              />
-              <Typography>{location}</Typography>
+    <Box className={classes.root}>
+      <img
+        className={classes.thumbnail}
+        src={event.imageUrl || 'default-event.jpg'}
+        alt="Event Thumbnail"
+      />
+      <Box className={classes.contentWrapper}>
+        <Grid container spacing={2} className={classes.topSection}>
+          <Grid item xs={3}>
+            <Box className={classes.dateWrapper}>
+              <Typography>{moment(event.start).format('MMM')}</Typography>
+              <Typography>{moment(event.start).format('D')}</Typography>
             </Box>
-            <Box>
-              <Typography variant="subtitle1">{title}</Typography>
+          </Grid>
+          <Grid item xs={9} className={classes.titleLocWrapper}>
+            <Box className={classes.locationWrapper}>
+              <LocationOn className={classes.locationIcon} />
+              <Typography className={classes.locationTitle}>
+                {event.location}
+              </Typography>
             </Box>
-          </Box>
-        </Box>
-        <Box className={classes.description}>
-          <ClampLines
-            lines={5}
-            text={description}
-            buttons={false}
-            innerElement="p"
-          ></ClampLines>
+            <Typography className={classes.eventTitle}>
+              {event.title}
+            </Typography>
+          </Grid>
+        </Grid>
+        <Box className={classes.bottomSection}>
+          <Typography className={classes.description}>
+            {event.description}
+          </Typography>
         </Box>
       </Box>
-    </>
+    </Box>
   )
 }
 
 EventCard.propTypes = {
-  date: PropTypes.object,
-  location: PropTypes.string,
-  title: PropTypes.string,
-  description: PropTypes.string,
-  imageUrl: PropTypes.string,
+  event: PropTypes.object,
 }
 
 export default EventCard
