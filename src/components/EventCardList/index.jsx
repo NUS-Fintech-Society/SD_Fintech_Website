@@ -8,13 +8,13 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     columnGap: '2em',
     flexWrap: 'wrap',
-    alignItems: 'stretch',
     justifyContent: 'center',
     flexDirection: 'row',
     height: 'max-content',
     [theme.breakpoints.down('xs')]: {
       flexDirection: 'column',
-      gap: '1em',
+      alignItems: 'center',
+      gap: '2em',
     },
   },
 }))
@@ -26,16 +26,7 @@ const EventCardList = ({ className, eventList, empty, ...props }) => {
     <Box className={`${classes.eventsList} ${className}`} {...props}>
       {eventList &&
         (eventList.length > 0 ? (
-          eventList.map((ev, index) => (
-            <EventCard
-              key={index}
-              date={ev.date}
-              location={ev.location}
-              title={ev.title}
-              description={ev.description}
-              imageUrl={ev?.imageUrl}
-            />
-          ))
+          eventList.map((ev, index) => <EventCard key={index} event={ev} />)
         ) : (
           <Typography>{empty}</Typography>
         ))}

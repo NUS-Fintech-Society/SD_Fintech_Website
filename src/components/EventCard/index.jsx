@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
   },
   flexBox: {
     display: 'flex',
-    marginBottom: 8,
+    marginBottom: 4,
   },
   icon: {
     color: theme.palette.secondary.main,
@@ -50,9 +50,10 @@ const useStyles = makeStyles((theme) => ({
   eventTitle: {
     fontWeight: 700,
     fontSize: 18,
-    marginBottom: 8,
+    marginTop: 4,
   },
   description: {
+    marginTop: 4,
     fontSize: 16,
   },
 }))
@@ -82,18 +83,20 @@ const EventCard = (props) => {
               <Typography>{moment(event.start).format('D')}</Typography>
             </Box>
           </Grid>
-          <Grid item xs={9}>
+          <Grid item xs={9} container alignItems="center">
             <Box className={classes.flexBox}>
               <LocationOnIcon className={classes.icon} />
               <Typography className={classes.info}>{event.location}</Typography>
             </Box>
-            <Box className={classes.flexBox}>
-              <TimerIcon className={classes.icon} />
-              <Typography className={classes.info}>
-                {moment(event.start).format('DD MMM YYYY hh:mma')} -{' '}
-                {moment(event.end).format('DD MMM YYYY hh:mma')}
-              </Typography>
-            </Box>
+            {event.start && event.end && (
+              <Box className={classes.flexBox}>
+                <TimerIcon className={classes.icon} />
+                <Typography className={classes.info}>
+                  {moment(event.start).format('DD MMM YYYY hh:mma')} -{' '}
+                  {moment(event.end).format('DD MMM YYYY hh:mma')}
+                </Typography>
+              </Box>
+            )}
           </Grid>
         </Grid>
         <Typography className={classes.eventTitle}>{event.title}</Typography>

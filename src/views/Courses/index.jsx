@@ -5,6 +5,15 @@ import coursesData from '../../data/courses'
 import theme from '../../themes'
 
 const useStyles = makeStyles(() => ({
+  root: {
+    minHeight: '100vh',
+    marginTop: 80,
+    paddingBottom: 32,
+  },
+  title: {
+    textAlign: 'center',
+    color: theme.palette.tertiary.dark,
+  },
   coursesList: {
     paddingTop: '1em',
   },
@@ -15,16 +24,8 @@ const Courses = () => {
 
   return (
     <Layout>
-      <Container maxWidth="lg" style={{ minHeight: 'calc(100vh - 126px)' }}>
-        <Typography
-          variant="h4"
-          style={{
-            color: theme.palette.tertiary.darker,
-            textAlign: 'center',
-            display: 'block',
-            marginTop: '80px',
-          }}
-        >
+      <Container maxWidth="lg" className={classes.root}>
+        <Typography className={classes.title} variant="h5">
           Courses
         </Typography>
         <EventCardList
