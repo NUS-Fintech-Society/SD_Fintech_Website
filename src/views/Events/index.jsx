@@ -9,12 +9,24 @@ import 'react-big-calendar/lib/css/react-big-calendar.css'
 import EventCard from '../../components/EventCard'
 
 const useStyles = makeStyles((theme) => ({
+  '@global': {
+    '.rbc-event': {
+      backgroundColor: theme.palette.secondary.main,
+      color: theme.palette.text.primary,
+    },
+    '.rbc-event.rbc-selected': {
+      backgroundColor: theme.palette.secondary.main,
+      color: theme.palette.text.primary,
+    },
+  },
   root: {
     minHeight: '100vh',
     marginTop: 80,
+    paddingBottom: 32,
   },
   title: {
     textAlign: 'center',
+    color: theme.palette.tertiary.dark,
   },
   eventsList: {
     marginTop: 32,
@@ -23,23 +35,25 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 32,
     display: 'flex',
     alignItems: 'center',
+    [theme.breakpoints.down('md')]: {
+      flexDirection: 'column',
+      justifyContent: 'center',
+    },
     '& .calendar': {
-      flex: '1 1 70%',
+      flexGrow: 1,
+      [theme.breakpoints.down('md')]: {
+        width: '100%',
+      },
       '& .rbc-calendar': {
         minHeight: '70vh',
         '& .rbc-toolbar-label': {
           fontWeight: 700,
           fontSize: 18,
         },
-        '& .rbc-event': {
-          backgroundColor: theme.palette.secondary.main,
-          color: theme.palette.text.primary,
-        },
       },
     },
     '& .event': {
-      flex: '1 1 30%',
-      paddingLeft: 32,
+      padding: 32,
     },
   },
 }))
@@ -53,7 +67,12 @@ const getLatestEvent = () => {
   const upcomingEvents = events.filter(
     (x) => x.start.getTime() >= new Date().getTime()
   )
-  return upcomingEvents[0]
+
+  if (upcomingEvents.length > 0) {
+    return upcomingEvents[0]
+  }
+
+  return events.at(-1)
 }
 
 const Events = () => {

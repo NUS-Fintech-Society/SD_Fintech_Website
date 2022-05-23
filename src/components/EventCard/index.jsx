@@ -1,5 +1,6 @@
 import { Box, Grid, Typography } from '@material-ui/core'
-import { LocationOn } from '@material-ui/icons'
+import LocationOnIcon from '@material-ui/icons/LocationOn'
+import TimerIcon from '@material-ui/icons/Timer'
 import { makeStyles } from '@material-ui/styles'
 import moment from 'moment'
 import PropTypes from 'prop-types'
@@ -7,6 +8,7 @@ import PropTypes from 'prop-types'
 const useStyles = makeStyles((theme) => ({
   root: {
     height: 450,
+    width: 330,
     backgroundColor: theme.palette.background.primary,
     borderRadius: theme.shape.borderRadius,
     boxShadow: '3px 6px #F0F0F0',
@@ -21,52 +23,37 @@ const useStyles = makeStyles((theme) => ({
   contentWrapper: {
     height: '60%',
     padding: '8px 16px',
-  },
-  topSection: {
-    height: '40%',
-    alignItems: 'center',
+    overflowY: 'scroll',
   },
   dateWrapper: {
     backgroundColor: theme.palette.secondary.light,
-    padding: 8,
+    padding: '8px 16px',
     borderRadius: theme.shape.borderRadius,
     textAlign: 'center',
     '& .MuiTypography-root': {
-      fontSize: 16,
+      fontSize: 18,
       color: theme.palette.secondary.main,
     },
   },
-  titleLocWrapper: {
-    height: '100%',
+  flexBox: {
     display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
+    marginBottom: 8,
   },
-  locationWrapper: {
-    display: 'flex',
-    maxHeight: '20%',
-  },
-  locationIcon: {
+  icon: {
     color: theme.palette.secondary.main,
   },
-  locationTitle: {
+  info: {
     color: theme.palette.secondary.main,
     marginLeft: 4,
+    fontSize: 16,
   },
   eventTitle: {
     fontWeight: 700,
-    maxHeight: '80%',
     fontSize: 18,
-    marginTop: 8,
-    overflowY: 'scroll',
-  },
-  bottomSection: {
-    height: '60%',
+    marginBottom: 8,
   },
   description: {
-    height: '100%',
     fontSize: 16,
-    overflowY: 'scroll',
   },
 }))
 
@@ -82,30 +69,37 @@ const EventCard = (props) => {
         alt="Event Thumbnail"
       />
       <Box className={classes.contentWrapper}>
-        <Grid container spacing={2} className={classes.topSection}>
-          <Grid item xs={3}>
+        <Grid container spacing={2}>
+          <Grid
+            item
+            xs={3}
+            container
+            alignItems="center"
+            justifyContent="center"
+          >
             <Box className={classes.dateWrapper}>
               <Typography>{moment(event.start).format('MMM')}</Typography>
               <Typography>{moment(event.start).format('D')}</Typography>
             </Box>
           </Grid>
-          <Grid item xs={9} className={classes.titleLocWrapper}>
-            <Box className={classes.locationWrapper}>
-              <LocationOn className={classes.locationIcon} />
-              <Typography className={classes.locationTitle}>
-                {event.location}
+          <Grid item xs={9}>
+            <Box className={classes.flexBox}>
+              <LocationOnIcon className={classes.icon} />
+              <Typography className={classes.info}>{event.location}</Typography>
+            </Box>
+            <Box className={classes.flexBox}>
+              <TimerIcon className={classes.icon} />
+              <Typography className={classes.info}>
+                {moment(event.start).format('DD MMM YYYY hh:mma')} -{' '}
+                {moment(event.end).format('DD MMM YYYY hh:mma')}
               </Typography>
             </Box>
-            <Typography className={classes.eventTitle}>
-              {event.title}
-            </Typography>
           </Grid>
         </Grid>
-        <Box className={classes.bottomSection}>
-          <Typography className={classes.description}>
-            {event.description}
-          </Typography>
-        </Box>
+        <Typography className={classes.eventTitle}>{event.title}</Typography>
+        <Typography className={classes.description}>
+          {event.description}
+        </Typography>
       </Box>
     </Box>
   )
