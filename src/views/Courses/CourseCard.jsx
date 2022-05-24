@@ -9,8 +9,12 @@ const useStyles = makeStyles((theme) => ({
     width: 330,
     backgroundColor: theme.palette.background.primary,
     borderRadius: theme.shape.borderRadius,
-    boxShadow: '3px 6px #F0F0F0',
+    boxShadow: '6px 6px #F0F0F0',
     cursor: 'pointer',
+    '&:hover': {
+      boxShadow: '12px 12px #F0F0F0',
+      transform: 'translateX(-2px) translateY(-2px)',
+    },
   },
   thumbnail: {
     width: '100%',

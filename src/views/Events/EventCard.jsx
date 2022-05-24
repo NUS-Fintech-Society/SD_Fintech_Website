@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     width: 330,
     backgroundColor: theme.palette.background.primary,
     borderRadius: theme.shape.borderRadius,
-    boxShadow: '3px 6px #F0F0F0',
+    boxShadow: '6px 6px #F0F0F0',
   },
   thumbnail: {
     width: '100%',
