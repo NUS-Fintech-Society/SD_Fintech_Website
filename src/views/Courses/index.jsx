@@ -1,8 +1,8 @@
 import { Box, Container, makeStyles, Typography } from '@material-ui/core'
-import EventCardList from '../../components/EventCardList'
 import Layout from '../../components/Layout'
 import coursesData from '../../data/courses'
 import theme from '../../themes'
+import CourseCard from './CourseCard'
 
 const useStyles = makeStyles(() => ({
   hero: {
@@ -36,14 +36,22 @@ const useStyles = makeStyles(() => ({
   },
   content: {
     padding: '32px 0px',
-  },
-  coursesList: {
-    paddingTop: '1em',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+    gap: 32,
   },
 }))
 
 const Courses = () => {
   const classes = useStyles()
+
+  const renderCourses = () => {
+    return coursesData.map((course, index) => {
+      return <CourseCard key={index} course={course} />
+    })
+  }
 
   return (
     <Layout>
@@ -58,11 +66,7 @@ const Courses = () => {
         />
       </Box>
       <Container maxWidth="lg" className={classes.content}>
-        <EventCardList
-          eventList={coursesData}
-          className={classes.coursesList}
-          empty={'No upcoming courses, stay tuned!'}
-        />
+        {renderCourses()}
       </Container>
     </Layout>
   )
