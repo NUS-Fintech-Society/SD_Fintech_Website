@@ -1,30 +1,24 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Box, Typography } from '@material-ui/core'
+import SectionContainer from '../Layout/SectionContainer'
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    width: '100%',
     margin: '0',
     boxSizing: 'border-box',
     textAlign: 'center',
     alignItems: 'center',
     color: theme.palette.text.secondary,
-    backgroundColor: theme.palette.background.secondary,
-    padding: '64px 96px',
-    [theme.breakpoints.down('xs')]: {
-      padding: 32,
-    },
   },
   ol: {
     listStyle: 'none',
   },
   header: {
     color: theme.palette.text.chart,
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '35px',
-    },
     [theme.breakpoints.down('xs')]: {
-      fontSize: '25px',
+      fontSize: 32,
     },
   },
   container: {
@@ -176,69 +170,71 @@ const Chart = () => {
   const classes = useStyles()
 
   return (
-    <Box className={classes.root}>
-      <br />
-      <Typography className={classes.header} variant="h5">
-        Club Structure
-      </Typography>
-      <br />
-      <br />
-      <div className={classes.container}>
-        <ol className={`${classes.level1Wrapper} ${classes.ol}`}>
-          <li className={classes.li1}>
-            <p className={`${classes.level1} ${classes.rectangle}`}>
-              Co-President
-            </p>
-          </li>
-          <li className={classes.li1}>
-            <p className={`${classes.level1} ${classes.rectangle}`}>
-              Co-President
-            </p>
-          </li>
-        </ol>
-        <ol className={`${classes.level2Wrapper} ${classes.ol}`}>
-          <li className={classes.li2}>
-            <p className={`${classes.level2} ${classes.rectangle}`}>
-              VP Operations
-            </p>
-            <ol className={`${classes.level3Wrapper} ${classes.ol}`}>
-              <li>
-                <p className={`${classes.level3} ${classes.rectangle}`}>
-                  External Relations
-                </p>
-              </li>
-              <li>
-                <p className={`${classes.level3} ${classes.rectangle}`}>
-                  Internal Affairs
-                </p>
-              </li>
-            </ol>
-          </li>
-          <li className={classes.li2}>
-            <p className={`${classes.level2} ${classes.rectangle}`}>
-              VP Technology
-            </p>
-            <ol className={`${classes.level3Wrapper} ${classes.ol}`}>
-              <li>
-                <p className={`${classes.level3} ${classes.rectangle}`}>
-                  Blockchain
-                </p>
-              </li>
-              <li>
-                <p className={`${classes.level3} ${classes.rectangle}`}>
-                  Machine Learning
-                </p>
-              </li>
-              <li>
-                <p className={`${classes.level3} ${classes.rectangle}`}>
-                  Software Dev
-                </p>
-              </li>
-            </ol>
-          </li>
-        </ol>
-      </div>
-    </Box>
+    <SectionContainer bgIsPrimary={false} viewportHeight={80}>
+      <Box className={classes.root}>
+        <br />
+        <Typography className={classes.header} variant="h5">
+          Club Structure
+        </Typography>
+        <br />
+        <br />
+        <div className={classes.container}>
+          <ol className={`${classes.level1Wrapper} ${classes.ol}`}>
+            <li className={classes.li1}>
+              <p className={`${classes.level1} ${classes.rectangle}`}>
+                Co-President
+              </p>
+            </li>
+            <li className={classes.li1}>
+              <p className={`${classes.level1} ${classes.rectangle}`}>
+                Co-President
+              </p>
+            </li>
+          </ol>
+          <ol className={`${classes.level2Wrapper} ${classes.ol}`}>
+            <li className={classes.li2}>
+              <p className={`${classes.level2} ${classes.rectangle}`}>
+                VP Operations
+              </p>
+              <ol className={`${classes.level3Wrapper} ${classes.ol}`}>
+                <li>
+                  <p className={`${classes.level3} ${classes.rectangle}`}>
+                    External Relations
+                  </p>
+                </li>
+                <li>
+                  <p className={`${classes.level3} ${classes.rectangle}`}>
+                    Internal Affairs
+                  </p>
+                </li>
+              </ol>
+            </li>
+            <li className={classes.li2}>
+              <p className={`${classes.level2} ${classes.rectangle}`}>
+                VP Technology
+              </p>
+              <ol className={`${classes.level3Wrapper} ${classes.ol}`}>
+                <li>
+                  <p className={`${classes.level3} ${classes.rectangle}`}>
+                    Blockchain
+                  </p>
+                </li>
+                <li>
+                  <p className={`${classes.level3} ${classes.rectangle}`}>
+                    Machine Learning
+                  </p>
+                </li>
+                <li>
+                  <p className={`${classes.level3} ${classes.rectangle}`}>
+                    Software Dev
+                  </p>
+                </li>
+              </ol>
+            </li>
+          </ol>
+        </div>
+      </Box>
+    </SectionContainer>
   )
 }
 
