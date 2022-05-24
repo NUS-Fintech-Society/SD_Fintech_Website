@@ -1,131 +1,110 @@
+import { useState } from 'react'
 import { Box, Container, makeStyles, Typography } from '@material-ui/core'
 import moment from 'moment'
 import { Calendar, momentLocalizer } from 'react-big-calendar'
-import EventSpotlight from '../../components/EventSpotlight'
 import Layout from '../../components/Layout'
 import eventsData from '../../data/events'
 
 import 'react-big-calendar/lib/css/react-big-calendar.css'
-import theme from '../../themes'
-import EventCardList from '../../components/EventCardList'
+import EventCard from '../../components/EventCard'
 
 const useStyles = makeStyles((theme) => ({
+  '@global': {
+    '.rbc-event': {
+      backgroundColor: theme.palette.secondary.main,
+      color: theme.palette.text.primary,
+    },
+    '.rbc-event.rbc-selected': {
+      backgroundColor: theme.palette.secondary.main,
+      color: theme.palette.text.primary,
+    },
+  },
+  root: {
+    marginTop: 80,
+    paddingBottom: 32,
+  },
+  title: {
+    textAlign: 'center',
+    color: theme.palette.tertiary.dark,
+  },
   eventsList: {
-    paddingTop: '2em',
+    marginTop: 32,
   },
   spotlight: {
+    marginTop: 32,
     display: 'flex',
-    alignItems: 'stretch',
-    gap: '2em',
+    alignItems: 'center',
     [theme.breakpoints.down('md')]: {
       flexDirection: 'column',
-      alignItems: 'stretch',
-      gap: '1em',
-      marginBottom: '3em',
+      justifyContent: 'center',
     },
-
     '& .calendar': {
-      flex: '1 1 50%',
-
+      flexGrow: 1,
+      [theme.breakpoints.down('md')]: {
+        width: '100%',
+      },
       '& .rbc-calendar': {
-        height: '100vh',
-        [theme.breakpoints.down('md')]: {
-          height: '80vh',
-        },
-        maxHeight: '40em',
-        '& .rbc-month-view, .rbc-time-view, .rbc-week-view': {
-          borderRadius: '1em',
-          overflow: 'hidden',
-          '& .rbc-event': {
-            backgroundColor: theme.palette.tertiary.dark,
-          },
-        },
-        '& .rbc-toolbar': {
-          [theme.breakpoints.down('xs')]: {
-            display: 'block',
-            textAlign: 'center',
-          },
-          '& span': {
-            display: 'block',
-          },
+        minHeight: '70vh',
+        '& .rbc-toolbar-label': {
+          fontWeight: 700,
+          fontSize: 18,
         },
       },
     },
     '& .event': {
-      flex: '1 1 50%',
-      [theme.breakpoints.down('md')]: {
-        display: 'flex',
-        justifyContent: 'center',
-      },
+      padding: 32,
     },
   },
 }))
 
 const localizer = momentLocalizer(moment)
+const events = [...eventsData]
+const getLatestEvent = () => {
+  events.sort((eventOne, eventTwo) => {
+    return new Date(eventOne.start) - new Date(eventTwo.start)
+  })
+  const upcomingEvents = events.filter(
+    (x) => x.start.getTime() >= new Date().getTime()
+  )
 
-const events = eventsData
+  if (upcomingEvents.length > 0) {
+    return upcomingEvents[0]
+  }
 
-const upcomingEvents =
-  events && events.filter((x) => x.date.getTime() >= new Date().getTime())
-
-const spotlightEvent = events && upcomingEvents[0]
+  return events.at(-1)
+}
 
 const Events = () => {
   const classes = useStyles()
+  const latestEvent = getLatestEvent()
+  const [selectedEvent, setSelectedEvent] = useState(latestEvent)
 
   return (
     <Layout>
-      <Container maxWidth="lg" style={{ minHeight: 'calc(100vh - 126px)' }}>
-        <Typography
-          variant="h4"
-          style={{
-            color: theme.palette.tertiary.darker,
-            textAlign: 'center',
-            display: 'block',
-            marginTop: '80px',
-            marginBottom: '40px',
-          }}
-        >
+      <Container maxWidth="lg" className={classes.root}>
+        <Typography className={classes.title} variant="h5">
           Upcoming Events
         </Typography>
         <Box className={classes.spotlight}>
           <Box className="calendar">
             {events && (
               <Calendar
-                views={['day', 'month', 'week']}
-                events={events.map((a, i) => ({
-                  id: i,
-                  title: a.title,
-                  start: a.start,
-                  end: a.end,
-                }))}
-                step={60}
+                views={['month']}
+                events={events}
                 defaultDate={new Date()}
                 localizer={localizer}
                 popup={true}
                 startAccessor="start"
                 endAccessor="end"
                 titleAccessor="title"
+                onSelectEvent={(e) => setSelectedEvent(e)}
               />
             )}
           </Box>
           <Box className="event">
-            {spotlightEvent && (
-              <EventSpotlight
-                date={spotlightEvent.date}
-                location={spotlightEvent.location}
-                title={spotlightEvent.title}
-                description={spotlightEvent.description}
-                imageUrl={spotlightEvent.imageUrl}
-              />
-            )}
+            <EventCard event={selectedEvent} />
           </Box>
         </Box>
-        <EventCardList
-          eventList={upcomingEvents.slice(1)}
-          className={classes.eventsList}
-          empty={'No upcoming events, stay tuned!'}
-        />
       </Container>
     </Layout>
   )

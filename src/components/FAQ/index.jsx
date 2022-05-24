@@ -7,23 +7,27 @@ import AddCircleIcon from '@material-ui/icons/AddCircle'
 import RemoveCircleIcon from '@material-ui/icons/RemoveCircle'
 import DUMMY_QA from '../../data/FAQs.json'
 import parse, { domToReact } from 'html-react-parser'
+import SectionContainer from '../Layout/SectionContainer'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    minHeight: '100vh',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     backgroundColor: theme.palette.background.secondary,
-    padding: 16,
   },
   title: {
     color: theme.palette.tertiary.dark,
-    marginTop: '4rem',
     textAlign: 'center',
+    [theme.breakpoints.down('xs')]: {
+      fontSize: 32,
+    },
   },
   subtitle: {
     textAlign: 'center',
+    [theme.breakpoints.down('xs')]: {
+      fontSize: 16,
+    },
   },
   section: {
     display: 'flex',
@@ -57,6 +61,9 @@ const useStyles = makeStyles((theme) => ({
   section__title: {
     color: theme.palette.tertiary.dark,
     textAlign: 'start',
+    [theme.breakpoints.down('xs')]: {
+      fontSize: 24,
+    },
   },
   section__icon: {
     color: theme.palette.primary.main,
@@ -85,63 +92,68 @@ const FAQ = () => {
   }
 
   return (
-    <Box className={classes.root}>
-      <Typography variant="h5" className={classes.title}>
-        Frequently Asked Questions
-      </Typography>
-      <Typography variant="subtitle2" className={classes.subtitle}>
-        Refer to our commonly asked Q&As here!
-      </Typography>
-      {DUMMY_QA.qa.map((qa) => {
-        return (
-          <Box key={`${qa.id}`} className={classes.section}>
-            <Typography variant="h6" className={classes.section__title}>
-              {qa.section}
-            </Typography>
+    <SectionContainer bgIsPrimary={false}>
+      <Box className={classes.root}>
+        <Typography variant="h5" className={classes.title}>
+          Frequently Asked Questions
+        </Typography>
+        <Typography variant="subtitle2" className={classes.subtitle}>
+          Refer to our commonly asked Q&As here!
+        </Typography>
+        {DUMMY_QA.qa.map((qa) => {
+          return (
+            <Box key={`${qa.id}`} className={classes.section}>
+              <Typography
+                variant="subtitle1"
+                className={classes.section__title}
+              >
+                {qa.section}
+              </Typography>
 
-            {qa.FAQs.map((faq) => {
-              return (
-                <Accordion key={`${faq.id}`} square>
-                  <AccordionSummary
-                    onClick={expandHandler(faq.id)}
-                    expandIcon={
-                      expandedState[faq.id] ? (
-                        <RemoveCircleIcon
-                          className={classes.section__icon}
-                          fontSize="large"
-                        />
-                      ) : (
-                        <AddCircleIcon
-                          className={classes.section__icon}
-                          fontSize="large"
-                        />
-                      )
-                    }
-                  >
-                    <Typography>
-                      <b>{faq.Q}</b>
-                    </Typography>
-                  </AccordionSummary>
-                  <AccordionDetails key={Math.random()}>
-                    {parse(faq.A, {
-                      replace: (domNode) => {
-                        if (domNode.name === 'p') {
-                          return (
-                            <Typography paragraph>
-                              {domToReact(domNode.children)}
-                            </Typography>
-                          )
-                        }
-                      },
-                    })}
-                  </AccordionDetails>
-                </Accordion>
-              )
-            })}
-          </Box>
-        )
-      })}
-    </Box>
+              {qa.FAQs.map((faq) => {
+                return (
+                  <Accordion key={`${faq.id}`} square>
+                    <AccordionSummary
+                      onClick={expandHandler(faq.id)}
+                      expandIcon={
+                        expandedState[faq.id] ? (
+                          <RemoveCircleIcon
+                            className={classes.section__icon}
+                            fontSize="large"
+                          />
+                        ) : (
+                          <AddCircleIcon
+                            className={classes.section__icon}
+                            fontSize="large"
+                          />
+                        )
+                      }
+                    >
+                      <Typography>
+                        <b>{faq.Q}</b>
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails key={Math.random()}>
+                      {parse(faq.A, {
+                        replace: (domNode) => {
+                          if (domNode.name === 'p') {
+                            return (
+                              <Typography paragraph>
+                                {domToReact(domNode.children)}
+                              </Typography>
+                            )
+                          }
+                        },
+                      })}
+                    </AccordionDetails>
+                  </Accordion>
+                )
+              })}
+            </Box>
+          )
+        })}
+      </Box>
+    </SectionContainer>
   )
 }
 

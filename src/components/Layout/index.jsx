@@ -10,6 +10,9 @@ const useStyles = makeStyles(() => ({
     width: '100%',
     scrollBehavior: 'smooth',
   },
+  children: {
+    minHeight: '100vh',
+  },
 }))
 
 const Layout = (props) => {
@@ -19,7 +22,7 @@ const Layout = (props) => {
   return (
     <Box className={classes.root}>
       <Navbar />
-      <Box>{children}</Box>
+      <Box className={classes.children}>{children}</Box>
       <Footer />
     </Box>
   )

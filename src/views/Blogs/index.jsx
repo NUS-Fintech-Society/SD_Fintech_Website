@@ -1,8 +1,8 @@
 import { Box, Container, makeStyles, Typography } from '@material-ui/core'
 import Layout from '../../components/Layout'
-import coursesData from '../../data/courses'
+import blogsData from '../../data/blogs'
 import theme from '../../themes'
-import CourseCard from './CourseCard'
+import BlogCard from './BlogCard'
 
 const useStyles = makeStyles(() => ({
   hero: {
@@ -25,11 +25,10 @@ const useStyles = makeStyles(() => ({
     },
   },
   heroImg: {
-    marginLeft: 64,
+    marginLeft: 32,
     height: 200,
     width: 200,
     [theme.breakpoints.down('xs')]: {
-      marginLeft: 32,
       height: 100,
       width: 100,
     },
@@ -44,12 +43,12 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-const Courses = () => {
+const Blogs = () => {
   const classes = useStyles()
 
   const renderCourses = () => {
-    return coursesData.map((course, index) => {
-      return <CourseCard key={index} course={course} />
+    return blogsData.map((blog, index) => {
+      return <BlogCard key={index} blog={blog} />
     })
   }
 
@@ -57,12 +56,12 @@ const Courses = () => {
     <Layout>
       <Box className={classes.hero}>
         <Typography className={classes.title} variant="h3">
-          Courses
+          Blogs
         </Typography>
         <img
           className={classes.heroImg}
-          src="courses-hero.png"
-          alt="Courses Hero Image"
+          src="blogs-hero.png"
+          alt="Blogs Hero Image"
         />
       </Box>
       <Container maxWidth="lg" className={classes.content}>
@@ -72,4 +71,4 @@ const Courses = () => {
   )
 }
 
-export default Courses
+export default Blogs

@@ -36,7 +36,7 @@ const NAVIGATION = [
     children: [
       {
         name: 'Blogs',
-        redirect: '',
+        redirect: '/blogs',
       },
       {
         name: 'Courses',
@@ -52,11 +52,6 @@ const NAVIGATION = [
   },
   {
     main: 'Recruitment',
-    children: [],
-    redirect: '',
-  },
-  {
-    main: 'FAQ',
     children: [],
     redirect: '',
   },
