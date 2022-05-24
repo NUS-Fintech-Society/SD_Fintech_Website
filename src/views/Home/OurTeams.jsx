@@ -1,7 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Box, Typography, Grid } from '@material-ui/core'
-import SectionContainer from '../Layout/SectionContainer'
+import SectionContainer from '../../components/Layout/SectionContainer'
 
 const useStyles = makeStyles((theme) => ({
   root: {

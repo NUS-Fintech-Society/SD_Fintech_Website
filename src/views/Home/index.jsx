@@ -1,11 +1,11 @@
-import FAQ from '../../components/FAQ'
-import Hero from '../../components/Hero'
 import Layout from '../../components/Layout'
-import Chart from '../../components/Chart'
-import OurTeams from '../../components/OurTeams'
-import Credits from '../../components/Credits'
-import ContactUs from '../../components/ContactUs'
-import About from '../../components/About'
+import Hero from './Hero'
+import About from './About'
+import Chart from './Chart'
+import OurTeams from './OurTeams'
+import FAQ from './FAQ'
+import Credits from './Credits'
+import ContactUs from './ContactUs'
 
 const Home = () => (
   <Layout>

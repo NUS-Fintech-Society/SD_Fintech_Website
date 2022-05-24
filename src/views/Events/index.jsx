@@ -6,7 +6,7 @@ import Layout from '../../components/Layout'
 import eventsData from '../../data/events'
 
 import 'react-big-calendar/lib/css/react-big-calendar.css'
-import EventCard from '../../components/EventCard'
+import EventCard from './EventCard'
 
 const useStyles = makeStyles((theme) => ({
   '@global': {
