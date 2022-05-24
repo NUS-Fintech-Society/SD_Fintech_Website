@@ -6,7 +6,7 @@ import MailIcon from '@material-ui/icons/Mail'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    minHeight: '70vh',
+    minHeight: '80vh',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -25,11 +25,8 @@ const useStyles = makeStyles((theme) => ({
   header: {
     textAlign: 'center',
     marginBottom: 32,
-    marginTop: 24,
     [theme.breakpoints.down('xs')]: {
       fontSize: 32,
-      marginBottom: 24,
-      marginTop: 12,
     },
   },
   textWrapper: {
@@ -39,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
   boldText: {
     fontWeight: 600,
     [theme.breakpoints.down('xs')]: {
-      fontSize: 14,
+      fontSize: 16,
     },
   },
   button: {
@@ -54,7 +51,7 @@ const ContactUs = () => {
 
   return (
     <Box className={classes.root} id="contact">
-      <Container className={classes.contentWrapper} maxWidth="md">
+      <Container className={classes.contentWrapper} maxWidth="lg">
         <Typography variant="h5" className={classes.header}>
           Contact
         </Typography>
