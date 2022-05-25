@@ -36,7 +36,7 @@ const Tab = (props) => {
     <div>
       <Button className={classes.btn} onMouseOver={handleClick}>
         <Link href={`${data.redirect}`}>
-          <a>
+          <a href={`${data.redirect}`}>
             <Typography variant="body2" color="textSecondary">
               {data.main}
             </Typography>
@@ -64,7 +64,7 @@ const Tab = (props) => {
           {data.children.map((item, index) => (
             <MenuItem key={index}>
               <Link href={`${item.redirect}`}>
-                <a>
+                <a href={`${item.redirect}`}>
                   <Typography variant="body2" color="textSecondary">
                     {item.name}
                   </Typography>
