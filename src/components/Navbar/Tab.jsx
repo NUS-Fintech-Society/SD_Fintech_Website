@@ -34,11 +34,13 @@ const Tab = (props) => {
 
   return (
     <div>
-      <Button className={classes.btn} onClick={handleClick}>
+      <Button className={classes.btn} onMouseOver={handleClick}>
         <Link href={`${data.redirect}`}>
-          <Typography variant="body2" color="textSecondary">
-            {data.main}
-          </Typography>
+          <a href={`${data.redirect}`}>
+            <Typography variant="body2" color="textSecondary">
+              {data.main}
+            </Typography>
+          </a>
         </Link>
       </Button>
       {data.children.length > 0 && (
@@ -57,13 +59,16 @@ const Tab = (props) => {
             vertical: 'top',
             horizontal: 'center',
           }}
+          MenuListProps={{ onMouseLeave: handleClose }}
         >
           {data.children.map((item, index) => (
             <MenuItem key={index}>
               <Link href={`${item.redirect}`}>
-                <Typography variant="body2" color="textSecondary">
-                  {item.name}
-                </Typography>
+                <a href={`${item.redirect}`}>
+                  <Typography variant="body2" color="textSecondary">
+                    {item.name}
+                  </Typography>
+                </a>
               </Link>
             </MenuItem>
           ))}

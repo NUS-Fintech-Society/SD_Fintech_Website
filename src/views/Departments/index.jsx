@@ -12,7 +12,7 @@ import {
   Icon,
   Typography,
 } from '@material-ui/core'
-import { DEPARTMENT_DATA } from '../../../data/departments/data.js'
+import { DEPARTMENT_DATA } from '../../data/departments'
 
 const useStyles = makeStyles((theme) => ({
   root: {

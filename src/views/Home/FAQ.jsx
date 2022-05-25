@@ -7,7 +7,7 @@ import AddCircleIcon from '@material-ui/icons/AddCircle'
 import RemoveCircleIcon from '@material-ui/icons/RemoveCircle'
 import DUMMY_QA from '../../data/FAQs.json'
 import parse, { domToReact } from 'html-react-parser'
-import SectionContainer from '../Layout/SectionContainer'
+import SectionContainer from '../../components/Layout/SectionContainer'
 
 const useStyles = makeStyles((theme) => ({
   root: {

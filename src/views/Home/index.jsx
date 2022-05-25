@@ -1,21 +1,34 @@
-import FAQ from '../../components/FAQ'
-import Hero from '../../components/Hero'
 import Layout from '../../components/Layout'
-import Chart from '../../components/Chart'
-import OurTeams from '../../components/OurTeams'
-import Credits from '../../components/Credits'
-import ContactUs from '../../components/ContactUs'
-import About from '../../components/About'
+import Hero from './Hero'
+import About from './About'
+import Chart from './Chart'
+import OurTeams from './OurTeams'
+import FAQ from './FAQ'
+import Credits from './Credits'
+import ContactUs from './ContactUs'
+import { Fade } from 'react-awesome-reveal'
 
 const Home = () => (
   <Layout>
     <Hero />
-    <About />
-    <Chart />
-    <OurTeams />
-    <FAQ />
-    <Credits />
-    <ContactUs />
+    <Fade>
+      <About />
+    </Fade>
+    <Fade>
+      <Chart />
+    </Fade>
+    <Fade>
+      <OurTeams />
+    </Fade>
+    <Fade>
+      <FAQ />
+    </Fade>
+    <Fade>
+      <Credits />
+    </Fade>
+    <Fade>
+      <ContactUs />
+    </Fade>
   </Layout>
 )
 

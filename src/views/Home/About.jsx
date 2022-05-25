@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import { Box, Grid, Typography } from '@material-ui/core'
 import GroupIcon from '@material-ui/icons/Group'
 import WorkIcon from '@material-ui/icons/Work'
-import SectionContainer from '../Layout/SectionContainer'
+import SectionContainer from '../../components/Layout/SectionContainer'
 
 const useStyles = makeStyles((theme) => ({
   root: {
